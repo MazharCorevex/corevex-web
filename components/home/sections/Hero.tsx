@@ -2,6 +2,7 @@ import Link from "next/link";
 import BookCall from "@/components/booking/BookCall";
 import Words from "@/components/ui/Words";
 import HeroArt from "@/components/home/HeroArt";
+import Img from "@/components/ui/Img";
 
 // Hero
 export default function Hero() {
@@ -31,7 +32,16 @@ export default function Hero() {
             <span>50+ engineers</span>
           </div>
         </div>
-        <HeroArt />
+        <HeroArt
+          mark={
+            <Img
+              src="/images/hero/corevex-mark-3d.webp"
+              alt=""
+              sizes="(max-width: 860px) 64vw, 40vw"
+              priority
+            />
+          }
+        />
       </div>
     </section>
   );

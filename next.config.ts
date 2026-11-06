@@ -29,7 +29,25 @@ const security = [
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
 ];
 
+// Public env defaults, always inlined so no process polyfill ships
+const PUBLIC_ENV = [
+  "NEXT_PUBLIC_SITE_URL",
+  "NEXT_PUBLIC_CALENDLY_URL",
+  "NEXT_PUBLIC_GA_ID",
+  "NEXT_PUBLIC_PSEB_NUMBER",
+  "NEXT_PUBLIC_LINKEDIN_URL",
+  "NEXT_PUBLIC_CLUTCH_URL",
+  "NEXT_PUBLIC_GITHUB_URL",
+  "NEXT_PUBLIC_CONTACT_EMAIL",
+  "NEXT_PUBLIC_CONTACT_PHONE",
+  "NEXT_PUBLIC_OFFICE_ADDRESS",
+  "NEXT_PUBLIC_SANITY_PROJECT_ID",
+  "NEXT_PUBLIC_SANITY_DATASET",
+  "NEXT_PUBLIC_SANITY_API_VERSION",
+];
+
 const config: NextConfig = {
+  env: Object.fromEntries(PUBLIC_ENV.map((k) => [k, process.env[k] ?? ""])),
   trailingSlash: true,
   poweredByHeader: false,
   reactStrictMode: true,
@@ -43,6 +61,7 @@ const config: NextConfig = {
   },
   experimental: {
     serverActions: { bodySizeLimit: "6mb" },
+    inlineCss: true,
     optimizePackageImports: [],
   },
   async headers() {

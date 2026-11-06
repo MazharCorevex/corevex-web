@@ -13,7 +13,9 @@
     "analyze": "cross-env ANALYZE=true next build --webpack",
     "images": "node scripts/images.mjs",
     "test:e2e": "playwright test",
-    "lhci": "lhci autorun",
+    "lhci": "lhci autorun --config=lighthouserc.cjs",
+    "qa:content": "node scripts/content-check.mjs",
+    "qa:js": "node scripts/js-budget.mjs",
     "sanity:seed": "node scripts/seed-sanity.mjs"
   },
   "dependencies": {
@@ -33,6 +35,7 @@
     "three": "^0.187.0"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.16.0",
     "@next/bundle-analyzer": "^16.4.5",
     "@playwright/test": "^1.65.0",
     "@types/node": "^26.6.6",

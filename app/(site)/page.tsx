@@ -5,6 +5,7 @@ import ServicesBento from "@/components/home/sections/ServicesBento";
 import CodeRescue from "@/components/home/sections/CodeRescue";
 import Numbers from "@/components/home/sections/Numbers";
 import CoreSection from "@/components/home/CoreSection";
+import Img from "@/components/ui/Img";
 import WorkRail from "@/components/home/sections/WorkRail";
 import TechStack from "@/components/home/sections/TechStack";
 import Process from "@/components/home/sections/Process";
@@ -26,7 +27,19 @@ export default function Home() {
       <ServicesBento />
       <CodeRescue />
       <Numbers />
-      <CoreSection />
+      <CoreSection
+        fallback={
+          <Img
+            src="/images/hero/hero-core-desktop.webp"
+            alt=""
+            aria-hidden="true"
+            fill
+            sizes="100vw"
+            className="core-fallback"
+            style={{ opacity: 0.9 }}
+          />
+        }
+      />
       <WorkRail />
       <TechStack />
       <Process />

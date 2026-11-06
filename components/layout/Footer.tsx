@@ -53,7 +53,7 @@ export default function Footer() {
             <p>Corevex Solutions is a PSEB registered software company building custom software, apps and AI since 2022.</p>
           </div>
           <div>
-            <h4>Services</h4>
+            <h2>Services</h2>
             <ul>
               {DRAWER_ORDER.map((s) => (
                 <li key={s}>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
           {COLS.map((c) => (
             <div key={c.h}>
-              <h4>{c.h}</h4>
+              <h2>{c.h}</h2>
               <ul>
                 {c.links.map(([href, label]) => (
                   <li key={label}>

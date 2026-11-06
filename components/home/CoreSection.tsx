@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const STEPS = [
   [
@@ -18,7 +17,7 @@ const STEPS = [
 ];
 
 // Pinned core
-export default function CoreSection() {
+export default function CoreSection({ fallback }: { fallback: ReactNode }) {
   const ref = useRef<HTMLElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const [k, setK] = useState(0);
@@ -66,15 +65,7 @@ export default function CoreSection() {
   return (
     <section className={`core${live ? " live" : ""}`} ref={ref} aria-label="How Corevex works">
       <div className="core-sticky">
-        <Image
-          src="/images/hero/hero-core-desktop.webp"
-          alt=""
-          aria-hidden="true"
-          fill
-          sizes="100vw"
-          className="core-fallback"
-          style={{ objectFit: "cover", opacity: 0.9 }}
-        />
+        {fallback}
         <canvas ref={canvas} aria-hidden="true" />
         <div className="wrap">
           <div className="core-steps">

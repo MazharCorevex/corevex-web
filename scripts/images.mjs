@@ -60,7 +60,7 @@ async function convertNew() {
 
 async function rootIcons() {
   const pub = path.join(root, "public");
-  for (const f of ["favicon.ico", "icon.svg", "apple-touch-icon.png", "favicon-16.png", "favicon-32.png", "favicon-48.png", "icon-192.png", "icon-512.png", "maskable-512.png"]) {
+  for (const f of ["site.webmanifest", "favicon.ico", "icon.svg", "apple-touch-icon.png", "favicon-16.png", "favicon-32.png", "favicon-48.png", "icon-192.png", "icon-512.png", "maskable-512.png"]) {
     await fs.copyFile(path.join(root, "reference", f), path.join(pub, f));
   }
 }

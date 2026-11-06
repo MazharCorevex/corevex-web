@@ -62,3 +62,20 @@ a.btn[href^="https://calendly.com"] { cursor: pointer; }
   .field input, .field select, .field textarea, .news input, .chat-in input { min-height: 44px; }
   .faq summary { min-height: 44px; }
 }
+
+/* Text contrast on light surfaces */
+:root { --teal-text: #287469; }
+.label, .light .label, .chip, .light .chip, .cloud .chip, .link, .takeaways b, .deliver div::before { color: var(--teal-text); }
+.dark .label, .hero .label, .page-hero .label, .core .label, .finale .label, .cs-hero .label, .contact .label { color: var(--teal-glow); }
+.hero .label { color: var(--teal-text); }
+.dark .chip, .tile .chip, .page-hero .chip, .cs-hero .chip { color: var(--teal-glow); }
+.t-strip .chip { color: #fff; }
+.dark .link, .finale .link, .page-hero .link, .cs-hero .link, .footer .link { color: var(--teal-glow); }
+
+/* Tech logos as masks */
+.stx-mask { background-color: currentColor; -webkit-mask: var(--logo) center / contain no-repeat; mask: var(--logo) center / contain no-repeat; }
+.step b { color: var(--teal-text); }
+.dark .step b { color: var(--teal-glow); }
+:root { --fg-muted: #636A7D; }
+.meta-row { color: var(--fg-muted); }
+.page-hero .meta-row, .art-hero .meta-row { color: var(--text-muted) !important; }

@@ -47,3 +47,21 @@ Decisions taken during the build, so the reasoning is on record.
 ## Booking
 
 - Every "Book a 30-minute call" button is a link to `NEXT_PUBLIC_CALENDLY_URL` that opens the Calendly popup with `primary_color=48ac9f`. The Calendly script and stylesheet are injected on the first click only. Without the env variable the button falls back to `/contact/#call`.
+
+## Performance
+
+- **First-load JavaScript budget (120 KB gzip) is not reachable on Next.js 16 as specified.** The framework alone ships about 125 KB gzipped on every App Router page (React DOM 63.8 KB, Next router runtime 44.6 KB, plus router, Turbopack runtime and polyfill chunks). Pages measure 147 to 152 KB, so the app code on top is 20 to 25 KB. Checked with Turbopack and webpack builds (same result). Measured with `npm run qa:js`; Next 16 no longer prints sizes in `next build` output.
+- What was done to keep app JavaScript small: no `next/image` inside client components (images are passed in as server-rendered slots), the mega menu is server rendered and passed to the header, every `NEXT_PUBLIC_` variable has a default so no `process` polyfill is needed, three.js is a separate chunk loaded only on desktop when the Core section nears the viewport, Calendly loads on first click, GA4 only with an ID, and the tech stack logos are CSS masks over the existing SVG files instead of inline SVG (half the size of that section).
+- **CSS is inlined** (`experimental.inlineCss`) so there is no render-blocking stylesheet request.
+- Above-the-fold reveals and headline words animate with CSS keyframes from first paint, and hero photos are never hidden waiting for JavaScript.
+- Open Graph images are served from `/og/<type>/<slug>.png` because Next's file-based `opengraph-image` URLs hit the trailing-slash redirect.
+
+## Accessibility
+
+- Small teal labels, chips and links on light backgrounds use `--teal-text: #287469` (5.5:1 on white) instead of `#2E8579` (4.4:1), and muted text uses `#636A7D`. The brand teal tokens are unchanged for buttons, accents and dark sections.
+- Mega menu and footer column titles are `h2` (styled exactly as the old `h4`) so heading levels do not skip.
+- Drawer and leader sheet use `inert` when closed, Escape closes menus and sheets, tabs support arrow keys.
+
+## Content checks
+
+- `scripts/content-check.mjs` scans every rendered page, `llms.txt`, `sitemap.xml` and `robots.txt`. The AI Lab extraction demo intentionally shows a sample supplier invoice with amounts; those amounts are excluded from the price rule because they are demo data, not Corevex pricing.

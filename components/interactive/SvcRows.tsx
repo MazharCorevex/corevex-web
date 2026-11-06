@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState, type MouseEvent, type ReactNode } from "react";
 
 // Service rows with hover image
@@ -32,7 +31,10 @@ export default function SvcRows({ className, children, ...rest }: { className?: 
         {children}
       </div>
       <div className={`hover-img${on ? " on" : ""}`} style={{ left: pos.x, top: pos.y }} aria-hidden="true">
-        {img && <Image src={img} alt="" width={800} height={533} sizes="320px" />}
+        {img && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={img} alt="" width={800} height={533} decoding="async" />
+        )}
       </div>
     </>
   );

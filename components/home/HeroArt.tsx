@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 const CHIPS = [
   {
@@ -29,7 +28,7 @@ const CHIPS = [
 ];
 
 // Hero mark and service orbit
-export default function HeroArt() {
+export default function HeroArt({ mark }: { mark: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const [r, setR] = useState<number | null>(null);
   const [inView, setIn] = useState(false);
@@ -85,15 +84,7 @@ export default function HeroArt() {
       <span className="hero-ring r1" aria-hidden="true" />
       <span className="hero-ring r2" aria-hidden="true" />
       <span className="hero-glow" aria-hidden="true" />
-      <Image
-        src="/images/hero/corevex-mark-3d.webp"
-        alt=""
-        width={1616}
-        height={1324}
-        sizes="(max-width: 860px) 64vw, 40vw"
-        priority
-        fetchPriority="high"
-      />
+      {mark}
       <nav className={`orbit${inView ? " in" : ""}`} aria-label="Our services" style={rVar}>
         {CHIPS.map((c, i) => (
           <Link
@@ -107,7 +98,8 @@ export default function HeroArt() {
             onBlur={hide}
           >
             <span className="orb-in">
-              <Image src={`/images/icons/${c.icon}.svg`} alt="" width={20} height={20} unoptimized />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`/images/icons/${c.icon}.svg`} alt="" width={20} height={20} />
               {c.t}
             </span>
           </Link>
@@ -122,7 +114,10 @@ export default function HeroArt() {
         onMouseLeave={hide}
       >
         <span className="orb-photo">
-          {cur && <Image src={`/images/photos/${cur.img}-800.webp`} alt="" width={800} height={533} sizes="150px" />}
+          {cur && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={`/images/photos/${cur.img}-800.webp`} alt="" width={800} height={533} decoding="async" />
+          )}
         </span>
         <b>{cur?.t}</b>
       </Link>

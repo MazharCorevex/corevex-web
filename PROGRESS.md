@@ -12,8 +12,8 @@
 - [x] Phase 8: Calendly popup on first click, teal, 30-minute wording everywhere
 - [x] Phase 9: contact (3 steps), careers (PDF, 5 MB, Blob for large files), newsletter with honeypot, rate limit, Resend
 - [x] Phase 10: metadata and canonicals on every page, generated OG images (/og/*.png), sitemap.xml, robots.txt, llms.txt, JSON-LD from reference, security headers
-- [ ] Phase 11: Lighthouse CI, Playwright, link and content checks
+- [x] Phase 11: Lighthouse CI, Playwright (208 passed), link and image checks, content rules check. JS budget not reachable on Next 16, see DECISIONS.md
 
 ## Next steps
 
-Continue from the first unchecked phase. Regenerate markup with `node scripts/gen-pages.mjs` only for pages not yet hand edited (home sections are never overwritten).
+All phases are complete. Remaining items need real content or keys and are listed in TODO.md. To resume work: `npm install`, `npm run build`, `npm run test:e2e`.

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Montserrat } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/layout/Header";
+import MegaPanel from "@/components/layout/MegaPanel";
 import Footer from "@/components/layout/Footer";
 import Motion from "@/components/layout/Motion";
 import Analytics from "@/components/layout/Analytics";
@@ -55,7 +56,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <a className="skip" href="#main">
           Skip to content
         </a>
-        <Header />
+        <Header megaPanel={<MegaPanel />} />
         <main id="main">{children}</main>
         <Footer />
         <Motion />

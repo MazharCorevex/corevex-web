@@ -18,12 +18,17 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 
 ## Keys and accounts
 
-- [ ] Sanity project: create the project, set `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`, `SANITY_API_WRITE_TOKEN` (for the seed), `SANITY_REVALIDATE_SECRET`, then run `npm run sanity:seed`. Until then the site uses the local content in `/content`
+- [ ] Sanity project (needs a one-time login): run `npx sanity login`, then `npx sanity init --env .env.local` (choose create new project, dataset production) or create it at sanity.io/manage. Then create an Editor token and a Viewer token, set `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET`, `SANITY_API_WRITE_TOKEN` (for the seed), `SANITY_REVALIDATE_SECRET`, then run `npm run sanity:seed`. Until then the site uses the local content in `/content`
 - [ ] Add `http://localhost:3000` and the production domain as CORS origins in Sanity (with credentials) so the embedded Studio can sign in
 - [ ] Resend: verify the sending domain, set `CONTACT_FROM_EMAIL` to an address on it, create an audience and set `RESEND_AUDIENCE_ID`
 - [ ] Vercel Blob store for CV uploads over 4.5 MB: `BLOB_READ_WRITE_TOKEN`
 - [ ] GA4 measurement ID: `NEXT_PUBLIC_GA_ID` (no analytics script loads until set)
 - [ ] Final domain: set `NEXT_PUBLIC_SITE_URL`, add the domain in Vercel and in Resend
+
+## Performance
+
+- [ ] Home page mobile Lighthouse performance is about 85 (others 97 to 99). The LCP is the hero mark; in Lighthouse's simulation it waits on hydration of the large home page. Next steps if needed: move more of the home page out of client wrappers so less of it hydrates
+- [ ] First-load JS is about 150 KB gzip against a 120 KB target; the Next.js 16 framework floor is about 125 KB (see DECISIONS.md)
 
 ## Later
 

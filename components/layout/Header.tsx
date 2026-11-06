@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { DRAWER_ORDER, SERVICES, svc } from "@/lib/site";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import { DRAWER_ORDER, svc } from "@/lib/site";
 
 const NAV = [
   { href: "/work/", label: "Work" },
@@ -15,13 +14,7 @@ const NAV = [
   { href: "/contact/", label: "Contact" },
 ];
 
-const ENGAGE = [
-  { t: "Dedicated Team", d: "A full team that works as part of yours." },
-  { t: "Fixed-Scope Project", d: "An agreed scope delivered in full." },
-  { t: "MVP Build", d: "A focused first version to test your idea." },
-];
-
-export default function Header() {
+export default function Header({ megaPanel }: { megaPanel: ReactNode }) {
   const path = usePathname();
   const [mega, setMega] = useState(false);
   const [drawer, setDrawer] = useState(false);
@@ -74,30 +67,14 @@ export default function Header() {
     timer.current = setTimeout(() => setMega(false), 160);
   };
   const cur = (href: string) => (path?.startsWith(href) ? "page" : undefined);
-  const group = (g: "build" | "intel") =>
-    SERVICES.filter((s) => s.group === g).map((s) => (
-      <Link key={s.slug} className="m" href={`/services/${s.slug}/`}>
-        <Image src={`/images/icons/${s.icon}.svg`} alt="" width={28} height={28} unoptimized />
-        <div>
-          <b>{s.name}</b>
-          <span>{s.blurb}</span>
-        </div>
-      </Link>
-    ));
 
   return (
     <>
       <header className={`header${hidden && !drawer ? " is-hidden" : ""}`}>
         <div className="wrap">
           <Link className="brand" href="/" aria-label="Corevex Solutions home">
-            <Image
-              src="/images/logo/corevex-logo-primary.svg"
-              alt="Corevex Solutions"
-              width={945}
-              height={213}
-              priority
-              unoptimized
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo/corevex-logo-primary.svg" alt="Corevex Solutions" width={945} height={213} />
           </Link>
           <nav aria-label="Main">
             <ul className="nav">
@@ -106,41 +83,7 @@ export default function Header() {
                   Services
                 </button>
                 <div className="mega" role="region" aria-label="Services">
-                  <div className="wrap">
-                    <div>
-                      <h4>Build</h4>
-                      {group("build")}
-                    </div>
-                    <div>
-                      <h4>Intelligence</h4>
-                      {group("intel")}
-                    </div>
-                    <div>
-                      <h4>How we engage</h4>
-                      {ENGAGE.map((e) => (
-                        <Link key={e.t} className="m" href="/services/#models">
-                          <div>
-                            <b>{e.t}</b>
-                            <span>{e.d}</span>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                    <Link className="feat" href="/work/fleetline-logistics-platform/">
-                      <Image
-                        src="/images/portfolio/fleetline-logistics-platform-1600.webp"
-                        alt="Fleetline logistics dashboard and driver app concept"
-                        width={1600}
-                        height={1000}
-                        sizes="340px"
-                      />
-                      <div>
-                        <span className="concept">Featured work</span>
-                        <br />
-                        <b>Live operations on one custom platform</b>
-                      </div>
-                    </Link>
-                  </div>
+                  {megaPanel}
                 </div>
               </li>
               {NAV.map((n) => (
