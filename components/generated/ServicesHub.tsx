@@ -17,7 +17,7 @@ export default function ServicesHub() {
             {"Software development services from one senior team"}
           </Words>
           <p className="lead" data-reveal="load">
-            Seven services, one senior team. From custom platforms and SaaS products to mobile apps and AI agents, we
+            Eight services, one senior team. From custom platforms and SaaS products to mobile apps and AI agents, we
             cover every layer with dedicated designers, engineers, QA and project managers.
           </p>
         </div>

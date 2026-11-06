@@ -66,6 +66,6 @@ export type TeamMember = {
 
 export type Job = { slug: string; order: number; title: string; type: string; location: string };
 
-export type Testimonial = { quote: string; name: string; role?: string; company?: string };
+export type Testimonial = { quote: string; name: string; role?: string; company?: string; caseStudy?: string };
 
 export type ClientLogo = { name: string; logo: string; width?: number; height?: number };

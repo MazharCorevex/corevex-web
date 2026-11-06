@@ -4,8 +4,11 @@ import Img from "@/components/ui/Img";
 import Words from "@/components/ui/Words";
 import CareersForm from "@/components/forms/CareersForm";
 
+import type { Job } from "@/lib/types";
+
 // CareersPage
-export default function CareersPage({ roles, blob }: { roles: string[]; blob: boolean }) {
+export default function CareersPage({ jobs, blob }: { jobs: Job[]; blob: boolean }) {
+  const roles = jobs.map((j) => j.title);
   return (
     <>
       <section className="page-hero c-hero">
@@ -90,24 +93,22 @@ export default function CareersPage({ roles, blob }: { roles: string[]; blob: bo
           <h2 className="h2" style={{ marginBottom: "40px" } as CSSProperties}>
             Current openings
           </h2>
-          <div className="roles">
-            <a href="#apply">
-              <b>AI Automation Engineer</b>
-              <span>Project based</span>
-              <span>Remote</span>
-              <span className="go" aria-hidden="true">
-                »
-              </span>
-            </a>
-            <a href="#apply">
-              <b>Business Development Intern</b>
-              <span>Internship</span>
-              <span>Remote</span>
-              <span className="go" aria-hidden="true">
-                »
-              </span>
-            </a>
-          </div>
+          {jobs.length > 0 ? (
+            <div className="roles">
+              {jobs.map((j) => (
+                <a key={j.slug} href="#apply">
+                  <b>{j.title}</b>
+                  <span>{j.type}</span>
+                  <span>{j.location}</span>
+                  <span className="go" aria-hidden="true">
+                    »
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <p className="lead">There are no open roles right now. You are welcome to send an open application below.</p>
+          )}
         </div>
       </section>
       <section className="band mist" id="apply">

@@ -78,7 +78,7 @@ export async function getJobs(): Promise<Job[]> {
 
 // Testimonials, empty until real ones are approved
 export async function getTestimonials(): Promise<Testimonial[]> {
-  return (await fetchSanity<Testimonial[]>(`*[_type == "testimonial" && approved == true] | order(order asc){quote, name, role, company}`, ["testimonial"])) ?? [];
+  return (await fetchSanity<Testimonial[]>(`*[_type == "testimonial" && approved == true] | order(order asc){quote, name, role, company, "caseStudy": caseStudy->slug.current}`, ["testimonial"])) ?? [];
 }
 
 // Client logos, empty until real ones are approved

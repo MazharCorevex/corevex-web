@@ -29,7 +29,7 @@ export default async function WorkRail() {
         {cases.map((c) => (
           <Link key={c.slug} href={`/work/${c.slug}/`} className="rail-card">
             <div className="img">
-              <Img src={c.image} alt={c.railAlt || c.imageAlt || ""} sizes="(max-width: 600px) 85vw, 440px" />
+              <Img src={c.image} alt={c.railAlt || c.imageAlt || ""} sizes="(max-width: 600px) 85vw, 560px" />
             </div>
             <div className="meta">
               <span className="chip">{c.industry}</span>{" "}

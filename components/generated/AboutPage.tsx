@@ -3,8 +3,12 @@ import Link from "next/link";
 import Img from "@/components/ui/Img";
 import Words from "@/components/ui/Words";
 
+import LeaderSheet from "@/components/about/LeaderSheet";
+import type { TeamMember } from "@/lib/types";
+import { PSEB_NUMBER } from "@/lib/site";
+
 // AboutPage
-export default function AboutPage() {
+export default function AboutPage({ team }: { team: TeamMember[] }) {
   return (
     <>
       <section className="ed-hero">
@@ -56,7 +60,7 @@ export default function AboutPage() {
               <strong>PSEB</strong>
               <p>
                 Corevex Solutions is registered with the Pakistan Software Export Board (PSEB), the government body that
-                certifies and supports IT and software export companies. Registration no. [add number].
+                certifies and supports IT and software export companies.{PSEB_NUMBER ? ` Registration no. ${PSEB_NUMBER}.` : ""}
               </p>
             </div>
           </div>
@@ -305,50 +309,7 @@ export default function AboutPage() {
               Led by engineers and operators who stay close to every client and every build.
             </p>
           </div>
-          <div className="leaders" data-reveal-group="">
-            <button className="leader" data-leader="bio-mazhar-h">
-              <div className="ph">
-                <Img
-                  src="/images/team/mazhar-h.svg"
-                  alt="Mazhar H, CEO and Founder of Corevex Solutions"
-                  sizes="160px"
-                />
-              </div>
-              <div className="info">
-                <h3>Mazhar H</h3>
-                <span>CEO and Founder</span>
-                <p>Senior software engineer with 8+ years of experience building software products.</p>
-              </div>
-            </button>
-            <button className="leader" data-leader="bio-m-azhar">
-              <div className="ph">
-                <Img
-                  src="/images/team/m-azhar.svg"
-                  alt="M Azhar, Co-founder and Solution Architect of Corevex Solutions"
-                  sizes="160px"
-                />
-              </div>
-              <div className="info">
-                <h3>M Azhar</h3>
-                <span>Co-founder and Solution Architect</span>
-                <p>Solution architect and web application developer who designs how every system fits together.</p>
-              </div>
-            </button>
-            <button className="leader" data-leader="bio-zafar-h">
-              <div className="ph">
-                <Img
-                  src="/images/team/zafar-h.svg"
-                  alt="Zafar H, Chief Operating Officer of Corevex Solutions"
-                  sizes="160px"
-                />
-              </div>
-              <div className="info">
-                <h3>Zafar H</h3>
-                <span>Chief Operating Officer</span>
-                <p>Head of business and customer success, with 8 years in sales.</p>
-              </div>
-            </button>
-          </div>
+          <LeaderSheet team={team} />
         </div>
       </section>
 

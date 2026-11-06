@@ -4,6 +4,8 @@ import Img from "@/components/ui/Img";
 import Words from "@/components/ui/Words";
 import ContactStepped from "@/components/forms/ContactStepped";
 
+import ContactDetails from "@/components/sections/ContactDetails";
+
 // ContactPage
 export default function ContactPage() {
   return (
@@ -34,12 +36,7 @@ export default function ContactPage() {
             <li>You own the code</li>
             <li>{'Prefer to talk? Choose "Book a call" below and we will send a time'}</li>
           </ul>
-          <div className="c-details">
-            <a href="mailto:hello@corevexsolutions.com">[hello@corevexsolutions.com]</a>
-            <span>[Phone number]</span>
-            <span>[Office address]</span>
-            <a href="#">LinkedIn</a>
-          </div>
+          <ContactDetails />
         </div>
         <div className="right">
           <ContactStepped />

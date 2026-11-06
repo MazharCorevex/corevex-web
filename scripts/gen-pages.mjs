@@ -8,7 +8,7 @@ const outDir = path.join(process.cwd(), "components/generated");
 await fs.mkdir(outDir, { recursive: true });
 
 const SIZES = [
-  [".rail-card", "(max-width: 600px) 85vw, 440px"],
+  [".rail-card", "(max-width: 600px) 85vw, 560px"],
   [".t-wide", "(max-width: 860px) 100vw, 66vw"],
   [".tile", "(max-width: 860px) 100vw, 33vw"],
   [".acc-item", "(max-width: 860px) 100vw, 40vw"],
@@ -161,4 +161,70 @@ if (process.argv[2] === "--home") {
   }
   void $;
   console.log("home sections written");
+}
+
+// Services
+if (process.argv[2] === "--services") {
+  const { normHref, normSrc } = await import("./lib/html2jsx.mjs");
+  const clean = (s) => (s || "").replace(/\s+/g, " ").trim();
+  const slugs = (await fs.readdir(path.join(ref, "services"), { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name);
+  const bodyDir = path.join(process.cwd(), "components/services/bodies");
+  await fs.mkdir(bodyDir, { recursive: true });
+  const data = [];
+  const pascal = (s) => s.replace(/(^|-)([a-z])/g, (_, __, c) => c.toUpperCase());
+  for (const slug of slugs) {
+    const file = `services/${slug}/index.html`;
+    const { $ } = await convertMain(file, "service");
+    const main = $("main");
+    const secs = main.children("section").toArray();
+    const hero = $(secs[0]);
+    const btns = hero.find(".btns a").toArray().map((a) => ({ label: clean($(a).text().replace("»", "")), href: normHref(a.attribs.href), primary: !$(a).hasClass("btn-ghost") }));
+    const deliverSec = secs.find((s) => $(s).find(".deliver").length);
+    const faqSec = secs.find((s) => $(s).find(".faq").length);
+    const relSec = secs.find((s) => clean($(s).find(".label").first().text()) === "Related services");
+    const ctaSec = secs.find((s) => $(s).hasClass("cta-band"));
+    const startIdx = secs.findIndex((s) => $(s).hasClass("logo-strip")) + 1;
+    const endIdx = secs.indexOf(deliverSec);
+    const middle = secs.slice(startIdx, endIdx);
+    const svc = {
+      slug,
+      name: clean(hero.find(".crumbs span").last().text()),
+      h1: clean(hero.find("h1").text()),
+      lead: clean(hero.find(".lead").text()),
+      buttons: btns,
+      proof: hero.find(".proof-chips span").toArray().map((s) => clean($(s).text())),
+      photo: normSrc(hero.find(".svc-photo img").attr("src")),
+      photoAlt: hero.find(".svc-photo img").attr("alt") || "",
+      chip: { value: clean(hero.find(".float-chip b").text()), label: clean(hero.find(".float-chip span").text()) },
+      deliver: {
+        label: clean($(deliverSec).find(".label").text()),
+        title: clean($(deliverSec).find("h2").text()),
+        steps: $(deliverSec).find(".deliver > div").toArray().map((d) => ({ title: clean($(d).find("b").text()), text: clean($(d).find("p").text()) })),
+      },
+      faq: $(faqSec).find("details").toArray().map((d) => ({ q: clean($(d).find("summary").text()), a: clean($(d).find("p").text()) })),
+      faqTitle: clean($(faqSec).find("h2").text()),
+      related: $(relSec).find("a.tile").toArray().map((a) => normHref(a.attribs.href).split("/")[2]),
+      relatedTitle: clean($(relSec).find("h2").text()),
+      cta: { title: clean($(ctaSec).find("h2").text()), text: clean($(ctaSec).find("p").text()), label: clean($(ctaSec).find("a").text().replace("»", "")), href: normHref($(ctaSec).find("a").attr("href")) },
+    };
+    data.push(svc);
+    // Body sections
+    const body = await convertMain(file, "service-body", { firstSectionPriority: false });
+    const bodySecs = body.sections.slice(startIdx, endIdx);
+    const src = bodySecs.join("\n");
+    const imp = [];
+    const need = (re, line) => re.test(src) && imp.push(line);
+    need(/as CSSProperties/, `import type { CSSProperties } from "react";`);
+    need(/<Link /, `import Link from "next/link";`);
+    need(/<Img /, `import Img from "@/components/ui/Img";`);
+    need(/<BookCall/, `import BookCall from "@/components/booking/BookCall";`);
+    need(/<FeatList /, `import FeatList from "@/components/interactive/FeatList";`);
+    need(/<BeforeAfter /, `import BeforeAfter from "@/components/interactive/BeforeAfter";`);
+    need(/<Rail /, `import Rail from "@/components/interactive/Rail";`);
+    const name = pascal(slug) + "Body";
+    await fs.writeFile(path.join(bodyDir, `${name}.tsx`), `${imp.join("\n")}\n\n// ${slug}\nexport default function ${name}() {\n  return (\n    <>\n${src}\n    </>\n  );\n}\n`);
+    void middle;
+  }
+  await fs.writeFile(path.join(process.cwd(), "content/services.json"), JSON.stringify(data, null, 1));
+  console.log("services", data.length);
 }
