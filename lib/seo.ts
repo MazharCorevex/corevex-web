@@ -11,7 +11,7 @@ export function seoFor(route: string): PageSeo | undefined {
   return SEO[route];
 }
 
-export function pageMetadata(route: string, fallback?: Partial<PageSeo> & { image?: string; type?: "website" | "article" }): Metadata {
+export function pageMetadata(route: string, fallback?: Partial<PageSeo> & { image?: string; type?: "website" | "article"; ogFile?: boolean }): Metadata {
   const s = { ...fallback, ...SEO[route] } as PageSeo;
   const title = s.title || fallback?.title || "Corevex Solutions";
   const description = s.description || fallback?.description || "";
@@ -21,8 +21,8 @@ export function pageMetadata(route: string, fallback?: Partial<PageSeo> & { imag
     title: { absolute: title },
     description,
     alternates: { canonical: route },
-    openGraph: { type, title: s.ogTitle || title, description, url: route, siteName: "Corevex Solutions", images: [{ url: image, width: 1200, height: 630 }] },
-    twitter: { card: "summary_large_image", title: s.ogTitle || title, description, images: [image] },
+    openGraph: { type, title: s.ogTitle || title, description, url: route, siteName: "Corevex Solutions", ...(fallback?.ogFile ? {} : { images: [{ url: image, width: 1200, height: 630 }] }) },
+    twitter: { card: "summary_large_image", title: s.ogTitle || title, description, ...(fallback?.ogFile ? {} : { images: [image] }) },
   };
 }
 

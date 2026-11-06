@@ -11,7 +11,7 @@
 - [x] Phase 7: Sanity schemas, seed script, embedded Studio at /studio (needs project keys, see TODO.md)
 - [x] Phase 8: Calendly popup on first click, teal, 30-minute wording everywhere
 - [x] Phase 9: contact (3 steps), careers (PDF, 5 MB, Blob for large files), newsletter with honeypot, rate limit, Resend
-- [ ] Phase 10: SEO, sitemap, robots, llms.txt, headers
+- [x] Phase 10: metadata and canonicals on every page, generated OG images (/og/*.png), sitemap.xml, robots.txt, llms.txt, JSON-LD from reference, security headers
 - [ ] Phase 11: Lighthouse CI, Playwright, link and content checks
 
 ## Next steps

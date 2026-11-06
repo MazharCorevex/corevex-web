@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const c = await getCaseStudy(slug);
   if (!c) return {};
-  return pageMetadata(`/work/${slug}/`, { title: c.seoTitle || `${c.name}: Case Study, Corevex`, description: c.description, image: c.image });
+  return pageMetadata(`/work/${slug}/`, { title: c.seoTitle || `${c.name}: Case Study, Corevex`, description: c.description, image: `/og/work/${slug}.png` });
 }
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {

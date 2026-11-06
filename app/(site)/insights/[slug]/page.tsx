@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const a = await getArticle(slug);
   if (!a) return {};
-  return pageMetadata(`/insights/${slug}/`, { title: a.seoTitle || a.title, description: a.description, image: a.image, type: "article" });
+  return pageMetadata(`/insights/${slug}/`, { title: a.seoTitle || a.title, description: a.description, type: "article", image: `/og/insights/${slug}.png` });
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
