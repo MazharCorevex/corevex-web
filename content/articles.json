@@ -1,0 +1,4524 @@
+[
+ {
+  "slug": "what-is-agent-as-a-service",
+  "title": "What is Agent as a Service (AaaS)? A practical guide for 2026",
+  "seoTitle": "What is Agent as a Service (AaaS)? 2026 Guide | Corevex",
+  "description": "Agent as a Service explained: how businesses subscribe to AI agents that do real work, how AaaS differs from SaaS, costs, risks and how to start.",
+  "category": "AI Agents",
+  "categoryKey": "agents",
+  "readTime": 8,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-aaas.webp",
+  "imageAlt": "",
+  "keywords": "agent as a service",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "AaaS lets you subscribe to AI agents that complete tasks, rather than buying software your team must operate.",
+   "It works best for repetitive, rule-based work spread across several tools.",
+   "Start with one measurable workflow, keep a person in the loop, then expand."
+  ],
+  "toc": [
+   {
+    "label": "What Agent as a Service means",
+    "anchor": "s0"
+   },
+   {
+    "label": "AaaS vs SaaS: the key difference",
+    "anchor": "s1"
+   },
+   {
+    "label": "Where Agent as a Service delivers the most value",
+    "anchor": "s2"
+   },
+   {
+    "label": "How to adopt AaaS safely",
+    "anchor": "s3"
+   },
+   {
+    "label": "What it costs",
+    "anchor": "s4"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "651f80d9a7ef",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a7fc6b89a23b",
+      "text": "Software as a Service gave businesses tools. Agent as a Service, often shortened to AaaS, gives them workers. Instead of logging in to an app and doing the work yourself, you subscribe to an AI agent that does the work for you, inside the tools you already use.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0a826280fb6f",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5980c6ba1e5f",
+      "text": "What Agent as a Service means",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "bd57667baf7f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1cd35ee6e858",
+      "text": "An AI agent is software that understands a goal, plans the steps, uses tools such as your email, CRM or helpdesk, and checks its own results. Agent as a Service packages that agent as a managed subscription. The provider builds, hosts, monitors and improves the agent; you pay for the outcome or the usage.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f63f18e0d0f0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c54edb069c00",
+      "text": "Typical AaaS agents include a support agent that resolves common tickets, a sales agent that qualifies leads and books meetings, a finance agent that processes invoices, and an operations agent that keeps orders and inventory in sync.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bb612e7afc90",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c2c899c87833",
+      "text": "AaaS vs SaaS: the key difference",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "ed3c0fcb37c4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b027acf721c9",
+      "text": "SaaS sells access to a tool. Your team still clicks, types and decides. AaaS sells completed work. The agent takes the action and hands off to a person only when it is unsure or when a decision needs approval.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ad1b517b0705",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2dc15042e09d",
+      "text": "This changes how value is measured. With SaaS you count seats. With AaaS you count tasks completed, hours saved or tickets resolved.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "03d6953e4e9c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1573aa19c1b0",
+      "text": "Where Agent as a Service delivers the most value",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "811c355845ed",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ff0c29564c07",
+      "text": "The strongest use cases share three traits: the work is repetitive, it follows clear rules, and it touches several systems. Customer support triage, lead qualification, appointment scheduling, invoice processing, order updates and internal reporting are common starting points.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7294ee4a56cd",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1b72011e184c",
+      "text": "Work that depends on judgment, relationships or creativity still benefits from agents, but as assistants that prepare drafts rather than as fully automated workers.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1963e31b54bf",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "35c523fb2e81",
+      "text": "How to adopt AaaS safely",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "79e1bcfb31db",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "57508215f021",
+      "text": "Pick one workflow you can measure, such as first reply time or invoices processed per day. Define what the agent may do on its own and what needs approval. Connect only the systems it needs, with the least access required, and log every action so your team can review it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5b5f2ce320af",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "651f2f8e8be8",
+      "text": "Run the agent alongside your team for a few weeks, compare results, then widen its scope. Good AaaS providers report accuracy, escalations and time saved every week.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a4695d32855f",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1afe85bc62ae",
+      "text": "What it costs",
+      "marks": []
+     }
+    ],
+    "anchor": "s4"
+   },
+   {
+    "_type": "block",
+    "_key": "4b4a7abb3be8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bbdcbc3efad9",
+      "text": "AaaS is usually priced per task, per agent or as a monthly subscription that includes hosting and monitoring. The real comparison is not against software licenses but against the hours the agent removes from your team each month.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "table",
+    "_key": "d73a135e7697",
+    "rows": [
+     {
+      "_key": "4e129e2aa1e3",
+      "_type": "tableRow",
+      "cells": [
+       "Factor",
+       "SaaS",
+       "Agent as a Service"
+      ]
+     },
+     {
+      "_key": "797f16efbe32",
+      "_type": "tableRow",
+      "cells": [
+       "What you buy",
+       "Access to a tool",
+       "Completed work"
+      ]
+     },
+     {
+      "_key": "391fddec4be7",
+      "_type": "tableRow",
+      "cells": [
+       "Who does the task",
+       "Your team",
+       "The AI agent, with human review"
+      ]
+     },
+     {
+      "_key": "8e44c3dbf9ce",
+      "_type": "tableRow",
+      "cells": [
+       "How value is measured",
+       "Seats and features",
+       "Tasks, hours saved, outcomes"
+      ]
+     },
+     {
+      "_key": "a5677462385c",
+      "_type": "tableRow",
+      "cells": [
+       "Setup",
+       "Configure the tool",
+       "Map the workflow and permissions"
+      ]
+     }
+    ],
+    "hasHeader": true
+   },
+   {
+    "_type": "block",
+    "_key": "3f71719e5f6b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a3429d27df0b",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "bdc3b3e619b6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "08c61330d1a4",
+      "text": "Is Agent as a Service the same as a chatbot?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "da356ff45334",
+      "text": " No. A chatbot answers questions. An AaaS agent takes actions across your systems, such as updating records, sending replies or booking meetings.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e4ba923a8ab1",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "49209803a36f",
+      "text": "Will AaaS replace my team?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5da2751d7b51",
+      "text": " It removes repetitive tasks so your team can focus on work that needs people. Most businesses redeploy time rather than reduce headcount.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "acf41ddd074b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "23ceff4eadbe",
+      "text": "How long does it take to launch an AI agent?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e8baffec4568",
+      "text": " A focused first agent for one workflow can usually be designed, connected and tested in a few weeks, then expanded in stages.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is Agent as a Service the same as a chatbot?",
+    "a": "No. A chatbot answers questions. An AaaS agent takes actions across your systems, such as updating records, sending replies or booking meetings."
+   },
+   {
+    "q": "Will AaaS replace my team?",
+    "a": "It removes repetitive tasks so your team can focus on work that needs people. Most businesses redeploy time rather than reduce headcount."
+   },
+   {
+    "q": "How long does it take to launch an AI agent?",
+    "a": "A focused first agent for one workflow can usually be designed, connected and tested in a few weeks, then expanded in stages."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore AI Agents as a Service",
+    "href": "/services/ai-agents-as-a-service/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Agent as a Service explained: how businesses subscribe to AI agents that do real work, how AaaS differs from SaaS, costs, risks and how to start.",
+  "featured": true,
+  "order": 0,
+  "homeOrder": 0,
+  "homeTeaser": "How businesses subscribe to AI agents that do real work, and how to start safely.",
+  "cardAlt": "Business owner choosing AI agents from an Agent as a Service marketplace",
+  "related": [
+   "vibe-coded-app-rescue",
+   "agentic-ai-explained",
+   "how-to-build-a-saas-application"
+  ]
+ },
+ {
+  "slug": "vibe-coded-app-rescue",
+  "title": "Vibe-coded your MVP? 9 signs it needs a rescue",
+  "seoTitle": "Vibe-Coded Your MVP? 9 Signs It Needs a Rescue | Corevex",
+  "description": "Built your app with Lovable, Bolt, Replit or Cursor? Nine signs your vibe-coded MVP needs a professional rescue before launch, and what to fix first.",
+  "category": "Code Rescue",
+  "categoryKey": "rescue",
+  "readTime": 7,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-vibe-rescue.webp",
+  "imageAlt": "",
+  "keywords": "fix vibe coded app",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "AI builders are great for demos but often skip security, billing and permissions.",
+   "Most apps can be rescued without a full rebuild.",
+   "Fix what blocks launch first: security, payments and critical bugs."
+  ],
+  "toc": [
+   {
+    "label": "1. Every fix breaks something else",
+    "anchor": "s0"
+   },
+   {
+    "label": "2. Your API keys are in the browser",
+    "anchor": "s1"
+   },
+   {
+    "label": "3. Anyone can read anyone else's data",
+    "anchor": "s2"
+   },
+   {
+    "label": "4. Payments work, until they do not",
+    "anchor": "s3"
+   },
+   {
+    "label": "5. There are no real user roles",
+    "anchor": "s4"
+   },
+   {
+    "label": "6. Pages slow down as data grows",
+    "anchor": "s5"
+   },
+   {
+    "label": "7. Deploying feels risky",
+    "anchor": "s6"
+   },
+   {
+    "label": "8. Users get lost in the interface",
+    "anchor": "s7"
+   },
+   {
+    "label": "9. Nobody else can work on the code",
+    "anchor": "s8"
+   },
+   {
+    "label": "What a rescue looks like",
+    "anchor": "s9"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "115a964f0aab",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "da597edeefc1",
+      "text": "Vibe coding with tools like Lovable, Bolt, Replit and Cursor lets founders go from idea to working demo in days. The trouble starts when real users, real payments and real data arrive. These nine signs tell you it is time to bring in engineers.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6df367c9f3d9",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5898c86c090a",
+      "text": "1. Every fix breaks something else",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "548dc13dc580",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "91a5028c6ded",
+      "text": "When changing one screen breaks two others, the code has no clear structure. That is the point where prompting harder stops working.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "790aef6f9419",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "65acfd300b98",
+      "text": "2. Your API keys are in the browser",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "793eb94b3e87",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c239a0b95cf8",
+      "text": "Keys and secrets visible in front-end code can be copied by anyone. They belong on the server, with access limited to what each feature needs.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d4b4efd7aa1c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "081f53e50250",
+      "text": "3. Anyone can read anyone else's data",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "0486cd2ae4e9",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f165e7a8b5db",
+      "text": "Missing database rules or row-level security mean one user can see another user's records. This is the most common and most serious gap in AI-built apps.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f0b19d4d77eb",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "143fafea4372",
+      "text": "4. Payments work, until they do not",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "82c2b7591394",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "265356588ee9",
+      "text": "Trials, upgrades, failed cards and refunds need proper handling. Half-finished billing quietly loses revenue and trust.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "24d6f07c1512",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3c7d4cfd0cfa",
+      "text": "5. There are no real user roles",
+      "marks": []
+     }
+    ],
+    "anchor": "s4"
+   },
+   {
+    "_type": "block",
+    "_key": "ea5c0a898a63",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "254f52cf45b9",
+      "text": "If admins, team members and customers all see the same thing, you need role-based access control before you onboard real teams.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "fba0cfe441e7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4952c016a936",
+      "text": "6. Pages slow down as data grows",
+      "marks": []
+     }
+    ],
+    "anchor": "s5"
+   },
+   {
+    "_type": "block",
+    "_key": "c2a36b897ee0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "25f3622f3228",
+      "text": "Queries that were fine with ten records crawl with ten thousand. Indexes, pagination and caching fix this early and cheaply.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "dc2a9ba94ac2",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3d68f99c2715",
+      "text": "7. Deploying feels risky",
+      "marks": []
+     }
+    ],
+    "anchor": "s6"
+   },
+   {
+    "_type": "block",
+    "_key": "04517978de65",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a03025dda912",
+      "text": "If every release is a manual leap of faith, you need separate environments, automated deployments and monitoring.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ad62733eb6ad",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1999a3db6a64",
+      "text": "8. Users get lost in the interface",
+      "marks": []
+     }
+    ],
+    "anchor": "s7"
+   },
+   {
+    "_type": "block",
+    "_key": "de6460a85a4a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "047bfcb95f19",
+      "text": "Generated screens often look fine but confuse people. A focused UI/UX pass on the core journey can lift sign-ups and retention.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5ea050a8b0a7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "87daae8e5fc2",
+      "text": "9. Nobody else can work on the code",
+      "marks": []
+     }
+    ],
+    "anchor": "s8"
+   },
+   {
+    "_type": "block",
+    "_key": "8932d5173e70",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "00cd6e3cbc2f",
+      "text": "If a new developer cannot understand the project in a day, you need structure, documentation and tests before you hire or raise.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b59f4371a691",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d61f7847014c",
+      "text": "What a rescue looks like",
+      "marks": []
+     }
+    ],
+    "anchor": "s9"
+   },
+   {
+    "_type": "block",
+    "_key": "2e6a71ad3edb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4272b96219db",
+      "text": "A good rescue starts with a code audit, fixes whatever blocks launch first, then hardens security, roles and billing. Most apps are rescued, not rebuilt, so you keep your momentum and your investment.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b8cf23658388",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d20d8c360162",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "e418850aed29",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "eb27f64eaf0f",
+      "text": "Can a vibe-coded app be made production-ready?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "137d9a481c65",
+      "text": " Yes, in most cases. The working parts are kept and the weak foundations are fixed step by step.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "69e6e31144e3",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5f9b3a6075ff",
+      "text": "How long does a code rescue take?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "6514e1db3386",
+      "text": " It depends on the app and the issues found in the audit. Critical fixes come first so you can keep moving.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3d71a40270fc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0eb7a755650c",
+      "text": "Do I need to stop using AI coding tools?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "4eb1a72e1cd0",
+      "text": " No. Many teams keep using them for speed, with engineers reviewing and structuring the code.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can a vibe-coded app be made production-ready?",
+    "a": "Yes, in most cases. The working parts are kept and the weak foundations are fixed step by step."
+   },
+   {
+    "q": "How long does a code rescue take?",
+    "a": "It depends on the app and the issues found in the audit. Critical fixes come first so you can keep moving."
+   },
+   {
+    "q": "Do I need to stop using AI coding tools?",
+    "a": "No. Many teams keep using them for speed, with engineers reviewing and structuring the code."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore Code Rescue",
+    "href": "/services/code-rescue/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Built your app with Lovable, Bolt, Replit or Cursor? Nine signs your vibe-coded MVP needs a professional rescue before launch, and what to fix first.",
+  "featured": false,
+  "order": 1,
+  "related": [
+   "agentic-ai-explained",
+   "how-to-build-a-saas-application",
+   "what-is-mcp-model-context-protocol"
+  ]
+ },
+ {
+  "slug": "agentic-ai-explained",
+  "title": "Agentic AI explained: how AI agents plan, act and use tools",
+  "seoTitle": "Agentic AI Explained: How AI Agents Work | Corevex",
+  "description": "Agentic AI in plain language: how AI agents plan tasks, call tools, check results and work with people, plus where agentic AI fits in your business.",
+  "category": "AI Agents",
+  "categoryKey": "agents",
+  "readTime": 7,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-agentic.webp",
+  "imageAlt": "",
+  "keywords": "agentic AI",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Agentic AI systems pursue a goal across several steps instead of answering a single prompt.",
+   "They combine a language model, tools, memory and guardrails.",
+   "Reliability comes from narrow scope, clear permissions and human review."
+  ],
+  "toc": [
+   {
+    "label": "The four parts of an AI agent",
+    "anchor": "s0"
+   },
+   {
+    "label": "How an agent works through a task",
+    "anchor": "s1"
+   },
+   {
+    "label": "Single agents and multi-agent systems",
+    "anchor": "s2"
+   },
+   {
+    "label": "Making agentic AI reliable",
+    "anchor": "s3"
+   },
+   {
+    "label": "Where to start",
+    "anchor": "s4"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "0af01a800bbc",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ca2324f10d62",
+      "text": "Most people met AI through chat: you ask, it answers. Agentic AI goes further. Give it a goal and it works out the steps, uses tools to carry them out, and checks whether the job is done. That shift from answering to acting is why agentic AI is the biggest change in business software this decade.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "32fd32fbfdfc",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "79290a9655d7",
+      "text": "The four parts of an AI agent",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "49c669785ed7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "86eff60e19b5",
+      "text": "A language model provides reasoning and language. Tools let the agent act, for example searching a database, sending an email or updating a CRM. Memory keeps context across steps and sessions. Guardrails define what the agent may and may not do.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "57f473bedd0c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fd00e6706cce",
+      "text": "Together these let an agent take a request like \"follow up with every lead that went quiet this week\" and complete it end to end.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "92c1c04486d4",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "59c4b1ac8dfe",
+      "text": "How an agent works through a task",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "b64efdfcf612",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8c03a8c609e2",
+      "text": "The agent reads the goal, breaks it into steps, chooses a tool for the first step, looks at the result, and decides what to do next. It repeats this loop until the goal is met or it needs help. Well-designed agents stop and ask a person when confidence is low.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "509a0c76ac37",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9f7e1a0f531d",
+      "text": "Single agents and multi-agent systems",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "568f1e8b3867",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "038a7a824071",
+      "text": "Simple jobs need one agent. Larger processes can use several specialised agents, such as one that researches, one that drafts and one that checks, coordinated by an orchestrator. More agents add capability but also complexity, so start with one.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "39cfd6a6a240",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7f02bb3159ad",
+      "text": "Making agentic AI reliable",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "8ee0e666df6f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "775f01d4b622",
+      "text": "Keep the scope narrow, give the agent only the access it needs, log every action, and test it against real examples before launch. Measure accuracy, escalation rate and time saved, and review those numbers weekly during the first months.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "adb0dbd38070",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5d3fa5c9e528",
+      "text": "Where to start",
+      "marks": []
+     }
+    ],
+    "anchor": "s4"
+   },
+   {
+    "_type": "block",
+    "_key": "ae79a3c62085",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "077a82db9c77",
+      "text": "Look for a workflow your team repeats daily that touches two or three tools. Support triage, lead follow-up and report preparation are common first agents with clear, measurable results.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "384901ff302a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ed45a599b8b6",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "6a884d6bfd8f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a3ce493ffef8",
+      "text": "What is the difference between agentic AI and generative AI?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d6b31f189af3",
+      "text": " Generative AI creates content such as text or images. Agentic AI uses that ability to plan and take actions toward a goal.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "555b19483615",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "03c9b81ecf68",
+      "text": "Are AI agents safe to connect to business systems?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e8d7b43bb364",
+      "text": " Yes, when they run with limited permissions, approval steps for sensitive actions and full logging.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "369bc2b32703",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "98fac7c889e4",
+      "text": "Do I need a large AI team to use agentic AI?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e3788807df03",
+      "text": " No. A focused agent can be built and managed by a specialised partner and improved over time.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between agentic AI and generative AI?",
+    "a": "Generative AI creates content such as text or images. Agentic AI uses that ability to plan and take actions toward a goal."
+   },
+   {
+    "q": "Are AI agents safe to connect to business systems?",
+    "a": "Yes, when they run with limited permissions, approval steps for sensitive actions and full logging."
+   },
+   {
+    "q": "Do I need a large AI team to use agentic AI?",
+    "a": "No. A focused agent can be built and managed by a specialised partner and improved over time."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore AI Agents as a Service",
+    "href": "/services/ai-agents-as-a-service/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Agentic AI in plain language: how AI agents plan tasks, call tools, check results and work with people, plus where agentic AI fits in your business.",
+  "featured": false,
+  "order": 2,
+  "homeOrder": 1,
+  "related": [
+   "how-to-build-a-saas-application",
+   "what-is-mcp-model-context-protocol",
+   "what-is-rag"
+  ]
+ },
+ {
+  "slug": "how-to-build-a-saas-application",
+  "title": "How to build a SaaS application: architecture, multi-tenancy and billing",
+  "seoTitle": "How to Build a SaaS Application in 2026 | Corevex",
+  "description": "A practical guide to SaaS application development: planning the MVP, multi-tenant architecture, subscriptions and billing, security and scaling.",
+  "category": "SaaS",
+  "categoryKey": "saas",
+  "readTime": 9,
+  "author": "Mazhar H",
+  "authorRole": "CEO and Founder",
+  "image": "/images/photos/ins-saas-build.webp",
+  "imageAlt": "",
+  "keywords": "SaaS application development",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Validate one core use case before building every feature.",
+   "Decide on multi-tenancy, roles and billing early, because they shape the whole architecture.",
+   "Plan for onboarding, analytics and support from day one."
+  ],
+  "toc": [
+   {
+    "label": "Start with the problem and the MVP",
+    "anchor": "s0"
+   },
+   {
+    "label": "Choose a multi-tenant architecture",
+    "anchor": "s1"
+   },
+   {
+    "label": "Roles, permissions and onboarding",
+    "anchor": "s2"
+   },
+   {
+    "label": "Subscriptions and billing",
+    "anchor": "s3"
+   },
+   {
+    "label": "Security, reliability and scaling",
+    "anchor": "s4"
+   },
+   {
+    "label": "A practical tech stack",
+    "anchor": "s5"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "e38bf672d77c",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2f469044057c",
+      "text": "Building a SaaS product is different from building a website or an internal tool. Many customers share one platform, they pay on a schedule, and they expect it to be online and secure every hour of every day. Getting a few foundations right early saves months later.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d03b5f5111fa",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6b6ad779c9c3",
+      "text": "Start with the problem and the MVP",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "603f793c1298",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "02d1e9a65ab2",
+      "text": "Define the one job your product does better than anything else, and for whom. Build the smallest version that delivers that job well: sign-up, the core workflow and a way to pay. Everything else can wait for real user feedback.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "84dddef9de9d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cc39798b5642",
+      "text": "Choose a multi-tenant architecture",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "22ed0e3059b4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e04189a7a8d5",
+      "text": "Multi-tenancy means one application serves many customer accounts while keeping their data separate. Common approaches are a shared database with a tenant identifier on every record, a separate schema per tenant, or a separate database per tenant for enterprise customers. The right choice depends on data sensitivity, scale and compliance needs.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d817721da5c7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bd901417b3bf",
+      "text": "Roles, permissions and onboarding",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "e645faf78586",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4ad8aee9c021",
+      "text": "Most SaaS products need organisation accounts, user invitations and roles such as owner, admin and member. A guided onboarding flow that gets a new user to their first result quickly has more effect on retention than almost any feature.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "719f810c3f85",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "150b04278729",
+      "text": "Subscriptions and billing",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "999d0f916024",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "35dffa57e32f",
+      "text": "Decide how you charge: per seat, per usage, tiered plans or a mix. Use a proven billing provider for payments, invoices, tax and failed-payment handling, and connect it to plan limits inside your app so upgrades and downgrades happen automatically.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3c57ce0b969b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "401ca75e2d5e",
+      "text": "Security, reliability and scaling",
+      "marks": []
+     }
+    ],
+    "anchor": "s4"
+   },
+   {
+    "_type": "block",
+    "_key": "dfd01e08c7f9",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cdc5e3e3a768",
+      "text": "Encrypt data in transit and at rest, enforce tenant isolation in every query, add audit logs and back up regularly. Use managed cloud services, automated deployments and monitoring so you can release often without downtime.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "effb44434846",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d7015d695583",
+      "text": "A practical tech stack",
+      "marks": []
+     }
+    ],
+    "anchor": "s5"
+   },
+   {
+    "_type": "block",
+    "_key": "221fb4bb9a68",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5a46fd050353",
+      "text": "A typical modern SaaS stack uses Next.js or Angular for the web app, Node.js, .NET or Python for the API, a relational database such as PostgreSQL, and cloud hosting with CI/CD. Add AI features through APIs once the core product is stable.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "table",
+    "_key": "379768124fe9",
+    "rows": [
+     {
+      "_key": "2b7c03e8b66d",
+      "_type": "tableRow",
+      "cells": [
+       "Decision",
+       "Options",
+       "When it fits"
+      ]
+     },
+     {
+      "_key": "a013288fba7d",
+      "_type": "tableRow",
+      "cells": [
+       "Tenancy",
+       "Shared database, schema per tenant, database per tenant",
+       "From fast MVP to enterprise isolation"
+      ]
+     },
+     {
+      "_key": "dfdeac608896",
+      "_type": "tableRow",
+      "cells": [
+       "Pricing",
+       "Per seat, usage-based, tiered plans",
+       "Depends on how customers get value"
+      ]
+     },
+     {
+      "_key": "78dc2d9bf6ef",
+      "_type": "tableRow",
+      "cells": [
+       "Front end",
+       "Next.js, Angular",
+       "Public product or complex admin app"
+      ]
+     },
+     {
+      "_key": "2a4e63c1cfba",
+      "_type": "tableRow",
+      "cells": [
+       "Back end",
+       "Node.js, .NET, Python",
+       "Team skills and integration needs"
+      ]
+     }
+    ],
+    "hasHeader": true
+   },
+   {
+    "_type": "block",
+    "_key": "f8e6fdb20b79",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ca59c145f6d6",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "bbe6487821a9",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d66d976446e3",
+      "text": "How long does it take to build a SaaS MVP?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "82079cd6aeae",
+      "text": " A focused MVP with sign-up, the core workflow and billing is usually built in a few months, then improved in short cycles.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "aa6ea4d429a4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5795b974b26a",
+      "text": "Should a SaaS product be multi-tenant from the start?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "b4f05e31e856",
+      "text": " Yes. Adding tenant separation later is much harder than designing for it on day one.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "80d269dd62e6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bb7383c188b9",
+      "text": "Can AI features be added to a SaaS product later?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "0fadde35cee5",
+      "text": " Yes. Most AI features connect through APIs and can be added once the core product is stable.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How long does it take to build a SaaS MVP?",
+    "a": "A focused MVP with sign-up, the core workflow and billing is usually built in a few months, then improved in short cycles."
+   },
+   {
+    "q": "Should a SaaS product be multi-tenant from the start?",
+    "a": "Yes. Adding tenant separation later is much harder than designing for it on day one."
+   },
+   {
+    "q": "Can AI features be added to a SaaS product later?",
+    "a": "Yes. Most AI features connect through APIs and can be added once the core product is stable."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore SaaS App Development",
+    "href": "/services/saas-app-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "A practical guide to SaaS application development: planning the MVP, multi-tenant architecture, subscriptions and billing, security and scaling.",
+  "featured": false,
+  "order": 3,
+  "homeOrder": 2,
+  "related": [
+   "what-is-mcp-model-context-protocol",
+   "what-is-rag",
+   "add-llm-to-your-product"
+  ]
+ },
+ {
+  "slug": "what-is-mcp-model-context-protocol",
+  "title": "What is MCP (Model Context Protocol) and why it matters for business AI",
+  "seoTitle": "What is MCP (Model Context Protocol)? Explained | Corevex",
+  "description": "Model Context Protocol explained simply: how MCP connects AI assistants and agents to your tools and data securely, and why it speeds up AI integration.",
+  "category": "AI and LLM",
+  "categoryKey": "ai",
+  "readTime": 6,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-mcp.webp",
+  "imageAlt": "",
+  "keywords": "Model Context Protocol",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "MCP is an open standard that lets AI assistants connect to tools and data in a consistent way.",
+   "It replaces one-off integrations with reusable connectors.",
+   "Access control and logging still need to be designed carefully."
+  ],
+  "toc": [
+   {
+    "label": "How MCP works",
+    "anchor": "s0"
+   },
+   {
+    "label": "Why it matters",
+    "anchor": "s1"
+   },
+   {
+    "label": "Business use cases",
+    "anchor": "s2"
+   },
+   {
+    "label": "Security considerations",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "df541c2c4d59",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "466a8cad51f3",
+      "text": "Every useful AI assistant needs access to real information: your calendar, CRM, files or database. Until recently each connection was built by hand. The Model Context Protocol, or MCP, is an open standard that makes those connections consistent, so one connector can work with many AI tools.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9b900175567a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5568ca9f7d28",
+      "text": "How MCP works",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "4966c50d0508",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "795192ed9d00",
+      "text": "An MCP server exposes a system, such as a CRM or a document store, as a set of tools and resources an AI can use. An AI application that supports MCP can discover those tools and call them when a task needs them, for example to look up a customer or create a ticket.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "55b406f2a9f1",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "893a5c2955e1",
+      "text": "Why it matters",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "6c721a17401d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c08e6b8b900d",
+      "text": "Without a standard, connecting five AI tools to five business systems can mean twenty-five custom integrations. With MCP, each system needs one server and each AI tool needs one client. That cuts integration time and makes it easier to switch or add AI models later.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "57a47b6ab792",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "95de7104cbba",
+      "text": "Business use cases",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "c34dc5a36c0f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "abf0111c1a8a",
+      "text": "Internal assistants that answer questions from company documents, support agents that read order history before replying, and sales assistants that update the CRM after a call are all simpler to build when the underlying systems expose MCP servers.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cb68e9ab8e75",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e089d9824f57",
+      "text": "Security considerations",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "fa2f99938b00",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fdf8ab42df65",
+      "text": "MCP does not remove the need for good access design. Give each connection the least access required, require approval for sensitive actions, and log every call so you can audit what the AI did and why.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9eaa63649988",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "88c1df2794f6",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "eab944a87632",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "369a195ce445",
+      "text": "Is MCP only for one AI model?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "dfcfbdde2ef6",
+      "text": " No. MCP is an open protocol designed to work across different AI applications and models.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "71049d517138",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9840455d3aba",
+      "text": "Do I need MCP to use AI agents?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "8e2c6463daf7",
+      "text": " Not always, but it makes connecting agents to many tools faster and easier to maintain.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "60a26032d7d7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0ea97c416320",
+      "text": "Can you build an MCP server for our own system?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "0e017d7fb854",
+      "text": " Yes. A custom MCP server can expose your internal APIs or database to AI tools with the permissions you choose.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is MCP only for one AI model?",
+    "a": "No. MCP is an open protocol designed to work across different AI applications and models."
+   },
+   {
+    "q": "Do I need MCP to use AI agents?",
+    "a": "Not always, but it makes connecting agents to many tools faster and easier to maintain."
+   },
+   {
+    "q": "Can you build an MCP server for our own system?",
+    "a": "Yes. A custom MCP server can expose your internal APIs or database to AI tools with the permissions you choose."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore AI and LLM development",
+    "href": "/services/ai-llm-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Model Context Protocol explained simply: how MCP connects AI assistants and agents to your tools and data securely, and why it speeds up AI integration.",
+  "featured": false,
+  "order": 4,
+  "homeOrder": 3,
+  "related": [
+   "what-is-rag",
+   "add-llm-to-your-product",
+   "processes-to-automate-with-ai-agents"
+  ]
+ },
+ {
+  "slug": "what-is-rag",
+  "title": "What is RAG (retrieval augmented generation) and why it makes AI accurate",
+  "seoTitle": "What is RAG? Retrieval Augmented Generation Explained | Corevex",
+  "description": "Retrieval augmented generation explained in plain language: how RAG grounds AI answers in your own documents, where it works best and how to build it well.",
+  "category": "AI and LLM",
+  "categoryKey": "ai",
+  "readTime": 6,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-rag.webp",
+  "imageAlt": "",
+  "keywords": "retrieval augmented generation",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "RAG lets an AI look up your own documents before answering.",
+   "It reduces made-up answers and can show sources.",
+   "Quality depends on clean content, good retrieval and testing."
+  ],
+  "toc": [
+   {
+    "label": "How RAG works",
+    "anchor": "s0"
+   },
+   {
+    "label": "Why it improves accuracy",
+    "anchor": "s1"
+   },
+   {
+    "label": "Where RAG works best",
+    "anchor": "s2"
+   },
+   {
+    "label": "What it takes to do well",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "4165b26135c5",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dc4038547b93",
+      "text": "Large language models write well, but they do not know your business. Retrieval augmented generation, or RAG, fixes that by letting the AI search your own content first and answer from what it finds.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d38df70ff409",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3096aff26b7e",
+      "text": "How RAG works",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "e966472f0698",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3ef1d521787a",
+      "text": "Your documents are split into small passages and stored in a search index, often a vector database. When someone asks a question, the system retrieves the most relevant passages and gives them to the model, which writes an answer based on them and can cite its sources.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9a89ab932880",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f9486e01cab3",
+      "text": "Why it improves accuracy",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "f82ee8878082",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "590f8d1ef23e",
+      "text": "The model answers from your real policies, manuals and data instead of guessing. When the answer is not in your content, a well-built system says so instead of inventing one.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f12d08b9f43b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3a9e7f9e9a2a",
+      "text": "Where RAG works best",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "accb949ded05",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "976785e6124f",
+      "text": "Customer support assistants, internal knowledge search, policy and compliance questions, product documentation and sales enablement are strong fits.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "80b078059b7a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "aedcad5f2c35",
+      "text": "What it takes to do well",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "5bc541c9aae0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "59429459487d",
+      "text": "Keep source content clean and current, split it sensibly, apply access controls so people only see what they should, and test against real questions before launch. Many teams now combine RAG with AI agents so the assistant can both answer and act.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9de48b1f1094",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d91491c1b308",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "6697aed8cdc4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b09f0909bf85",
+      "text": "Does RAG train the model on our data?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5b7b51ef5a27",
+      "text": " No. Your documents are searched at question time. The underlying model is not retrained.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0f433e2bd3ea",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a94fb1e69b59",
+      "text": "Can RAG answers include sources?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "f79a5cf8c214",
+      "text": " Yes. Showing source passages is one of its main benefits.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "661ca89baa17",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d983019389c4",
+      "text": "What is the difference between RAG and fine-tuning?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "c216b221e6ec",
+      "text": " RAG looks up current information at question time. Fine-tuning changes the model itself and is better for style or format than for facts that change.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Does RAG train the model on our data?",
+    "a": "No. Your documents are searched at question time. The underlying model is not retrained."
+   },
+   {
+    "q": "Can RAG answers include sources?",
+    "a": "Yes. Showing source passages is one of its main benefits."
+   },
+   {
+    "q": "What is the difference between RAG and fine-tuning?",
+    "a": "RAG looks up current information at question time. Fine-tuning changes the model itself and is better for style or format than for facts that change."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore AI and LLM development",
+    "href": "/services/ai-llm-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Retrieval augmented generation explained in plain language: how RAG grounds AI answers in your own documents, where it works best and how to build it well.",
+  "featured": false,
+  "order": 5,
+  "related": [
+   "add-llm-to-your-product",
+   "processes-to-automate-with-ai-agents",
+   "react-native-vs-flutter"
+  ]
+ },
+ {
+  "slug": "add-llm-to-your-product",
+  "title": "LLM integration: how to add generative AI to your existing product",
+  "seoTitle": "LLM Integration: Add Generative AI to Your Product | Corevex",
+  "description": "A step by step approach to LLM integration: choosing a first feature, connecting your data, designing for review and measuring results, without a rebuild.",
+  "category": "AI and LLM",
+  "categoryKey": "ai",
+  "readTime": 6,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-llm-feature.webp",
+  "imageAlt": "",
+  "keywords": "LLM integration",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Most LLM features are added alongside your product, not by rebuilding it.",
+   "Start with one task users already do by hand.",
+   "Design for review, then measure edits and usage."
+  ],
+  "toc": [
+   {
+    "label": "Pick one job for the AI",
+    "anchor": "s0"
+   },
+   {
+    "label": "Connect it to your data",
+    "anchor": "s1"
+   },
+   {
+    "label": "Design for review",
+    "anchor": "s2"
+   },
+   {
+    "label": "Measure and improve",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "2483f10580e0",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "773a40285ff2",
+      "text": "You do not need to rebuild your product to use AI. Most large language model features connect through APIs and a small amount of new infrastructure.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "44f0cfb821a0",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b843c4816b35",
+      "text": "Pick one job for the AI",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "081b60c39436",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1c047246c8d9",
+      "text": "Start with a single task users already do by hand: summarising, drafting, searching or classifying. A narrow first feature is easier to test and easier to trust.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "100c680ac2a7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "21347b4593e8",
+      "text": "Connect it to your data",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "e1bc8d84c343",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6d0a91d0165c",
+      "text": "Decide what information the feature needs and how it reaches the model safely. That might be the current record, a set of documents through RAG, or your own API through an MCP server.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "35076caf2e3d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0519184280ba",
+      "text": "Design for review",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "57cf3fbeacfc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "051eeb28c105",
+      "text": "Show users what the AI produced and let them edit or approve it. Clear review steps build trust and catch mistakes early.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "585c2c73088b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c82110c05858",
+      "text": "Measure and improve",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "34f72c3f029a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "385172135324",
+      "text": "Track usage, edits and feedback. Use real examples to improve prompts and retrieval before expanding to more features or turning the feature into an agent that acts on its own.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f33a33237c4a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3b9e82fd22f5",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "51a69ac033aa",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c43c476afb63",
+      "text": "Which LLM should we use?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "ca4d1bc8bdf8",
+      "text": " It depends on the task, cost and privacy needs. Testing two or three models against real examples is the fastest way to decide.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c681e4adc680",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e08d6c71eecd",
+      "text": "Is it expensive to run?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5a2bea10f93d",
+      "text": " Costs scale with usage. A focused feature with caching and sensible limits keeps them predictable.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1dba874d3e2e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8d3c8a38da63",
+      "text": "Can the feature run on our own servers?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "f840735eb001",
+      "text": " Yes. Open models can be hosted privately when data must stay in your environment.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Which LLM should we use?",
+    "a": "It depends on the task, cost and privacy needs. Testing two or three models against real examples is the fastest way to decide."
+   },
+   {
+    "q": "Is it expensive to run?",
+    "a": "Costs scale with usage. A focused feature with caching and sensible limits keeps them predictable."
+   },
+   {
+    "q": "Can the feature run on our own servers?",
+    "a": "Yes. Open models can be hosted privately when data must stay in your environment."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore AI and LLM development",
+    "href": "/services/ai-llm-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "A step by step approach to LLM integration: choosing a first feature, connecting your data, designing for review and measuring results, without a rebuild.",
+  "featured": false,
+  "order": 6,
+  "related": [
+   "processes-to-automate-with-ai-agents",
+   "react-native-vs-flutter",
+   "nextjs-vs-angular"
+  ]
+ },
+ {
+  "slug": "processes-to-automate-with-ai-agents",
+  "title": "7 business processes worth automating with AI agents in 2026",
+  "seoTitle": "7 Processes to Automate with AI Agents in 2026 | Corevex",
+  "description": "Seven everyday processes where AI automation saves the most time, from support triage to invoice processing, and how to start automating them safely.",
+  "category": "Automation",
+  "categoryKey": "automation",
+  "readTime": 7,
+  "author": "Zafar H",
+  "authorRole": "Chief Operating Officer",
+  "image": "/images/photos/ins-automate.webp",
+  "imageAlt": "",
+  "keywords": "AI automation for business",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "AI agents work best on repetitive, rule-based work across several tools.",
+   "Support, sales follow-up and finance are common quick wins.",
+   "Automate one process, measure it, then expand."
+  ],
+  "toc": [
+   {
+    "label": "1. Support triage",
+    "anchor": "s0"
+   },
+   {
+    "label": "2. Lead capture and follow-up",
+    "anchor": "s1"
+   },
+   {
+    "label": "3. Invoice processing",
+    "anchor": "s2"
+   },
+   {
+    "label": "4. Order and inventory updates",
+    "anchor": "s3"
+   },
+   {
+    "label": "5. Scheduling",
+    "anchor": "s4"
+   },
+   {
+    "label": "6. Reporting",
+    "anchor": "s5"
+   },
+   {
+    "label": "7. Employee onboarding",
+    "anchor": "s6"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "e357f6117439",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ee428b05c496",
+      "text": "AI agents are most useful where work repeats every day and moves between tools. These seven processes are where most businesses see results first.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "df59846e170e",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0be8a4d7fe3d",
+      "text": "1. Support triage",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "7df916050f3b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "62e151fe3a7d",
+      "text": "Classify incoming requests, answer common questions from your knowledge base and route the rest to the right person with context attached.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "19a8fa559ca0",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "59a3b4fe39f4",
+      "text": "2. Lead capture and follow-up",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "14094e575554",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "55a712de09b4",
+      "text": "Collect leads from forms and email, enrich them, add them to the CRM and send timely follow-ups.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "857edfe84184",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "556aaa686238",
+      "text": "3. Invoice processing",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "e2d14b5fdf28",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b8226fd74a26",
+      "text": "Extract invoice data, match it to purchase orders and send it for approval.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f3ed84a9aae8",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "42a906852c02",
+      "text": "4. Order and inventory updates",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "8bdd56e60147",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "383a1d493b67",
+      "text": "Keep stock levels, order status and customer notifications in sync across systems.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6c38bcbca50c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "57428beab200",
+      "text": "5. Scheduling",
+      "marks": []
+     }
+    ],
+    "anchor": "s4"
+   },
+   {
+    "_type": "block",
+    "_key": "8590c46255cf",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f54683694510",
+      "text": "Book, confirm and reschedule appointments without back-and-forth emails.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "84a221f5f596",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0c41ce4f0331",
+      "text": "6. Reporting",
+      "marks": []
+     }
+    ],
+    "anchor": "s5"
+   },
+   {
+    "_type": "block",
+    "_key": "5d5b0e113d3b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "77cf74e35da2",
+      "text": "Pull data from several tools and deliver a ready-to-read report every morning.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cd7df029f230",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b305cfb41261",
+      "text": "7. Employee onboarding",
+      "marks": []
+     }
+    ],
+    "anchor": "s6"
+   },
+   {
+    "_type": "block",
+    "_key": "018aad06c594",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2815fead672e",
+      "text": "Create accounts, send documents and track tasks for each new team member.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "dc8c7e9feff2",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ac7d8e31e404",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "eaf332260b58",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0dd98d905578",
+      "text": "Where should we start?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d55df193f702",
+      "text": " Pick the most repetitive process that is easy to measure, automate it, then expand.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "82be4bff1dce",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d3474038d5f0",
+      "text": "What happens when the agent is unsure?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "010019ee7aba",
+      "text": " A well-designed agent hands the task to a person with the context it has gathered.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7a63afef3132",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b42216236d02",
+      "text": "Can we subscribe to these agents instead of building them?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e49ecf0e337e",
+      "text": " Yes. Agent as a Service delivers ready, managed agents on a subscription.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Where should we start?",
+    "a": "Pick the most repetitive process that is easy to measure, automate it, then expand."
+   },
+   {
+    "q": "What happens when the agent is unsure?",
+    "a": "A well-designed agent hands the task to a person with the context it has gathered."
+   },
+   {
+    "q": "Can we subscribe to these agents instead of building them?",
+    "a": "Yes. Agent as a Service delivers ready, managed agents on a subscription."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore AI automation",
+    "href": "/services/ai-automation/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Seven everyday processes where AI automation saves the most time, from support triage to invoice processing, and how to start automating them safely.",
+  "featured": false,
+  "order": 7,
+  "related": [
+   "react-native-vs-flutter",
+   "nextjs-vs-angular",
+   "custom-software-vs-off-the-shelf"
+  ]
+ },
+ {
+  "slug": "react-native-vs-flutter",
+  "title": "React Native vs Flutter in 2026: which is right for your app?",
+  "seoTitle": "React Native vs Flutter in 2026: Which to Choose | Corevex",
+  "description": "React Native vs Flutter compared on performance, interface, team skills and maintenance, with a simple way to choose the right framework for your app.",
+  "category": "Mobile Apps",
+  "categoryKey": "mobile",
+  "readTime": 7,
+  "author": "Mazhar H",
+  "authorRole": "CEO and Founder",
+  "image": "/images/photos/ins-rn-vs-flutter.webp",
+  "imageAlt": "",
+  "keywords": "React Native vs Flutter",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Both ship one codebase to iOS and Android.",
+   "React Native suits teams using React and apps that share web logic.",
+   "Flutter suits highly custom, branded interfaces."
+  ],
+  "toc": [
+   {
+    "label": "How they work",
+    "anchor": "s0"
+   },
+   {
+    "label": "When React Native fits best",
+    "anchor": "s1"
+   },
+   {
+    "label": "When Flutter fits best",
+    "anchor": "s2"
+   },
+   {
+    "label": "What matters more than the framework",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "04d30570b461",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9acdf0920d96",
+      "text": "React Native and Flutter both let one team ship an app to iOS and Android from a single codebase. They get there in different ways, and the better choice depends on your product and your team.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a4f050cb9ea4",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "656911720eaf",
+      "text": "How they work",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "7a6a304c8de6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e66e27147074",
+      "text": "React Native uses JavaScript or TypeScript with React and renders native platform components. Flutter uses Dart and draws every pixel with its own rendering engine.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "dbc25acfb5b2",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a142b40e9ecf",
+      "text": "When React Native fits best",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "b2ae6e983b48",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2c9f483fdfad",
+      "text": "Choose React Native when your team already works in React, when the app shares logic or developers with a web product, or when you want the app to feel like a standard iOS or Android app.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "aae502f2590f",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1a35f36edce5",
+      "text": "When Flutter fits best",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "9425e2fd4229",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3daecac17af5",
+      "text": "Choose Flutter when the interface is highly custom, when you want pixel-identical visuals on every device, or when animation and branded design are central to the product.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "71e16a250332",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "190b3efa2ff1",
+      "text": "What matters more than the framework",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "ef101177a5b6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d4f46ab390f0",
+      "text": "Clear scope, good design and testing on real devices decide app quality far more than the framework. Both are mature and well supported.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "table",
+    "_key": "b6b9b901adc5",
+    "rows": [
+     {
+      "_key": "a7a92d5cada1",
+      "_type": "tableRow",
+      "cells": [
+       "Factor",
+       "React Native",
+       "Flutter"
+      ]
+     },
+     {
+      "_key": "2554deda4ca7",
+      "_type": "tableRow",
+      "cells": [
+       "Language",
+       "JavaScript or TypeScript",
+       "Dart"
+      ]
+     },
+     {
+      "_key": "d82e0c7079fe",
+      "_type": "tableRow",
+      "cells": [
+       "Interface",
+       "Native components",
+       "Own rendering engine"
+      ]
+     },
+     {
+      "_key": "b755e5ddda73",
+      "_type": "tableRow",
+      "cells": [
+       "Best for",
+       "React teams, shared web logic",
+       "Custom, branded interfaces"
+      ]
+     },
+     {
+      "_key": "f7136db4ecbd",
+      "_type": "tableRow",
+      "cells": [
+       "Web reuse",
+       "Strong with React",
+       "Possible, less common"
+      ]
+     }
+    ],
+    "hasHeader": true
+   },
+   {
+    "_type": "block",
+    "_key": "36ab3ace0c4c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f0bc3926b37f",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "7f7cb994473b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9317c2860edd",
+      "text": "Is one faster than the other?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d1e666e99ca6",
+      "text": " For most business apps, both are fast enough. Performance depends more on how the app is built.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1fecf3f063d1",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "42a711b1dcea",
+      "text": "Can we switch later?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "205679486da4",
+      "text": " Switching means rewriting the app, so choose carefully at the start.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7d13f4332b60",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "75454f83992b",
+      "text": "Which is better for an MVP?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "902a73139083",
+      "text": " Either works. Pick the one that matches your team and long-term roadmap.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is one faster than the other?",
+    "a": "For most business apps, both are fast enough. Performance depends more on how the app is built."
+   },
+   {
+    "q": "Can we switch later?",
+    "a": "Switching means rewriting the app, so choose carefully at the start."
+   },
+   {
+    "q": "Which is better for an MVP?",
+    "a": "Either works. Pick the one that matches your team and long-term roadmap."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore mobile app development",
+    "href": "/services/mobile-app-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "React Native vs Flutter compared on performance, interface, team skills and maintenance, with a simple way to choose the right framework for your app.",
+  "featured": false,
+  "order": 8,
+  "related": [
+   "nextjs-vs-angular",
+   "custom-software-vs-off-the-shelf",
+   "plan-an-mvp"
+  ]
+ },
+ {
+  "slug": "nextjs-vs-angular",
+  "title": "Next.js vs Angular for business web apps: how to choose",
+  "seoTitle": "Next.js vs Angular for Business Web Apps | Corevex",
+  "description": "Next.js vs Angular compared for business web applications: SEO, speed, structure, team size and long-term maintenance, with clear guidance on when to use each.",
+  "category": "Web Development",
+  "categoryKey": "web",
+  "readTime": 7,
+  "author": "Mazhar H",
+  "authorRole": "CEO and Founder",
+  "image": "/images/photos/ins-next-angular.webp",
+  "imageAlt": "",
+  "keywords": "Next.js vs Angular",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Next.js excels at fast, search-friendly products and SaaS.",
+   "Angular excels at large, form-heavy enterprise applications.",
+   "Both connect to any backend through APIs."
+  ],
+  "toc": [
+   {
+    "label": "Next.js in short",
+    "anchor": "s0"
+   },
+   {
+    "label": "Angular in short",
+    "anchor": "s1"
+   },
+   {
+    "label": "Choose Next.js when",
+    "anchor": "s2"
+   },
+   {
+    "label": "Choose Angular when",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "0d8f06271a30",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "df214e3621f3",
+      "text": "Next.js and Angular are both proven choices for serious web applications. They suit different kinds of products and teams.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5a7fe3264aed",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c17fe5c0e96e",
+      "text": "Next.js in short",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "b341e644d355",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7e1d70429e9e",
+      "text": "Next.js is built on React and is strong at fast, search-friendly websites and SaaS products. It handles server rendering, routing and performance out of the box.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9b615f7cee3b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "df6ecf9e9b84",
+      "text": "Angular in short",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "95a085b0dba0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1ce0287b862c",
+      "text": "Angular is a complete framework with strong conventions, which suits large teams building complex internal or enterprise applications.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4a89d926d78e",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1657cec9cd55",
+      "text": "Choose Next.js when",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "f65c3ebe565b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9c40093897cb",
+      "text": "Search visibility matters, the product mixes marketing pages and app screens, or your team already works in React.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "947351698da5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fbf9047c9674",
+      "text": "Choose Angular when",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "c02a1615480d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3e5baa2a8977",
+      "text": "You are building a large, form-heavy business application, your organisation already uses Angular, or you want strict structure across many developers.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "table",
+    "_key": "17b274b2d7e4",
+    "rows": [
+     {
+      "_key": "3454d86acc28",
+      "_type": "tableRow",
+      "cells": [
+       "Factor",
+       "Next.js",
+       "Angular"
+      ]
+     },
+     {
+      "_key": "f5e49b3953c2",
+      "_type": "tableRow",
+      "cells": [
+       "Based on",
+       "React",
+       "Its own framework"
+      ]
+     },
+     {
+      "_key": "a1ac8e1f48e3",
+      "_type": "tableRow",
+      "cells": [
+       "SEO",
+       "Excellent",
+       "Good with extra setup"
+      ]
+     },
+     {
+      "_key": "5098da81da13",
+      "_type": "tableRow",
+      "cells": [
+       "Structure",
+       "Flexible",
+       "Opinionated"
+      ]
+     },
+     {
+      "_key": "09c70c0292d7",
+      "_type": "tableRow",
+      "cells": [
+       "Best for",
+       "Public products and SaaS",
+       "Large enterprise apps"
+      ]
+     }
+    ],
+    "hasHeader": true
+   },
+   {
+    "_type": "block",
+    "_key": "236a4dbe07ed",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "79e295d39d92",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "8f22e013a115",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "262c2e501169",
+      "text": "Which is faster to build with?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "74f54bea28e1",
+      "text": " For most new products, Next.js reaches a first version quicker. Angular pays off on large, long-lived applications.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "67625282c3f2",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ce9325ce5205",
+      "text": "Can both use a .NET or Node.js backend?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "864611db5ddc",
+      "text": " Yes. Both work with any backend through APIs.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6088730ec962",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c98d527d3b5b",
+      "text": "Which is better for SaaS?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "a5832d213a98",
+      "text": " Next.js is the more common choice for SaaS products that need fast public pages and an app in one codebase.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Which is faster to build with?",
+    "a": "For most new products, Next.js reaches a first version quicker. Angular pays off on large, long-lived applications."
+   },
+   {
+    "q": "Can both use a .NET or Node.js backend?",
+    "a": "Yes. Both work with any backend through APIs."
+   },
+   {
+    "q": "Which is better for SaaS?",
+    "a": "Next.js is the more common choice for SaaS products that need fast public pages and an app in one codebase."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore full stack development",
+    "href": "/services/full-stack-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "Next.js vs Angular compared for business web applications: SEO, speed, structure, team size and long-term maintenance, with clear guidance on when to use each.",
+  "featured": false,
+  "order": 9,
+  "related": [
+   "custom-software-vs-off-the-shelf",
+   "plan-an-mvp",
+   "hire-a-dedicated-development-team"
+  ]
+ },
+ {
+  "slug": "custom-software-vs-off-the-shelf",
+  "title": "Custom software vs off-the-shelf: how to decide in 2026",
+  "seoTitle": "Custom Software vs Off-the-Shelf: How to Decide | Corevex",
+  "description": "How to choose between custom software and off-the-shelf tools, weighing fit, total cost, control, integrations and the new option of AI agents.",
+  "category": "Custom Software",
+  "categoryKey": "custom",
+  "readTime": 6,
+  "author": "M Azhar",
+  "authorRole": "Co-founder and Solution Architect",
+  "image": "/images/photos/ins-custom-vs-shelf.webp",
+  "imageAlt": "",
+  "keywords": "custom software vs off the shelf",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Off-the-shelf fits standard processes; custom fits what makes you different.",
+   "Compare total cost over several years, not the first invoice.",
+   "AI agents can now fill gaps between tools without a full rebuild."
+  ],
+  "toc": [
+   {
+    "label": "Start with fit",
+    "anchor": "s0"
+   },
+   {
+    "label": "Look at total cost",
+    "anchor": "s1"
+   },
+   {
+    "label": "Think about control",
+    "anchor": "s2"
+   },
+   {
+    "label": "The new middle option: AI agents",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "cd96b57a1382",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "eba54168de79",
+      "text": "Every growing business reaches the same question: keep stretching an off-the-shelf tool, or build software of its own. Both can be right. The trick is knowing which fits your situation today.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8c2e54a80dc9",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c8261b6bc2af",
+      "text": "Start with fit",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "41d44d97942f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "700def25f445",
+      "text": "Off-the-shelf software works well for standard processes such as payroll, email or basic accounting. Custom software earns its place when the way you work is part of what makes you different, or when your team spends hours bridging tools that were never designed to talk to each other.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2776e3a25738",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "76d85ab00f03",
+      "text": "Look at total cost",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "9147002eef61",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cc422fe2fa7e",
+      "text": "Subscriptions look cheaper at the start. Over a few years, per-seat fees, add-ons and the manual work around the tool can cost more than a system built once and owned outright.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2b54a8d2573e",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3000172e784f",
+      "text": "Think about control",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "9dc13a11d138",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "df57f4cc6e0a",
+      "text": "With your own software you decide the roadmap, the data model and the security rules. That matters most when the software sits at the core of how you serve customers.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2418c3a03dea",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "31baf409bdff",
+      "text": "The new middle option: AI agents",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "2c91f4611a5d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "08a75b9d9759",
+      "text": "If the gap is the manual work between tools rather than the tools themselves, an AI agent can connect them and do that work, often faster than a full custom build.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "table",
+    "_key": "1206d7f62bfa",
+    "rows": [
+     {
+      "_key": "3ef7610ade00",
+      "_type": "tableRow",
+      "cells": [
+       "Question",
+       "Off-the-shelf",
+       "Custom"
+      ]
+     },
+     {
+      "_key": "52b32be601a3",
+      "_type": "tableRow",
+      "cells": [
+       "Time to start",
+       "Days",
+       "Weeks to months"
+      ]
+     },
+     {
+      "_key": "3def6535ab11",
+      "_type": "tableRow",
+      "cells": [
+       "Fit to your process",
+       "You adapt to it",
+       "It adapts to you"
+      ]
+     },
+     {
+      "_key": "b09f3681b183",
+      "_type": "tableRow",
+      "cells": [
+       "Ownership",
+       "Licensed",
+       "Yours"
+      ]
+     },
+     {
+      "_key": "df5bf0d35580",
+      "_type": "tableRow",
+      "cells": [
+       "Integration",
+       "Limited by the vendor",
+       "Built for your tools"
+      ]
+     }
+    ],
+    "hasHeader": true
+   },
+   {
+    "_type": "block",
+    "_key": "89f0250ffd0b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7506c706246d",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "2146713cf8c8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f85235039ed7",
+      "text": "Can we start with off-the-shelf and move later?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "ccda04dccd85",
+      "text": " Yes. A good team can migrate your data when you are ready.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b178559c1d53",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b1ad4c9ade1a",
+      "text": "How long does custom software take?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "39777e40545f",
+      "text": " It depends on scope. A focused first version comes first, then the product grows in stages.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "75a46f6d37c3",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "38119106393f",
+      "text": "Is custom software only for large companies?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "9851a55ff5ce",
+      "text": " No. Many small and mid-sized businesses build focused custom tools for their core workflow.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can we start with off-the-shelf and move later?",
+    "a": "Yes. A good team can migrate your data when you are ready."
+   },
+   {
+    "q": "How long does custom software take?",
+    "a": "It depends on scope. A focused first version comes first, then the product grows in stages."
+   },
+   {
+    "q": "Is custom software only for large companies?",
+    "a": "No. Many small and mid-sized businesses build focused custom tools for their core workflow."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore custom software",
+    "href": "/services/custom-software-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "How to choose between custom software and off-the-shelf tools, weighing fit, total cost, control, integrations and the new option of AI agents.",
+  "featured": false,
+  "order": 10,
+  "related": [
+   "plan-an-mvp",
+   "hire-a-dedicated-development-team",
+   "what-is-agent-as-a-service"
+  ]
+ },
+ {
+  "slug": "plan-an-mvp",
+  "title": "How to build an MVP that users actually want",
+  "seoTitle": "How to Build an MVP Users Actually Want | Corevex",
+  "description": "A simple framework for planning a minimum viable product around one problem, one user and one measurable outcome, so you learn fast and build less.",
+  "category": "SaaS",
+  "categoryKey": "saas",
+  "readTime": 6,
+  "author": "Zafar H",
+  "authorRole": "Chief Operating Officer",
+  "image": "/images/photos/ins-mvp.webp",
+  "imageAlt": "",
+  "keywords": "how to build an MVP",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "Build for one problem and one type of user first.",
+   "Define success before writing code.",
+   "Plan the next step for both success and failure."
+  ],
+  "toc": [
+   {
+    "label": "Start with one problem",
+    "anchor": "s0"
+   },
+   {
+    "label": "Define success first",
+    "anchor": "s1"
+   },
+   {
+    "label": "Cut to the core journey",
+    "anchor": "s2"
+   },
+   {
+    "label": "Plan what comes next",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "ae72fc393000",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "60621d730565",
+      "text": "A minimum viable product is the smallest version of your idea that real users can try. Planned well, it answers your biggest question quickly. Planned badly, it becomes a smaller version of everything.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6726a62bcab8",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a383bca0ec21",
+      "text": "Start with one problem",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "1fa313d46bed",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "89179a982c65",
+      "text": "Write down the single problem your product solves and the person who has it. Every feature in the MVP should serve that problem.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9762d53f200f",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5384ea0e081b",
+      "text": "Define success first",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "fcc04c12502f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0fbfcbd9260e",
+      "text": "Choose one or two measures, such as sign-ups, repeat use or completed tasks, that will tell you whether the idea works.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9ac99c4e9fae",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fe57c32d7bdd",
+      "text": "Cut to the core journey",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "a3a573e5239e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5cacd0b28ead",
+      "text": "Map the steps a user takes to get value, then build only those steps well. Everything else waits.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f1ad58895230",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c36220d4ac98",
+      "text": "Plan what comes next",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "1ca0e784e98b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "57c85194896b",
+      "text": "Decide in advance what you will do if the MVP succeeds and what you will change if it does not. For SaaS products, include sign-up and payment in the MVP so you test willingness to pay early.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "83605c1d3cfb",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3c028dc2b9d0",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "280265a941fc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "066c153555a5",
+      "text": "Should an MVP look polished?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "0d3d3d339e16",
+      "text": " It should be clear and easy to use. Users judge quality quickly, even in an early version.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b8947e76df10",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c0a413cd1852",
+      "text": "Can the MVP code grow into the full product?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "008e56d76fd7",
+      "text": " Yes, if it is built on a sound architecture from the start.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d89ca43d3f76",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d9ea70ff81a5",
+      "text": "Should an MVP include AI?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "be7fb6f385a4",
+      "text": " Only if AI is central to the core problem. Otherwise add it after the core workflow is proven.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Should an MVP look polished?",
+    "a": "It should be clear and easy to use. Users judge quality quickly, even in an early version."
+   },
+   {
+    "q": "Can the MVP code grow into the full product?",
+    "a": "Yes, if it is built on a sound architecture from the start."
+   },
+   {
+    "q": "Should an MVP include AI?",
+    "a": "Only if AI is central to the core problem. Otherwise add it after the core workflow is proven."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore SaaS App Development",
+    "href": "/services/saas-app-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "A simple framework for planning a minimum viable product around one problem, one user and one measurable outcome, so you learn fast and build less.",
+  "featured": false,
+  "order": 11,
+  "related": [
+   "hire-a-dedicated-development-team",
+   "what-is-agent-as-a-service",
+   "vibe-coded-app-rescue"
+  ]
+ },
+ {
+  "slug": "hire-a-dedicated-development-team",
+  "title": "Hiring a dedicated development team: what to expect",
+  "seoTitle": "Hiring a Dedicated Development Team: What to Expect | Corevex",
+  "description": "How a dedicated development team works day to day, who is on it, what you stay in control of, and how to get the best results from the engagement.",
+  "category": "Custom Software",
+  "categoryKey": "custom",
+  "readTime": 6,
+  "author": "Mazhar H",
+  "authorRole": "CEO and Founder",
+  "image": "/images/photos/ins-dedicated-team.webp",
+  "imageAlt": "",
+  "keywords": "dedicated development team",
+  "publishedAt": "2026-11-06",
+  "takeaways": [
+   "A dedicated team works on your product full time as an extension of your own.",
+   "You keep control of the roadmap, code and accounts.",
+   "Quick feedback and one decision maker speed everything up."
+  ],
+  "toc": [
+   {
+    "label": "Who is on the team",
+    "anchor": "s0"
+   },
+   {
+    "label": "How the work runs",
+    "anchor": "s1"
+   },
+   {
+    "label": "What you stay in control of",
+    "anchor": "s2"
+   },
+   {
+    "label": "How to get the best results",
+    "anchor": "s3"
+   },
+   {
+    "label": "FAQ",
+    "anchor": "faq"
+   }
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "dda8f8c5d20b",
+    "style": "lead",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "37792ac0948e",
+      "text": "A dedicated development team works on your product full time, as an extension of your own team. Here is what that looks like in practice.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c21b9aa0bb2a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0e2c5935279e",
+      "text": "Who is on the team",
+      "marks": []
+     }
+    ],
+    "anchor": "s0"
+   },
+   {
+    "_type": "block",
+    "_key": "5959ccdd4c92",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0a9aa8ec40c5",
+      "text": "A typical team includes a project manager, a solution architect, front-end, back-end or mobile developers, a QA engineer and a designer when needed. The mix changes as the product grows.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9155781063f8",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9f11a50489e3",
+      "text": "How the work runs",
+      "marks": []
+     }
+    ],
+    "anchor": "s1"
+   },
+   {
+    "_type": "block",
+    "_key": "81473b7b9da7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4d03f0c68821",
+      "text": "Work is planned in short cycles with regular demos. You see progress every week and can change priorities as you learn.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8a063914ed4d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1b60cb892d4e",
+      "text": "What you stay in control of",
+      "marks": []
+     }
+    ],
+    "anchor": "s2"
+   },
+   {
+    "_type": "block",
+    "_key": "ab278d8bc55b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2b6a3d15d648",
+      "text": "You own the roadmap, the code and the accounts. The team works in your repositories and tools, or hands everything over at the end.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ab3a1155f8dc",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8cc5134f0f1f",
+      "text": "How to get the best results",
+      "marks": []
+     }
+    ],
+    "anchor": "s3"
+   },
+   {
+    "_type": "block",
+    "_key": "a241e8544ad2",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f129a6680b57",
+      "text": "Name one decision maker on your side, share context early and join the demos. Teams move fastest when feedback is quick and clear.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2b4e90509e34",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "47c149f03068",
+      "text": "FAQ",
+      "marks": []
+     }
+    ],
+    "anchor": "faq"
+   },
+   {
+    "_type": "block",
+    "_key": "44ab033d2d39",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "69df95e9765d",
+      "text": "Can the team size change?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d899035783e8",
+      "text": " Yes. Teams scale up or down as your needs change.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e08f0ff652f4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "46e91dfb731d",
+      "text": "How is this different from a fixed-scope project?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "04458c680639",
+      "text": " A dedicated team is flexible and ongoing. A fixed-scope project delivers an agreed set of features and ends with handover.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "fd1166ab0094",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d0592a56dd4e",
+      "text": "Does the team work in our time zone?",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "6fab75619905",
+      "text": " Working hours are agreed upfront, with overlap for meetings and quick feedback.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can the team size change?",
+    "a": "Yes. Teams scale up or down as your needs change."
+   },
+   {
+    "q": "How is this different from a fixed-scope project?",
+    "a": "A dedicated team is flexible and ongoing. A fixed-scope project delivers an agreed set of features and ends with handover."
+   },
+   {
+    "q": "Does the team work in our time zone?",
+    "a": "Working hours are agreed upfront, with overlap for meetings and quick feedback."
+   }
+  ],
+  "ctas": [
+   {
+    "label": "Explore custom software",
+    "href": "/services/custom-software-development/",
+    "primary": true
+   },
+   {
+    "label": "Talk to an engineer",
+    "href": "/contact/",
+    "primary": false
+   }
+  ],
+  "summary": "How a dedicated development team works day to day, who is on it, what you stay in control of, and how to get the best results from the engagement.",
+  "featured": false,
+  "order": 12,
+  "related": [
+   "what-is-agent-as-a-service",
+   "vibe-coded-app-rescue",
+   "agentic-ai-explained"
+  ]
+ }
+]

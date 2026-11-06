@@ -1,0 +1,50 @@
+/* Spam trap */
+.trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Field error */
+.err {
+  font-size: 14px;
+  color: #b42318;
+}
+
+:global(.dark) .err,
+:global(.finale) .err,
+:global(.footer) .err,
+:global(.contact) .err {
+  color: #ffb4a8;
+}
+
+/* Form error */
+.alert {
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(180, 35, 24, 0.08);
+  border: 1px solid rgba(180, 35, 24, 0.3);
+  color: #b42318;
+  font-size: 15px;
+}
+
+:global(.finale) .alert,
+:global(.footer) .alert,
+:global(.contact) .alert {
+  background: rgba(255, 180, 168, 0.1);
+  border-color: rgba(255, 180, 168, 0.35);
+  color: #ffd2ca;
+}
+
+.newsErr {
+  flex-basis: 100%;
+  font-size: 14px;
+  color: #ffb4a8;
+}
+
+.file {
+  font-size: 13px;
+  color: var(--fg-muted);
+}

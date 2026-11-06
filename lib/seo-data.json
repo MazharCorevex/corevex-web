@@ -1,0 +1,2255 @@
+{
+ "/404/": {
+  "title": "Page not found, Corevex Solutions",
+  "description": "The page you are looking for has moved or no longer exists.",
+  "ogTitle": "Page not found, Corevex Solutions",
+  "ogType": "website",
+  "robots": "",
+  "ld": []
+ },
+ "/about/": {
+  "title": "About Corevex Solutions: PSEB Registered Software Company",
+  "description": "Founded in 2022 and registered with PSEB, Corevex is a 50+ engineer team building software, apps and AI for clients worldwide.",
+  "ogTitle": "About Corevex Solutions: PSEB Registered Software Company",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mazhar H",
+    "jobTitle": "CEO and Founder",
+    "worksFor": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "M Azhar",
+    "jobTitle": "Co-founder and Solution Architect",
+    "worksFor": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zafar H",
+    "jobTitle": "Chief Operating Officer",
+    "worksFor": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://www.corevexsolutions.com/about/"
+     }
+    ]
+   }
+  ]
+ },
+ "/ai-lab/": {
+  "title": "AI Lab: Live AI Demos, Corevex Solutions",
+  "description": "Try working AI demos: document extraction, support agents and workflow automation built by Corevex engineers.",
+  "ogTitle": "AI Lab: Live AI Demos, Corevex Solutions",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Lab",
+      "item": "https://www.corevexsolutions.com/ai-lab/"
+     }
+    ]
+   }
+  ]
+ },
+ "/careers/": {
+  "title": "Careers at Corevex Solutions: Engineering Jobs",
+  "description": "Join a 50+ engineer team working across TypeScript, React, Node, .NET, Python, Flutter and AI. See open roles.",
+  "ogTitle": "Careers at Corevex Solutions: Engineering Jobs",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Careers",
+      "item": "https://www.corevexsolutions.com/careers/"
+     }
+    ]
+   }
+  ]
+ },
+ "/contact/": {
+  "title": "Contact Corevex Solutions: Start a Software Project",
+  "description": "Tell us what you want to build. A senior engineer from Corevex reviews every enquiry and replies personally.",
+  "ogTitle": "Contact Corevex Solutions: Start a Software Project",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://www.corevexsolutions.com/contact/"
+     }
+    ]
+   }
+  ]
+ },
+ "/faq/": {
+  "title": "FAQ: Working With Corevex Solutions",
+  "description": "Answers on services, tech stack, engagement models, code ownership, security and how to start a project with Corevex.",
+  "ogTitle": "FAQ: Working With Corevex Solutions",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What does Corevex Solutions do?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We are a PSEB registered software company that builds custom software, full stack web applications, mobile apps, AI and LLM solutions, and AI automation."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "When was Corevex founded?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Corevex Solutions was founded in 2022."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How big is the team?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We have 50+ engineers and specialists, including solution architects, software engineers, UI/UX designers, QA engineers and project managers."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you work with clients outside Pakistan?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We work with clients worldwide."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Which technologies do you use?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "TypeScript, JavaScript, React, Next.js, Node.js, .NET, Angular, React Native, Python and Flutter, plus LLM and AI tooling."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How do engagements work?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We offer dedicated teams, fixed-scope projects and MVP builds."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Who owns the code?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "You do. We hand over source code, documentation and access at the end of the project."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you sign NDAs?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We are happy to sign an NDA before you share project details."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you offer support after launch?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We provide maintenance, updates and continued development."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How do I start?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Use the contact form and our team will arrange a call with a solution architect."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQ",
+      "item": "https://www.corevexsolutions.com/faq/"
+     }
+    ]
+   }
+  ]
+ },
+ "/": {
+  "title": "Corevex Solutions: Custom Software, AI and Mobile Apps",
+  "description": "PSEB registered software company with 50+ engineers building custom software, full stack web apps, mobile apps, AI, LLM and automation solutions.",
+  "ogTitle": "Corevex Solutions: Custom Software, AI and Mobile Apps",
+  "ogType": "website",
+  "robots": "",
+  "ld": []
+ },
+ "/insights/add-llm-to-your-product/": {
+  "title": "LLM Integration: Add Generative AI to Your Product | Corevex",
+  "description": "A step by step approach to LLM integration: choosing a first feature, connecting your data, designing for review and measuring results, without a rebuild.",
+  "ogTitle": "LLM Integration: Add Generative AI to Your Product | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LLM integration: how to add generative AI to your existing product",
+    "description": "A step by step approach to LLM integration: choosing a first feature, connecting your data, designing for review and measuring results, without a rebuild.",
+    "keywords": "LLM integration",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Which LLM should we use?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It depends on the task, cost and privacy needs. Testing two or three models against real examples is the fastest way to decide."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Is it expensive to run?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Costs scale with usage. A focused feature with caching and sensible limits keeps them predictable."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can the feature run on our own servers?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Open models can be hosted privately when data must stay in your environment."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LLM integration: how to add generative AI to your existing product",
+      "item": "https://www.corevexsolutions.com/insights/add-llm-to-your-product/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/agentic-ai-explained/": {
+  "title": "Agentic AI Explained: How AI Agents Work | Corevex",
+  "description": "Agentic AI in plain language: how AI agents plan tasks, call tools, check results and work with people, plus where agentic AI fits in your business.",
+  "ogTitle": "Agentic AI Explained: How AI Agents Work | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Agentic AI explained: how AI agents plan, act and use tools",
+    "description": "Agentic AI in plain language: how AI agents plan tasks, call tools, check results and work with people, plus where agentic AI fits in your business.",
+    "keywords": "agentic AI",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is the difference between agentic AI and generative AI?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Generative AI creates content such as text or images. Agentic AI uses that ability to plan and take actions toward a goal."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Are AI agents safe to connect to business systems?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes, when they run with limited permissions, approval steps for sensitive actions and full logging."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do I need a large AI team to use agentic AI?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. A focused agent can be built and managed by a specialised partner and improved over time."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Agentic AI explained: how AI agents plan, act and use tools",
+      "item": "https://www.corevexsolutions.com/insights/agentic-ai-explained/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/custom-software-vs-off-the-shelf/": {
+  "title": "Custom Software vs Off-the-Shelf: How to Decide | Corevex",
+  "description": "How to choose between custom software and off-the-shelf tools, weighing fit, total cost, control, integrations and the new option of AI agents.",
+  "ogTitle": "Custom Software vs Off-the-Shelf: How to Decide | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Custom software vs off-the-shelf: how to decide in 2026",
+    "description": "How to choose between custom software and off-the-shelf tools, weighing fit, total cost, control, integrations and the new option of AI agents.",
+    "keywords": "custom software vs off the shelf",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Can we start with off-the-shelf and move later?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. A good team can migrate your data when you are ready."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How long does custom software take?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It depends on scope. A focused first version comes first, then the product grows in stages."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Is custom software only for large companies?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. Many small and mid-sized businesses build focused custom tools for their core workflow."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Custom software vs off-the-shelf: how to decide in 2026",
+      "item": "https://www.corevexsolutions.com/insights/custom-software-vs-off-the-shelf/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/hire-a-dedicated-development-team/": {
+  "title": "Hiring a Dedicated Development Team: What to Expect | Corevex",
+  "description": "How a dedicated development team works day to day, who is on it, what you stay in control of, and how to get the best results from the engagement.",
+  "ogTitle": "Hiring a Dedicated Development Team: What to Expect | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Hiring a dedicated development team: what to expect",
+    "description": "How a dedicated development team works day to day, who is on it, what you stay in control of, and how to get the best results from the engagement.",
+    "keywords": "dedicated development team",
+    "author": {
+     "@type": "Person",
+     "name": "Mazhar H"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Can the team size change?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Teams scale up or down as your needs change."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How is this different from a fixed-scope project?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A dedicated team is flexible and ongoing. A fixed-scope project delivers an agreed set of features and ends with handover."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Does the team work in our time zone?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Working hours are agreed upfront, with overlap for meetings and quick feedback."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Hiring a dedicated development team: what to expect",
+      "item": "https://www.corevexsolutions.com/insights/hire-a-dedicated-development-team/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/how-to-build-a-saas-application/": {
+  "title": "How to Build a SaaS Application in 2026 | Corevex",
+  "description": "A practical guide to SaaS application development: planning the MVP, multi-tenant architecture, subscriptions and billing, security and scaling.",
+  "ogTitle": "How to Build a SaaS Application in 2026 | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to build a SaaS application: architecture, multi-tenancy and billing",
+    "description": "A practical guide to SaaS application development: planning the MVP, multi-tenant architecture, subscriptions and billing, security and scaling.",
+    "keywords": "SaaS application development",
+    "author": {
+     "@type": "Person",
+     "name": "Mazhar H"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "How long does it take to build a SaaS MVP?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A focused MVP with sign-up, the core workflow and billing is usually built in a few months, then improved in short cycles."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Should a SaaS product be multi-tenant from the start?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Adding tenant separation later is much harder than designing for it on day one."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can AI features be added to a SaaS product later?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Most AI features connect through APIs and can be added once the core product is stable."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to build a SaaS application: architecture, multi-tenancy and billing",
+      "item": "https://www.corevexsolutions.com/insights/how-to-build-a-saas-application/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/": {
+  "title": "Insights: Software, AI and Product Engineering, Corevex",
+  "description": "Practical writing from Corevex engineers on building software, mobile apps, AI and automation that work in production.",
+  "ogTitle": "Insights: Software, AI and Product Engineering, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/nextjs-vs-angular/": {
+  "title": "Next.js vs Angular for Business Web Apps | Corevex",
+  "description": "Next.js vs Angular compared for business web applications: SEO, speed, structure, team size and long-term maintenance, with clear guidance on when to use each.",
+  "ogTitle": "Next.js vs Angular for Business Web Apps | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Next.js vs Angular for business web apps: how to choose",
+    "description": "Next.js vs Angular compared for business web applications: SEO, speed, structure, team size and long-term maintenance, with clear guidance on when to use each.",
+    "keywords": "Next.js vs Angular",
+    "author": {
+     "@type": "Person",
+     "name": "Mazhar H"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Which is faster to build with?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "For most new products, Next.js reaches a first version quicker. Angular pays off on large, long-lived applications."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can both use a .NET or Node.js backend?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Both work with any backend through APIs."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Which is better for SaaS?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Next.js is the more common choice for SaaS products that need fast public pages and an app in one codebase."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Next.js vs Angular for business web apps: how to choose",
+      "item": "https://www.corevexsolutions.com/insights/nextjs-vs-angular/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/plan-an-mvp/": {
+  "title": "How to Build an MVP Users Actually Want | Corevex",
+  "description": "A simple framework for planning a minimum viable product around one problem, one user and one measurable outcome, so you learn fast and build less.",
+  "ogTitle": "How to Build an MVP Users Actually Want | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to build an MVP that users actually want",
+    "description": "A simple framework for planning a minimum viable product around one problem, one user and one measurable outcome, so you learn fast and build less.",
+    "keywords": "how to build an MVP",
+    "author": {
+     "@type": "Person",
+     "name": "Zafar H"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Should an MVP look polished?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It should be clear and easy to use. Users judge quality quickly, even in an early version."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can the MVP code grow into the full product?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes, if it is built on a sound architecture from the start."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Should an MVP include AI?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Only if AI is central to the core problem. Otherwise add it after the core workflow is proven."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to build an MVP that users actually want",
+      "item": "https://www.corevexsolutions.com/insights/plan-an-mvp/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/processes-to-automate-with-ai-agents/": {
+  "title": "7 Processes to Automate with AI Agents in 2026 | Corevex",
+  "description": "Seven everyday processes where AI automation saves the most time, from support triage to invoice processing, and how to start automating them safely.",
+  "ogTitle": "7 Processes to Automate with AI Agents in 2026 | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "7 business processes worth automating with AI agents in 2026",
+    "description": "Seven everyday processes where AI automation saves the most time, from support triage to invoice processing, and how to start automating them safely.",
+    "keywords": "AI automation for business",
+    "author": {
+     "@type": "Person",
+     "name": "Zafar H"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Where should we start?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Pick the most repetitive process that is easy to measure, automate it, then expand."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What happens when the agent is unsure?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A well-designed agent hands the task to a person with the context it has gathered."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can we subscribe to these agents instead of building them?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Agent as a Service delivers ready, managed agents on a subscription."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "7 business processes worth automating with AI agents in 2026",
+      "item": "https://www.corevexsolutions.com/insights/processes-to-automate-with-ai-agents/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/react-native-vs-flutter/": {
+  "title": "React Native vs Flutter in 2026: Which to Choose | Corevex",
+  "description": "React Native vs Flutter compared on performance, interface, team skills and maintenance, with a simple way to choose the right framework for your app.",
+  "ogTitle": "React Native vs Flutter in 2026: Which to Choose | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "React Native vs Flutter in 2026: which is right for your app?",
+    "description": "React Native vs Flutter compared on performance, interface, team skills and maintenance, with a simple way to choose the right framework for your app.",
+    "keywords": "React Native vs Flutter",
+    "author": {
+     "@type": "Person",
+     "name": "Mazhar H"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Is one faster than the other?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "For most business apps, both are fast enough. Performance depends more on how the app is built."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can we switch later?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Switching means rewriting the app, so choose carefully at the start."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Which is better for an MVP?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Either works. Pick the one that matches your team and long-term roadmap."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "React Native vs Flutter in 2026: which is right for your app?",
+      "item": "https://www.corevexsolutions.com/insights/react-native-vs-flutter/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/vibe-coded-app-rescue/": {
+  "title": "Vibe-Coded Your MVP? 9 Signs It Needs a Rescue | Corevex",
+  "description": "Built your app with Lovable, Bolt, Replit or Cursor? Nine signs your vibe-coded MVP needs a professional rescue before launch, and what to fix first.",
+  "ogTitle": "Vibe-Coded Your MVP? 9 Signs It Needs a Rescue | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Vibe-coded your MVP? 9 signs it needs a rescue",
+    "description": "Built your app with Lovable, Bolt, Replit or Cursor? Nine signs your vibe-coded MVP needs a professional rescue before launch, and what to fix first.",
+    "keywords": "fix vibe coded app",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Can a vibe-coded app be made production-ready?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes, in most cases. The working parts are kept and the weak foundations are fixed step by step."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How long does a code rescue take?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It depends on the app and the issues found in the audit. Critical fixes come first so you can keep moving."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do I need to stop using AI coding tools?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. Many teams keep using them for speed, with engineers reviewing and structuring the code."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vibe-coded your MVP? 9 signs it needs a rescue",
+      "item": "https://www.corevexsolutions.com/insights/vibe-coded-app-rescue/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/what-is-agent-as-a-service/": {
+  "title": "What is Agent as a Service (AaaS)? 2026 Guide | Corevex",
+  "description": "Agent as a Service explained: how businesses subscribe to AI agents that do real work, how AaaS differs from SaaS, costs, risks and how to start.",
+  "ogTitle": "What is Agent as a Service (AaaS)? 2026 Guide | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is Agent as a Service (AaaS)? A practical guide for 2026",
+    "description": "Agent as a Service explained: how businesses subscribe to AI agents that do real work, how AaaS differs from SaaS, costs, risks and how to start.",
+    "keywords": "agent as a service",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Is Agent as a Service the same as a chatbot?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. A chatbot answers questions. An AaaS agent takes actions across your systems, such as updating records, sending replies or booking meetings."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Will AaaS replace my team?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It removes repetitive tasks so your team can focus on work that needs people. Most businesses redeploy time rather than reduce headcount."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How long does it take to launch an AI agent?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A focused first agent for one workflow can usually be designed, connected and tested in a few weeks, then expanded in stages."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What is Agent as a Service (AaaS)? A practical guide for 2026",
+      "item": "https://www.corevexsolutions.com/insights/what-is-agent-as-a-service/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/what-is-mcp-model-context-protocol/": {
+  "title": "What is MCP (Model Context Protocol)? Explained | Corevex",
+  "description": "Model Context Protocol explained simply: how MCP connects AI assistants and agents to your tools and data securely, and why it speeds up AI integration.",
+  "ogTitle": "What is MCP (Model Context Protocol)? Explained | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is MCP (Model Context Protocol) and why it matters for business AI",
+    "description": "Model Context Protocol explained simply: how MCP connects AI assistants and agents to your tools and data securely, and why it speeds up AI integration.",
+    "keywords": "Model Context Protocol",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Is MCP only for one AI model?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. MCP is an open protocol designed to work across different AI applications and models."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do I need MCP to use AI agents?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Not always, but it makes connecting agents to many tools faster and easier to maintain."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can you build an MCP server for our own system?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. A custom MCP server can expose your internal APIs or database to AI tools with the permissions you choose."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What is MCP (Model Context Protocol) and why it matters for business AI",
+      "item": "https://www.corevexsolutions.com/insights/what-is-mcp-model-context-protocol/"
+     }
+    ]
+   }
+  ]
+ },
+ "/insights/what-is-rag/": {
+  "title": "What is RAG? Retrieval Augmented Generation Explained | Corevex",
+  "description": "Retrieval augmented generation explained in plain language: how RAG grounds AI answers in your own documents, where it works best and how to build it well.",
+  "ogTitle": "What is RAG? Retrieval Augmented Generation Explained | Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is RAG (retrieval augmented generation) and why it makes AI accurate",
+    "description": "Retrieval augmented generation explained in plain language: how RAG grounds AI answers in your own documents, where it works best and how to build it well.",
+    "keywords": "retrieval augmented generation",
+    "author": {
+     "@type": "Person",
+     "name": "M Azhar"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "datePublished": "2026-11-06"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Does RAG train the model on our data?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. Your documents are searched at question time. The underlying model is not retrained."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can RAG answers include sources?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Showing source passages is one of its main benefits."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What is the difference between RAG and fine-tuning?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "RAG looks up current information at question time. Fine-tuning changes the model itself and is better for style or format than for facts that change."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://www.corevexsolutions.com/insights/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What is RAG (retrieval augmented generation) and why it makes AI accurate",
+      "item": "https://www.corevexsolutions.com/insights/what-is-rag/"
+     }
+    ]
+   }
+  ]
+ },
+ "/privacy/": {
+  "title": "Privacy Policy, Corevex Solutions",
+  "description": "Privacy Policy for the Corevex Solutions website.",
+  "ogTitle": "Privacy Policy, Corevex Solutions",
+  "ogType": "website",
+  "robots": "",
+  "ld": []
+ },
+ "/services/ai-agents-as-a-service/": {
+  "title": "AI Agents as a Service (AaaS), Corevex",
+  "description": "Agent as a Service from Corevex: managed AI agents for support, sales, operations and finance that work inside your tools, with monitoring and human approval built in.",
+  "ogTitle": "AI Agents as a Service (AaaS), Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Agents as a Service",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "Agent as a Service from Corevex: managed AI agents for support, sales, operations and finance that work inside your tools, with monitoring and human approval built in."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is Agent as a Service?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Agent as a Service is a subscription to managed AI agents that complete tasks across your tools, rather than software your team has to operate."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How is AaaS different from automation tools?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Automation tools follow fixed rules you set up. AI agents understand requests, decide the next step and handle variation, while asking a person when unsure."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Is our data safe with AI agents?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Agents run with the least access they need, sensitive actions require approval, and every action is logged for review."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How quickly can an agent go live?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A first agent for one workflow is usually designed, connected and tested in a few weeks, then expanded."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Agents as a Service",
+      "item": "https://www.corevexsolutions.com/services/ai-agents-as-a-service/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/ai-automation/": {
+  "title": "AI Automation and AI Agents Development, Corevex",
+  "description": "AI agents and workflow automation that take repetitive work off your team and run around the clock.",
+  "ogTitle": "AI Automation and AI Agents Development, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Automation and Agents",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "AI agents and workflow automation that take repetitive work off your team and run around the clock."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is an AI agent?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "An AI agent is software that understands a task, takes actions across your tools and asks a person when it is unsure."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Which tools can you connect?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Most modern tools with an API, including CRMs, email, helpdesks, spreadsheets and databases."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Will automation replace my team?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "No. It removes repetitive tasks so your team can focus on work that needs people."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How do we start?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We map one workflow with you, automate it, measure the result, then expand."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Automation and Agents",
+      "item": "https://www.corevexsolutions.com/services/ai-automation/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/ai-llm-development/": {
+  "title": "AI and LLM Development Services, Corevex",
+  "description": "LLM features, AI assistants, RAG search and machine learning models wired into the systems your team already uses.",
+  "ogTitle": "AI and LLM Development Services, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI and LLM Development",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "LLM features, AI assistants, RAG search and machine learning models wired into the systems your team already uses."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is LLM development?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It is building software features powered by large language models, such as assistants, summarizers and search."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What is RAG?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Retrieval augmented generation lets an AI answer using your own documents, so answers stay accurate and specific to your business."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Is our data safe?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We design with access controls, and your data is used only for your system."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can AI be added to our existing app?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Most AI features are added to existing products through APIs."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI and LLM Development",
+      "item": "https://www.corevexsolutions.com/services/ai-llm-development/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/code-rescue/": {
+  "title": "Code Rescue: Fix and Take Over Vibe-Coded Apps, Corevex",
+  "description": "Built your app with Lovable, Bolt, Replit or Cursor and got stuck? Corevex takes over your codebase and fixes bugs, UI/UX, billing, security and RBAC.",
+  "ogTitle": "Code Rescue: Fix and Take Over Vibe-Coded Apps, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Code Rescue and Takeover",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "Built your app with Lovable, Bolt, Replit or Cursor and got stuck? Corevex takes over your codebase and fixes bugs, UI/UX, billing, security and RBAC."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Can you work on an app built with Lovable, Bolt or Replit?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We take over code generated by AI builders and coding assistants, review it and continue development on a clean foundation."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do we need to rebuild from scratch?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Usually not. We keep what works, fix the root causes and only rebuild the parts that cannot be made reliable."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What do you fix first?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Anything that blocks launch or puts users at risk: security gaps, broken payments and critical bugs come first."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Will I still own the code?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. The code stays in your repository and accounts, and you keep full ownership."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Code Rescue and Takeover",
+      "item": "https://www.corevexsolutions.com/services/code-rescue/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/custom-software-development/": {
+  "title": "Custom Software Development Services, Corevex",
+  "description": "Software built around how your business works: internal tools, portals, SaaS platforms and legacy rebuilds, with code you own.",
+  "ogTitle": "Custom Software Development Services, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Custom Software Development",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "Software built around how your business works: internal tools, portals, SaaS platforms and legacy rebuilds, with code you own."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is custom software development?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It is software designed and built for one organization's processes, rather than a general product used by many companies."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do we own the code?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. You receive the full source code, documentation and access when the project is handed over."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can you work with our existing systems?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We integrate with your current tools, databases and APIs, or migrate data from them."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Which technologies do you use?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We choose from TypeScript, React, Next.js, Angular, Node.js, .NET and Python based on your needs."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How do we start?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Share your goals through the contact form and a solution architect will review them with you."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Custom Software Development",
+      "item": "https://www.corevexsolutions.com/services/custom-software-development/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/full-stack-development/": {
+  "title": "Full Stack Development Services, React, Node, .NET",
+  "description": "Web products built end to end in React, Next.js, Angular, Node.js, .NET and Python, by engineers who own the whole stack.",
+  "ogTitle": "Full Stack Development Services, React, Node, .NET",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Full-Stack Development",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "Web products built end to end in React, Next.js, Angular, Node.js, .NET and Python, by engineers who own the whole stack."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What does a full stack developer do?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "A full stack developer builds both the parts users see and the server, database and APIs behind them."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Which frameworks do you work with?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "React, Next.js, Angular, Node.js, .NET and Python, with TypeScript and JavaScript across the stack."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can you take over an existing web app?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We review the code, stabilize it and continue development."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you provide ongoing support?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We offer maintenance and continued development after launch."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Full-Stack Development",
+      "item": "https://www.corevexsolutions.com/services/full-stack-development/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/": {
+  "title": "Software Development Services, AI and Apps, Corevex",
+  "description": "Custom software, full stack, mobile apps, AI and LLM, and automation, delivered by one senior team with full code handover.",
+  "ogTitle": "Software Development Services, AI and Apps, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/mobile-app-development/": {
+  "title": "Mobile App Development, React Native and Flutter",
+  "description": "iOS and Android apps built with React Native and Flutter, from first design to app store launch and beyond.",
+  "ogTitle": "Mobile App Development, React Native and Flutter",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Mobile App Development",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "iOS and Android apps built with React Native and Flutter, from first design to app store launch and beyond."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Do you build for both iOS and Android?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. With React Native or Flutter, one codebase serves both platforms."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Will you publish the app to the stores?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We prepare the listings, handle submission and support the review process."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can you connect the app to our existing system?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We integrate with your APIs, databases and third-party services."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you maintain apps after launch?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We handle updates, OS compatibility and new features."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Mobile App Development",
+      "item": "https://www.corevexsolutions.com/services/mobile-app-development/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/saas-app-development/": {
+  "title": "SaaS App Development Services, Corevex",
+  "description": "SaaS application development from MVP to scale: multi-tenant architecture, subscriptions and billing, admin portals and AI features, with full code ownership.",
+  "ogTitle": "SaaS App Development Services, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "SaaS App Development",
+    "provider": {
+     "@type": "Organization",
+     "name": "Corevex Solutions"
+    },
+    "areaServed": "Worldwide",
+    "description": "SaaS application development from MVP to scale: multi-tenant architecture, subscriptions and billing, admin portals and AI features, with full code ownership."
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What is SaaS application development?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It is building software delivered online on a subscription, where many customer accounts share one platform with their data kept separate."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can you build a SaaS MVP first?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We start with sign-up, the core workflow and billing, then grow the product in stages based on user feedback."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you handle subscriptions and payments?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. We connect plans, trials, seats and usage billing to a proven payment provider and to the limits inside your app."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Who owns the SaaS code?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "You do. Source code, documentation and cloud accounts are handed over in full."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.corevexsolutions.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SaaS App Development",
+      "item": "https://www.corevexsolutions.com/services/saas-app-development/"
+     }
+    ]
+   }
+  ]
+ },
+ "/terms/": {
+  "title": "Terms of Service, Corevex Solutions",
+  "description": "Terms of Service for the Corevex Solutions website.",
+  "ogTitle": "Terms of Service, Corevex Solutions",
+  "ogType": "website",
+  "robots": "",
+  "ld": []
+ },
+ "/work/fleetline-logistics-platform/": {
+  "title": "Fleetline: Custom Software Case Study, Corevex",
+  "description": "How a logistics company runs live operations on one custom platform. A Corevex Solutions concept case study.",
+  "ogTitle": "Fleetline: Custom Software Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fleetline",
+      "item": "https://www.corevexsolutions.com/work/fleetline-logistics-platform/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/": {
+  "title": "Our Work: Software and AI Case Studies, Corevex",
+  "description": "See the platforms, apps and AI systems Corevex has designed, built and handed over across industries.",
+  "ogTitle": "Our Work: Software and AI Case Studies, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/ledgerly-ai-document-extraction/": {
+  "title": "Ledgerly AI: AI and LLM Case Study, Corevex",
+  "description": "How a finance team stopped typing invoices by hand. A Corevex Solutions concept case study.",
+  "ogTitle": "Ledgerly AI: AI and LLM Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ledgerly AI",
+      "item": "https://www.corevexsolutions.com/work/ledgerly-ai-document-extraction/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/medora-clinic-booking/": {
+  "title": "Medora: Full-Stack Case Study, Corevex",
+  "description": "How a clinic group moved scheduling and booking onto one platform. A Corevex Solutions concept case study.",
+  "ogTitle": "Medora: Full-Stack Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Medora",
+      "item": "https://www.corevexsolutions.com/work/medora-clinic-booking/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/pulse-fitness-app/": {
+  "title": "Pulse: Mobile Case Study, Corevex",
+  "description": "How a fitness brand launched one app on iOS and Android. A Corevex Solutions concept case study.",
+  "ogTitle": "Pulse: Mobile Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pulse",
+      "item": "https://www.corevexsolutions.com/work/pulse-fitness-app/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/relay-support-automation/": {
+  "title": "Relay: Automation Case Study, Corevex",
+  "description": "How an online store answers support requests in seconds. A Corevex Solutions concept case study.",
+  "ogTitle": "Relay: Automation Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Relay",
+      "item": "https://www.corevexsolutions.com/work/relay-support-automation/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/vaultix-wealth-platform/": {
+  "title": "Vaultix: Full-Stack and Mobile Case Study, Corevex",
+  "description": "How a wealth platform gave clients one clear view of their money. A Corevex Solutions concept case study.",
+  "ogTitle": "Vaultix: Full-Stack and Mobile Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vaultix",
+      "item": "https://www.corevexsolutions.com/work/vaultix-wealth-platform/"
+     }
+    ]
+   }
+  ]
+ }
+}

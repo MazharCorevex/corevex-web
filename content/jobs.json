@@ -1,0 +1,16 @@
+[
+ {
+  "slug": "ai-automation-engineer",
+  "order": 0,
+  "title": "AI Automation Engineer",
+  "type": "Project based",
+  "location": "Remote"
+ },
+ {
+  "slug": "business-development-intern",
+  "order": 1,
+  "title": "Business Development Intern",
+  "type": "Internship",
+  "location": "Remote"
+ }
+]

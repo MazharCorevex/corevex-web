@@ -1,0 +1,41 @@
+[
+ {
+  "slug": "mazhar-h",
+  "order": 0,
+  "name": "Mazhar H",
+  "role": "CEO and Founder",
+  "short": "Senior software engineer with 8+ years of experience building software products.",
+  "bio": [
+   "Mazhar founded Corevex Solutions in 2022 and leads the company's direction, delivery standards and client relationships. A senior software engineer with more than eight years of experience, he brings a hands-on engineering view to every project and makes sure each build is planned for quality, scale and long-term ownership."
+  ],
+  "image": "/images/team/mazhar-h.svg",
+  "linkedin": "",
+  "leadership": true
+ },
+ {
+  "slug": "m-azhar",
+  "order": 1,
+  "name": "M Azhar",
+  "role": "Co-founder and Solution Architect",
+  "short": "Solution architect and web application developer who designs how every system fits together.",
+  "bio": [
+   "Azhar co-founded Corevex and leads solution architecture. He turns client goals into technical plans, choosing the right stack, structure and integrations before development begins. As a web application developer, he stays close to the code and guides engineering teams through complex builds."
+  ],
+  "image": "/images/team/m-azhar.svg",
+  "linkedin": "",
+  "leadership": true
+ },
+ {
+  "slug": "zafar-h",
+  "order": 2,
+  "name": "Zafar H",
+  "role": "Chief Operating Officer",
+  "short": "Head of business and customer success, with 8 years in sales.",
+  "bio": [
+   "Zafar runs Corevex's operations and leads business development and customer success. With eight years in sales, he makes sure clients get a clear process, honest communication and a partner who stays involved long after launch."
+  ],
+  "image": "/images/team/zafar-h.svg",
+  "linkedin": "",
+  "leadership": true
+ }
+]

@@ -1,0 +1,35 @@
+/* Load reveal */
+@keyframes cv-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes cv-word {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: none; }
+}
+[data-reveal="load"] { opacity: 1; transform: none; transition: none; animation: cv-rise .6s var(--ease-in) both; animation-delay: calc(var(--i, 0) * 80ms + 250ms); }
+.words .w { opacity: 1; transform: none; transition: none; animation: cv-word .7s var(--ease-x) both; animation-delay: calc(var(--i) * 70ms + 200ms); }
+
+/* Next image inside background slots */
+.bg > img { object-fit: cover; }
+.bg { background-image: none; }
+
+/* Booking button reset */
+a.btn[href^="https://calendly.com"] { cursor: pointer; }
+
+/* Drawer when closed */
+.drawer:not(.is-open) { visibility: hidden; transition: transform .4s var(--ease-x), visibility 0s .4s; }
+.drawer.is-open { visibility: visible; transition: transform .4s var(--ease-x); }
+
+/* Tap targets */
+@media (pointer: coarse) {
+  .footer ul a, .crumbs a, .legal .soc a, .drawer details a { display: inline-block; min-height: 44px; padding-block: 10px; }
+  .footer ul { gap: 0; }
+}
+
+/* Empty filter note */
+.empty-note[hidden] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal="load"], .words .w { animation: none !important; opacity: 1 !important; transform: none !important; }
+}

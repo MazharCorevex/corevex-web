@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env.local
+.env*.local
+reference
+new-images
+.vercel
+playwright-report
+test-results
+.lighthouseci
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store

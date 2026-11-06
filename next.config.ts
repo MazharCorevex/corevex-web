@@ -1,0 +1,63 @@
+import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === "true" });
+
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.googletagmanager.com",
+  "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
+  "img-src 'self' data: blob: https://cdn.sanity.io https://*.googletagmanager.com https://*.google-analytics.com https://assets.calendly.com",
+  "font-src 'self' data:",
+  "connect-src 'self' https://*.sanity.io https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.public.blob.vercel-storage.com https://vercel.com https://*.vercel-storage.com",
+  "frame-src https://calendly.com https://*.calendly.com",
+  "worker-src 'self' blob:",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+  "upgrade-insecure-requests",
+].join("; ");
+
+const security = [
+  { key: "Content-Security-Policy", value: csp },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+];
+
+const config: NextConfig = {
+  trailingSlash: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [360, 414, 640, 768, 1024, 1280, 1536, 1920],
+    imageSizes: [32, 48, 64, 96, 160, 256, 384],
+    qualities: [70, 75],
+    minimumCacheTTL: 31536000,
+    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
+  },
+  experimental: {
+    serverActions: { bodySizeLimit: "6mb" },
+    optimizePackageImports: [],
+  },
+  async headers() {
+    return [
+      { source: "/((?!studio).*)", headers: security },
+      { source: "/studio/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }, ...security.filter((h) => h.key !== "Content-Security-Policy")] },
+      { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+    ];
+  },
+  async redirects() {
+    return [
+      { source: "/index.html", destination: "/", permanent: true },
+      { source: "/:path*/index.html", destination: "/:path*/", permanent: true },
+    ];
+  },
+};
+
+export default withAnalyzer(config);

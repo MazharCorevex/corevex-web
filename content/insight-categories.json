@@ -1,0 +1,38 @@
+[
+ {
+  "key": "all",
+  "label": "All"
+ },
+ {
+  "key": "rescue",
+  "label": "Code Rescue"
+ },
+ {
+  "key": "agents",
+  "label": "AI Agents"
+ },
+ {
+  "key": "ai",
+  "label": "AI and LLM"
+ },
+ {
+  "key": "saas",
+  "label": "SaaS"
+ },
+ {
+  "key": "custom",
+  "label": "Custom Software"
+ },
+ {
+  "key": "web",
+  "label": "Web Development"
+ },
+ {
+  "key": "mobile",
+  "label": "Mobile Apps"
+ },
+ {
+  "key": "automation",
+  "label": "Automation"
+ }
+]

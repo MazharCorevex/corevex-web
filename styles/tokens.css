@@ -1,0 +1,38 @@
+/* Tokens */
+:root {
+  --ink: #0D1022;
+  --ink-2: #111530;
+  --navy: #262B47;
+  --midnight: #012A54;
+  --teal: #48AC9F;
+  --teal-deep: #2E8579;
+  --teal-glow: #8CD9D3;
+  --white: #FFFFFF;
+  --cloud: #F4F6F8;
+  --text: #F4F5F8;
+  --text-body: #C9CDD6;
+  --text-muted: #8A90A0;
+  --line: #E3E6EC;
+  --line-2: #D5DAE2;
+  --fg: #1C2133;
+  --fg-body: #4B5163;
+  --fg-muted: #6B7285;
+  --card: #FFFFFF;
+  --card-2: #F6F7F9;
+  --field: #FFFFFF;
+  --hover-line: #48AC9F;
+  --mist: #F6F7F9;
+  --glass: rgba(255, 255, 255, .04);
+  --glass-2: rgba(255, 255, 255, .07);
+  --ease: cubic-bezier(.2, 0, .38, .9);
+  --ease-x: cubic-bezier(.4, .14, .3, 1);
+  --ease-in: cubic-bezier(0, 0, .3, 1);
+  --f-head: var(--font-montserrat), "Montserrat", system-ui, sans-serif;
+  --f-body: var(--font-inter), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: var(--font-mono), "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --wrap: 1280px;
+  --gutter: clamp(20px, 5vw, 56px);
+  --section: clamp(72px, 10vw, 128px);
+  --header: 76px;
+}
+
