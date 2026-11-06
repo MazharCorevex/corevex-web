@@ -8,9 +8,9 @@
 - [x] Phase 4: home page, all sections, data-driven work rail and insights block
 - [x] Phase 5: service template, 8 service pages (bodies in components/services/bodies), Services hub
 - [x] Phase 6: Work index and case study template, AI Lab, About, Careers, Insights index and article template, Contact, FAQ, Privacy, Terms, 404 (Playwright: 194 passed)
-- [ ] Phase 7: Sanity schemas, seed, embedded Studio
-- [ ] Phase 8: Calendly booking
-- [ ] Phase 9: forms with Resend
+- [x] Phase 7: Sanity schemas, seed script, embedded Studio at /studio (needs project keys, see TODO.md)
+- [x] Phase 8: Calendly popup on first click, teal, 30-minute wording everywhere
+- [x] Phase 9: contact (3 steps), careers (PDF, 5 MB, Blob for large files), newsletter with honeypot, rate limit, Resend
 - [ ] Phase 10: SEO, sitemap, robots, llms.txt, headers
 - [ ] Phase 11: Lighthouse CI, Playwright, link and content checks
 

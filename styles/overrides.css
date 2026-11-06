@@ -51,3 +51,14 @@ a.btn[href^="https://calendly.com"] { cursor: pointer; }
 @keyframes cv-zoom { from { transform: scale(1.12); } }
 .svc-photo[data-reveal="load"] img, .art-hero .art-img img, .ed-hero .ed-photo img, .c-hero .frame img, .cs-hero .shot img { opacity: 1; transform: scale(1.03) translateY(var(--py, 0px)); animation: cv-zoom 1.6s var(--ease-x) backwards; }
 @media (prefers-reduced-motion: reduce) { .svc-photo[data-reveal="load"] img, .art-hero .art-img img, .ed-hero .ed-photo img, .c-hero .frame img, .cs-hero .shot img { animation: none; transform: none; } }
+
+/* Touch targets */
+@media (pointer: coarse) {
+  .brand { display: flex; align-items: center; min-height: 44px; }
+  .orb-in { min-height: 44px; }
+  .btn, .btn-sm, .filters button, .chat-in button, .rail-ctrl button, .q-ctrl button { min-height: 44px; min-width: 44px; }
+  a.link { display: inline-flex; align-items: center; min-height: 44px; }
+  .c-details a { display: inline-flex; align-items: center; min-height: 44px; }
+  .field input, .field select, .field textarea, .news input, .chat-in input { min-height: 44px; }
+  .faq summary { min-height: 44px; }
+}
