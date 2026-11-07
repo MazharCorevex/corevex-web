@@ -31,7 +31,24 @@ for (const vp of VIEWPORTS) {
           ...(await layout(page, route, vp.width, vp.height)),
         ];
         const tall = await page.evaluate(() => document.documentElement.scrollHeight > 30000);
-        await page.screenshot({ path: `test-results/responsive/${info.project.name}/${vp.name}/${slug(route)}.png`, fullPage: !tall, timeout: 60_000 });
+        const shot = `test-results/responsive/${info.project.name}/${vp.name}/${slug(route)}.png`;
+        try {
+          await page.screenshot({ path: shot, fullPage: !tall, timeout: 60_000 });
+        } catch (e) {
+          if (!String(e).includes("32767")) throw e;
+          // Canvas larger than the document: report what stretches it
+          const why = await page.evaluate(() => {
+            const all = [...document.querySelectorAll("body, body *")].map((el) => {
+              const r = el.getBoundingClientRect();
+              return { el, b: Math.round(r.bottom + scrollY), h: Math.round(r.height), sh: el.scrollHeight };
+            });
+            const name = (el: Element) => `${el.tagName.toLowerCase()}.${String((el as HTMLElement).className?.toString?.() || "").split(" ")[0]}`;
+            const top = (k: "b" | "h" | "sh") => [...all].sort((a, b) => b[k] - a[k]).slice(0, 4).map((x) => `${name(x.el)}=${x[k]}`).join(" ");
+            return `doc ${document.documentElement.scrollHeight}, body ${document.body.scrollHeight}; bottom: ${top("b")}; height: ${top("h")}; scrollHeight: ${top("sh")}`;
+          });
+          issues.push(`full-page capture over 32767px: ${why}`);
+          await page.screenshot({ path: shot });
+        }
         expect(issues, `${route} at ${vp.name} in ${browserName}`).toEqual([]);
         expect(errors, "page errors").toEqual([]);
       });
