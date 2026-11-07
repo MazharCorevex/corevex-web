@@ -33,7 +33,9 @@ for (const vp of VIEWPORTS) {
         const tall = await page.evaluate(() => document.documentElement.scrollHeight > 30000);
         const shot = `test-results/responsive/${info.project.name}/${vp.name}/${slug(route)}.png`;
         try {
-          await page.screenshot({ path: shot, fullPage: !tall, timeout: 60_000 });
+          // 2x pixel density can push long pages past WebKit's 32767px capture limit
+          const big = await page.evaluate(() => document.documentElement.scrollHeight * devicePixelRatio > 32000);
+          await page.screenshot({ path: shot, fullPage: !tall, timeout: 60_000, ...(big ? { scale: "css" as const } : {}) });
         } catch (e) {
           if (!String(e).includes("32767")) throw e;
           // Canvas larger than the document: report what stretches it
