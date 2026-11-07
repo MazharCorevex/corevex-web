@@ -1,0 +1,151 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      update_visual:
+        description: "Write new visual baselines and upload them as an artifact"
+        type: boolean
+        default: false
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  NEXT_PUBLIC_SITE_URL: https://www.corevexsolutions.com
+  NEXT_PUBLIC_CALENDLY_URL: https://calendly.com/corevex-ci/30min
+  TEST_MODE: "true"
+
+jobs:
+  checks:
+    name: Lint, types, unit, security scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: coverage, path: test-results/coverage, retention-days: 7 }
+      - run: npm run build
+      - run: node scripts/secrets-scan.mjs
+      - run: npm audit --audit-level=high
+
+  e2e:
+    name: End-to-end journeys
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with: { name: e2e-report, path: playwright-report, retention-days: 7 }
+
+  responsive:
+    name: Responsive ${{ matrix.browser }} ${{ matrix.shard }}/4
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+        shard: [1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: npm run build
+      - run: npx playwright test -c playwright.responsive.config.ts --project=${{ matrix.browser }} --shard=${{ matrix.shard }}/4
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: responsive-${{ matrix.browser }}-${{ matrix.shard }}
+          path: |
+            test-results/responsive.json
+            test-results/.pw/responsive
+          retention-days: 7
+
+  a11y:
+    name: Accessibility
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - run: npm run test:a11y
+
+  seo-security:
+    name: SEO, content, links, security, performance budgets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - run: npx playwright test -c playwright.seo.config.ts
+      - run: npx playwright test -c playwright.security.config.ts
+      - run: npx playwright test -c playwright.perf.config.ts
+
+  visual:
+    name: Visual regression
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - name: Compare with baselines
+        if: ${{ !inputs.update_visual }}
+        run: npm run test:visual
+      - name: Write baselines
+        if: ${{ inputs.update_visual }}
+        run: npm run test:visual -- --update-snapshots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: visual-${{ inputs.update_visual && 'baselines' || 'results' }}
+          path: |
+            tests/visual/__screenshots__/linux
+            test-results/.pw/visual
+          retention-days: 14
+
+  lighthouse:
+    name: Lighthouse ${{ matrix.preset }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        preset: [mobile, desktop]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - run: npx lhci autorun --config=lighthouserc.cjs
+        env:
+          LHCI_PRESET: ${{ matrix.preset }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: lighthouse-${{ matrix.preset }}, path: .lighthouseci, retention-days: 14 }
