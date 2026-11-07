@@ -1,10 +1,30 @@
-// Lighthouse summary
+// Lighthouse medians per page
 import fs from "node:fs";
-const dir = ".lighthouseci";
-for (const f of fs.readdirSync(dir).filter((f) => f.startsWith("lhr-") && f.endsWith(".json"))) {
-  const r = JSON.parse(fs.readFileSync(`${dir}/${f}`));
-  const c = r.categories, a = r.audits;
-  const s = (k) => Math.round(c[k].score * 100);
-  const fails = Object.values(a).filter((x) => x.score !== null && x.score < 0.9 && !["informative", "notApplicable", "manual"].includes(x.scoreDisplayMode)).map((x) => x.id);
-  console.log(new URL(r.finalDisplayedUrl).pathname.padEnd(28), "P", s("performance"), "A", s("accessibility"), "BP", s("best-practices"), "SEO", s("seo"), "| LCP", a["largest-contentful-paint"].displayValue, "CLS", a["cumulative-layout-shift"].displayValue, "TBT", a["total-blocking-time"].displayValue, "|", fails.join(" "));
+
+const dir = process.argv.slice(2).find((a) => !a.startsWith("--")) || ".lighthouseci";
+const runs = fs
+  .readdirSync(dir)
+  .filter((f) => f.startsWith("lhr-") && f.endsWith(".json"))
+  .map((f) => JSON.parse(fs.readFileSync(`${dir}/${f}`, "utf8")));
+const by = new Map();
+for (const r of runs) {
+  const p = new URL(r.finalDisplayedUrl).pathname;
+  if (!by.has(p)) by.set(p, []);
+  by.get(p).push(r);
 }
+const med = (xs) => {
+  const s = [...xs].sort((a, b) => a - b);
+  return s[Math.floor(s.length / 2)];
+};
+const rows = [];
+for (const [p, rs] of by) {
+  const s = (k) => med(rs.map((r) => Math.round(r.categories[k].score * 100)));
+  const n = (k) => med(rs.map((r) => r.audits[k].numericValue));
+  const js = med(rs.map((r) => r.audits["resource-summary"].details.items.find((i) => i.resourceType === "script")?.transferSize || 0));
+  rows.push({ page: p, perf: s("performance"), a11y: s("accessibility"), bp: s("best-practices"), seo: s("seo"), lcp: (n("largest-contentful-paint") / 1000).toFixed(1) + " s", cls: n("cumulative-layout-shift").toFixed(3), tbt: Math.round(n("total-blocking-time")) + " ms", js: Math.round(js / 1024) + " KB", runs: rs.length });
+}
+rows.sort((a, b) => a.page.localeCompare(b.page));
+if (process.argv.includes("--md")) {
+  console.log("| Page | Perf | A11y | BP | SEO | LCP | CLS | TBT | JS |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |");
+  for (const r of rows) console.log(`| ${r.page} | ${r.perf} | ${r.a11y} | ${r.bp} | ${r.seo} | ${r.lcp} | ${r.cls} | ${r.tbt} | ${r.js} |`);
+} else console.table(rows);

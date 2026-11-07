@@ -115,7 +115,7 @@ export default function Header({ megaPanel }: { megaPanel: ReactNode }) {
         <div className="wrap">
           <Link className="brand" href="/" aria-label="Corevex Solutions home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo/corevex-logo-primary.svg" alt="Corevex Solutions" width={945} height={213} />
+            <img src="/images/logo/corevex-logo-primary.svg" alt="Corevex Solutions" width={945} height={213} fetchPriority="high" />
           </Link>
           <nav aria-label="Main">
             <ul className="nav">

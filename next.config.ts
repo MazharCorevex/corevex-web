@@ -57,7 +57,7 @@ const config: NextConfig = {
   },
   experimental: {
     serverActions: { bodySizeLimit: "6mb" },
-    inlineCss: true,
+    inlineCss: false,
     optimizePackageImports: [],
   },
   async headers() {

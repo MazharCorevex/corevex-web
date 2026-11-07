@@ -32,6 +32,7 @@ export default function Img({ src, alt, sizes, priority, fill, className, style,
         className={className}
         style={style}
         loading={priority ? undefined : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
         decoding="async"
         aria-hidden={rest["aria-hidden"]}
       />
@@ -44,7 +45,9 @@ export default function Img({ src, alt, sizes, priority, fill, className, style,
         alt={alt}
         fill
         sizes={sizes ?? "100vw"}
-        priority={priority}
+        preload={priority}
+        fetchPriority={priority ? "high" : undefined}
+        loading={priority ? "eager" : undefined}
         className={className}
         style={{ objectFit: "cover", ...style }}
         aria-hidden={rest["aria-hidden"]}
@@ -58,7 +61,9 @@ export default function Img({ src, alt, sizes, priority, fill, className, style,
       width={d[0]}
       height={d[1]}
       sizes={sizes ?? "(max-width: 860px) 100vw, 50vw"}
-      priority={priority}
+      preload={priority}
+      fetchPriority={priority ? "high" : undefined}
+      loading={priority ? "eager" : undefined}
       className={className}
       style={style}
       aria-hidden={rest["aria-hidden"]}
