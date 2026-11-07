@@ -12,7 +12,6 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 - [ ] Leadership headshots: add to `public/images` and set `image` in `content/team.json`. Placeholder SVGs are used until then
 - [ ] Leadership LinkedIn URLs: set `linkedin` in `content/team.json`. The link is hidden until set
 - [ ] Team and office photos
-- [ ] 13 images pending regeneration: `client-review` and the 12 Insights covers. Replace the PNGs in `/new-images` and run `npm run images`
 - [ ] Clutch and GitHub profile URLs: `NEXT_PUBLIC_CLUTCH_URL`, `NEXT_PUBLIC_GITHUB_URL` (hidden until set)
 - [ ] Privacy Policy and Terms of Service: have them reviewed and approved by a legal advisor
 

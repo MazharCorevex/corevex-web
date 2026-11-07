@@ -50,5 +50,4 @@ Corevex Solutions, PSEB registered, founded 2022, 50+ engineers and specialists.
 
 - PSEB registration number, contact email, phone, office address
 - Real client logos, leadership headshots, team and office photos
-- 13 images pending regeneration (client-review and 12 Insights covers)
 - Final domain (Resend domain verification and Vercel domain)
