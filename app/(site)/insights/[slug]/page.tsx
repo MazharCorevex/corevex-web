@@ -10,7 +10,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getArticle, getArticles } from "@/lib/content";
 import { abs, breadcrumbLd, faqLd, pageLd, pageMetadata, seoFor } from "@/lib/seo";
 
-export const revalidate = 3600;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {

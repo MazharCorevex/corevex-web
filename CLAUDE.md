@@ -6,7 +6,7 @@ Production rebuild of the approved static prototype in `/reference` (unzipped `C
 
 - Next.js (App Router) + TypeScript, static generation for all marketing pages
 - Styling: port `/reference/assets/css/style.css` into global tokens plus CSS Modules. Do not switch to Tailwind or change the look.
-- CMS: Sanity (articles, case studies, testimonials, client logos, job openings, team)
+- Content: local JSON in `/content` (articles, case studies, testimonials, client logos, job openings, team). No CMS; Sanity is out of scope
 - Images: `next/image`, sources from `/reference/assets/img`
 - 3D: React Three Fiber for the Core scroll section (desktop only), static image fallback on mobile and reduced motion
 - Forms: server actions with spam protection (honeypot + rate limit), email via Resend (notification to CONTACT_TO_EMAIL, branded confirmation to the sender, newsletter to a Resend audience)
@@ -52,4 +52,3 @@ Corevex Solutions, PSEB registered, founded 2022, 50+ engineers and specialists.
 - Real client logos, leadership headshots, team and office photos
 - 13 images pending regeneration (client-review and 12 Insights covers)
 - Final domain (Resend domain verification and Vercel domain)
-- Sanity project keys

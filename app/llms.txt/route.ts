@@ -1,7 +1,7 @@
 import { getArticles, getCaseStudies } from "@/lib/content";
 import { SERVICES, SITE_URL } from "@/lib/site";
 
-export const revalidate = 3600;
+export const dynamic = "force-static";
 
 // llms.txt
 export async function GET() {

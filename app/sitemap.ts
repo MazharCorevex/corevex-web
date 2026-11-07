@@ -3,8 +3,6 @@ import seo from "@/lib/seo-data.json";
 import { getArticles, getCaseStudies } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 
-export const revalidate = 3600;
-
 // Sitemap
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = new Set(Object.keys(seo).filter((r) => r !== "/404/"));

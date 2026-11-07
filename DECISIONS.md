@@ -5,9 +5,9 @@ Decisions taken during the build, so the reasoning is on record.
 ## Stack and structure
 
 - **Next.js 16 (App Router, Turbopack)** with React Server Components by default. `trailingSlash: true` keeps the prototype's URLs (`/about/`, `/services/ai-automation/`).
-- **Two root layouts.** `app/(site)` holds the public site (header, footer, global CSS). `app/(studio)` holds the embedded Sanity Studio so none of the site CSS or JS reaches the Studio, and none of the Studio reaches the site.
+- **No CMS.** Sanity was built in phase 7 and then removed at the client's request as out of scope. All content lives as JSON in `/content`, read by `lib/content.ts`, and every page is fully static (no ISR). Changing content means editing the JSON and redeploying.
 - **Page markup is converted, not retyped.** `scripts/gen-pages.mjs` converts each reference page's `<main>` into JSX (`components/generated`, `components/home/sections`). This keeps copy, classes and structure identical to `/reference`. The generated files are committed and edited by hand from there.
-- **Content extraction.** `scripts/gen-content.mjs` turns the 13 articles, 6 case studies, leadership bios and job openings into JSON in `/content`. Article bodies become Portable Text so the same renderer serves local content and Sanity.
+- **Content extraction.** `scripts/gen-content.mjs` turns the 13 articles, 6 case studies, leadership bios and job openings into JSON in `/content`. Article bodies are stored as Portable Text JSON (rendered with `@portabletext/react`), which keeps headings, links and tables structured.
 - **SEO data extraction.** `scripts/gen-seo.mjs` copies every page's title, meta description and JSON-LD from `/reference` into `lib/seo-data.json`, so nothing is retyped and nothing drifts.
 
 ## Styling
@@ -31,8 +31,8 @@ Decisions taken during the build, so the reasoning is on record.
 
 - "Book a 20-minute call" changed to "Book a 30-minute call" everywhere, including the contact form option.
 - Work cards and the home rail say **"Product design study"** (the prototype mixed "Design study" and "Concept"). The work index note now says "Projects marked Product design study ...".
-- **Client logo strips are hidden.** The prototype's ten logos are placeholders (per its README), so showing them as "Trusted by" would be invented social proof. The strip renders automatically once real logos are added in Sanity and marked approved.
-- **Testimonials and case study results** render only when real, approved entries exist in Sanity. None are seeded.
+- **Client logo strips are hidden.** The prototype's ten logos are placeholders (per its README), so showing them as "Trusted by" would be invented social proof. The strip renders automatically once real logos are added to `content/client-logos.json`.
+- **Testimonials and case study results** render only when real entries exist in `content/testimonials.json` and the case study `results`. Both are empty.
 - Bracket placeholders are never rendered: the PSEB number, email, phone, address and social links come from environment variables and the element is hidden when the value is empty. The "[Replace with ...]" notes on Privacy and Terms are removed (legal review is listed in TODO.md).
 - Services hub intro said "Seven services" while listing eight; changed to "Eight services".
 

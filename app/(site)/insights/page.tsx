@@ -8,7 +8,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getArticles, getInsightCategories } from "@/lib/content";
 import { pageLd, pageMetadata } from "@/lib/seo";
 
-export const revalidate = 3600;
 export const metadata: Metadata = pageMetadata("/insights/");
 
 export default async function InsightsIndex() {

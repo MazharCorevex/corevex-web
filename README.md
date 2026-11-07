@@ -1,6 +1,6 @@
 # Corevex Solutions website
 
-Production build of the Corevex Solutions marketing site: Next.js 16 (App Router), TypeScript, Sanity, Resend, Calendly, deployed on Vercel.
+Production build of the Corevex Solutions marketing site: Next.js 16 (App Router), TypeScript, Resend, Calendly, deployed on Vercel.
 
 ## Run locally
 
@@ -19,7 +19,7 @@ npm run build
 npm run start
 ```
 
-The site works without any keys: content falls back to the JSON files in `/content`, forms log to the console in development, the booking button links to the contact page and analytics stay off.
+The site works without any keys: content comes from the JSON files in `/content`, forms log to the console in development, the booking button links to the contact page and analytics stay off.
 
 ## Scripts
 
@@ -35,20 +35,17 @@ The site works without any keys: content falls back to the JSON files in `/conte
 | `npm run qa:js` | First-load JavaScript per page, gzipped (needs a running server on port 3100) |
 | `npm run analyze` | Webpack build with the bundle analyzer |
 | `npm run images` | Converts `/new-images/*.png` to WebP (q82 plus `-800`), copies `/reference` assets, optimises SVGs, rebuilds the size manifest |
-| `npm run sanity:seed` | Loads the current content into Sanity |
 
 ## Structure
 
 ```
 app/(site)        public pages, root layout with header and footer
-app/(studio)      embedded Sanity Studio at /studio (own root layout, noindex)
 app/actions.ts    server actions for contact, careers and newsletter
-app/api           CV upload token, Sanity revalidation webhook
+app/api           CV upload token
 app/og            Open Graph images
 components        UI, sections, interactive pieces, forms
-content           local content used when Sanity is not configured
+content           site content (articles, case studies, team, jobs, testimonials, logos)
 lib               content layer, SEO data, site constants, server helpers
-sanity            schemas and env
 scripts           image pipeline, generators, QA scripts
 styles            design tokens, ported prototype styles, overrides
 tests             Playwright
@@ -56,8 +53,8 @@ tests             Playwright
 
 ## Content
 
-Articles, case studies, testimonials, client logos, team and jobs are managed in Sanity at `/studio`. Pages are statically generated and revalidated every hour, or immediately when the Sanity webhook calls `/api/revalidate`.
+Articles, case studies, testimonials, client logos, team and jobs live as JSON in `/content`. Edit the file, commit and push; Vercel rebuilds and every page is statically generated.
 
-Testimonials, client logos and case study results only appear once real entries are added and marked approved.
+Testimonials, client logos and case study results only appear once real entries are added to their JSON files.
 
 See `DECISIONS.md` for the reasoning behind the build and `TODO.md` for what still needs real content or keys.

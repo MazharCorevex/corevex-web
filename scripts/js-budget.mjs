@@ -24,7 +24,7 @@ for (const r of routes) {
   for (const s of srcs) total += await size(s);
   const inline = [...html.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/g)].reduce((n, m) => n + gzipSync(m[1]).length, 0);
   const kb = (total / 1024).toFixed(1);
-  rows.push([r, kb, (inline / 1024).toFixed(1), srcs.some((s) => /three|sanity|studio/.test(s))]);
+  rows.push([r, kb, (inline / 1024).toFixed(1), srcs.some((s) => /three/.test(s))]);
   if (total > LIMIT) fail = true;
 }
 rows.sort((a, b) => b[1] - a[1]);

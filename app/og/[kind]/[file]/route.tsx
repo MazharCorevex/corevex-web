@@ -2,7 +2,7 @@ import services from "@/content/services.json";
 import { getArticle, getArticles, getCaseStudies, getCaseStudy } from "@/lib/content";
 import { ogCard } from "@/lib/og";
 
-export const revalidate = 3600;
+export const dynamic = "force-static";
 
 export async function generateStaticParams() {
   const a = (await getArticles()).map((x) => ({ kind: "insights", file: `${x.slug}.png` }));

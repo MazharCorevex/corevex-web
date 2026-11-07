@@ -16,7 +16,6 @@ import InsightsBlock from "@/components/home/sections/InsightsBlock";
 import ContactFinale from "@/components/home/sections/ContactFinale";
 import { pageMetadata } from "@/lib/seo";
 
-export const revalidate = 3600;
 export const metadata: Metadata = pageMetadata("/");
 
 export default function Home() {

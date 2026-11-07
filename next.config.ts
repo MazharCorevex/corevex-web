@@ -7,9 +7,9 @@ const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
-  "img-src 'self' data: blob: https://cdn.sanity.io https://*.googletagmanager.com https://*.google-analytics.com https://assets.calendly.com",
+  "img-src 'self' data: blob: https://*.googletagmanager.com https://*.google-analytics.com https://assets.calendly.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.sanity.io https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.public.blob.vercel-storage.com https://vercel.com https://*.vercel-storage.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.public.blob.vercel-storage.com https://vercel.com https://*.vercel-storage.com",
   "frame-src https://calendly.com https://*.calendly.com",
   "worker-src 'self' blob:",
   "object-src 'none'",
@@ -41,9 +41,6 @@ const PUBLIC_ENV = [
   "NEXT_PUBLIC_CONTACT_EMAIL",
   "NEXT_PUBLIC_CONTACT_PHONE",
   "NEXT_PUBLIC_OFFICE_ADDRESS",
-  "NEXT_PUBLIC_SANITY_PROJECT_ID",
-  "NEXT_PUBLIC_SANITY_DATASET",
-  "NEXT_PUBLIC_SANITY_API_VERSION",
 ];
 
 const config: NextConfig = {
@@ -57,7 +54,6 @@ const config: NextConfig = {
     imageSizes: [32, 48, 64, 96, 160, 256, 384],
     qualities: [70, 75],
     minimumCacheTTL: 31536000,
-    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
   },
   experimental: {
     serverActions: { bodySizeLimit: "6mb" },
@@ -66,8 +62,7 @@ const config: NextConfig = {
   },
   async headers() {
     return [
-      { source: "/((?!studio).*)", headers: security },
-      { source: "/studio/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }, ...security.filter((h) => h.key !== "Content-Security-Policy")] },
+      { source: "/:path*", headers: security },
       { source: "/images/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
     ];
   },

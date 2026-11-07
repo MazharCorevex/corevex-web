@@ -20,12 +20,13 @@ export default function PrivacyPage() {
           <p>Corevex Solutions is a software company registered with the Pakistan Software Export Board (PSEB).</p>
           <h2>What we collect</h2>
           <p>
-            When you contact us, apply for a role or subscribe to our newsletter, we collect the details you enter in the
-            form: for example your name, email address, company, country, your message and, for job applications, your CV.
+            When you contact us, apply for a role or subscribe to our newsletter, we collect the details you enter in
+            the form: for example your name, email address, company, country, your message and, for job applications,
+            your CV.
           </p>
           <p>
-            If analytics are enabled, we collect anonymous usage data such as pages visited and how far you scroll, so we
-            can improve the site.
+            If analytics are enabled, we collect anonymous usage data such as pages visited and how far you scroll, so
+            we can improve the site.
           </p>
           <h2>How we use it</h2>
           <p>
@@ -34,9 +35,8 @@ export default function PrivacyPage() {
           </p>
           <h2>Services we use</h2>
           <p>
-            We use trusted providers to run this site: Vercel for hosting, Resend to send email, Sanity to manage site
-            content, Calendly when you book a call and, if enabled, Google Analytics. Each provider processes data only
-            to deliver its service to us.
+            We use trusted providers to run this site: Vercel for hosting, Resend to send email, Calendly when you book
+            a call and, if enabled, Google Analytics. Each provider processes data only to deliver its service to us.
           </p>
           <h2>How long we keep it</h2>
           <p>

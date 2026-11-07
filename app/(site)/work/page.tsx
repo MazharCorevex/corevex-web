@@ -9,7 +9,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getCaseStudies } from "@/lib/content";
 import { pageLd, pageMetadata } from "@/lib/seo";
 
-export const revalidate = 3600;
 export const metadata: Metadata = pageMetadata("/work/");
 
 const FILTERS = [

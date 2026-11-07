@@ -4,7 +4,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getJobs } from "@/lib/content";
 import { pageLd, pageMetadata } from "@/lib/seo";
 
-export const revalidate = 3600;
 export const metadata: Metadata = pageMetadata("/careers/");
 
 export default async function Page() {
