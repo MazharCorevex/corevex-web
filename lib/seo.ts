@@ -26,8 +26,16 @@ export function pageMetadata(route: string, fallback?: Partial<PageSeo> & { imag
   };
 }
 
-export function pageLd(route: string): object[] {
-  return (SEO[route]?.ld ?? []).map((d) => withSite(d));
+// Stored JSON-LD plus the fields search engines expect
+export function pageLd(route: string, extra: { image?: string } = {}): object[] {
+  return (SEO[route]?.ld ?? []).map((raw) => {
+    const d = withSite(raw) as Record<string, unknown>;
+    const org = { "@type": "Organization", name: "Corevex Solutions", url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/images/logo/corevex-logo-primary.svg` } };
+    if (d["@type"] === "Service") return { ...d, name: d.name ?? d.serviceType, provider: org, url: abs(route) };
+    if (d["@type"] === "Article")
+      return { ...d, image: d.image ?? (extra.image ? abs(extra.image) : undefined), publisher: org, mainEntityOfPage: abs(route), dateModified: d.dateModified ?? d.datePublished };
+    return d;
+  });
 }
 
 export const abs = (p: string) => `${SITE_URL}${p}`;

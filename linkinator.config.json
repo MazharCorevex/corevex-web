@@ -1,0 +1,10 @@
+{
+  "recurse": true,
+  "timeout": 15000,
+  "concurrency": 20,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 3,
+  "skip": ["^http://localhost:3100/_next/", "^https://(www\\.)?linkedin\\.com/"],
+  "urlRewriteExpressions": [{ "pattern": "^https://www\\.corevexsolutions\\.com", "replacement": "http://localhost:3100" }]
+}

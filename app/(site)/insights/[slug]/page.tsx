@@ -33,7 +33,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     .slice(0, 3);
   const route = `/insights/${slug}/`;
   const ld = seoFor(route)
-    ? pageLd(route)
+    ? pageLd(route, { image: a.image })
     : [
         {
           "@context": "https://schema.org",
