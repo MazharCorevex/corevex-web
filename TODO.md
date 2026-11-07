@@ -30,7 +30,7 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 ## Testing
 
 - [ ] Visual baselines for Linux: run the CI workflow manually with "update visual" ticked, download the visual-baselines artifact into tests/visual/__screenshots__/linux and commit it
-- [ ] Confirm the LinkedIn company URL by hand (LinkedIn blocks automated link checks)
+- [x] LinkedIn company URL confirmed: https://www.linkedin.com/company/corevex-solution/ (if `NEXT_PUBLIC_LINKEDIN_URL` is set in Vercel, update it there too)
 - [ ] Optional: install the Microsoft Visual C++ runtime on Windows machines that should run Firefox tests locally (CI already runs Firefox and WebKit)
 
 ## Later

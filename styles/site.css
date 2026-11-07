@@ -63,28 +63,34 @@ h1, h2, h3, h4 { font-family: var(--f-head); font-weight: 600; letter-spacing: -
 .header.is-hidden { transform: translateY(-100%); }
 .header .wrap { display: flex; align-items: center; width: 100%; gap: 24px; }
 .brand img { height: 30px; width: auto; }
-.nav { display: flex; gap: 4px; margin-left: auto; }
+.nav { display: flex; gap: 4px; }
 .nav > li { list-style: none; position: relative; }
 .nav > li > a, .nav > li > button { display: block; padding: 10px 14px; border-radius: 10px; color: var(--fg-body); font-size: 15px; background: none; border: 0; cursor: pointer; }
 .nav > li > a:hover, .nav > li > button:hover, .nav a[aria-current="page"] { color: var(--white); }
 .nav ul { padding: 0; }
-.nav-cta { margin-left: 8px; }
+.nav-cta { margin-left: auto; }
 .menu-btn { display: none; margin-left: auto; width: 44px; height: 44px; border-radius: 12px; background: var(--card-2); border: 1px solid var(--line); cursor: pointer; }
 .menu-btn span { display: block; width: 18px; height: 2px; background: #fff; margin: 4px auto; transition: transform .24s var(--ease); }
 
 /* Mega menu */
-.mega { position: fixed; left: 0; right: 0; top: var(--header); background: rgba(13, 16, 34, .97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .4s var(--ease-x), transform .4s var(--ease-x); }
-.has-mega.is-open .mega, .has-mega:focus-within .mega { opacity: 1; transform: none; pointer-events: auto; }
-.mega .wrap { display: grid; grid-template-columns: 1fr 1fr 1fr 1.2fr; gap: 40px; padding-top: 40px; padding-bottom: 44px; }
+.has-mega { display: flex; align-items: center; }
+.nav > li.has-mega { position: static; }
+.nav > li.has-mega > a { padding-right: 4px; }
+.nav > li > .mega-toggle { display: grid; place-items: center; width: 28px; height: 32px; padding: 0; margin-right: 6px; border-radius: 8px; color: inherit; }
+.mega-toggle svg { transition: transform .2s var(--ease); }
+.has-mega.is-open .mega-toggle svg { transform: rotate(180deg); }
+.mega { position: absolute; top: 100%; left: 50%; width: min(calc(var(--wrap) - 2 * var(--gutter)), calc(100% - 2 * var(--gutter))); max-height: min(600px, 70vh); overflow-y: auto; overscroll-behavior: contain; background: rgba(13, 16, 34, .97); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 20px 20px; opacity: 0; visibility: hidden; transform: translate(-50%, -8px); pointer-events: none; transition: opacity .25s var(--ease-x), transform .25s var(--ease-x), visibility 0s .25s; }
+.has-mega.is-open .mega { opacity: 1; visibility: visible; transform: translate(-50%, 0); pointer-events: auto; transition: opacity .25s var(--ease-x), transform .25s var(--ease-x); }
+.mega .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; max-width: none; padding: 28px 32px 22px; }
 .mega h4, .mega h2 { font: 500 12px var(--f-mono); letter-spacing: .08em; color: var(--fg-muted); margin-bottom: 14px; text-transform: none; }
 .mega a.m { display: flex; gap: 12px; padding: 10px; border-radius: 12px; margin: 0 -10px; }
 .mega a.m:hover { background: var(--card-2); }
 .mega a.m img { width: 28px; height: 28px; flex: none; margin-top: 2px; }
 .mega a.m b { display: block; font-weight: 600; font-size: 15px; }
 .mega a.m span { font-size: 13px; color: var(--fg-muted); }
-.mega .feat { border-radius: 18px; overflow: hidden; background: var(--card); border: 1px solid var(--line); }
-.mega .feat img { aspect-ratio: 16/10; object-fit: cover; width: 100%; }
-.mega .feat div { padding: 16px; font-size: 14px; }
+.mega .all { grid-column: 1 / -1; justify-self: start; margin-top: 10px; padding: 14px 0 4px; font-weight: 600; font-size: 15px; color: var(--teal-text); }
+body::after { content: ""; position: fixed; inset: var(--header) 0 0; z-index: 80; background: rgba(13, 16, 34, .12); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .25s var(--ease-x), visibility 0s .25s; }
+body:has(.has-mega.is-open)::after { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .25s var(--ease-x); }
 
 /* Mobile drawer */
 .drawer { position: fixed; inset: 0; z-index: 95; background: var(--ink); padding: calc(var(--header) + 16px) var(--gutter) 40px; overflow-y: auto; transform: translateX(100%); transition: transform .4s var(--ease-x); }
@@ -341,7 +347,7 @@ ul.icon-list { padding: 0; }
 /* Footer */
 .footer { padding: clamp(48px, 6vw, 72px) 0 0; border-top: 1px solid var(--line); overflow: hidden; background: var(--ink); }
 .foot-top { display: grid; grid-template-columns: 1.5fr repeat(5, minmax(0, 1fr)); gap: 28px 32px; }
-.foot-brand img { height: 28px; width: auto; margin-bottom: 14px; }
+.foot-brand img { height: 28px; width: auto; margin-bottom: 24px; }
 .foot-brand p { color: var(--fg-muted); font-size: 15px; max-width: 32ch; }
 .foot-brand .slogan { font: 600 20px var(--f-head); color: #fff; margin-bottom: 10px; }
 .footer h4, .footer h2 { font: 500 12px var(--f-mono); letter-spacing: .08em; color: var(--fg-muted); margin-bottom: 16px; font-weight: 500; }
@@ -996,7 +1002,6 @@ body.header-on .filters { top: var(--header); }
 .mega h4, .mega h2 { color: var(--fg-muted); font-family: var(--f-body); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; }
 .mega a.m:hover { background: var(--mist); }
 .mega a.m b { color: var(--fg); }
-.mega .feat { background: var(--mist); border-color: var(--line); color: var(--fg); }
 .drawer { background: #fff; }
 .drawer summary, .drawer > a { color: var(--fg); }
 .drawer details a { color: var(--fg-body); }
@@ -1033,8 +1038,8 @@ body.header-on .filters { top: var(--header); }
 }
 
 /* Hero fits one screen */
-.hero { height: 100svh; min-height: 620px; max-height: 1000px; padding: var(--header) 0 0; }
-.hero .display { font-size: clamp(44px, min(6.2vw, 9.6vh), 88px); }
+.hero { height: auto; min-height: min(100svh, 1000px); padding: calc(var(--header) + clamp(28px, 6vh, 64px)) 0 clamp(20px, 4vh, 48px); }
+.hero .display { font-size: clamp(42px, min(6.2vw, 8.8vh), 88px); }
 .hero .seo-h1 { margin-top: clamp(12px, 2vh, 22px); }
 .hero .lead { margin: clamp(10px, 1.8vh, 18px) 0 clamp(20px, 3.4vh, 34px); }
 .hero .proof { margin-top: clamp(22px, 4vh, 40px); padding-top: clamp(14px, 2vh, 22px); }

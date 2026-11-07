@@ -23,7 +23,7 @@ export default function Analytics() {
         }
     };
     const onClick = (e: MouseEvent) => {
-      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>("a.btn, .nav-cta, a.link");
+      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>("a.btn, .nav-cta, a.link, a.wa-chat");
       if (a) track("cta_click", { label: a.textContent?.trim().slice(0, 60), href: a.getAttribute("href"), page: path });
     };
     addEventListener("scroll", onScroll, { passive: true });

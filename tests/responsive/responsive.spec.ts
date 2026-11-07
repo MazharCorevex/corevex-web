@@ -59,7 +59,7 @@ for (const vp of VIEWPORTS) {
     test("menus switch layout", async ({ page }) => {
       await page.goto("/");
       if (vp.width > 1100) {
-        await page.getByRole("button", { name: "Services" }).first().click();
+        await page.getByRole("button", { name: "Services menu" }).first().click();
         const mega = page.locator(".has-mega.is-open .mega");
         await expect(mega).toBeVisible();
         const box = await mega.boundingBox();

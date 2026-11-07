@@ -185,7 +185,6 @@ Abuse inputs, all handled as expected:
 - **The 120 KB first-load JS budget.** The framework alone is about 125 KB. Either raise the budget to about 185 KB or accept the CI failure.
 - **GitHub Actions billing.** The last push could not start any job: "recent account payments have failed or your spending limit needs to be increased". Fix it under Settings, Billing and plans, then re-run CI to get the WebKit home page diagnostic.
 - **Firefox and WebKit locally.** Install the Microsoft Visual C++ Redistributable if you want to run them on this machine. CI covers them meanwhile.
-- **LinkedIn URL.** LinkedIn blocks automated link checks, so confirm the company page URL by hand.
 - **Open items from CLAUDE.md.** PSEB number, contact email, phone and office address; real client logos, headshots and team photos; the final domain for Resend and Vercel.
 - **Legal review** of the Privacy and Terms copy.
 - **Commit attribution.** Seven pushed commits (29aac84 to 57f6417) end with a literal `$T` instead of the co-author line. Fixing that means rewriting pushed history, so it has been left alone.

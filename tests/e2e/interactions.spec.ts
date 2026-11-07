@@ -5,7 +5,7 @@ test.describe("desktop interactions", () => {
 
   test("mega menu lists all eight services", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("button", { name: "Services" }).click();
+    await page.getByRole("button", { name: "Services menu" }).click();
     const mega = page.locator(".mega");
     await expect(mega).toBeVisible();
     await expect(mega.locator("a.m[href^='/services/']:not([href*='#'])")).toHaveCount(8);

@@ -20,6 +20,8 @@ test.describe("links and images", () => {
   });
 
   test("every image loads", async ({ page }) => {
+    // Visits every page, so it needs more than the default budget under load
+    test.setTimeout(300_000);
     const failed: string[] = [];
     page.on("response", (r) => {
       if (r.request().resourceType() === "image" && r.status() >= 400) failed.push(`${r.status()} ${r.url()}`);

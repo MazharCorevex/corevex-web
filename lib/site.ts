@@ -1,7 +1,7 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.corevexsolutions.com").replace(/\/$/, "");
 export const SITE_NAME = "Corevex Solutions";
 export const PSEB_NUMBER = process.env.NEXT_PUBLIC_PSEB_NUMBER || "";
-export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/company/corevex-solutions";
+export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/company/corevex-solution/";
 export const CLUTCH_URL = process.env.NEXT_PUBLIC_CLUTCH_URL || "";
 export const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "";
 
@@ -41,4 +41,6 @@ export const svc = (slug: string) => SERVICES.find((s) => s.slug === slug)!;
 
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 export const CONTACT_PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || "";
+// WhatsApp, international format without "+"
+export const WHATSAPP_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923332031151").replace(/\D/g, "");
 export const OFFICE_ADDRESS = process.env.NEXT_PUBLIC_OFFICE_ADDRESS || "";

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Montserrat } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/layout/Header";
-import MegaPanel from "@/components/layout/MegaPanel";
+import WhatsAppChat from "@/components/layout/WhatsAppChat";
 import Footer from "@/components/layout/Footer";
 import Motion from "@/components/layout/Motion";
 import Analytics from "@/components/layout/Analytics";
@@ -68,9 +68,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <a className="skip" href="#main">
           Skip to content
         </a>
-        <Header megaPanel={<MegaPanel />} />
+        <Header />
         <main id="main">{children}</main>
         <Footer />
+        <WhatsAppChat />
         <Motion />
         <Analytics />
         {process.env.NEXT_PUBLIC_GA_ID ? (

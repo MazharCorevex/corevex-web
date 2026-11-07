@@ -28,12 +28,12 @@ test.describe("navigation", () => {
       await expect(page).toHaveURL(new RegExp(`/${label.toLowerCase().replace(" ", "-")}/$`));
       await expect(page.locator("main h1")).toBeVisible();
     }
-    await page.getByRole("button", { name: "Services" }).click();
+    await page.getByRole("button", { name: "Services menu" }).click();
     const services = (await page.locator(".mega a[href^='/services/']").evaluateAll((as) => as.map((a) => a.getAttribute("href")!))).filter((h, i, all) => /^\/services\/[a-z-]+\/$/.test(h) && all.indexOf(h) === i);
     expect(new Set(services).size).toBe(8);
     for (const href of services) {
       await page.goto("/");
-      await page.getByRole("button", { name: "Services" }).click();
+      await page.getByRole("button", { name: "Services menu" }).click();
       await page.locator(`.mega a[href='${href}']`).first().click();
       await expect(page).toHaveURL(new RegExp(href.replace(/\//g, "\\/") + "$"));
       await expect(page.locator("main h1")).toBeVisible();
@@ -165,16 +165,12 @@ test.describe("forms", () => {
 });
 
 test.describe("booking", () => {
-  test("Book a 30-minute call loads Calendly on click and opens the popup", async ({ page }) => {
+  test("Book a 30-minute call opens the booking window with Calendly inside", async ({ page }) => {
+    // Stand-in for Calendly so tests never reach it
     const calls: string[] = [];
-    await page.route("https://assets.calendly.com/**", (route) => {
+    await page.route(/https:\/\/([a-z0-9-]+\.)?calendly\.com\//, (route) => {
       calls.push(route.request().url());
-      if (route.request().url().endsWith(".js"))
-        return route.fulfill({
-          contentType: "text/javascript",
-          body: `window.Calendly={initPopupWidget:function(o){var d=document.createElement('div');d.className='calendly-overlay';var f=document.createElement('iframe');f.src=o.url;d.appendChild(f);document.body.appendChild(d);}};`,
-        });
-      return route.fulfill({ contentType: "text/css", body: "" });
+      return route.fulfill({ contentType: "text/html", body: "<title>Calendly stub</title><p>Pick a time</p>" });
     });
     await page.goto("/");
     await page.waitForTimeout(1500);
@@ -182,11 +178,30 @@ test.describe("booking", () => {
     const btn = page.getByRole("link", { name: "Book a 30-minute call" }).first();
     const href = await btn.getAttribute("href");
     test.skip(!href?.startsWith("https://calendly.com"), "NEXT_PUBLIC_CALENDLY_URL not set for this build");
+    await btn.scrollIntoViewIfNeeded();
+    const before = await page.evaluate(() => scrollY);
     await btn.click();
-    const frame = page.locator(".calendly-overlay iframe");
-    await expect(frame).toHaveCount(1);
+    const dialog = page.getByRole("dialog", { name: "Book a 30-minute call" });
+    await expect(dialog).toBeVisible();
+    const frame = dialog.locator("iframe");
     expect(await frame.getAttribute("src")).toContain("primary_color=48ac9f");
-    expect(calls.some((u) => u.endsWith("widget.js"))).toBe(true);
+    await expect(frame.contentFrame().getByText("Pick a time")).toBeVisible();
+    await expect(dialog.getByRole("status")).toHaveCount(0);
+    // A window on the page, not a full-screen takeover
+    const box = (await dialog.boundingBox())!;
+    const vp = page.viewportSize()!;
+    if (vp.width > 860) {
+      expect(box.width).toBeLessThan(vp.width - 40);
+      expect(box.height).toBeLessThan(vp.height - 40);
+    }
+    // Page behind does not scroll
+    await page.mouse.wheel(0, 600);
+    await page.waitForTimeout(300);
+    expect(await page.evaluate(() => scrollY)).toBe(before);
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeHidden();
+    await expect(btn).toBeFocused();
+    expect(await page.evaluate(() => document.documentElement.classList.contains("booking-open"))).toBe(false);
     // every booking button uses the same wording
     const texts = await page.locator("a[href^='https://calendly.com']").allInnerTexts();
     for (const t of texts) expect(t.trim()).toMatch(/^Book a 30-minute call/);
@@ -247,11 +262,11 @@ test.describe("keyboard only", () => {
     await expect(page).toHaveURL(/#main$/);
 
     // Services menu by keyboard
-    await page.getByRole("button", { name: "Services" }).focus();
+    await page.getByRole("button", { name: "Services menu" }).focus();
     await page.keyboard.press("Enter");
-    await expect(page.getByRole("button", { name: "Services" })).toHaveAttribute("aria-expanded", "true");
+    await expect(page.getByRole("button", { name: "Services menu" })).toHaveAttribute("aria-expanded", "true");
     await page.keyboard.press("Escape");
-    await expect(page.getByRole("button", { name: "Services" })).toHaveAttribute("aria-expanded", "false");
+    await expect(page.getByRole("button", { name: "Services menu" })).toHaveAttribute("aria-expanded", "false");
 
     // Reach Contact by tabbing through the header
     let found = false;

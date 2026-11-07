@@ -27,7 +27,24 @@ const resend = TEST_MODE ? mock : key ? new Resend(key) : null;
 const FROM = process.env.CONTACT_FROM_EMAIL || process.env.RESEND_FROM_EMAIL || "Corevex Solutions <onboarding@resend.dev>";
 const TO = TEST_MODE ? "team@test.local" : process.env.CONTACT_TO_EMAIL;
 
-export const emailConfigured = () => Boolean(resend && TO);
+// Which email settings are present, logged once, never values
+let logged = false;
+function logEnv() {
+  if (logged) return;
+  logged = true;
+  const has = (k: string) => (process.env[k] ? "set" : "missing");
+  const sender = /@resend\.dev>?$/i.test(FROM) ? " (resend.dev test sender: delivers only to the Resend account owner)" : "";
+  console.info(
+    `[email] env: RESEND_API_KEY=${has("RESEND_API_KEY")} CONTACT_TO_EMAIL=${has("CONTACT_TO_EMAIL")} CONTACT_FROM_EMAIL=${has("CONTACT_FROM_EMAIL")}${sender} RESEND_AUDIENCE_ID=${has("RESEND_AUDIENCE_ID")} TEST_MODE=${TEST_MODE}`,
+  );
+}
+
+export const emailConfigured = () => {
+  logEnv();
+  return Boolean(resend && TO);
+};
+
+const fail = (step: string, error: { name?: string; message: string }) => new Error(`${step}: ${error.name ?? "error"}: ${error.message}`);
 
 export const esc = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
@@ -65,13 +82,13 @@ type Attachment = { filename: string; content?: Buffer; path?: string };
 export async function sendNotification(subject: string, html: string, replyTo?: string, attachments?: Attachment[]) {
   if (!resend || !TO) throw new Error("email-not-configured");
   const { error } = await resend.emails.send({ from: FROM, to: TO.split(",").map((s) => s.trim()), subject, html, replyTo, attachments });
-  if (error) throw new Error(error.message);
+  if (error) throw fail("notification to CONTACT_TO_EMAIL", error);
 }
 
 export async function sendConfirmation(to: string, subject: string, html: string) {
   if (!resend) throw new Error("email-not-configured");
   const { error } = await resend.emails.send({ from: FROM, to, subject, html, replyTo: TO?.split(",")[0]?.trim() });
-  if (error) throw new Error(error.message);
+  if (error) throw fail("confirmation to visitor", error);
 }
 
 export async function addToAudience(email: string, firstName?: string) {

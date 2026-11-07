@@ -40,9 +40,18 @@ function notConfigured(): FormResult {
 }
 
 const failed = (form: string, e: unknown): FormResult => {
-  console.error(`[forms] ${form}`, e);
+  console.error(`[forms] ${form} failed, message not sent:`, e instanceof Error ? e.message : e);
   return { state: { status: "error", message: GENERIC }, code: 502 };
 };
+
+// Visitor emails never fail the form; problems are logged
+async function confirm(form: string, to: string, subject: string, html: string) {
+  try {
+    await sendConfirmation(to, subject, html);
+  } catch (e) {
+    console.error(`[forms] ${form} confirmation to the visitor not sent (form still succeeded):`, e instanceof Error ? e.message : e);
+  }
+}
 
 // Contact
 export async function contact(fd: FormData, ip: string): Promise<FormResult> {
@@ -72,7 +81,8 @@ export async function contact(fd: FormData, ip: string): Promise<FormResult> {
       ),
       v.email,
     );
-    await sendConfirmation(
+    await confirm(
+      "contact",
       v.email,
       "We have your project details",
       branded(
@@ -96,9 +106,14 @@ export async function newsletter(fd: FormData, ip: string): Promise<FormResult> 
   if (!EMAIL.test(email)) return invalid({ email: "Please enter a valid email address." }, "Please enter a valid email address.");
   if (!emailConfigured()) return notConfigured();
   try {
-    await addToAudience(email);
+    try {
+      await addToAudience(email);
+    } catch (e) {
+      console.error("[forms] newsletter audience not updated (form still succeeded):", e instanceof Error ? e.message : e);
+    }
     await sendNotification("New newsletter subscriber", branded("New newsletter subscriber", rows({ Email: email })), email);
-    await sendConfirmation(
+    await confirm(
+      "newsletter",
       email,
       "You are subscribed to Corevex notes",
       branded(
@@ -163,7 +178,8 @@ export async function careers(fd: FormData, ip: string): Promise<FormResult> {
       v.email,
       attachment ? [attachment] : undefined,
     );
-    await sendConfirmation(
+    await confirm(
+      "careers",
       v.email,
       "We received your application",
       branded(

@@ -85,6 +85,15 @@ describe("contact action", () => {
     expect(r.code).toBe(502);
     expect(r.state.message).not.toContain("resend");
   });
+
+  it("succeeds when only the visitor confirmation fails, and logs it", async () => {
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(email, "sendConfirmation").mockRejectedValueOnce(new Error("You can only send testing emails to your own email address"));
+    const r = await contact(fd(good), ip());
+    expect(r.code).toBe(200);
+    expect(outbox()[0].subject).toMatch(/^New enquiry/);
+    expect(log.mock.calls.flat().join(" ")).toMatch(/contact confirmation to the visitor not sent.*testing emails/);
+  });
 });
 
 describe("newsletter action", () => {
@@ -101,9 +110,17 @@ describe("newsletter action", () => {
     expect(r.state.errors?.email).toBeDefined();
   });
 
-  it("handles audience errors", async () => {
+  it("still succeeds and logs when the audience update fails", async () => {
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(email, "addToAudience").mockRejectedValueOnce(new Error("audience-not-configured"));
+    expect((await newsletter(fd({ email: "reader@example.com" }), ip())).code).toBe(200);
+    expect(outbox().filter((m) => m.kind === "email")).toHaveLength(2);
+    expect(log.mock.calls.flat().join(" ")).toMatch(/audience not updated.*audience-not-configured/);
+  });
+
+  it("fails when the team notification fails", async () => {
     vi.spyOn(console, "error").mockImplementation(() => {});
-    vi.spyOn(email, "addToAudience").mockRejectedValueOnce(new Error("x"));
+    vi.spyOn(email, "sendNotification").mockRejectedValueOnce(new Error("x"));
     expect((await newsletter(fd({ email: "reader@example.com" }), ip())).code).toBe(502);
   });
 });
@@ -149,9 +166,12 @@ describe("careers action", () => {
     expect(outbox()[0].attachments).toBe(0);
   });
 
-  it("handles send failures", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => {});
-    vi.spyOn(email, "sendConfirmation").mockRejectedValueOnce(new Error("x"));
+  it("fails only when the team notification fails", async () => {
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(email, "sendConfirmation").mockRejectedValueOnce(new Error("visitor blocked"));
+    expect((await careers(fd(base), ip())).code).toBe(200);
+    expect(log.mock.calls.flat().join(" ")).toMatch(/careers confirmation to the visitor not sent.*visitor blocked/);
+    vi.spyOn(email, "sendNotification").mockRejectedValueOnce(new Error("x"));
     expect((await careers(fd(base), ip())).code).toBe(502);
   });
 });

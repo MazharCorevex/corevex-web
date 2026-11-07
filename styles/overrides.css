@@ -137,3 +137,80 @@ body { overflow-wrap: break-word; }
 
 /* CTA card after a dark band keeps its frame */
 .dark + .cta-band { margin-top: clamp(10px, 2vw, 24px); }
+
+/* Drawer services accordion */
+.drawer-acc summary { display: flex; align-items: center; justify-content: space-between; }
+.drawer-acc summary::-webkit-details-marker { display: none; }
+.drawer-acc summary::after { content: ""; width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-3px) rotate(45deg); transition: transform .2s var(--ease); margin-right: 6px; }
+.drawer-acc[open] summary::after { transform: translateY(2px) rotate(225deg); }
+
+/* Mega menu, light theme */
+.mega { border: 1px solid var(--line); border-top: 0; }
+.mega .all:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* WhatsApp chat button */
+.wa-chat { position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 85; display: flex; align-items: center; justify-content: center; height: 58px; min-width: 58px; padding: 0 14px; border-radius: 999px; background: #25D366; color: #fff; box-shadow: 0 10px 30px rgba(13, 16, 34, .22); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.wa-chat:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(13, 16, 34, .28); }
+.wa-chat:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+.wa-chat .wa-label { font-weight: 600; font-size: 15px; color: #0B3D21; max-width: 0; overflow: hidden; white-space: nowrap; transition: max-width .3s var(--ease); }
+.wa-chat svg { flex: none; color: #fff; }
+@media (hover: hover) and (pointer: fine) { .wa-chat:hover .wa-label, .wa-chat:focus-visible .wa-label { max-width: 180px; margin-left: 10px; } }
+@media (max-width: 860px) { .wa-chat { height: 54px; min-width: 54px; padding: 0 12px; right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); } }
+body.menu-open .wa-chat { visibility: hidden; }
+.footer .legal { padding-bottom: 88px; }
+
+/* WhatsApp button motion */
+.wa-chat { animation: wa-in .6s var(--ease-x) .8s both; }
+.wa-chat::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: #25D366; z-index: -1; animation: wa-pulse 3.2s ease-out 2s infinite; }
+.wa-chat svg { animation: wa-nudge 3.2s ease-in-out 2s infinite; transform-origin: 50% 60%; }
+.wa-chat:hover::before, .wa-chat:hover svg { animation-play-state: paused; }
+@keyframes wa-in { from { opacity: 0; transform: translateY(16px) scale(.6); } }
+@keyframes wa-pulse { 0% { transform: scale(1); opacity: .55; } 45%, 100% { transform: scale(1.55); opacity: 0; } }
+@keyframes wa-nudge { 0%, 52%, 100% { transform: rotate(0); } 56% { transform: rotate(-14deg); } 62% { transform: rotate(12deg); } 68% { transform: rotate(-8deg); } 74% { transform: rotate(0); } }
+
+/* Booking window */
+html.booking-open { overflow: hidden; padding-right: var(--sbw, 0px); }
+.booking { padding: 0; border: 0; margin: auto; width: min(1040px, calc(100vw - 48px)); height: min(720px, calc(100dvh - 48px)); max-width: none; max-height: none; border-radius: 24px; overflow: hidden; background: #fff; color: var(--fg); box-shadow: 0 40px 120px rgba(13, 16, 34, .35); }
+.booking::backdrop { background: rgba(13, 16, 34, .55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.booking[open] { animation: booking-in .35s var(--ease-x); }
+.booking[open]::backdrop { animation: booking-fade .35s var(--ease-x); }
+@keyframes booking-in { from { opacity: 0; transform: translateY(18px) scale(.98); } }
+@keyframes booking-fade { from { opacity: 0; } }
+@keyframes booking-up { from { transform: translateY(40px); opacity: 0; } }
+.booking-panel { position: relative; display: grid; grid-template-columns: 320px minmax(0, 1fr); height: 100%; }
+.booking-side { display: flex; flex-direction: column; gap: 18px; padding: 36px 32px 30px; color: #fff; background: radial-gradient(120% 70% at 0% 100%, rgba(72, 172, 159, .35) 0%, rgba(72, 172, 159, 0) 60%), linear-gradient(160deg, #262B47 0%, #012A54 100%); }
+.booking-side img { height: 28px; width: auto; margin-bottom: 18px; }
+.booking-side h2 { font: 600 28px/1.15 var(--f-head); color: #fff; }
+.booking-lead { color: #DDE1E8; font-size: 15px; }
+.booking-side ul { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 12px; }
+.booking-side li { position: relative; padding-left: 26px; font-size: 15px; color: #fff; }
+.booking-side li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-glow); font-weight: 700; }
+.booking-alt { margin-top: auto; display: grid; gap: 8px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .14); font-size: 14px; color: #C9D1DC; }
+.booking-alt a { color: #fff; font-weight: 600; }
+.booking-alt a:hover { color: var(--teal-glow); }
+.booking-cal { position: relative; min-width: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); background: #fff; }
+.booking-cal iframe { display: block; width: 100%; height: 100%; border: 0; }
+.booking-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px 12px 28px; border-bottom: 1px solid var(--line); }
+.booking-step { font: 600 12px var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--fg-muted); }
+.booking-loading { position: absolute; inset: 69px 0 0; display: grid; place-content: center; justify-items: center; gap: 14px; color: var(--fg-muted); font-size: 15px; }
+.booking-spin { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--line); border-top-color: var(--teal); animation: booking-spin .8s linear infinite; }
+@keyframes booking-spin { to { transform: rotate(360deg); } }
+.booking-close { flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-size: 24px; line-height: 1; color: var(--navy); background: #fff; border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(13, 16, 34, .08); cursor: pointer; }
+.booking-close:hover { background: var(--mist); }
+.booking-close:focus-visible, .booking-alt a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+@media (max-width: 860px) {
+  .booking { width: 100vw; height: calc(100dvh - 16px); margin: auto 0 0; border-radius: 22px 22px 0 0; }
+  .booking[open] { animation-name: booking-up; }
+  .booking-panel { grid-template-columns: minmax(0, 1fr); }
+  .booking-side { display: none; }
+  .booking-bar { padding: 10px 12px 10px 20px; }
+  .booking-step { font: 600 18px var(--f-head); letter-spacing: 0; text-transform: none; color: var(--navy); }
+  .booking-loading { inset: 65px 0 0; }
+}
+
+/* Touch sizes for the Services arrow; WhatsApp label only where hover exists */
+@media (pointer: coarse) { .nav > li > .mega-toggle { width: 44px; height: 44px; margin-right: 0; } }
+.wa-chat .wa-label { display: none; }
+@media (hover: hover) and (pointer: fine) { .wa-chat .wa-label { display: inline-block; } }
+.booking-loading { pointer-events: none; text-align: center; padding: 0 24px; }
+.booking-loading a { pointer-events: auto; color: var(--teal-text); font-weight: 600; }

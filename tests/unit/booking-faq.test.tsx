@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import FaqPage from "@/components/generated/FaqPage";
 
@@ -11,8 +11,8 @@ async function loadButton(url?: string) {
 }
 
 beforeEach(() => {
-  document.head.querySelectorAll("link[href*=calendly]").forEach((n) => n.remove());
-  document.body.querySelectorAll("script[src*=calendly]").forEach((n) => n.remove());
+  document.querySelectorAll("dialog").forEach((n) => n.remove());
+  document.documentElement.classList.remove("booking-open");
   vi.unstubAllEnvs();
 });
 
@@ -22,38 +22,54 @@ describe("Calendly button", () => {
     render(<BookCall />);
     const a = screen.getByRole("link", { name: "Book a 30-minute call" });
     expect(a).toHaveAttribute("href", CAL);
-    expect(document.querySelector("script[src*=calendly]")).toBeNull();
+    expect(document.querySelector("iframe, dialog")).toBeNull();
   });
 
-  it("loads the script once on first click and opens the teal popup", async () => {
+  it("opens the booking window with the calendar embedded and closes it", async () => {
     const BookCall = await loadButton(CAL);
-    const init = vi.fn();
-    (window as unknown as { Calendly: unknown }).Calendly = { initPopupWidget: init };
     render(<BookCall className="btn">Talk to us</BookCall>);
     const a = screen.getByRole("link", { name: "Talk to us" });
-    const click = new MouseEvent("click", { bubbles: true, cancelable: true });
-    a.dispatchEvent(click);
+    const click = new MouseEvent("click", { bubbles: true, cancelable: true, button: 0 });
+    await act(async () => {
+      a.dispatchEvent(click);
+    });
     expect(click.defaultPrevented).toBe(true);
-    const script = document.querySelector<HTMLScriptElement>("script[src*=calendly]")!;
-    expect(script.src).toBe("https://assets.calendly.com/assets/external/widget.js");
-    expect(document.querySelector("link[href*='calendly.com/assets/external/widget.css']")).not.toBeNull();
-    script.onload!(new Event("load"));
-    await waitFor(() => expect(init).toHaveBeenCalled());
-    const url = new URL(init.mock.calls[0][0].url);
-    expect(url.searchParams.get("primary_color")).toBe("48ac9f");
-    fireEvent.click(a);
-    await waitFor(() => expect(init).toHaveBeenCalledTimes(2));
-    expect(document.querySelectorAll("script[src*=calendly]")).toHaveLength(1);
+    const dialog = document.querySelector("dialog.booking")!;
+    expect(dialog).toHaveAttribute("open");
+    expect(screen.getByRole("heading", { name: "Book a 30-minute call" })).toBeInTheDocument();
+    expect(document.documentElement).toHaveClass("booking-open");
+    const frame = dialog.querySelector("iframe")!;
+    const src = new URL(frame.src);
+    expect(src.origin + src.pathname).toBe(CAL);
+    expect(src.searchParams.get("primary_color")).toBe("48ac9f");
+    expect(src.searchParams.get("embed_type")).toBe("Inline");
+    expect(src.searchParams.get("hide_event_type_details")).toBe("1");
+    expect(screen.getByRole("status")).toHaveTextContent("Loading available times");
+    fireEvent.load(frame);
+    expect(screen.queryByRole("status")).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Close booking" }));
+    expect(document.querySelector("dialog.booking")).toBeNull();
+    expect(document.documentElement).not.toHaveClass("booking-open");
+    expect(a).toHaveFocus();
   });
 
-  it("opens Calendly in a new tab if the script fails", async () => {
+  it("closes on Escape and on a click outside the window", async () => {
     const BookCall = await loadButton(CAL);
-    const open = vi.spyOn(window, "open").mockImplementation(() => null);
     render(<BookCall />);
-    fireEvent.click(screen.getByRole("link"));
-    const script = document.querySelector<HTMLScriptElement>("script[src*=calendly]")!;
-    script.onerror!(new Event("error"));
-    await waitFor(() => expect(open).toHaveBeenCalledWith(CAL, "_blank", "noopener"));
+    const a = screen.getByRole("link");
+    fireEvent.click(a, { button: 0 });
+    fireEvent(document.querySelector("dialog.booking")!, new Event("cancel", { cancelable: true }));
+    expect(document.querySelector("dialog.booking")).toBeNull();
+    fireEvent.click(a, { button: 0 });
+    fireEvent.click(document.querySelector("dialog.booking")!);
+    expect(document.querySelector("dialog.booking")).toBeNull();
+  });
+
+  it("leaves modified clicks to the browser", async () => {
+    const BookCall = await loadButton(CAL);
+    render(<BookCall />);
+    fireEvent.click(screen.getByRole("link"), { button: 0, ctrlKey: true });
+    expect(document.querySelector("dialog.booking")).toBeNull();
   });
 
   it("falls back to the contact page without a Calendly URL", async () => {
@@ -62,7 +78,7 @@ describe("Calendly button", () => {
     const a = screen.getByRole("link", { name: "Book a 30-minute call" });
     expect(a.getAttribute("href")).toMatch(/^\/contact\/?#call$/);
     fireEvent.click(a);
-    expect(document.querySelector("script[src*=calendly]")).toBeNull();
+    expect(document.querySelector("dialog.booking")).toBeNull();
   });
 });
 
