@@ -134,3 +134,6 @@ body { overflow-wrap: break-word; }
 .values > *, .leaders > *, .stx-grid > *, .team-map > *, .perks > *, .jobs > *, .art-hero .wrap > *, .art-hero .grid2 > *, .stx > *, .rescue-top > *, .svc-row > *, .cs-block > *, .rail-head > *, .section-head > *, .split > *, .grid2 > *, .feat-wrap > *, .faq-wrap > *, .contact > *, .ins > *, .story > *, .mag-feat > *, .console > *, .steps-wrap > *, .finale .wrap > * { min-width: 0; }
 .rail-head { flex-wrap: wrap; }
 .btn { max-width: 100%; white-space: normal; }
+
+/* CTA card after a dark band keeps its frame */
+.dark + .cta-band { margin-top: clamp(10px, 2vw, 24px); }
