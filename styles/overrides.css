@@ -54,6 +54,9 @@ a.btn[href^="https://calendly.com"] { cursor: pointer; }
 /* Hero column never wider than the screen */
 @media (max-width: 860px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
 
+/* Before and after on phones: after list sits at the bottom */
+@media (max-width: 860px) { .ba .after div { margin-top: auto; } }
+
 /* Short landscape phones: orbit becomes a swipe row */
 @media (min-width: 861px) and (max-height: 520px) {
   .orbit { position: relative; left: auto; top: auto; width: auto; height: auto; animation: none; display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 10px; margin-top: 10px; scrollbar-width: none; }

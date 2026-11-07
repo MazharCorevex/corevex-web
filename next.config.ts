@@ -16,7 +16,8 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
+  // WebKit upgrades http://localhost too, so test builds skip it
+  ...(process.env.TEST_MODE === "true" ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
 const security = [

@@ -20,8 +20,8 @@ test.describe("three.js", () => {
     const initial = list.filter((s) => THREE.test(s.body)).map((s) => s.url);
     expect(initial, "three.js before scrolling").toEqual([]);
     await page.locator(".core").scrollIntoViewIfNeeded();
-    await expect(page.locator(".core")).toHaveClass(/live/, { timeout: 15_000 });
-    expect(list.some((s) => THREE.test(s.body)), "three.js loads once the section is near").toBe(true);
+    // CI runners may lack WebGL, so wait for the chunk rather than the live canvas
+    await expect.poll(() => list.some((s) => THREE.test(s.body)), { message: "three.js loads once the section is near", timeout: 15_000 }).toBe(true);
     await page.close();
   });
 
