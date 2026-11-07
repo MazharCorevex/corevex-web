@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type MouseEvent, type PointerEvent, type ReactNode } from "react";
 import { DRAWER_ORDER, svc } from "@/lib/site";
 
 const NAV = [
@@ -21,6 +21,7 @@ export default function Header({ megaPanel }: { megaPanel: ReactNode }) {
   const [hidden, setHidden] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const drawerRef = useRef<HTMLDivElement>(null);
+  const menuBtn = useRef<HTMLButtonElement>(null);
   const [lastPath, setLastPath] = useState(path);
 
   if (path !== lastPath) {
@@ -53,19 +54,59 @@ export default function Header({ megaPanel }: { megaPanel: ReactNode }) {
     };
   }, []);
 
+  // Tap outside closes the mega menu
+  useEffect(() => {
+    if (!mega) return;
+    const out = (e: globalThis.PointerEvent) => {
+      if (!(e.target as Element).closest?.(".has-mega")) setMega(false);
+    };
+    document.addEventListener("pointerdown", out);
+    return () => document.removeEventListener("pointerdown", out);
+  }, [mega]);
+
   useEffect(() => {
     document.body.classList.toggle("menu-open", drawer);
     document.body.style.overflow = drawer ? "hidden" : "";
-    if (drawer) drawerRef.current?.querySelector<HTMLElement>(".close")?.focus();
+    const box = drawerRef.current;
+    if (!drawer || !box) return;
+    box.querySelector<HTMLElement>(".close")?.focus();
+    // Focus trap
+    const trap = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const f = Array.from(box.querySelectorAll<HTMLElement>("a[href],button,summary")).filter((el) => el.offsetParent !== null || el === document.activeElement);
+      if (!f.length) return;
+      const first = f[0];
+      const last = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === first || !box.contains(document.activeElement))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (document.activeElement === last || !box.contains(document.activeElement))) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", trap);
+    const opener = menuBtn.current;
+    return () => {
+      document.removeEventListener("keydown", trap);
+      opener?.focus();
+    };
   }, [drawer]);
 
-  const enter = () => {
+  const hovered = useRef(false);
+  const enter = (e: PointerEvent) => {
+    if (e.pointerType !== "mouse") return;
     clearTimeout(timer.current);
+    hovered.current = true;
     setMega(true);
   };
-  const leave = () => {
+  const leave = (e: PointerEvent) => {
+    if (e.pointerType !== "mouse") return;
+    hovered.current = false;
     timer.current = setTimeout(() => setMega(false), 160);
   };
+  // Mouse click keeps a hover-opened menu open; keyboard and touch toggle
+  const toggle = (e: MouseEvent) => setMega((o) => (e.detail > 0 && hovered.current ? true : !o));
   const cur = (href: string) => (path?.startsWith(href) ? "page" : undefined);
 
   return (
@@ -78,8 +119,8 @@ export default function Header({ megaPanel }: { megaPanel: ReactNode }) {
           </Link>
           <nav aria-label="Main">
             <ul className="nav">
-              <li className={`has-mega${mega ? " is-open" : ""}`} onMouseEnter={enter} onMouseLeave={leave}>
-                <button aria-expanded={mega} aria-haspopup="true" onClick={() => setMega((o) => !o)}>
+              <li className={`has-mega${mega ? " is-open" : ""}`} onPointerEnter={enter} onPointerLeave={leave}>
+                <button aria-expanded={mega} aria-haspopup="true" onClick={toggle}>
                   Services
                 </button>
                 <div className="mega" role="region" aria-label="Services">
@@ -98,7 +139,7 @@ export default function Header({ megaPanel }: { megaPanel: ReactNode }) {
           <Link className="btn btn-sm nav-cta" href="/contact/">
             Start a project <span className="chev">»</span>
           </Link>
-          <button className="menu-btn" aria-label="Open menu" aria-expanded={drawer} onClick={() => setDrawer(true)}>
+          <button ref={menuBtn} className="menu-btn" aria-label="Open menu" aria-expanded={drawer} onClick={() => setDrawer(true)}>
             <span />
             <span />
             <span />

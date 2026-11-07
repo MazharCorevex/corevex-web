@@ -28,7 +28,7 @@ export default function Motion() {
             io.unobserve(e.target);
           }
         }),
-      { threshold: 0.18 },
+      { threshold: 0, rootMargin: "0px 0px -12% 0px" },
     );
     $$('[data-reveal]:not([data-reveal="load"]), .layers, .timeline, .wordmark, .ed-photo, .art-img').forEach((el) => io.observe(el));
     off.push(() => io.disconnect());
