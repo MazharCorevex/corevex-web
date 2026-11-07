@@ -2,10 +2,30 @@ import "server-only";
 import { Resend } from "resend";
 import { SITE_URL } from "@/lib/site";
 
+// Test mode never sends real email
+export const TEST_MODE = process.env.TEST_MODE === "true";
+type Sent = { kind: "email" | "contact"; to?: string | string[]; subject?: string; html?: string; email?: string; attachments?: number };
+const g = globalThis as unknown as { __outbox?: Sent[] };
+export const outbox = () => (g.__outbox ??= []);
+const mock = {
+  emails: {
+    send: async (m: { to: string | string[]; subject: string; html: string; attachments?: unknown[] }) => {
+      outbox().push({ kind: "email", to: m.to, subject: m.subject, html: m.html, attachments: m.attachments?.length ?? 0 });
+      return { data: { id: "test" }, error: null };
+    },
+  },
+  contacts: {
+    create: async (c: { email: string }) => {
+      outbox().push({ kind: "contact", email: c.email });
+      return { data: { id: "test" }, error: null };
+    },
+  },
+} as unknown as Resend;
+
 const key = process.env.RESEND_API_KEY;
-const resend = key ? new Resend(key) : null;
+const resend = TEST_MODE ? mock : key ? new Resend(key) : null;
 const FROM = process.env.CONTACT_FROM_EMAIL || process.env.RESEND_FROM_EMAIL || "Corevex Solutions <onboarding@resend.dev>";
-const TO = process.env.CONTACT_TO_EMAIL;
+const TO = TEST_MODE ? "team@test.local" : process.env.CONTACT_TO_EMAIL;
 
 export const emailConfigured = () => Boolean(resend && TO);
 
@@ -55,7 +75,7 @@ export async function sendConfirmation(to: string, subject: string, html: string
 }
 
 export async function addToAudience(email: string, firstName?: string) {
-  const audienceId = process.env.RESEND_AUDIENCE_ID;
+  const audienceId = TEST_MODE ? "test-audience" : process.env.RESEND_AUDIENCE_ID;
   if (!resend || !audienceId) throw new Error("audience-not-configured");
   const { error } = await resend.contacts.create({ email, firstName, unsubscribed: false, audienceId });
   if (error && !/already exists/i.test(error.message)) throw new Error(error.message);

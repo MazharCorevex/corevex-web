@@ -211,7 +211,7 @@ export default function ServicesHub() {
         <div className="wrap">
           <div>
             <h2 className="h2">Have something to build?</h2>
-            <p>Tell us what you need. A senior engineer replies within one business day.</p>
+            <p>Tell us what you need. A senior engineer reads every enquiry and replies personally.</p>
           </div>
           <Link href="/contact/" className="btn">
             {"Start a project "}

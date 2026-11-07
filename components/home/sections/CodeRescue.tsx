@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
+import BookCall from "@/components/booking/BookCall";
 import HealthCheck from "@/components/home/HealthCheck";
 
 // CodeRescue
@@ -28,10 +29,7 @@ export default function CodeRescue() {
               <span>Base44</span>
             </div>
             <div className="btns" data-reveal="" style={{ marginTop: "28px" } as CSSProperties}>
-              <Link href="/contact/" className="btn">
-                {"Book a code rescue call "}
-                <span className="chev">»</span>
-              </Link>
+              <BookCall className="btn" />
               <Link href="/services/code-rescue/" className="btn btn-ghost">
                 See how it works
               </Link>

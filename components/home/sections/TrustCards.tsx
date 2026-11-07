@@ -42,7 +42,7 @@ export default function TrustCards() {
             <span className="ib">
               <Img src="/images/icons/web-mobile.svg" alt="" />
             </span>
-            <b>Reply in one business day</b>
+            <b>A senior engineer replies</b>
             <p>A senior engineer reviews every enquiry and replies personally.</p>
           </div>
         </div>

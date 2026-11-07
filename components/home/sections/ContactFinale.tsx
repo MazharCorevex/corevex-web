@@ -9,8 +9,7 @@ export default function ContactFinale() {
           <span className="label">Contact</span>
           <h2 className="h2">Have something to build?</h2>
           <p className="lead">
-            Tell us about your idea, product or problem. A senior engineer reads every enquiry and replies within one
-            business day.
+            Tell us about your idea, product or problem. A senior engineer reads every enquiry and replies personally.
           </p>
         </div>
         <QuickContact />

@@ -11,6 +11,7 @@ const RULES = [
   ["bracket placeholder", /\[[A-Za-z][^\]\n]{0,60}\](?!\()/],
   ["price", /(\$|USD|EUR|GBP|PKR|£|€)\s?\d|\d+\s?(USD|per hour|\/hr|\/month|a month)\b/i],
   ["rate or timeline promise", /\b(in|within) \d+\s?(days?|weeks?|months?)\b|\bstarting (at|from)\b|\bhourly rate\b/i],
+  ["availability promise", /\bbusiness days?\b|\bsame[- ]day\b|\b24\/7\b|\bwithin (a|an|one|two|three|a few|\d+) (hours?|days?|weeks?|months?)\b|\b(reply|replies|respond|response|turnaround) (in|within)\b/i],
   ["free offer", /free (audit|blueprint|consultation|estimate)/i],
   ["20-minute call", /20[- ]minute/i],
 ];

@@ -12,10 +12,14 @@
     "check": "npm run lint && npm run typecheck && npm run build",
     "analyze": "cross-env ANALYZE=true next build --webpack",
     "images": "node scripts/images.mjs",
-    "test:e2e": "playwright test",
+    "test:e2e": "playwright test -c playwright.config.ts",
     "lhci": "lhci autorun --config=lighthouserc.cjs",
     "qa:content": "node scripts/content-check.mjs",
-    "qa:js": "node scripts/js-budget.mjs"
+    "qa:js": "node scripts/js-budget.mjs",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest run --coverage",
+    "test:responsive": "playwright test -c playwright.responsive.config.ts",
+    "test:a11y": "playwright test -c playwright.a11y.config.ts"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",
@@ -28,20 +32,31 @@
     "three": "^0.187.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@lhci/cli": "^0.16.0",
     "@next/bundle-analyzer": "^16.4.5",
     "@playwright/test": "^1.65.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "@vitest/coverage-v8": "^5.1.0",
+    "autocannon": "^9.0.0",
     "cheerio": "^1.2.0",
     "cross-env": "^10.1.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.5",
+    "jsdom": "^31.0.0",
+    "linkinator": "^8.1.0",
     "prettier": "^3.9.10",
     "sharp": "^0.35.5",
     "svgo": "^4.1.0",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^5.1.0"
   }
 }

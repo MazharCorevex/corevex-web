@@ -31,7 +31,7 @@ export default function ContactPage() {
             <span>You will speak with our team</span>
           </div>
           <ul className="c-trust" id="call">
-            <li>Reply within one business day</li>
+            <li>A senior engineer replies personally</li>
             <li>NDA on request</li>
             <li>You own the code</li>
             <li>{'Prefer to talk? Choose "Book a call" below and we will send a time'}</li>
