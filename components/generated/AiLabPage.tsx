@@ -62,23 +62,23 @@ export default function AiLabPage() {
                     <b>Total $3,195.60</b>
                   </div>
                   <div className="fields">
-                    <div>
+                    <div className="on">
                       <span>Supplier: Atlas Industrial Supply</span>
                       <em>99.1%</em>
                     </div>
-                    <div>
+                    <div className="on">
                       <span>Invoice no: INV-88213</span>
                       <em>99.8%</em>
                     </div>
-                    <div>
+                    <div className="on">
                       <span>Date: 2026-11-04</span>
                       <em>98.7%</em>
                     </div>
-                    <div>
+                    <div className="on">
                       <span>Customer: Northwind Foods</span>
                       <em>97.9%</em>
                     </div>
-                    <div>
+                    <div className="on">
                       <span>Total: $3,195.60</span>
                       <em>99.4%</em>
                     </div>

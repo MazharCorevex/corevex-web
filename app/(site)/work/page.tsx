@@ -46,8 +46,11 @@ export default async function WorkIndex() {
             ))}
           </div>
         </div>
-        <section className="band">
+        <section className="band" aria-labelledby="work-list">
           <div className="wrap">
+            <h2 className="sr" id="work-list">
+              Projects
+            </h2>
             <div className="masonry">
               {cases.map((c) => (
                 <Link key={c.slug} className="m-card" data-cat={c.categories.join(" ")} href={`/work/${c.slug}/`}>
@@ -63,7 +66,7 @@ export default async function WorkIndex() {
                 </Link>
               ))}
             </div>
-            <p className="note" style={{ color: "var(--text-muted)" }}>
+            <p className="note">
               Projects marked Product design study are design studies that show our capabilities. Client case studies
               are added as they are approved for publication.
             </p>

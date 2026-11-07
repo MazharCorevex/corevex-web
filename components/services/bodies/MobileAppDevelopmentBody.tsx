@@ -13,7 +13,7 @@ export default function MobileAppDevelopmentBody() {
             Apps for customers, teams and connected products
           </h2>
         </div>
-        <div className="swipe">
+        <div className="swipe" tabIndex={0} role="region" aria-label="App screens, scroll sideways for more">
           <figure>
             <div className="shot">
               <Img

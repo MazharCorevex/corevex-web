@@ -31,7 +31,7 @@ const components: PortableTextComponents = {
     table: ({ value }: { value: TableValue }) => {
       const [head, ...rows] = value.hasHeader ? value.rows : [null, ...value.rows];
       return (
-        <div className="table-scroll">
+        <div className="table-scroll" tabIndex={0} role="region" aria-label="Table, scroll sideways for more">
           <table>
             {head && (
               <thead>
