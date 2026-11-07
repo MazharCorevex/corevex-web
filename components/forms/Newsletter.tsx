@@ -13,7 +13,7 @@ export default function Newsletter() {
   }, [state.status]);
   const sent = state.status === "ok";
   return (
-    <form className={`news${sent ? " sent" : ""}`} onSubmit={onSubmitWith(action)}>
+    <form className={`news${sent ? " sent" : ""}`} action={action} onSubmit={onSubmitWith(action)}>
       <div className="news-copy">
         <b>Practical notes on software and AI</b>
         <p>One short email a month from our engineers. No spam.</p>

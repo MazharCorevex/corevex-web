@@ -63,7 +63,7 @@ export default function CareersForm({ roles, blob }: { roles: string[]; blob: bo
   const cvErr = fileErr || state.errors?.cv;
 
   return (
-    <form className={`form${sent ? " sent" : ""}`} onSubmit={onSubmit}>
+    <form className={`form${sent ? " sent" : ""}`} action={action} onSubmit={onSubmit}>
       <div className="row2 hide-on-sent">
         <div className="field">
           <label htmlFor="a-name">Name</label>

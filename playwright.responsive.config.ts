@@ -5,7 +5,6 @@ const PORT = Number(process.env.PORT || 3100);
 export default defineConfig({
   testDir: "./tests/responsive",
   outputDir: "test-results/.pw/responsive",
-  snapshotPathTemplate: "tests/visual/__screenshots__/{projectName}/{arg}{ext}",
   timeout: 120_000,
   fullyParallel: true,
   workers: process.env.CI ? 2 : 6,

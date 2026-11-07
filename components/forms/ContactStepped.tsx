@@ -52,6 +52,7 @@ export default function ContactStepped() {
   return (
     <form
       ref={ref}
+      action={action}
       className={`form${sent ? " sent" : ""}`}
       style={{ background: "transparent", border: 0, padding: 0, backdropFilter: "none" }}
       onSubmit={(e) => {

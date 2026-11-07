@@ -13,7 +13,7 @@ export default function QuickContact({ source = "home" }: { source?: string }) {
     if (sent) track("form_submit", { form: source });
   }, [sent, source]);
   return (
-    <form className={`form${sent ? " sent" : ""}`} onSubmit={onSubmitWith(action)}>
+    <form className={`form${sent ? " sent" : ""}`} action={action} onSubmit={onSubmitWith(action)}>
       <input type="hidden" name="source" value={source} />
       <div className="hide-on-sent row2">
         <div className="field">

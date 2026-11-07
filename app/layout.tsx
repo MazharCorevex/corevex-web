@@ -36,6 +36,18 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
 };
 
+// Without JavaScript every block is shown in its final state
+const NOSCRIPT = [
+  "[data-reveal],.words .w,.layers .layer,.stx-card{opacity:1!important;transform:none!important}",
+  ".split-img img,.svc-photo img,.art-img img,.ed-photo img{opacity:1!important;transform:none!important}",
+  ".timeline::after{transform:none!important}.wordmark{opacity:.07}",
+  ".orb-chip{opacity:1!important;transform:translate(-50%,-50%) rotate(var(--a)) translateX(var(--orb-r,270px)) rotate(calc(-1*var(--a))) scale(1)!important}",
+  "@media (max-width:860px),(max-height:520px){.orb-chip{transform:none!important}}",
+  ".stx-panel{display:block!important}.stx-panel+.stx-panel{margin-top:24px}.stx-nav{display:none!important}",
+  ".fstep{display:grid!important;animation:none!important;margin-bottom:28px}.fnav button[type=button],.stepper{display:none!important}",
+  ".core-step{position:static!important;opacity:1!important;transform:none!important;margin-bottom:24px}.core-steps{min-height:0}",
+].join("");
+
 export const viewport: Viewport = {
   themeColor: "#0D1022",
   width: "device-width",
@@ -48,7 +60,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${montserrat.variable} ${mono.variable}`}>
       <head>
         <noscript>
-          <style>{`[data-reveal],.words .w{opacity:1!important;transform:none!important}.split-img img,.svc-photo img,.art-img img,.ed-photo img{opacity:1!important;transform:none!important}`}</style>
+          <style>{NOSCRIPT}</style>
         </noscript>
         <JsonLd data={organizationLd()} />
       </head>

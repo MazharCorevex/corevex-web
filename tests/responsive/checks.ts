@@ -44,7 +44,7 @@ export async function audit(page: Page, opts: Opts) {
       return `${el.tagName.toLowerCase()}${c}${t ? ` "${t}"` : ""}`;
     };
     const hidden = (el: Element): boolean => {
-      if (el.closest("[inert],[hidden],[aria-hidden=true],.drawer:not(.is-open),.mega,.sheet:not(.is-open),noscript,.skip")) return true;
+      if (el.closest("[inert],[hidden],[aria-hidden=true],.drawer:not(.is-open),.mega,.sheet:not(.is-open),noscript,.skip,.sr")) return true;
       const d = el.closest("details:not([open])");
       if (d && !el.closest("summary")) return true;
       for (let n: Element | null = el; n; n = n.parentElement) {
