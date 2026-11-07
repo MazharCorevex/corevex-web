@@ -39,7 +39,7 @@ async function pages() {
   const all = { times: [], codes: {}, errors: 0, timeouts: 0, requests: 0, bytes: 0, seconds: 0 };
   for (const s of stages) {
     const { res, times, codes } = await run({ ...s, requests, timeout: 10, pipelining: 1 });
-    all.times.push(...times);
+    for (const t of times) all.times.push(t);
     for (const [k, v] of Object.entries(codes)) all.codes[k] = (all.codes[k] || 0) + v;
     all.errors += res.errors + res.non2xx;
     all.timeouts += res.timeouts;

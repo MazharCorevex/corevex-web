@@ -16,6 +16,8 @@ for (const vp of VIEWPORTS) {
 
     for (const route of ROUTES) {
       test(route, async ({ page, browserName }, info) => {
+        // WebKit full-page captures at 1920+ are slow
+        test.slow(browserName === "webkit" && vp.width >= 1920);
         const errors: string[] = [];
         page.on("pageerror", (e) => errors.push(e.message));
         const res = await page.goto(route, { waitUntil: "load" });
@@ -28,7 +30,8 @@ for (const vp of VIEWPORTS) {
           ...(await audit(page, { touch: touchCheck, desktop: vp.kind === "desktop", home: route === "/" })),
           ...(await layout(page, route, vp.width, vp.height)),
         ];
-        await page.screenshot({ path: `test-results/responsive/${info.project.name}/${vp.name}/${slug(route)}.png`, fullPage: true });
+        const tall = await page.evaluate(() => document.documentElement.scrollHeight > 30000);
+        await page.screenshot({ path: `test-results/responsive/${info.project.name}/${vp.name}/${slug(route)}.png`, fullPage: !tall, timeout: 60_000 });
         expect(issues, `${route} at ${vp.name} in ${browserName}`).toEqual([]);
         expect(errors, "page errors").toEqual([]);
       });

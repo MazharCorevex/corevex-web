@@ -206,6 +206,16 @@ export async function audit(page: Page, opts: Opts) {
     // Content left hidden after scrolling
     const stuck = [...document.querySelectorAll("[data-reveal]:not([data-reveal=load])")].filter((e) => !e.classList.contains("is-in") && !e.closest("[hidden],.drawer,.mega,.sheet,details:not([open])"));
     if (stuck.length) issues.push(`${stuck.length} block(s) never revealed: ${stuck.slice(0, 3).map(label).join(", ")}`);
+    // Runaway page height
+    const total = document.documentElement.scrollHeight;
+    if (total > 30000) {
+      const tall = [...document.querySelectorAll("main > *, main > * > *, main > * > * > *")]
+        .map((e) => ({ e, h: Math.round(e.getBoundingClientRect().height) }))
+        .sort((a, b) => b.h - a.h)
+        .slice(0, 6)
+        .map((t) => `${label(t.e)} ${t.h}px`);
+      issues.push(`page ${total}px tall; tallest: ${tall.join(", ")}`);
+    }
     return issues;
   }, opts);
 }
