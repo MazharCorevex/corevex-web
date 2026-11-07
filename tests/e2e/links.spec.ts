@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { ROUTES } from "./routes";
+import { ROUTES } from "../routes";
 
 test.describe("links and images", () => {
-  test.beforeEach(({}, info) => test.skip(info.project.name !== "1366", "runs once"));
+  test.beforeEach(({}, info) => test.skip(info.project.name !== "desktop", "runs once"));
 
   test("every internal link resolves", async ({ page, request }) => {
     const links = new Set<string>();

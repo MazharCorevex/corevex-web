@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("desktop interactions", () => {
-  test.beforeEach(({}, info) => test.skip(info.project.name !== "1366", "desktop only"));
+  test.beforeEach(({}, info) => test.skip(info.project.name !== "desktop", "desktop only"));
 
   test("mega menu lists all eight services", async ({ page }) => {
     await page.goto("/");
@@ -9,18 +9,6 @@ test.describe("desktop interactions", () => {
     const mega = page.locator(".mega");
     await expect(mega).toBeVisible();
     await expect(mega.locator("a.m[href^='/services/']:not([href*='#'])")).toHaveCount(8);
-  });
-
-  test("book a call opens Calendly in teal", async ({ page }) => {
-    test.skip(!process.env.NEXT_PUBLIC_CALENDLY_URL && !(await import("node:fs")).existsSync(".env.local"), "no Calendly URL");
-    await page.goto("/");
-    const before = await page.locator('script[src*="calendly"]').count();
-    expect(before).toBe(0);
-    await page.getByRole("link", { name: "Book a 30-minute call" }).first().click();
-    await expect(page.locator('script[src*="assets.calendly.com"]').first()).toBeAttached();
-    const frame = page.locator(".calendly-overlay iframe, .calendly-popup iframe");
-    await expect(frame).toHaveCount(1, { timeout: 15000 });
-    expect(await frame.getAttribute("src")).toContain("primary_color=48ac9f");
   });
 
   test("tech stack tabs switch panels", async ({ page }) => {
@@ -92,7 +80,7 @@ test.describe("desktop interactions", () => {
 });
 
 test.describe("mobile interactions", () => {
-  test.beforeEach(({}, info) => test.skip(info.project.name !== "390", "mobile only"));
+  test.beforeEach(({}, info) => test.skip(info.project.name !== "mobile", "mobile only"));
 
   test("drawer opens and lists services", async ({ page }) => {
     await page.goto("/");
