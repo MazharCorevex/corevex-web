@@ -29,7 +29,7 @@ export default function Industries() {
           </button>
           <button className="acc-item" aria-expanded="false">
             <span className="bg">
-              <Img src="/images/photos/ind-healthcare.webp" alt="" fill sizes="(max-width: 860px) 100vw, 40vw" />
+              <Img src="/images/photos/ind-healthcare-clinic.webp" alt="" fill sizes="(max-width: 860px) 100vw, 40vw" />
             </span>
             <span className="in">
               <h3>Healthcare</h3>
