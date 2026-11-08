@@ -1,375 +1,768 @@
 [
- {
-  "slug": "fleetline-logistics-platform",
-  "order": 0,
-  "categories": [
-   "custom-software"
-  ],
-  "industry": "Logistics",
-  "name": "Fleetline",
-  "summary": "Live operations dashboard and driver app on one shared backend.",
-  "image": "/images/portfolio/fleetline-logistics-platform-1600.webp",
-  "imageAlt": "Fleetline logistics product shown on laptop and phone",
-  "railAlt": "Fleetline logistics product shown on laptop and phone",
-  "title": "How a logistics company runs live operations on one custom platform",
-  "seoTitle": "Fleetline: Custom Software Case Study, Corevex",
-  "description": "How a logistics company runs live operations on one custom platform. A Corevex Solutions concept case study.",
-  "heroAlt": "Fleetline product shown on laptop and phone",
-  "snapshot": [
-   {
-    "label": "INDUSTRY",
-    "value": "Logistics"
-   },
-   {
-    "label": "SERVICE",
-    "value": "Custom Software"
-   },
-   {
-    "label": "PLATFORM",
-    "value": "Web and mobile"
-   },
-   {
-    "label": "TECH STACK",
-    "value": "React, Node.js, React Native"
-   },
-   {
-    "label": "DELIVERY",
-    "value": "Dedicated team"
-   }
-  ],
-  "challenge": "Dispatchers tracked shipments across spreadsheets, calls and three separate tools, so delays were found too late.",
-  "approach": [
-   "Mapped the dispatch workflow with the operations team.",
-   "Designed a live operations dashboard and a driver app.",
-   "Built both on one shared backend with real-time updates."
-  ],
-  "delivered": [
-   {
-    "title": "Product design",
-    "text": "Flows, screens and a clickable prototype approved before build."
-   },
-   {
-    "title": "Web and mobile",
-    "text": "Built on React, Node.js, React Native, tested by dedicated QA."
-   },
-   {
-    "title": "Handover",
-    "text": "Source code, documentation and access transferred in full."
-   }
-  ],
-  "next": "medora-clinic-booking",
-  "results": [],
-  "isDesignStudy": true
- },
- {
-  "slug": "medora-clinic-booking",
-  "order": 1,
-  "categories": [
-   "full-stack"
-  ],
-  "industry": "Healthcare",
-  "name": "Medora",
-  "summary": "Clinic scheduling and patient booking across web and mobile.",
-  "image": "/images/portfolio/medora-clinic-booking-1600.webp",
-  "imageAlt": "Medora healthcare product shown on laptop and phone",
-  "railAlt": "Medora healthcare product shown on laptop and phone",
-  "title": "How a clinic group moved scheduling and booking onto one platform",
-  "seoTitle": "Medora: Full-Stack Case Study, Corevex",
-  "description": "How a clinic group moved scheduling and booking onto one platform. A Corevex Solutions concept case study.",
-  "heroAlt": "Medora product shown on laptop and phone",
-  "snapshot": [
-   {
-    "label": "INDUSTRY",
-    "value": "Healthcare"
-   },
-   {
-    "label": "SERVICE",
-    "value": "Full-Stack"
-   },
-   {
-    "label": "PLATFORM",
-    "value": "Web and mobile"
-   },
-   {
-    "label": "TECH STACK",
-    "value": "Next.js, .NET, Flutter"
-   },
-   {
-    "label": "DELIVERY",
-    "value": "Dedicated team"
-   }
-  ],
-  "challenge": "Front desk staff juggled phone bookings and paper diaries, and patients could not book online.",
-  "approach": [
-   "Mapped appointment types, doctors and rooms.",
-   "Designed a week calendar for staff and a booking flow for patients.",
-   "Built the scheduling engine with reminders and a waitlist."
-  ],
-  "delivered": [
-   {
-    "title": "Product design",
-    "text": "Flows, screens and a clickable prototype approved before build."
-   },
-   {
-    "title": "Web and mobile",
-    "text": "Built on Next.js, .NET, Flutter, tested by dedicated QA."
-   },
-   {
-    "title": "Handover",
-    "text": "Source code, documentation and access transferred in full."
-   }
-  ],
-  "next": "pulse-fitness-app",
-  "results": [],
-  "isDesignStudy": true
- },
- {
-  "slug": "pulse-fitness-app",
-  "order": 2,
-  "categories": [
-   "mobile"
-  ],
-  "industry": "Health and fitness",
-  "name": "Pulse",
-  "summary": "A cross-platform fitness app with workouts, progress and rest timers.",
-  "image": "/images/portfolio/pulse-fitness-app-1600.webp",
-  "imageAlt": "Pulse health and fitness product shown on laptop and phone",
-  "railAlt": "Pulse health and fitness product shown on laptop and phone",
-  "title": "How a fitness brand launched one app on iOS and Android",
-  "seoTitle": "Pulse: Mobile Case Study, Corevex",
-  "description": "How a fitness brand launched one app on iOS and Android. A Corevex Solutions concept case study.",
-  "heroAlt": "Pulse product shown on laptop and phone",
-  "snapshot": [
-   {
-    "label": "INDUSTRY",
-    "value": "Health and fitness"
-   },
-   {
-    "label": "SERVICE",
-    "value": "Mobile"
-   },
-   {
-    "label": "PLATFORM",
-    "value": "iOS and Android"
-   },
-   {
-    "label": "TECH STACK",
-    "value": "Flutter, Node.js"
-   },
-   {
-    "label": "DELIVERY",
-    "value": "Dedicated team"
-   }
-  ],
-  "challenge": "The brand needed an app quickly on both platforms without two separate teams.",
-  "approach": [
-   "Defined the core journeys: today, workout and progress.",
-   "Designed a dark, high-contrast interface for use mid-workout.",
-   "Built one Flutter codebase with offline workout tracking."
-  ],
-  "delivered": [
-   {
-    "title": "Product design",
-    "text": "Flows, screens and a clickable prototype approved before build."
-   },
-   {
-    "title": "iOS and Android",
-    "text": "Built on Flutter, Node.js, tested by dedicated QA."
-   },
-   {
-    "title": "Handover",
-    "text": "Source code, documentation and access transferred in full."
-   }
-  ],
-  "next": "ledgerly-ai-document-extraction",
-  "results": [],
-  "isDesignStudy": true
- },
- {
-  "slug": "ledgerly-ai-document-extraction",
-  "order": 3,
-  "categories": [
-   "ai"
-  ],
-  "industry": "Finance",
-  "name": "Ledgerly AI",
-  "summary": "Invoice data extraction with confidence scores and ERP sync.",
-  "image": "/images/portfolio/ledgerly-ai-document-extraction-1600.webp",
-  "imageAlt": "Ledgerly AI finance product shown on laptop and phone",
-  "railAlt": "Ledgerly AI finance product shown on laptop and phone",
-  "title": "How a finance team stopped typing invoices by hand",
-  "seoTitle": "Ledgerly AI: AI and LLM Case Study, Corevex",
-  "description": "How a finance team stopped typing invoices by hand. A Corevex Solutions concept case study.",
-  "heroAlt": "Ledgerly AI product shown on laptop and phone",
-  "snapshot": [
-   {
-    "label": "INDUSTRY",
-    "value": "Finance"
-   },
-   {
-    "label": "SERVICE",
-    "value": "AI and LLM"
-   },
-   {
-    "label": "PLATFORM",
-    "value": "Web"
-   },
-   {
-    "label": "TECH STACK",
-    "value": "Python, LLM APIs, React"
-   },
-   {
-    "label": "DELIVERY",
-    "value": "Dedicated team"
-   }
-  ],
-  "challenge": "Accounts staff typed every supplier invoice into the ERP, which was slow and error-prone.",
-  "approach": [
-   "Collected sample invoices and the fields that mattered.",
-   "Built an extraction pipeline with a confidence score per field.",
-   "Added a review screen and a one-click sync to the ERP."
-  ],
-  "delivered": [
-   {
-    "title": "Product design",
-    "text": "Flows, screens and a clickable prototype approved before build."
-   },
-   {
-    "title": "Web",
-    "text": "Built on Python, LLM APIs, React, tested by dedicated QA."
-   },
-   {
-    "title": "Handover",
-    "text": "Source code, documentation and access transferred in full."
-   }
-  ],
-  "next": "relay-support-automation",
-  "results": [],
-  "isDesignStudy": true
- },
- {
-  "slug": "relay-support-automation",
-  "order": 4,
-  "categories": [
-   "automation"
-  ],
-  "industry": "eCommerce",
-  "name": "Relay",
-  "summary": "An AI support workflow that answers, routes and escalates.",
-  "image": "/images/portfolio/relay-support-automation-1600.webp",
-  "imageAlt": "Relay ecommerce product shown on laptop and phone",
-  "railAlt": "Relay ecommerce product shown on laptop and phone",
-  "title": "How an online store answers support requests in seconds",
-  "seoTitle": "Relay: Automation Case Study, Corevex",
-  "description": "How an online store answers support requests in seconds. A Corevex Solutions concept case study.",
-  "heroAlt": "Relay product shown on laptop and phone",
-  "snapshot": [
-   {
-    "label": "INDUSTRY",
-    "value": "eCommerce"
-   },
-   {
-    "label": "SERVICE",
-    "value": "Automation"
-   },
-   {
-    "label": "PLATFORM",
-    "value": "Web and chat"
-   },
-   {
-    "label": "TECH STACK",
-    "value": "Python, LLM APIs, Node.js"
-   },
-   {
-    "label": "DELIVERY",
-    "value": "Dedicated team"
-   }
-  ],
-  "challenge": "Support requests piled up overnight and simple questions took the same time as complex ones.",
-  "approach": [
-   "Mapped incoming request types and escalation rules.",
-   "Built an AI agent that answers from the knowledge base.",
-   "Connected ticketing, CRM and on-call alerts into one workflow."
-  ],
-  "delivered": [
-   {
-    "title": "Product design",
-    "text": "Flows, screens and a clickable prototype approved before build."
-   },
-   {
-    "title": "Web and chat",
-    "text": "Built on Python, LLM APIs, Node.js, tested by dedicated QA."
-   },
-   {
-    "title": "Handover",
-    "text": "Source code, documentation and access transferred in full."
-   }
-  ],
-  "next": "vaultix-wealth-platform",
-  "results": [],
-  "isDesignStudy": true
- },
- {
-  "slug": "vaultix-wealth-platform",
-  "order": 5,
-  "categories": [
-   "full-stack",
-   "mobile"
-  ],
-  "industry": "Fintech",
-  "name": "Vaultix",
-  "summary": "A wealth dashboard with portfolio tracking and a companion app.",
-  "image": "/images/portfolio/vaultix-wealth-platform-1600.webp",
-  "imageAlt": "Vaultix fintech product shown on laptop and phone",
-  "railAlt": "Vaultix fintech product shown on laptop and phone",
-  "title": "How a wealth platform gave clients one clear view of their money",
-  "seoTitle": "Vaultix: Full-Stack and Mobile Case Study, Corevex",
-  "description": "How a wealth platform gave clients one clear view of their money. A Corevex Solutions concept case study.",
-  "heroAlt": "Vaultix product shown on laptop and phone",
-  "snapshot": [
-   {
-    "label": "INDUSTRY",
-    "value": "Fintech"
-   },
-   {
-    "label": "SERVICE",
-    "value": "Full-Stack and Mobile"
-   },
-   {
-    "label": "PLATFORM",
-    "value": "Web and mobile"
-   },
-   {
-    "label": "TECH STACK",
-    "value": "React, .NET, React Native"
-   },
-   {
-    "label": "DELIVERY",
-    "value": "Dedicated team"
-   }
-  ],
-  "challenge": "Clients received monthly PDFs and had no live view of their portfolio or goals.",
-  "approach": [
-   "Defined the portfolio, holdings and goals experience.",
-   "Designed a dashboard and a companion mobile app.",
-   "Built secure data feeds and charts that update daily."
-  ],
-  "delivered": [
-   {
-    "title": "Product design",
-    "text": "Flows, screens and a clickable prototype approved before build."
-   },
-   {
-    "title": "Web and mobile",
-    "text": "Built on React, .NET, React Native, tested by dedicated QA."
-   },
-   {
-    "title": "Handover",
-    "text": "Source code, documentation and access transferred in full."
-   }
-  ],
-  "next": "fleetline-logistics-platform",
-  "results": [],
-  "isDesignStudy": true
- }
+  {
+    "slug": "australian-direct-tutoring",
+    "order": 0,
+    "categories": [
+      "custom-software",
+      "full-stack"
+    ],
+    "industry": "Education",
+    "name": "Australian Direct Tutoring",
+    "summary": "Tutoring management platform with six role-based portals and a public website.",
+    "image": "/images/portfolio/australian-direct-tutoring-1600.webp",
+    "imageAlt": "Australian Direct Tutoring website and six role-based portals, from sign in to the Super Admin dashboard",
+    "railAlt": "Australian Direct Tutoring website and six role-based portals, from sign in to the Super Admin dashboard",
+    "title": "How a tutoring business runs leads, lessons and reports on one platform",
+    "seoTitle": "Australian Direct Tutoring: Custom Software Case Study, Corevex",
+    "description": "How a tutoring business runs leads, lessons and reports on one platform. A Corevex Solutions concept case study.",
+    "heroAlt": "Australian Direct Tutoring website and six role-based portals, from sign in to the Super Admin dashboard",
+    "gallery": [
+      {
+        "src": "/images/portfolio/australian-direct-tutoring-2-1600.webp",
+        "alt": "Academic Trainer, Parent and Super Admin portals with the shared sign in page"
+      }
+    ],
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Education"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Custom Software"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "Web platform and public website"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "Next.js, Node.js, LLM assistant"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Dedicated team"
+      }
+    ],
+    "challenge": "Enquiries, bookings, lesson notes and parent reports lived in separate tools, so families waited on updates and admins chased trainers for reports.",
+    "approach": [
+      "Mapped the journey from first enquiry to enrolment with the owners and the trainer team.",
+      "Designed six portals around each role: Super Admin, Admin, Team Leader, Academic Trainer, Parent and Student.",
+      "Built one shared platform behind them, with the public website and an AI assistant feeding new leads in."
+    ],
+    "delivered": [
+      {
+        "title": "Role-based portals",
+        "text": "Six portals on one sign in, each showing only what that role needs."
+      },
+      {
+        "title": "Lead to enrolment",
+        "text": "Enquiries, consultations and bookings tracked through to an enrolled student."
+      },
+      {
+        "title": "Learning plans and reports",
+        "text": "Trainers write session reports and plans, and parents see progress as it happens."
+      }
+    ],
+    "next": "northgate-ap-autopilot",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "northgate-ap-autopilot",
+    "order": 1,
+    "categories": [
+      "automation",
+      "ai"
+    ],
+    "industry": "Finance",
+    "name": "Northgate AP Autopilot",
+    "summary": "AI invoice processing from inbox to accounting, with approvals and a full audit trail.",
+    "image": "/images/portfolio/northgate-ap-autopilot-1600.webp",
+    "imageAlt": "Northgate AP inbox, automation workflow, invoice review and accounts payable dashboard",
+    "railAlt": "Northgate AP inbox, automation workflow, invoice review and accounts payable dashboard",
+    "title": "How a finance team moves invoices from inbox to Xero without typing them",
+    "seoTitle": "Northgate AP Autopilot: AI Automation Case Study, Corevex",
+    "description": "How a finance team moves invoices from inbox to Xero without typing them. A Corevex Solutions concept case study.",
+    "heroAlt": "Northgate AP inbox, automation workflow, invoice review and accounts payable dashboard",
+    "gallery": [
+      {
+        "src": "/images/portfolio/northgate-ap-autopilot-2-1600.webp",
+        "alt": "Northgate AP Autopilot shown in an alternative green theme"
+      }
+    ],
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Finance"
+      },
+      {
+        "label": "SERVICE",
+        "value": "AI Automation"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "Automated workflow and web dashboard"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "n8n, Python, LLM, Xero"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Automation team"
+      }
+    ],
+    "challenge": "The accounts team keyed every supplier invoice by hand, matched it to purchase orders in a spreadsheet and found duplicates only after paying them.",
+    "approach": [
+      "Traced how invoices arrive, who approves them and where errors slip through.",
+      "Designed a workflow that reads the AP inbox, extracts invoice fields and checks them against purchase orders.",
+      "Added a review queue and Slack approvals for exceptions, with every step written to an audit trail."
+    ],
+    "delivered": [
+      {
+        "title": "AI invoice extraction",
+        "text": "Supplier, amounts, VAT and PO numbers read from PDFs, images and spreadsheets."
+      },
+      {
+        "title": "Checks before posting",
+        "text": "Duplicate detection and purchase order matching within a set tolerance."
+      },
+      {
+        "title": "Approvals and sync",
+        "text": "Exceptions go to a person in Slack, and matched invoices post to Xero."
+      }
+    ],
+    "next": "apex-voice-receptionist",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "apex-voice-receptionist",
+    "order": 2,
+    "categories": [
+      "ai",
+      "automation"
+    ],
+    "industry": "Home services",
+    "name": "Apex Voice Receptionist",
+    "summary": "AI phone agent that answers every call, triages the job and books engineers.",
+    "image": "/images/portfolio/apex-voice-receptionist-1600.webp",
+    "imageAlt": "Apex Voice call log, overview, automation workflow and live call transcript",
+    "railAlt": "Apex Voice call log, overview, automation workflow and live call transcript",
+    "title": "How a plumbing and heating firm answers every call with an AI receptionist",
+    "seoTitle": "Apex Voice Receptionist: AI Agent Case Study, Corevex",
+    "description": "How a plumbing and heating firm answers every call with an AI receptionist. A Corevex Solutions concept case study.",
+    "heroAlt": "Apex Voice call log, overview, automation workflow and live call transcript",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Home services"
+      },
+      {
+        "label": "SERVICE",
+        "value": "AI Agents as a Service"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "Phone agent and web dashboard"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "LLM voice agent, n8n, Python"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Managed agent"
+      }
+    ],
+    "challenge": "Calls went to voicemail while engineers were on jobs, and after-hours callers rang the next firm on the list.",
+    "approach": [
+      "Listened to real call types with the office team: breakdowns, quotes, emergencies and reschedules.",
+      "Designed a voice agent that asks the right questions for each call type and checks engineer calendars.",
+      "Connected it to booking, SMS confirmations and an on-call transfer for emergencies, with a live view for the office."
+    ],
+    "delivered": [
+      {
+        "title": "Natural voice agent",
+        "text": "Answers, triages the job and captures the address, fault and priority."
+      },
+      {
+        "title": "Calendar booking",
+        "text": "Books the right engineer and texts the caller a confirmation."
+      },
+      {
+        "title": "Live transcripts",
+        "text": "The office can listen in, take over a call and review every outcome."
+      }
+    ],
+    "next": "highstreet-content-planning",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "highstreet-content-planning",
+    "order": 3,
+    "categories": [
+      "saas"
+    ],
+    "industry": "Local retail",
+    "name": "Highstreet",
+    "summary": "Content planning and publishing for multi-branch local businesses.",
+    "image": "/images/portfolio/highstreet-content-planning-1600.webp",
+    "imageAlt": "Highstreet content plan, comparable businesses, performance and dashboard screens",
+    "railAlt": "Highstreet content plan, comparable businesses, performance and dashboard screens",
+    "title": "How a multi-branch local business plans and publishes a month of content",
+    "seoTitle": "Highstreet: SaaS Case Study, Corevex",
+    "description": "How a multi-branch local business plans and publishes a month of content. A Corevex Solutions concept case study.",
+    "heroAlt": "Highstreet content plan, comparable businesses, performance and dashboard screens",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Local retail"
+      },
+      {
+        "label": "SERVICE",
+        "value": "SaaS App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "Web app"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "React, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "Owners of local businesses with several branches posted when they had a spare moment, so channels went quiet and branch listings fell out of date.",
+    "approach": [
+      "Worked through a month of posting with a group of butcher's shops across five channels.",
+      "Designed a monthly content plan with one approval step instead of item by item sign-off.",
+      "Built branch-level publishing, listing health checks and plain-language performance reporting."
+    ],
+    "delivered": [
+      {
+        "title": "Monthly content plan",
+        "text": "Every post for the month in one plan, approved in a single step."
+      },
+      {
+        "title": "Five-channel publishing",
+        "text": "Scheduled posts for each branch, with a listing health check for each one."
+      },
+      {
+        "title": "Performance and market read",
+        "text": "Reach by channel and a read on what comparable businesses publish."
+      }
+    ],
+    "next": "brightsmile-ai-receptionist",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "brightsmile-ai-receptionist",
+    "order": 4,
+    "categories": [
+      "ai",
+      "automation"
+    ],
+    "industry": "Dental",
+    "name": "Brightsmile AI",
+    "summary": "AI receptionist that answers, qualifies and books patients.",
+    "image": "/images/portfolio/brightsmile-ai-receptionist-1600.webp",
+    "imageAlt": "Brightsmile conversation inbox, CRM leads, n8n workflow and website chat assistant",
+    "railAlt": "Brightsmile conversation inbox, CRM leads, n8n workflow and website chat assistant",
+    "title": "How a dental practice answers patient questions and books visits with AI",
+    "seoTitle": "Brightsmile AI: AI Chatbot Case Study, Corevex",
+    "description": "How a dental practice answers patient questions and books visits with AI. A Corevex Solutions concept case study.",
+    "heroAlt": "Brightsmile conversation inbox, CRM leads, n8n workflow and website chat assistant",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Dental"
+      },
+      {
+        "label": "SERVICE",
+        "value": "AI and LLM Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "Website assistant and CRM"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "LLM, n8n, HubSpot, Google Calendar"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Automation team"
+      }
+    ],
+    "challenge": "Reception answered the same treatment and booking questions all day, and website enquiries waited until someone had time to call back.",
+    "approach": [
+      "Collected the practice's real questions on treatments, costs and booking.",
+      "Built a website assistant that answers from a knowledge base and qualifies new patients.",
+      "Connected it through an n8n workflow to the calendar, the CRM and a human handover for urgent cases."
+    ],
+    "delivered": [
+      {
+        "title": "AI website assistant",
+        "text": "Answers treatment questions and offers real appointment times."
+      },
+      {
+        "title": "CRM lead sync",
+        "text": "Every conversation creates or updates a lead with the details captured."
+      },
+      {
+        "title": "Human handover",
+        "text": "Urgent cases and complex questions go straight to reception."
+      }
+    ],
+    "next": "mary-properties",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "mary-properties",
+    "order": 5,
+    "categories": [
+      "full-stack"
+    ],
+    "industry": "Real estate",
+    "name": "Mary Properties",
+    "summary": "Real estate website with a members area and an admin panel for listings and enquiries.",
+    "image": "/images/portfolio/mary-properties-1600.webp",
+    "imageAlt": "Mary Properties website, properties admin, enquiries inbox and overview dashboard",
+    "railAlt": "Mary Properties website, properties admin, enquiries inbox and overview dashboard",
+    "title": "How an independent estate agent runs listings, members and enquiries from one admin",
+    "seoTitle": "Mary Properties: Full-Stack Case Study, Corevex",
+    "description": "How an independent estate agent runs listings, members and enquiries from one admin. A Corevex Solutions concept case study.",
+    "heroAlt": "Mary Properties website, properties admin, enquiries inbox and overview dashboard",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Real estate"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Full-Stack Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "Website, members area and admin"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "Next.js, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Dedicated team"
+      }
+    ],
+    "challenge": "Listings were updated through a web agency, buyers had no reason to register, and enquiries arrived in a shared inbox with no status.",
+    "approach": [
+      "Planned the buyer journey from browsing homes to booking a viewing.",
+      "Designed a members area with saved homes, listing alerts and members-only details.",
+      "Built an admin panel to publish or hide listings and work through enquiries."
+    ],
+    "delivered": [
+      {
+        "title": "Property listings",
+        "text": "Listings by home type, live or hidden, edited directly by the agent."
+      },
+      {
+        "title": "Members area",
+        "text": "Saved homes, listing alerts and details shown only to members."
+      },
+      {
+        "title": "Enquiry inbox",
+        "text": "Website chat and form enquiries in one place, marked new, replied or closed."
+      }
+    ],
+    "next": "voltway-ev-charging-app",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "voltway-ev-charging-app",
+    "order": 6,
+    "categories": [
+      "mobile"
+    ],
+    "industry": "EV charging",
+    "name": "Voltway",
+    "summary": "EV charging app to find fast chargers, start a session and pay in one tap.",
+    "image": "/images/portfolio/voltway-ev-charging-app-1600.webp",
+    "imageAlt": "Voltway onboarding, charger map, charger details, wallet and live charging session screens",
+    "railAlt": "Voltway onboarding, charger map, charger details, wallet and live charging session screens",
+    "title": "How EV drivers find a fast charger, start charging and pay in one tap",
+    "seoTitle": "Voltway: Mobile App Case Study, Corevex",
+    "description": "How EV drivers find a fast charger, start charging and pay in one tap. A Corevex Solutions concept case study.",
+    "heroAlt": "Voltway onboarding, charger map, charger details, wallet and live charging session screens",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "EV charging"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Mobile App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS and Android"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "React Native, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "Drivers juggled several network apps and cards to find a free charger and pay for it.",
+    "approach": [
+      "Mapped the trip from searching for a charger to unplugging.",
+      "Designed a live map with availability, connector choice and a cost estimate before starting.",
+      "Built one-tap sessions, live progress and an in-app wallet."
+    ],
+    "delivered": [
+      {
+        "title": "Live charger map",
+        "text": "Nearby chargers with real-time availability and power."
+      },
+      {
+        "title": "One-tap charging",
+        "text": "Pick a connector, see the estimate and start the session."
+      },
+      {
+        "title": "In-app wallet",
+        "text": "Top up, auto top-up and a history of every session."
+      }
+    ],
+    "next": "orbit-money-finance-app",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "orbit-money-finance-app",
+    "order": 7,
+    "categories": [
+      "mobile"
+    ],
+    "industry": "Fintech",
+    "name": "Orbit Money",
+    "summary": "Personal finance super app for spending, cards and investing in one place.",
+    "image": "/images/portfolio/orbit-money-finance-app-1600.webp",
+    "imageAlt": "Orbit Money insights, portfolio, stock order, cards and home screens",
+    "railAlt": "Orbit Money insights, portfolio, stock order, cards and home screens",
+    "title": "How a personal finance app brings spending, cards and investing into one place",
+    "seoTitle": "Orbit Money: Mobile App Case Study, Corevex",
+    "description": "How a personal finance app brings spending, cards and investing into one place. A Corevex Solutions concept case study.",
+    "heroAlt": "Orbit Money insights, portfolio, stock order, cards and home screens",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Fintech"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Mobile App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS and Android"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "Flutter, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "People used one app for their bank, another for budgeting and a third for investing, so nobody had the full picture.",
+    "approach": [
+      "Talked to everyday savers and first-time investors about how they track money.",
+      "Designed a home screen that puts balance, spending and recent activity together.",
+      "Built card controls, budgets with alerts, and stock and ETF trading in the same app."
+    ],
+    "delivered": [
+      {
+        "title": "Smart money dashboard",
+        "text": "Balance, monthly spending and activity on one screen."
+      },
+      {
+        "title": "Card controls",
+        "text": "Freeze, limits, contactless and online payments for each card."
+      },
+      {
+        "title": "Investing",
+        "text": "Stocks and ETFs with a simple order flow and a portfolio view."
+      }
+    ],
+    "next": "lumen-learning-app",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "lumen-learning-app",
+    "order": 8,
+    "categories": [
+      "mobile"
+    ],
+    "industry": "Education",
+    "name": "Lumen",
+    "summary": "Learning app with guided lessons, quizzes, progress tracking and a teacher class dashboard.",
+    "image": "/images/portfolio/lumen-learning-app-1600.webp",
+    "imageAlt": "Lumen quiz question, learning home screen and monthly progress",
+    "railAlt": "Lumen quiz question, learning home screen and monthly progress",
+    "title": "How learners and teachers track progress through guided lessons and quizzes",
+    "seoTitle": "Lumen: Education App Case Study, Corevex",
+    "description": "How learners and teachers track progress through guided lessons and quizzes. A Corevex Solutions concept case study.",
+    "heroAlt": "Lumen quiz question, learning home screen and monthly progress",
+    "gallery": [
+      {
+        "src": "/images/portfolio/lumen-learning-app-2-1600.webp",
+        "alt": "Lumen quiz, teacher class dashboard with at-risk alerts, and student progress"
+      }
+    ],
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Education"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Mobile App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS and Android"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "Flutter, Python"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "Learners dropped off between lessons, and teachers only spotted struggling students after results came in.",
+    "approach": [
+      "Designed short guided lessons that resume exactly where the learner left off.",
+      "Added interactive quizzes, learning streaks and certificates to keep momentum.",
+      "Gave teachers a class view with attendance, quiz analytics and at-risk alerts."
+    ],
+    "delivered": [
+      {
+        "title": "Course library",
+        "text": "Guided lessons with resume, streaks and certificates."
+      },
+      {
+        "title": "Interactive quizzes",
+        "text": "Code and concept questions with instant feedback."
+      },
+      {
+        "title": "Teacher dashboard",
+        "text": "Attendance, quiz results and the students who need attention."
+      }
+    ],
+    "next": "dose-medication-app",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "dose-medication-app",
+    "order": 9,
+    "categories": [
+      "mobile"
+    ],
+    "industry": "Healthcare",
+    "name": "Dose",
+    "summary": "Medication app for daily doses, adherence tracking and pharmacy refills.",
+    "image": "/images/portfolio/dose-medication-app-1600.webp",
+    "imageAlt": "Dose medication details, today's schedule and refill tracking screens",
+    "railAlt": "Dose medication details, today's schedule and refill tracking screens",
+    "title": "How patients keep up with daily medication and repeat prescriptions",
+    "seoTitle": "Dose: Mobile App Case Study, Corevex",
+    "description": "How patients keep up with daily medication and repeat prescriptions. A Corevex Solutions concept case study.",
+    "heroAlt": "Dose medication details, today's schedule and refill tracking screens",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Healthcare"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Mobile App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS and Android"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "Flutter, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "Patients on several medicines missed doses and ran out of tablets before ordering repeat prescriptions.",
+    "approach": [
+      "Designed a daily schedule that shows exactly what to take and when.",
+      "Added adherence tracking and low stock alerts based on the tablets left.",
+      "Built repeat prescription ordering with live refill status from the pharmacy."
+    ],
+    "delivered": [
+      {
+        "title": "Dose reminders",
+        "text": "A clear daily schedule with reminders and a one-tap Take."
+      },
+      {
+        "title": "Adherence tracking",
+        "text": "Weekly streaks and adherence over the last month."
+      },
+      {
+        "title": "Refill tracking",
+        "text": "Order a repeat prescription and follow it through to collection."
+      }
+    ],
+    "next": "nimbus-flight-companion-app",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "nimbus-flight-companion-app",
+    "order": 10,
+    "categories": [
+      "mobile"
+    ],
+    "industry": "Travel",
+    "name": "Nimbus",
+    "summary": "Flight companion app with live status, airport timings and a digital boarding pass.",
+    "image": "/images/portfolio/nimbus-flight-companion-app-1600.webp",
+    "imageAlt": "Nimbus flight journey tracker, trips home screen and digital boarding pass",
+    "railAlt": "Nimbus flight journey tracker, trips home screen and digital boarding pass",
+    "title": "How travellers move through the airport with live flight status and timings",
+    "seoTitle": "Nimbus: Mobile App Case Study, Corevex",
+    "description": "How travellers move through the airport with live flight status and timings. A Corevex Solutions concept case study.",
+    "heroAlt": "Nimbus flight journey tracker, trips home screen and digital boarding pass",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Travel"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Mobile App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS and Android"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "React Native, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "Travellers switched between airline emails, airport boards and a wallet pass to work out when to leave for security.",
+    "approach": [
+      "Mapped the airport journey from check-in to departure.",
+      "Designed a boarding countdown and a step tracker for check-in, bag drop, security and boarding.",
+      "Built live flight status and a boarding pass that adds to the phone's wallet."
+    ],
+    "delivered": [
+      {
+        "title": "Live flight status",
+        "text": "Gate, seat and timing changes as soon as they happen."
+      },
+      {
+        "title": "Airport journey tracker",
+        "text": "Each step from check-in to boarding, with security wait times."
+      },
+      {
+        "title": "Digital boarding pass",
+        "text": "A boarding pass ready to show at security and to add to the wallet."
+      }
+    ],
+    "next": "aura-home-smart-home-app",
+    "results": [],
+    "isDesignStudy": true
+  },
+  {
+    "slug": "aura-home-smart-home-app",
+    "order": 11,
+    "categories": [
+      "mobile"
+    ],
+    "industry": "Smart home",
+    "name": "Aura Home",
+    "summary": "Smart home app for rooms, climate and energy, designed to feel native on iPhone.",
+    "image": "/images/portfolio/aura-home-smart-home-app-1600.webp",
+    "imageAlt": "Aura Home climate control, home overview and energy usage screens",
+    "railAlt": "Aura Home climate control, home overview and energy usage screens",
+    "title": "How a smart home app puts rooms, climate and energy in one calm place",
+    "seoTitle": "Aura Home: Mobile App Case Study, Corevex",
+    "description": "How a smart home app puts rooms, climate and energy in one calm place. A Corevex Solutions concept case study.",
+    "heroAlt": "Aura Home climate control, home overview and energy usage screens",
+    "snapshot": [
+      {
+        "label": "INDUSTRY",
+        "value": "Smart home"
+      },
+      {
+        "label": "SERVICE",
+        "value": "Mobile App Development"
+      },
+      {
+        "label": "PLATFORM",
+        "value": "iOS"
+      },
+      {
+        "label": "TECH STACK",
+        "value": "React Native, Node.js"
+      },
+      {
+        "label": "DELIVERY",
+        "value": "Product team"
+      }
+    ],
+    "challenge": "Households controlled lights, heating and energy in separate apps that each looked and behaved differently.",
+    "approach": [
+      "Grouped every device by room, the way people think about their home.",
+      "Designed scenes such as Evening, Morning and Away that change several rooms at once.",
+      "Built climate control and daily energy tracking with native iOS patterns."
+    ],
+    "delivered": [
+      {
+        "title": "Room by room control",
+        "text": "Each room's temperature, lights and mode at a glance."
+      },
+      {
+        "title": "Smart climate",
+        "text": "Heating and cooling with a clear target and the time to reach it."
+      },
+      {
+        "title": "Energy tracking",
+        "text": "Daily use split by heating, appliances and lighting."
+      }
+    ],
+    "next": "australian-direct-tutoring",
+    "results": [],
+    "isDesignStudy": true
+  }
 ]

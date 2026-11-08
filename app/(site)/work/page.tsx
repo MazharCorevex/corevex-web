@@ -16,6 +16,7 @@ const FILTERS = [
   ["custom-software", "Custom Software"],
   ["full-stack", "Full-Stack"],
   ["mobile", "Mobile"],
+  ["saas", "SaaS"],
   ["ai", "AI and LLM"],
   ["automation", "Automation"],
 ];

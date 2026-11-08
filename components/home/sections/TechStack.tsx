@@ -159,8 +159,8 @@ export default function TechStack() {
                   <p>Large enterprise web apps</p>
                 </div>
               </div>
-              <Link href="/work/vaultix-wealth-platform/" className="link stx-proof">
-                {"See it in a design study: Vaultix wealth platform "}
+              <Link href="/work/mary-properties/" className="link stx-proof">
+                {"See it in a design study: Mary Properties website and admin "}
                 <span className="chev">»</span>
               </Link>
             </div>
@@ -194,8 +194,8 @@ export default function TechStack() {
                   <p>Data services and AI back ends</p>
                 </div>
               </div>
-              <Link href="/work/fleetline-logistics-platform/" className="link stx-proof">
-                {"See it in a design study: Fleetline logistics platform "}
+              <Link href="/work/australian-direct-tutoring/" className="link stx-proof">
+                {"See it in a design study: Australian Direct Tutoring platform "}
                 <span className="chev">»</span>
               </Link>
             </div>
@@ -220,8 +220,8 @@ export default function TechStack() {
                   <p>Branded iOS and Android apps</p>
                 </div>
               </div>
-              <Link href="/work/pulse-fitness-app/" className="link stx-proof">
-                {"See it in a design study: Pulse fitness app "}
+              <Link href="/work/voltway-ev-charging-app/" className="link stx-proof">
+                {"See it in a design study: Voltway EV charging app"}
                 <span className="chev">»</span>
               </Link>
             </div>
@@ -276,8 +276,8 @@ export default function TechStack() {
                   <p>Forecasting and classification</p>
                 </div>
               </div>
-              <Link href="/work/ledgerly-ai-document-extraction/" className="link stx-proof">
-                {"See it in a design study: Ledgerly AI document extraction "}
+              <Link href="/work/brightsmile-ai-receptionist/" className="link stx-proof">
+                {"See it in a design study: Brightsmile AI receptionist "}
                 <span className="chev">»</span>
               </Link>
             </div>
@@ -319,8 +319,8 @@ export default function TechStack() {
                   <p>CRM, funnels and follow-ups</p>
                 </div>
               </div>
-              <Link href="/work/relay-support-automation/" className="link stx-proof">
-                {"See it in a design study: Relay support automation "}
+              <Link href="/work/northgate-ap-autopilot/" className="link stx-proof">
+                {"See it in a design study: Northgate AP Autopilot "}
                 <span className="chev">»</span>
               </Link>
             </div>

@@ -95,25 +95,25 @@ export default function AiLlmDevelopmentBody() {
         <div className="wrap case-band">
           <div className="shot" data-reveal="">
             <Img
-              src="/images/portfolio/ledgerly-ai-document-extraction-1600.webp"
-              alt="Ledgerly AI finance product on laptop and phone"
+              src="/images/portfolio/brightsmile-ai-receptionist-1600.webp"
+              alt="Brightsmile conversation inbox, CRM leads, n8n workflow and website chat assistant"
               sizes="(max-width: 1280px) 100vw, 1200px"
             />
           </div>
           <div>
-            <span className="label">Featured design study · Finance</span>
+            <span className="label">Featured design study · Dental</span>
             <h2 className="h2" data-reveal="">
-              Ledgerly AI
+              Brightsmile AI
             </h2>
             <p className="lead" style={{ marginTop: "16px" } as CSSProperties}>
-              Invoice data extraction with confidence scores and ERP sync.
+              AI receptionist that answers, qualifies and books patients.
             </p>
             <ul>
               <li>Scoped with a solution architect</li>
               <li>Designed as a working product, web and mobile</li>
               <li>Structured for full code handover</li>
             </ul>
-            <Link href="/work/ledgerly-ai-document-extraction/" className="btn">
+            <Link href="/work/brightsmile-ai-receptionist/" className="btn">
               {"See the design study "}
               <span className="chev">»</span>
             </Link>

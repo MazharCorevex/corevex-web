@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import Img from "@/components/ui/Img";
 import { getClientLogos } from "@/lib/content";
 
-// Client logos, hidden until real logos are published
-export default async function ClientLogos({ variant }: { variant: "marquee" | "strip" }) {
+// Client logos; until real logos are published, the fallback shows instead
+export default async function ClientLogos({ variant, fallback = null }: { variant: "marquee" | "strip"; fallback?: ReactNode }) {
   const logos = await getClientLogos();
-  if (!logos.length) return null;
+  if (!logos.length) return fallback;
   const img = (l: (typeof logos)[number], k: string) => (
     <Img key={k} src={l.logo} alt={`${l.name} logo`} width={l.width} height={28} />
   );

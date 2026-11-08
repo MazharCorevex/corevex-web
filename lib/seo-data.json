@@ -2027,39 +2027,6 @@
   "robots": "",
   "ld": []
  },
- "/work/fleetline-logistics-platform/": {
-  "title": "Fleetline: Custom Software Case Study, Corevex",
-  "description": "How a logistics company runs live operations on one custom platform. A Corevex Solutions concept case study.",
-  "ogTitle": "Fleetline: Custom Software Case Study, Corevex",
-  "ogType": "website",
-  "robots": "",
-  "ld": [
-   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.corevexsolutions.com/"
-     },
-     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Work",
-      "item": "https://www.corevexsolutions.com/work/"
-     },
-     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Fleetline",
-      "item": "https://www.corevexsolutions.com/work/fleetline-logistics-platform/"
-     }
-    ]
-   }
-  ]
- },
  "/work/": {
   "title": "Our Work: Software and AI Case Studies, Corevex",
   "description": "See the platforms, apps and AI systems Corevex has designed, built and handed over across industries.",
@@ -2087,10 +2054,10 @@
    }
   ]
  },
- "/work/ledgerly-ai-document-extraction/": {
-  "title": "Ledgerly AI: AI and LLM Case Study, Corevex",
-  "description": "How a finance team stopped typing invoices by hand. A Corevex Solutions concept case study.",
-  "ogTitle": "Ledgerly AI: AI and LLM Case Study, Corevex",
+ "/work/australian-direct-tutoring/": {
+  "title": "Australian Direct Tutoring: Custom Software Case Study, Corevex",
+  "description": "How a tutoring business runs leads, lessons and reports on one platform. A Corevex Solutions concept case study.",
+  "ogTitle": "Australian Direct Tutoring: Custom Software Case Study, Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -2113,17 +2080,17 @@
      {
       "@type": "ListItem",
       "position": 3,
-      "name": "Ledgerly AI",
-      "item": "https://www.corevexsolutions.com/work/ledgerly-ai-document-extraction/"
+      "name": "Australian Direct Tutoring",
+      "item": "https://www.corevexsolutions.com/work/australian-direct-tutoring/"
      }
     ]
    }
   ]
  },
- "/work/medora-clinic-booking/": {
-  "title": "Medora: Full-Stack Case Study, Corevex",
-  "description": "How a clinic group moved scheduling and booking onto one platform. A Corevex Solutions concept case study.",
-  "ogTitle": "Medora: Full-Stack Case Study, Corevex",
+ "/work/northgate-ap-autopilot/": {
+  "title": "Northgate AP Autopilot: AI Automation Case Study, Corevex",
+  "description": "How a finance team moves invoices from inbox to Xero without typing them. A Corevex Solutions concept case study.",
+  "ogTitle": "Northgate AP Autopilot: AI Automation Case Study, Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -2146,17 +2113,17 @@
      {
       "@type": "ListItem",
       "position": 3,
-      "name": "Medora",
-      "item": "https://www.corevexsolutions.com/work/medora-clinic-booking/"
+      "name": "Northgate AP Autopilot",
+      "item": "https://www.corevexsolutions.com/work/northgate-ap-autopilot/"
      }
     ]
    }
   ]
  },
- "/work/pulse-fitness-app/": {
-  "title": "Pulse: Mobile Case Study, Corevex",
-  "description": "How a fitness brand launched one app on iOS and Android. A Corevex Solutions concept case study.",
-  "ogTitle": "Pulse: Mobile Case Study, Corevex",
+ "/work/apex-voice-receptionist/": {
+  "title": "Apex Voice Receptionist: AI Agent Case Study, Corevex",
+  "description": "How a plumbing and heating firm answers every call with an AI receptionist. A Corevex Solutions concept case study.",
+  "ogTitle": "Apex Voice Receptionist: AI Agent Case Study, Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -2179,17 +2146,17 @@
      {
       "@type": "ListItem",
       "position": 3,
-      "name": "Pulse",
-      "item": "https://www.corevexsolutions.com/work/pulse-fitness-app/"
+      "name": "Apex Voice Receptionist",
+      "item": "https://www.corevexsolutions.com/work/apex-voice-receptionist/"
      }
     ]
    }
   ]
  },
- "/work/relay-support-automation/": {
-  "title": "Relay: Automation Case Study, Corevex",
-  "description": "How an online store answers support requests in seconds. A Corevex Solutions concept case study.",
-  "ogTitle": "Relay: Automation Case Study, Corevex",
+ "/work/highstreet-content-planning/": {
+  "title": "Highstreet: SaaS Case Study, Corevex",
+  "description": "How a multi-branch local business plans and publishes a month of content. A Corevex Solutions concept case study.",
+  "ogTitle": "Highstreet: SaaS Case Study, Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -2212,17 +2179,17 @@
      {
       "@type": "ListItem",
       "position": 3,
-      "name": "Relay",
-      "item": "https://www.corevexsolutions.com/work/relay-support-automation/"
+      "name": "Highstreet",
+      "item": "https://www.corevexsolutions.com/work/highstreet-content-planning/"
      }
     ]
    }
   ]
  },
- "/work/vaultix-wealth-platform/": {
-  "title": "Vaultix: Full-Stack and Mobile Case Study, Corevex",
-  "description": "How a wealth platform gave clients one clear view of their money. A Corevex Solutions concept case study.",
-  "ogTitle": "Vaultix: Full-Stack and Mobile Case Study, Corevex",
+ "/work/brightsmile-ai-receptionist/": {
+  "title": "Brightsmile AI: AI Chatbot Case Study, Corevex",
+  "description": "How a dental practice answers patient questions and books visits with AI. A Corevex Solutions concept case study.",
+  "ogTitle": "Brightsmile AI: AI Chatbot Case Study, Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -2245,8 +2212,239 @@
      {
       "@type": "ListItem",
       "position": 3,
-      "name": "Vaultix",
-      "item": "https://www.corevexsolutions.com/work/vaultix-wealth-platform/"
+      "name": "Brightsmile AI",
+      "item": "https://www.corevexsolutions.com/work/brightsmile-ai-receptionist/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/mary-properties/": {
+  "title": "Mary Properties: Full-Stack Case Study, Corevex",
+  "description": "How an independent estate agent runs listings, members and enquiries from one admin. A Corevex Solutions concept case study.",
+  "ogTitle": "Mary Properties: Full-Stack Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Mary Properties",
+      "item": "https://www.corevexsolutions.com/work/mary-properties/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/voltway-ev-charging-app/": {
+  "title": "Voltway: Mobile App Case Study, Corevex",
+  "description": "How EV drivers find a fast charger, start charging and pay in one tap. A Corevex Solutions concept case study.",
+  "ogTitle": "Voltway: Mobile App Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Voltway",
+      "item": "https://www.corevexsolutions.com/work/voltway-ev-charging-app/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/orbit-money-finance-app/": {
+  "title": "Orbit Money: Mobile App Case Study, Corevex",
+  "description": "How a personal finance app brings spending, cards and investing into one place. A Corevex Solutions concept case study.",
+  "ogTitle": "Orbit Money: Mobile App Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Orbit Money",
+      "item": "https://www.corevexsolutions.com/work/orbit-money-finance-app/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/lumen-learning-app/": {
+  "title": "Lumen: Education App Case Study, Corevex",
+  "description": "How learners and teachers track progress through guided lessons and quizzes. A Corevex Solutions concept case study.",
+  "ogTitle": "Lumen: Education App Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lumen",
+      "item": "https://www.corevexsolutions.com/work/lumen-learning-app/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/dose-medication-app/": {
+  "title": "Dose: Mobile App Case Study, Corevex",
+  "description": "How patients keep up with daily medication and repeat prescriptions. A Corevex Solutions concept case study.",
+  "ogTitle": "Dose: Mobile App Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Dose",
+      "item": "https://www.corevexsolutions.com/work/dose-medication-app/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/nimbus-flight-companion-app/": {
+  "title": "Nimbus: Mobile App Case Study, Corevex",
+  "description": "How travellers move through the airport with live flight status and timings. A Corevex Solutions concept case study.",
+  "ogTitle": "Nimbus: Mobile App Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Nimbus",
+      "item": "https://www.corevexsolutions.com/work/nimbus-flight-companion-app/"
+     }
+    ]
+   }
+  ]
+ },
+ "/work/aura-home-smart-home-app/": {
+  "title": "Aura Home: Mobile App Case Study, Corevex",
+  "description": "How a smart home app puts rooms, climate and energy in one calm place. A Corevex Solutions concept case study.",
+  "ogTitle": "Aura Home: Mobile App Case Study, Corevex",
+  "ogType": "website",
+  "robots": "",
+  "ld": [
+   {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.corevexsolutions.com/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Work",
+      "item": "https://www.corevexsolutions.com/work/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Aura Home",
+      "item": "https://www.corevexsolutions.com/work/aura-home-smart-home-app/"
      }
     ]
    }

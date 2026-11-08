@@ -91,6 +91,18 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             </div>
           </div>
         )}
+        {c.gallery?.length ? (
+          <div className="cs-block">
+            <h2 className="h2">More screens</h2>
+            <div className="cs-gallery">
+              {c.gallery.map((g) => (
+                <div className="shot" key={g.src}>
+                  <Img src={g.src} alt={g.alt} sizes="(max-width: 1280px) 100vw, 1200px" />
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
         {c.results.length > 0 && (
           <div className="cs-block">
             <h2 className="h2">Results</h2>
@@ -109,7 +121,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <div className="cs-block" style={{ border: 0 }}>
             <span className="label">Next project</span>
             <Link className="m-card" href={`/work/${next.slug}/`} style={{ maxWidth: 560 }}>
-              <div className="img" style={{ aspectRatio: "16/10" }}>
+              <div className="img" style={{ aspectRatio: "4/3" }}>
                 <Img src={next.image} alt={`${next.name} concept`} sizes="(max-width: 600px) 100vw, 560px" />
               </div>
               <div className="meta">

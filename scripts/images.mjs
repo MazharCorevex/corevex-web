@@ -23,6 +23,8 @@ async function copyReference() {
   let n = 0;
   for (const file of await walk(refImg)) {
     const rel = path.relative(refImg, file);
+    // Portfolio boards now come from new-images/portfolio
+    if (rel.split(path.sep)[0] === "portfolio") continue;
     const dest = path.join(outImg, rel);
     await fs.mkdir(path.dirname(dest), { recursive: true });
     if (/.(mp4|webm)$|loop-poster/.test(file)) continue;
@@ -65,8 +67,32 @@ async function rootIcons() {
   }
 }
 
+// Portfolio boards: 1600 and 800 wide WebP
+async function convertPortfolio() {
+  const src = path.join(newImgs, "portfolio");
+  try {
+    await fs.access(src);
+  } catch {
+    return 0;
+  }
+  const dest = path.join(outImg, "portfolio");
+  await fs.mkdir(dest, { recursive: true });
+  let n = 0;
+  for (const file of await fs.readdir(src)) {
+    if (!/\.(png|webp|jpe?g)$/i.test(file)) continue;
+    const base = file.replace(/\.(png|webp|jpe?g)$/i, "");
+    const input = path.join(src, file);
+    await sharp(input).resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 82 }).toFile(path.join(dest, `${base}-1600.webp`));
+    await sharp(input).resize({ width: 800, withoutEnlargement: true }).webp({ quality: 82 }).toFile(path.join(dest, `${base}-800.webp`));
+    n++;
+  }
+  return n;
+}
+
 const copied = await copyReference();
 const converted = await convertNew();
+const boards = await convertPortfolio();
+console.log(`converted ${boards} portfolio boards`);
 await rootIcons();
 console.log(`copied ${copied} reference assets, converted ${converted} new PNGs`);
 

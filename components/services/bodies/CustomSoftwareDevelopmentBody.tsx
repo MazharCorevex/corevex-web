@@ -33,19 +33,19 @@ export default function CustomSoftwareDevelopmentBody() {
           <FeatList className="feat-wrap">
             <div className="feat-media">
               <Img
-                src="/images/portfolio/fleetline-logistics-platform-1600.webp"
-                alt="Custom operations dashboard concept on laptop and phone"
+                src="/images/portfolio/northgate-ap-autopilot-1600.webp"
+                alt="Northgate accounts payable dashboard and review queue concept"
                 className="on"
                 sizes="(max-width: 860px) 100vw, 50vw"
               />
               <Img
-                src="/images/portfolio/medora-clinic-booking-1600.webp"
-                alt="Client booking portal concept"
+                src="/images/portfolio/mary-properties-1600.webp"
+                alt="Mary Properties members area and admin portal concept"
                 sizes="(max-width: 860px) 100vw, 50vw"
               />
               <Img
-                src="/images/portfolio/vaultix-wealth-platform-1600.webp"
-                alt="SaaS dashboard concept"
+                src="/images/portfolio/highstreet-content-planning-1600.webp"
+                alt="Highstreet SaaS content planning dashboard concept"
                 sizes="(max-width: 860px) 100vw, 50vw"
               />
               <Img
@@ -89,25 +89,25 @@ export default function CustomSoftwareDevelopmentBody() {
         <div className="wrap case-band">
           <div className="shot" data-reveal="">
             <Img
-              src="/images/portfolio/fleetline-logistics-platform-1600.webp"
-              alt="Fleetline logistics product on laptop and phone"
+              src="/images/portfolio/australian-direct-tutoring-1600.webp"
+              alt="Australian Direct Tutoring website and six role-based portals, from sign in to the Super Admin dashboard"
               sizes="(max-width: 1280px) 100vw, 1200px"
             />
           </div>
           <div>
-            <span className="label">Featured design study · Logistics</span>
+            <span className="label">Featured design study · Education</span>
             <h2 className="h2" data-reveal="">
-              Fleetline
+              Australian Direct Tutoring
             </h2>
             <p className="lead" style={{ marginTop: "16px" } as CSSProperties}>
-              Live operations dashboard and driver app on one shared backend.
+              Tutoring management platform with six role-based portals and a public website.
             </p>
             <ul>
               <li>Scoped with a solution architect</li>
               <li>Designed as a working product, web and mobile</li>
               <li>Structured for full code handover</li>
             </ul>
-            <Link href="/work/fleetline-logistics-platform/" className="btn">
+            <Link href="/work/australian-direct-tutoring/" className="btn">
               {"See the design study "}
               <span className="chev">»</span>
             </Link>

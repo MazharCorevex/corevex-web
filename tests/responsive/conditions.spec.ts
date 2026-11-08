@@ -2,7 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import { ROUTES } from "../routes";
 import { audit, settle } from "./checks";
 
-const KEY = ["/", "/services/", "/services/code-rescue/", "/work/", "/work/medora-clinic-booking/", "/insights/", "/insights/what-is-rag/", "/about/", "/careers/", "/contact/", "/faq/", "/ai-lab/"];
+const KEY = ["/", "/services/", "/services/code-rescue/", "/work/", "/work/australian-direct-tutoring/", "/insights/", "/insights/what-is-rag/", "/about/", "/careers/", "/contact/", "/faq/", "/ai-lab/"];
 
 test.describe("200% browser zoom", () => {
   // 1280 x 800 at 200% is a 640 x 400 CSS viewport at double density

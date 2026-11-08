@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/sections/Hero";
 import ClientLogos from "@/components/sections/ClientLogos";
+import ProjectLogos from "@/components/sections/ProjectLogos";
 import ServicesBento from "@/components/home/sections/ServicesBento";
 import CodeRescue from "@/components/home/sections/CodeRescue";
 import Numbers from "@/components/home/sections/Numbers";
@@ -22,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ClientLogos variant="marquee" />
+      <ClientLogos variant="marquee" fallback={<ProjectLogos />} />
       <ServicesBento />
       <CodeRescue />
       <Numbers />

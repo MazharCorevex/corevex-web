@@ -214,3 +214,39 @@ html.booking-open { overflow: hidden; padding-right: var(--sbw, 0px); }
 @media (hover: hover) and (pointer: fine) { .wa-chat .wa-label { display: inline-block; } }
 .booking-loading { pointer-events: none; text-align: center; padding: 0 24px; }
 .booking-loading a { pointer-events: auto; color: var(--teal-text); font-weight: 600; }
+
+/* Portfolio boards are 4:3 with titles built in, so never crop them */
+.m-card:nth-child(n) .img, .rail-card .img { aspect-ratio: 4/3; }
+.feat-media { aspect-ratio: 4/3; }
+.cs-gallery { display: grid; gap: 24px; }
+.cs-gallery .shot { border-radius: 24px; overflow: hidden; border: 1px solid var(--line); background: var(--ink); }
+.cs-gallery .shot img { display: block; width: 100%; height: auto; }
+
+/* Work grid: equal 4:3 cards read row by row */
+.masonry { columns: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.masonry .m-card { margin-bottom: 0; }
+
+/* Portfolio logo marquee under the hero */
+.mq-projects { padding: 22px 0 26px; }
+.mq-projects .marquee-title { margin-bottom: 18px; font: 500 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; }
+.mq-projects .marquee-track { gap: 56px; padding-right: 56px; animation-duration: 55s; }
+.mq-projects:focus-within .marquee-track { animation-play-state: paused; }
+.mq-copy { display: contents; }
+.mq-logo { display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; color: var(--fg-body); transition: color .3s var(--ease); }
+.mq-logo:hover, .mq-logo:focus-visible { color: var(--navy); }
+.mq-logo:hover .mq-mark, .mq-logo:focus-visible .mq-mark { background: var(--brand); color: var(--ink); }
+.mq-logo:focus-visible { outline: 2px solid var(--teal); outline-offset: 6px; border-radius: 8px; }
+.mq-mark { display: grid; place-items: center; min-width: 34px; height: 34px; padding: 0 7px; border-radius: 10px; background: #4B5163; color: #fff; font: 700 13px/1 var(--f-head); transition: background .3s var(--ease), color .3s var(--ease); letter-spacing: .02em; }
+.mq-name { font: 600 17px/1 var(--f-head); letter-spacing: -.01em; }
+@media (max-width: 860px) {
+  .mq-projects .marquee-track { gap: 36px; padding-right: 36px; animation-duration: 40s; }
+  .mq-mark { min-width: 30px; height: 30px; font-size: 12px; }
+  .mq-name { font-size: 15px; }
+}
+/* Reduced motion: a still row you can scroll sideways */
+@media (prefers-reduced-motion: reduce) {
+  .mq-projects { overflow-x: auto; -webkit-mask-image: none; mask-image: none; scrollbar-width: none; }
+  .mq-projects .marquee-track { padding-inline: var(--gutter); }
+  .mq-copy { display: none; }
+}
+.mq-logo { min-height: 44px; }

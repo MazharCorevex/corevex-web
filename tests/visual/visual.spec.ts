@@ -6,7 +6,7 @@ const PAGES = [
   "/services/",
   "/services/code-rescue/",
   "/work/",
-  "/work/medora-clinic-booking/",
+  "/work/australian-direct-tutoring/",
   "/insights/",
   "/insights/what-is-rag/",
   "/about/",

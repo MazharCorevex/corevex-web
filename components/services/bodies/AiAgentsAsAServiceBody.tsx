@@ -85,25 +85,25 @@ export default function AiAgentsAsAServiceBody() {
         <div className="wrap case-band">
           <div className="shot" data-reveal="">
             <Img
-              src="/images/portfolio/relay-support-automation-1600.webp"
-              alt="Relay ecommerce product on laptop and phone"
+              src="/images/portfolio/apex-voice-receptionist-1600.webp"
+              alt="Apex Voice call log, overview, automation workflow and live call transcript"
               sizes="(max-width: 1280px) 100vw, 1200px"
             />
           </div>
           <div>
-            <span className="label">Featured design study · eCommerce</span>
+            <span className="label">Featured design study · Home services</span>
             <h2 className="h2" data-reveal="">
-              Relay
+              Apex Voice Receptionist
             </h2>
             <p className="lead" style={{ marginTop: "16px" } as CSSProperties}>
-              An AI support workflow that answers, routes and escalates.
+              AI phone agent that answers every call, triages the job and books engineers.
             </p>
             <ul>
               <li>Scoped with a solution architect</li>
               <li>Designed as a working product, web and mobile</li>
               <li>Structured for full code handover</li>
             </ul>
-            <Link href="/work/relay-support-automation/" className="btn">
+            <Link href="/work/apex-voice-receptionist/" className="btn">
               {"See the design study "}
               <span className="chev">»</span>
             </Link>

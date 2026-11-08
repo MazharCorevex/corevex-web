@@ -82,25 +82,25 @@ export default function FullStackDevelopmentBody() {
         <div className="wrap case-band">
           <div className="shot" data-reveal="">
             <Img
-              src="/images/portfolio/medora-clinic-booking-1600.webp"
-              alt="Medora healthcare product on laptop and phone"
+              src="/images/portfolio/mary-properties-1600.webp"
+              alt="Mary Properties website, properties admin, enquiries inbox and overview dashboard"
               sizes="(max-width: 1280px) 100vw, 1200px"
             />
           </div>
           <div>
-            <span className="label">Featured design study · Healthcare</span>
+            <span className="label">Featured design study · Real estate</span>
             <h2 className="h2" data-reveal="">
-              Medora
+              Mary Properties
             </h2>
             <p className="lead" style={{ marginTop: "16px" } as CSSProperties}>
-              Clinic scheduling and patient booking across web and mobile.
+              Real estate website with a members area and an admin panel for listings and enquiries.
             </p>
             <ul>
               <li>Scoped with a solution architect</li>
               <li>Designed as a working product, web and mobile</li>
               <li>Structured for full code handover</li>
             </ul>
-            <Link href="/work/medora-clinic-booking/" className="btn">
+            <Link href="/work/mary-properties/" className="btn">
               {"See the design study "}
               <span className="chev">»</span>
             </Link>

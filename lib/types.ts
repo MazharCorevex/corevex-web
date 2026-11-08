@@ -43,6 +43,7 @@ export type CaseStudy = {
   imageAlt?: string;
   railAlt?: string;
   heroAlt?: string;
+  gallery?: { src: string; alt: string }[];
   snapshot: { label: string; value: string }[];
   challenge: string;
   approach: string[];

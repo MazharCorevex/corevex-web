@@ -24,8 +24,18 @@ describe("content helpers", () => {
     expect(await content.getArticle(articles[0].slug)).toEqual(articles[0]);
     expect(await content.getArticle("missing")).toBeNull();
     const cases = await content.getCaseStudies();
-    expect(cases.length).toBe(6);
+    expect(cases.length).toBe(12);
     expect(await content.getCaseStudy(cases[0].slug)).toEqual(cases[0]);
+    // Every board exists and every project sits under a Work filter
+    const { existsSync } = await import("node:fs");
+    const filters = ["custom-software", "full-stack", "mobile", "saas", "ai", "automation"];
+    for (const c of cases) {
+      for (const src of [c.image, ...(c.gallery ?? []).map((g) => g.src)]) expect(existsSync(`public${src}`), src).toBe(true);
+      expect(c.categories.length).toBeGreaterThan(0);
+      for (const cat of c.categories) expect(filters, `${c.slug}: ${cat}`).toContain(cat);
+      expect(c.isDesignStudy).toBe(true);
+      expect(cases.some((x) => x.slug === c.next)).toBe(true);
+    }
     expect(await content.getCaseStudy("missing")).toBeNull();
     const team = await content.getTeam();
     expect(team.filter((t) => t.leadership).map((t) => t.name)).toEqual(["Mazhar H", "M Azhar", "Zafar H"]);
@@ -45,12 +55,12 @@ describe("empty states", () => {
   it("hides testimonials when there are none", async () => {
     expect(await content.getTestimonials()).toEqual([]);
     expect(await Testimonials({})).toBeNull();
-    expect(await Testimonials({ caseStudy: "medora-clinic-booking" })).toBeNull();
+    expect(await Testimonials({ caseStudy: "australian-direct-tutoring" })).toBeNull();
   });
 
   it("shows a testimonial once a real one exists", async () => {
-    data.testimonials.push({ quote: "They shipped it.", name: "Hina", role: "COO", company: "Acme", caseStudy: "medora-clinic-booking" });
-    render((await Testimonials({ caseStudy: "medora-clinic-booking" }))!);
+    data.testimonials.push({ quote: "They shipped it.", name: "Hina", role: "COO", company: "Acme", caseStudy: "australian-direct-tutoring" });
+    render((await Testimonials({ caseStudy: "australian-direct-tutoring" }))!);
     expect(screen.getByText("They shipped it.")).toBeInTheDocument();
     expect(screen.getByText("COO, Acme")).toBeInTheDocument();
     expect(await Testimonials({ caseStudy: "other" })).toBeNull();
