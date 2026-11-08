@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import Words from "@/components/ui/Words";
-import SvcRows from "@/components/interactive/SvcRows";
 
 // ServicesHub
 export default function ServicesHub() {
@@ -24,11 +23,10 @@ export default function ServicesHub() {
       </section>
       <section className="band" style={{ paddingTop: "0" } as CSSProperties}>
         <div className="wrap">
-          <SvcRows className="svc-rows" data-reveal-group>
+          <div className="svc-rows" data-reveal-group="">
             <Link
               href="/services/custom-software-development/"
               className="svc-row"
-              data-img="/images/photos/custom-software-800.webp"
             >
               <div>
                 <h2>Custom Software Development</h2>
@@ -48,7 +46,6 @@ export default function ServicesHub() {
             <Link
               href="/services/full-stack-development/"
               className="svc-row"
-              data-img="/images/photos/pair-programming-800.webp"
             >
               <div>
                 <h2>Full-Stack Development</h2>
@@ -68,7 +65,6 @@ export default function ServicesHub() {
             <Link
               href="/services/mobile-app-development/"
               className="svc-row"
-              data-img="/images/photos/mobile-in-hand-800.webp"
             >
               <div>
                 <h2>Mobile App Development</h2>
@@ -88,7 +84,6 @@ export default function ServicesHub() {
             <Link
               href="/services/ai-llm-development/"
               className="svc-row"
-              data-img="/images/photos/ai-assistant-800.webp"
             >
               <div>
                 <h2>AI and LLM Development</h2>
@@ -105,7 +100,7 @@ export default function ServicesHub() {
                 »
               </span>
             </Link>
-            <Link href="/services/ai-automation/" className="svc-row" data-img="/images/photos/automation-800.webp">
+            <Link href="/services/ai-automation/" className="svc-row">
               <div>
                 <h2>AI Automation and Agents</h2>
               </div>
@@ -124,7 +119,6 @@ export default function ServicesHub() {
             <Link
               href="/services/saas-app-development/"
               className="svc-row"
-              data-img="/images/photos/saas-dashboard-800.webp"
             >
               <div>
                 <h2>SaaS App Development</h2>
@@ -144,7 +138,6 @@ export default function ServicesHub() {
             <Link
               href="/services/ai-agents-as-a-service/"
               className="svc-row"
-              data-img="/images/photos/aaas-console-800.webp"
             >
               <div>
                 <h2>AI Agents as a Service</h2>
@@ -164,7 +157,6 @@ export default function ServicesHub() {
             <Link
               href="/services/code-rescue/"
               className="svc-row"
-              data-img="/images/photos/rescue-health-check-800.webp"
             >
               <div>
                 <h2>Code Rescue and Takeover</h2>
@@ -181,7 +173,7 @@ export default function ServicesHub() {
                 »
               </span>
             </Link>
-          </SvcRows>
+          </div>
         </div>
       </section>
 

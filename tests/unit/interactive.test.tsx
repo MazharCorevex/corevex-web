@@ -8,7 +8,6 @@ import Accordion from "@/components/interactive/Accordion";
 import Filter from "@/components/interactive/Filter";
 import Rail from "@/components/interactive/Rail";
 import FeatList from "@/components/interactive/FeatList";
-import SvcRows from "@/components/interactive/SvcRows";
 import BeforeAfter from "@/components/interactive/BeforeAfter";
 import Demo from "@/components/interactive/Demo";
 import TechStack from "@/components/home/sections/TechStack";
@@ -291,25 +290,6 @@ describe("other interactive pieces", () => {
     expect(document.querySelectorAll(".feat-media img")[1]).toHaveClass("on");
     fireEvent.click(screen.getByText("One"));
     expect(screen.getByText("One")).toHaveClass("on");
-  });
-
-  it("service rows show a hover image with a fine pointer", () => {
-    const { container } = render(
-      <SvcRows data-reveal-group>
-        <a className="svc-row" data-img="/images/photos/ai-ml-800.webp">
-          Row
-        </a>
-      </SvcRows>,
-    );
-    fireEvent.mouseOver(screen.getByText("Row"));
-    fireEvent.mouseMove(screen.getByText("Row"), { clientX: 10, clientY: 20 });
-    expect(container.querySelector(".hover-img")).toHaveClass("on");
-    expect(container.querySelector(".hover-img img")).toHaveAttribute("src", "/images/photos/ai-ml-800.webp");
-    fireEvent.mouseOut(screen.getByText("Row"), { relatedTarget: document.body });
-    expect(container.querySelector(".hover-img")).not.toHaveClass("on");
-    media.fine = false;
-    fireEvent.mouseOver(screen.getByText("Row"));
-    expect(container.querySelector(".hover-img")).not.toHaveClass("on");
   });
 
   it("before and after slider follows the range input", () => {

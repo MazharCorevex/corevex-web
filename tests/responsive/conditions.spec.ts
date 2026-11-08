@@ -136,7 +136,7 @@ test.describe("JavaScript disabled", () => {
       const r = await page.evaluate(() => {
         const main = document.querySelector("main") || document.body;
         const faded = [...main.querySelectorAll<HTMLElement>("*")].filter((e) => {
-          if (!e.textContent?.trim() || e.closest("[hidden],[aria-hidden=true],details:not([open]),.sr,.hover-img,.orb-card,.stx-panel:not(.on),.hc-tag,.acc-item:not(.on) p,.drawer,.mega,.sheet,.empty-note,.tile .reveal")) return false;
+          if (!e.textContent?.trim() || e.closest("[hidden],[aria-hidden=true],details:not([open]),.sr,.orb-card,.stx-panel:not(.on),.hc-tag,.acc-item:not(.on) p,.drawer,.mega,.sheet,.empty-note,.tile .reveal")) return false;
           const s = getComputedStyle(e);
           return parseFloat(s.opacity) < 0.5 && s.display !== "none" && s.visibility !== "hidden";
         });
