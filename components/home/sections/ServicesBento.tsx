@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Img from "@/components/ui/Img";
+import GearsVideo from "@/components/home/GearsVideo";
 
 // ServicesBento
 export default function ServicesBento() {
@@ -85,9 +86,9 @@ export default function ServicesBento() {
               <span className="chip">RAG search</span>
             </div>
           </Link>
-          <Link href="/services/ai-automation/" className="tile t-strip">
-            <div className="bg">
-              <Img src="/images/photos/automation.webp" alt="" fill sizes="(max-width: 860px) 100vw, 33vw" />
+          <Link href="/services/ai-automation/" className="tile t-strip t-gears">
+            <div className="bg bg-gears">
+              <GearsVideo />
             </div>
             <Img
               src="/images/icons/automation-on-dark.svg"
