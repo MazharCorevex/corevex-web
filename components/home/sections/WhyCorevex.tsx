@@ -7,8 +7,8 @@ export default function WhyCorevex() {
       <div className="wrap split">
         <div className="split-img" data-reveal="">
           <Img
-            src="/images/photos/handover.webp"
-            alt="Senior engineer handing over a completed software project to a client"
+            src="/images/photos/senior-team-board.webp"
+            alt="Corevex team planning a project together at a task board"
             sizes="(max-width: 860px) 100vw, 50vw"
           />
           <div className="float-chip">

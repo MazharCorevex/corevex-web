@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import Img from "@/components/ui/Img";
+import RescueCards from "@/components/services/RescueCards";
 
 // code-rescue
 export default function CodeRescueBody() {
@@ -28,64 +29,7 @@ export default function CodeRescueBody() {
           <h2 className="h2" style={{ marginBottom: "44px" } as CSSProperties}>
             What we fix
           </h2>
-          <div className="trust rescue-grid" data-reveal-group="">
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/rescue.svg" alt="" />
-              </span>
-              <b>Bugs and broken flows</b>
-              <p>Features that worked in the demo fail with real users.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/web-mobile.svg" alt="" />
-              </span>
-              <b>UI/UX that converts</b>
-              <p>Clear screens, fixed layouts and fewer drop-offs.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/saas.svg" alt="" />
-              </span>
-              <b>Billing and subscriptions</b>
-              <p>Plans, trials and failed payments handled properly.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/custom-software.svg" alt="" />
-              </span>
-              <b>Security hardening</b>
-              <p>Secrets, database rules and endpoints locked down.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/full-stack.svg" alt="" />
-              </span>
-              <b>Roles and permissions</b>
-              <p>RBAC so each user sees only what they should.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/ai-ml.svg" alt="" />
-              </span>
-              <b>Performance and scaling</b>
-              <p>Slow queries and pages fixed before traffic grows.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/automation.svg" alt="" />
-              </span>
-              <b>Deployment and hosting</b>
-              <p>Reliable releases, environments and monitoring.</p>
-            </div>
-            <div>
-              <span className="ib">
-                <Img src="/images/icons/aaas.svg" alt="" />
-              </span>
-              <b>Maintainable code</b>
-              <p>Structure, tests and docs your next hire can follow.</p>
-            </div>
-          </div>
+          <RescueCards />
         </div>
       </section>
       <section className="band mist">
