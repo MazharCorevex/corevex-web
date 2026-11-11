@@ -4,11 +4,11 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 
 ## Content
 
-- [x] Public contact email, phone and office address: hello@corevex.org, +92 333 2031151, Sikandar Plaza, Canal Road, Hasilpur, Bahawalpur (defaults in `lib/site.ts`)
+- [x] Public contact email, phone and office address: hello@corevex.org, +92 333 2031151, Sikander Plaza, Canal Bridge, Vehari Rd, Model Town, Hasilpur (defaults in `lib/site.ts`)
 - [ ] Real client logos: add to `content/client-logos.json` (name, logo path, width, height). The logo strips stay hidden while it is empty
 - [ ] Testimonials: add approved quotes to `content/testimonials.json`. Hidden while it is empty
 - [ ] Case study results: add real numbers to `results` per case study in `content/case-studies.json`. Hidden until then
-- [ ] Leadership headshots: Mazhar H and Zafar H are done; M Azhar still uses a placeholder SVG (add to `public/images/team` and set `image` in `content/team.json`)
+- [x] Leadership headshots: Mazhar H, M Azhar and Zafar H
 - [ ] Leadership LinkedIn URLs: set `linkedin` in `content/team.json`. The link is hidden until set
 - [ ] Team and office photos
 - [ ] Privacy Policy and Terms of Service: have them reviewed and approved by a legal advisor

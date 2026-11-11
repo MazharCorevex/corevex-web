@@ -118,10 +118,11 @@ describe("newsletter action", () => {
     expect(log.mock.calls.flat().join(" ")).toMatch(/audience not updated.*audience-not-configured/);
   });
 
-  it("fails when the team notification fails", async () => {
-    vi.spyOn(console, "error").mockImplementation(() => {});
-    vi.spyOn(email, "sendNotification").mockRejectedValueOnce(new Error("x"));
-    expect((await newsletter(fd({ email: "reader@example.com" }), ip())).code).toBe(502);
+  it("still succeeds when the team notification fails, and logs the address", async () => {
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(email, "sendNotification").mockRejectedValueOnce(new Error("resend blocked"));
+    expect((await newsletter(fd({ email: "reader@example.com" }), ip())).code).toBe(200);
+    expect(log.mock.calls.flat().join(" ")).toMatch(/newsletter signup recorded here.*reader@example\.com.*resend blocked/);
   });
 });
 

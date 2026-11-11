@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Img from "@/components/ui/Img";
 import Newsletter from "@/components/forms/Newsletter";
-import { CLUTCH_URL, DRAWER_ORDER, GITHUB_URL, LINKEDIN_URL, PSEB_NUMBER, svc } from "@/lib/site";
+import { CLUTCH_URL, DRAWER_ORDER, FACEBOOK_URL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL, PSEB_NUMBER, svc, X_URL } from "@/lib/site";
+import SocialIcon from "@/components/ui/SocialIcon";
 
 const COLS = [
   {
@@ -37,11 +38,15 @@ const COLS = [
 ];
 
 export default function Footer() {
-  const social = [
+  // Every profile shows; only those with a URL are links
+  const social: [string, string][] = [
     ["LinkedIn", LINKEDIN_URL],
     ["Clutch", CLUTCH_URL],
+    ["X", X_URL],
+    ["Instagram", INSTAGRAM_URL],
+    ["Facebook", FACEBOOK_URL],
     ["GitHub", GITHUB_URL],
-  ].filter(([, u]) => u);
+  ];
   return (
     <footer className="footer">
       <div className="wrap">
@@ -80,15 +85,11 @@ export default function Footer() {
             © {new Date().getFullYear()} Corevex Solutions. All rights reserved.
             {PSEB_NUMBER ? ` · PSEB Reg. ${PSEB_NUMBER}` : ""}
           </span>
-          {social.length > 0 && (
-            <span className="soc">
-              {social.map(([name, url]) => (
-                <a key={name} href={url} target="_blank" rel="noopener noreferrer">
-                  {name}
-                </a>
-              ))}
-            </span>
-          )}
+          <span className="soc" aria-label="Corevex Solutions on social media">
+            {social.map(([name, url]) => (
+              <SocialIcon key={name} name={name} url={url} />
+            ))}
+          </span>
         </div>
       </div>
     </footer>

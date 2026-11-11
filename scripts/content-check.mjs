@@ -36,8 +36,10 @@ for (const r of [...routes, ...extra]) {
   const scrub = (t) => (r === "/ai-lab/" ? t.replace(/\$[\d,]+\.\d{2}/g, "") : t);
   const body0 = r.endsWith(".txt") || r.endsWith(".xml") ? raw : `${text(raw)} ${meta} ${ld}`;
   const body = scrub(body0);
+  // Client quotes describe what happened; promises are checked in Corevex's own copy
+  const ownCopy = scrub(r.endsWith(".txt") || r.endsWith(".xml") ? raw : `${text(raw.replace(/<blockquote[\s\S]*?<\/blockquote>/gi, " "))} ${meta} ${ld}`);
   for (const [name, re] of RULES) {
-    const m = body.match(re);
+    const m = (name === "availability promise" ? ownCopy : body).match(re);
     if (m) {
       bad++;
       const i = body.indexOf(m[0]);

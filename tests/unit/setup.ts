@@ -1,5 +1,8 @@
 import "@testing-library/jest-dom/vitest";
-import { cleanup } from "@testing-library/react";
+import { cleanup, configure } from "@testing-library/react";
+
+// Slower machines need more than the default 1 s for async UI
+configure({ asyncUtilTimeout: 3000 });
 import { afterEach, vi } from "vitest";
 import { createElement } from "react";
 

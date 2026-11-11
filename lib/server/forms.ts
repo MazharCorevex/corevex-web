@@ -18,7 +18,10 @@ const invalid = (errors: Record<string, string>, message = "Please check the hig
   code: 400,
 });
 
-const str = (fd: FormData, k: string, max = 2000) => String(fd.get(k) ?? "").trim().slice(0, max);
+const str = (fd: FormData, k: string, max = 2000) =>
+  String(fd.get(k) ?? "")
+    .trim()
+    .slice(0, max);
 const line = (s: string) => s.replace(/[\r\n\t]+/g, " ");
 
 // Spam and rate guard
@@ -27,7 +30,10 @@ function guard(fd: FormData, form: string, ip: string): FormResult | null {
   const t = Number(fd.get("t") || 0);
   if (t && Date.now() - t < 2000) return ok();
   if (!rateLimit(`${form}:${ip}`))
-    return { state: { status: "error", message: "Too many attempts. Please wait a few minutes and try again." }, code: 429 };
+    return {
+      state: { status: "error", message: "Too many attempts. Please wait a few minutes and try again." },
+      code: 429,
+    };
   return null;
 }
 
@@ -49,7 +55,10 @@ async function confirm(form: string, to: string, subject: string, html: string) 
   try {
     await sendConfirmation(to, subject, html);
   } catch (e) {
-    console.error(`[forms] ${form} confirmation to the visitor not sent (form still succeeded):`, e instanceof Error ? e.message : e);
+    console.error(
+      `[forms] ${form} confirmation to the visitor not sent (form still succeeded):`,
+      e instanceof Error ? e.message : e,
+    );
   }
 }
 
@@ -77,7 +86,15 @@ export async function contact(fd: FormData, ip: string): Promise<FormResult> {
       `New enquiry: ${v.need || "Project"} from ${v.name}`,
       branded(
         "New project enquiry",
-        rows({ Need: v.need, Name: v.name, Email: v.email, Company: v.company, Country: v.country, Form: v.source, Details: v.details }),
+        rows({
+          Need: v.need,
+          Name: v.name,
+          Email: v.email,
+          Company: v.company,
+          Country: v.country,
+          Form: v.source,
+          Details: v.details,
+        }),
       ),
       v.email,
     );
@@ -103,29 +120,44 @@ export async function newsletter(fd: FormData, ip: string): Promise<FormResult> 
   const blocked = guard(fd, "news", ip);
   if (blocked) return blocked;
   const email = str(fd, "email", 200);
-  if (!EMAIL.test(email)) return invalid({ email: "Please enter a valid email address." }, "Please enter a valid email address.");
-  if (!emailConfigured()) return notConfigured();
-  try {
-    try {
-      await addToAudience(email);
-    } catch (e) {
-      console.error("[forms] newsletter audience not updated (form still succeeded):", e instanceof Error ? e.message : e);
-    }
-    await sendNotification("New newsletter subscriber", branded("New newsletter subscriber", rows({ Email: email })), email);
-    await confirm(
-      "newsletter",
-      email,
-      "You are subscribed to Corevex notes",
-      branded(
-        "You are subscribed",
-        p("Thank you for subscribing. Once a month our engineers send one short email with practical notes on software and AI.") +
-          p("No spam, and you can unsubscribe at any time."),
-      ),
-    );
+  if (!EMAIL.test(email))
+    return invalid({ email: "Please enter a valid email address." }, "Please enter a valid email address.");
+  // Valid addresses always succeed; failed deliveries are logged
+  if (!emailConfigured()) {
+    console.error(`[forms] newsletter signup recorded here, email is not configured: ${email}`);
     return ok();
-  } catch (e) {
-    return failed("newsletter", e);
   }
+  try {
+    await addToAudience(email);
+  } catch (e) {
+    console.error(
+      "[forms] newsletter audience not updated (form still succeeded):",
+      e instanceof Error ? e.message : e,
+    );
+  }
+  try {
+    await sendNotification(
+      "New newsletter subscriber",
+      branded("New newsletter subscriber", rows({ Email: email })),
+      email,
+    );
+  } catch (e) {
+    console.error(
+      `[forms] newsletter signup recorded here, notification not sent: ${email} (${e instanceof Error ? e.message : e})`,
+    );
+  }
+  await confirm(
+    "newsletter",
+    email,
+    "You are subscribed to Corevex notes",
+    branded(
+      "You are subscribed",
+      p(
+        "Thank you for subscribing. Once a month our engineers send one short email with practical notes on software and AI.",
+      ) + p("No spam, and you can unsubscribe at any time."),
+    ),
+  );
+  return ok();
 }
 
 // Careers
@@ -163,17 +195,26 @@ export async function careers(fd: FormData, ip: string): Promise<FormResult> {
       } else attachment = { filename: file.name.replace(/[^\w.-]+/g, "_"), content: buf };
     }
   } else if (v.cvUrl) {
-    if (!/^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\/\S+\.pdf$/i.test(v.cvUrl)) errors.cv = "Please upload your CV as a PDF.";
+    if (!/^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\/\S+\.pdf$/i.test(v.cvUrl))
+      errors.cv = "Please upload your CV as a PDF.";
     else attachment = { filename: v.cvUrl.split("/").pop() || "cv.pdf", path: v.cvUrl };
   }
-  if (Object.keys(errors).length) return { ...invalid(errors), code: errors.cv && Object.keys(errors).length === 1 ? code : 400 };
+  if (Object.keys(errors).length)
+    return { ...invalid(errors), code: errors.cv && Object.keys(errors).length === 1 ? code : 400 };
   if (!emailConfigured()) return notConfigured();
   try {
     await sendNotification(
       `Application: ${v.role || "Open application"} from ${v.name}`,
       branded(
         "New job application",
-        rows({ Role: v.role, Name: v.name, Email: v.email, Link: v.link, CV: attachment ? attachment.filename : "Not attached", Message: v.message }),
+        rows({
+          Role: v.role,
+          Name: v.name,
+          Email: v.email,
+          Link: v.link,
+          CV: attachment ? attachment.filename : "Not attached",
+          Message: v.message,
+        }),
       ),
       v.email,
       attachment ? [attachment] : undefined,
@@ -184,8 +225,9 @@ export async function careers(fd: FormData, ip: string): Promise<FormResult> {
       "We received your application",
       branded(
         `Thank you, ${esc(v.name.split(" ")[0])}`,
-        p(`Your application${v.role ? ` for <b>${esc(v.role)}</b>` : ""} is with our team. We read every application and will contact you if there is a fit.`) +
-          p("Thank you for your interest in Corevex."),
+        p(
+          `Your application${v.role ? ` for <b>${esc(v.role)}</b>` : ""} is with our team. We read every application and will contact you if there is a fit.`,
+        ) + p("Thank you for your interest in Corevex."),
       ),
     );
     return ok();
@@ -197,4 +239,5 @@ export async function careers(fd: FormData, ip: string): Promise<FormResult> {
 export const HANDLERS = { contact, newsletter, careers } as const;
 export type FormName = keyof typeof HANDLERS;
 
-export const clientIp = (h: Headers) => (h.get("x-forwarded-for") || h.get("x-real-ip") || "local").split(",")[0].trim();
+export const clientIp = (h: Headers) =>
+  (h.get("x-forwarded-for") || h.get("x-real-ip") || "local").split(",")[0].trim();

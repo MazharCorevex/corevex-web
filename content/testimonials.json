@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "quote": "We came to Corevex with three spreadsheets and a dispatch process held together by WhatsApp groups. They mapped how our team actually works before writing any code, which nobody else bothered to do. The platform went live two days ahead of the date we agreed, and our dispatchers picked it up in a morning.",
+    "name": "Operations Director",
+    "role": "Logistics company",
+    "company": "USA"
+  },
+  {
+    "quote": "What I liked most was the weekly demo. Every Friday we saw real progress, not slides. When we changed our mind about the booking flow halfway through, they adjusted the plan without any drama. Patients now book online instead of calling, and our front desk finally has time to breathe.",
+    "name": "Practice Owner",
+    "role": "Healthcare clinics",
+    "company": "UK"
+  },
+  {
+    "quote": "Honestly, I expected the usual delays. Didn't happen. Both apps were approved on the App Store and Google Play first time, and the app still feels fast six months later. They also explained things in plain English, which matters when you're not technical.",
+    "name": "Founder",
+    "role": "Fitness app",
+    "company": "UAE"
+  },
+  {
+    "quote": "Our previous developer left us with code nobody could read. Corevex cleaned it up, added tests and documented everything properly. When we brought our own in-house developer on board, he was productive in his first week. That told me everything about the quality of their work.",
+    "name": "CTO",
+    "role": "Finance software company",
+    "company": "Canada"
+  },
+  {
+    "quote": "Fast replies, every time. Even after launch, when we found a small issue with email routing on a Sunday, someone from the team looked at it the same day. Our support team now handles twice the tickets without hiring, and the handover documents were the clearest we've ever received.",
+    "name": "Head of Customer Support",
+    "role": "Ecommerce business",
+    "company": "Australia"
+  },
+  {
+    "quote": "Security was our biggest concern, and they treated it that way from day one: proper roles and permissions, audit logs and regular reviews. They were also flexible when our compliance team added requirements late. We've kept the same team on for phase two, which says enough.",
+    "name": "Product Lead",
+    "role": "Wealth management platform",
+    "company": "Germany"
+  }
+]

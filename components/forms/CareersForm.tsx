@@ -76,15 +76,19 @@ export default function CareersForm({ roles, blob }: { roles: string[]; blob: bo
           <FieldError state={state} name="email" />
         </div>
       </div>
-      <div className="field hide-on-sent">
-        <label htmlFor="a-role">Role</label>
-        <select id="a-role" name="role">
-          {roles.map((r) => (
-            <option key={r}>{r}</option>
-          ))}
-          <option>Open application</option>
-        </select>
-      </div>
+      {roles.length > 0 ? (
+        <div className="field hide-on-sent">
+          <label htmlFor="a-role">Role</label>
+          <select id="a-role" name="role">
+            {roles.map((r) => (
+              <option key={r}>{r}</option>
+            ))}
+            <option>Open application</option>
+          </select>
+        </div>
+      ) : (
+        <input type="hidden" name="role" value="Open application" />
+      )}
       <div className="field hide-on-sent">
         <label htmlFor="a-link">LinkedIn or portfolio</label>
         <input id="a-link" name="link" type="url" placeholder="https://" {...invalid(state, "link")} />

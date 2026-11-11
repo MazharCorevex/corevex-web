@@ -1,4 +1,5 @@
 import { CONTACT_EMAIL, CONTACT_PHONE, LINKEDIN_URL, OFFICE_ADDRESS } from "@/lib/site";
+import SocialIcon from "@/components/ui/SocialIcon";
 
 // Contact details, shown only when set
 export default function ContactDetails() {
@@ -14,11 +15,7 @@ export default function ContactDetails() {
       </a>
     ),
     OFFICE_ADDRESS && <span key="a">{OFFICE_ADDRESS}</span>,
-    LINKEDIN_URL && (
-      <a key="l" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
-    ),
+    LINKEDIN_URL && <SocialIcon key="l" name="LinkedIn" url={LINKEDIN_URL} className="c-social" size={26} />,
   ].filter(Boolean);
   if (!items.length) return null;
   return <div className="c-details">{items}</div>;

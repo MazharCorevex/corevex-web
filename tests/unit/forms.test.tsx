@@ -147,6 +147,12 @@ describe("careers form", () => {
     expect(actions.apply).not.toHaveBeenCalled();
   });
 
+  it("sends an open application without a role picker when there are no roles", () => {
+    render(<CareersForm roles={[]} blob={false} />);
+    expect(screen.queryByLabelText("Role")).toBeNull();
+    expect(document.querySelector<HTMLInputElement>('input[type="hidden"][name="role"]')?.value).toBe("Open application");
+  });
+
   it("applies with a valid PDF and shows success", async () => {
     const user = userEvent.setup();
     actions.apply.mockResolvedValue(ok);

@@ -38,10 +38,13 @@ export default function LeaderSheet({ team }: { team: TeamMember[] }) {
             <div className="ph">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={m.image} alt={`${m.name}, ${m.role} of Corevex Solutions`} width={400} height={500} loading="lazy" decoding="async" />
+              <span className="more" aria-hidden="true">
+                View profile <span className="chev">»</span>
+              </span>
             </div>
             <div className="info">
               <h3>{m.name}</h3>
-              <span>{m.role}</span>
+              <span className="role">{m.role}</span>
               <p>{m.short}</p>
             </div>
           </button>

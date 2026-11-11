@@ -39,7 +39,7 @@ describe("content helpers", () => {
     expect(await content.getCaseStudy("missing")).toBeNull();
     const team = await content.getTeam();
     expect(team.filter((t) => t.leadership).map((t) => t.name)).toEqual(["Mazhar H", "M Azhar", "Zafar H"]);
-    expect((await content.getJobs()).length).toBeGreaterThan(0);
+    expect(await content.getJobs()).toEqual([]);
     expect(content.getInsightCategories().length).toBeGreaterThan(1);
   });
 

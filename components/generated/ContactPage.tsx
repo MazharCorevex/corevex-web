@@ -25,7 +25,7 @@ export default function ContactPage() {
           <div className="team-avs">
             <div>
               <Img src="/images/team/mazhar-h.webp" alt="Mazhar H" />
-              <Img src="/images/team/m-azhar.svg" alt="M Azhar" />
+              <Img src="/images/team/m-azhar.webp" alt="M Azhar" />
               <Img src="/images/team/zafar-h.webp" alt="Zafar H" />
             </div>
             <span>You will speak with our team</span>

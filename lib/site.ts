@@ -4,6 +4,9 @@ export const PSEB_NUMBER = process.env.NEXT_PUBLIC_PSEB_NUMBER || "";
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/company/corevex-solution/";
 export const CLUTCH_URL = process.env.NEXT_PUBLIC_CLUTCH_URL || "";
 export const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "";
+export const X_URL = process.env.NEXT_PUBLIC_X_URL || "";
+export const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
+export const FACEBOOK_URL = process.env.NEXT_PUBLIC_FACEBOOK_URL || "";
 
 export type NavService = {
   slug: string;
@@ -43,4 +46,4 @@ export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@cor
 export const CONTACT_PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || "+92 333 2031151";
 // WhatsApp, international format without "+"
 export const WHATSAPP_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923332031151").replace(/\D/g, "");
-export const OFFICE_ADDRESS = process.env.NEXT_PUBLIC_OFFICE_ADDRESS || "Sikandar Plaza, Canal Road, Hasilpur, Bahawalpur";
+export const OFFICE_ADDRESS = process.env.NEXT_PUBLIC_OFFICE_ADDRESS || "Sikander Plaza, Canal Bridge, Vehari Rd, Model Town, Hasilpur";

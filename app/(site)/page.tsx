@@ -13,6 +13,7 @@ import Process from "@/components/home/sections/Process";
 import WhyCorevex from "@/components/home/sections/WhyCorevex";
 import Industries from "@/components/home/sections/Industries";
 import TrustCards from "@/components/home/sections/TrustCards";
+import ClientQuotes from "@/components/home/sections/ClientQuotes";
 import InsightsBlock from "@/components/home/sections/InsightsBlock";
 import ContactFinale from "@/components/home/sections/ContactFinale";
 import { pageMetadata } from "@/lib/seo";
@@ -46,6 +47,7 @@ export default function Home() {
       <WhyCorevex />
       <Industries />
       <TrustCards />
+      <ClientQuotes />
       <InsightsBlock />
       <ContactFinale />
     </>

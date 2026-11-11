@@ -55,7 +55,7 @@ export function organizationLd() {
     ...(CONTACT_EMAIL ? { email: CONTACT_EMAIL } : {}),
     ...(CONTACT_PHONE ? { telephone: CONTACT_PHONE.replace(/[^\d+]/g, "") } : {}),
     ...(OFFICE_ADDRESS
-      ? { address: { "@type": "PostalAddress", streetAddress: "Sikandar Plaza, Canal Road", addressLocality: "Hasilpur", addressRegion: "Punjab", addressCountry: "PK" } }
+      ? { address: { "@type": "PostalAddress", streetAddress: "Sikander Plaza, Canal Bridge, Vehari Rd, Model Town", addressLocality: "Hasilpur", addressRegion: "Punjab", addressCountry: "PK" } }
       : {}),
   };
 }

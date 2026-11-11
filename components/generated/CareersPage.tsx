@@ -26,8 +26,8 @@ export default function CareersPage({ jobs, blob }: { jobs: Job[]; blob: boolean
               Flutter and AI, on real products for real clients.
             </p>
             <div className="btns" data-reveal="load" style={{ marginTop: "30px" } as CSSProperties}>
-              <a href="#roles" className="btn">
-                {"See open roles "}
+              <a href={jobs.length ? "#roles" : "#apply"} className="btn">
+                {jobs.length ? "See open roles " : "Send an application "}
                 <span className="chev">»</span>
               </a>
             </div>
@@ -87,13 +87,13 @@ export default function CareersPage({ jobs, blob }: { jobs: Job[]; blob: boolean
           </div>
         </div>
       </section>
-      <section className="band" id="roles">
-        <div className="wrap">
-          <span className="label">Open roles</span>
-          <h2 className="h2" style={{ marginBottom: "40px" } as CSSProperties}>
-            Current openings
-          </h2>
-          {jobs.length > 0 ? (
+      {jobs.length > 0 && (
+        <section className="band" id="roles">
+          <div className="wrap">
+            <span className="label">Open roles</span>
+            <h2 className="h2" style={{ marginBottom: "40px" } as CSSProperties}>
+              Current openings
+            </h2>
             <div className="roles">
               {jobs.map((j) => (
                 <a key={j.slug} href="#apply">
@@ -106,11 +106,9 @@ export default function CareersPage({ jobs, blob }: { jobs: Job[]; blob: boolean
                 </a>
               ))}
             </div>
-          ) : (
-            <p className="lead">There are no open roles right now. You are welcome to send an open application below.</p>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
       <section className="band mist" id="apply">
         <div className="wrap split">
           <div>

@@ -7,7 +7,7 @@ import CtaBand from "@/components/sections/CtaBand";
 import ArticleBody from "@/components/insights/ArticleBody";
 import ArticleCard from "@/components/insights/ArticleCard";
 import JsonLd from "@/components/seo/JsonLd";
-import { getArticle, getArticles } from "@/lib/content";
+import { getArticle, getArticles, getTeam } from "@/lib/content";
 import { abs, breadcrumbLd, faqLd, pageLd, pageMetadata, seoFor } from "@/lib/seo";
 
 export const dynamicParams = true;
@@ -49,7 +49,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         ...(a.faq.length ? [faqLd(a.faq)] : []),
         breadcrumbLd([["Home", "/"], ["Insights", "/insights/"], [a.title, route]]),
       ];
-  const authorImg = a.authorImage || `/images/team/${a.author.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.svg`;
+  // Author photo from the team list
+  const team = await getTeam();
+  const authorImg = a.authorImage || team.find((m) => m.name === a.author)?.image || "/images/logo/corevex-mark.svg";
 
   return (
     <>
