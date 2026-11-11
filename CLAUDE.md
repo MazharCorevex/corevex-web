@@ -48,6 +48,6 @@ Corevex Solutions, PSEB registered, founded 2022, 50+ engineers and specialists.
 
 ## Open items
 
-- PSEB registration number, contact email, phone, office address
+- Contact details are set (hello@corevex.org, +92 333 2031151, Sikandar Plaza, Canal Road, Hasilpur, Bahawalpur); no PSEB number, Clutch or GitHub links are shown
 - Real client logos, leadership headshots, team and office photos
 - Final domain (Resend domain verification and Vercel domain)

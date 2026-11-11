@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import data from "./seo-data.json";
-import { LINKEDIN_URL, SITE_URL } from "./site";
+import { CONTACT_EMAIL, CONTACT_PHONE, LINKEDIN_URL, OFFICE_ADDRESS, SITE_URL } from "./site";
 
 type PageSeo = { title: string; description: string; ogTitle: string; ogType: string; robots: string; ld: object[] };
 const SEO = data as Record<string, PageSeo>;
@@ -52,6 +52,11 @@ export function organizationLd() {
     slogan: "Engineered at the Core.",
     founder: { "@type": "Person", name: "Mazhar H", jobTitle: "CEO and Founder" },
     sameAs: [LINKEDIN_URL].filter(Boolean),
+    ...(CONTACT_EMAIL ? { email: CONTACT_EMAIL } : {}),
+    ...(CONTACT_PHONE ? { telephone: CONTACT_PHONE.replace(/[^\d+]/g, "") } : {}),
+    ...(OFFICE_ADDRESS
+      ? { address: { "@type": "PostalAddress", streetAddress: "Sikandar Plaza, Canal Road", addressLocality: "Hasilpur", addressRegion: "Punjab", addressCountry: "PK" } }
+      : {}),
   };
 }
 

@@ -4,15 +4,13 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 
 ## Content
 
-- [ ] PSEB registration number: set `NEXT_PUBLIC_PSEB_NUMBER` (shown in the footer and on About when set)
-- [ ] Public contact email, phone and office address: set `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_CONTACT_PHONE`, `NEXT_PUBLIC_OFFICE_ADDRESS` (Contact page details are hidden until set)
+- [x] Public contact email, phone and office address: hello@corevex.org, +92 333 2031151, Sikandar Plaza, Canal Road, Hasilpur, Bahawalpur (defaults in `lib/site.ts`)
 - [ ] Real client logos: add to `content/client-logos.json` (name, logo path, width, height). The logo strips stay hidden while it is empty
 - [ ] Testimonials: add approved quotes to `content/testimonials.json`. Hidden while it is empty
 - [ ] Case study results: add real numbers to `results` per case study in `content/case-studies.json`. Hidden until then
 - [ ] Leadership headshots: add to `public/images` and set `image` in `content/team.json`. Placeholder SVGs are used until then
 - [ ] Leadership LinkedIn URLs: set `linkedin` in `content/team.json`. The link is hidden until set
 - [ ] Team and office photos
-- [ ] Clutch and GitHub profile URLs: `NEXT_PUBLIC_CLUTCH_URL`, `NEXT_PUBLIC_GITHUB_URL` (hidden until set)
 - [ ] Privacy Policy and Terms of Service: have them reviewed and approved by a legal advisor
 
 ## Keys and accounts
@@ -29,7 +27,7 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 
 ## Testing
 
-- [ ] Visual baselines for Linux: run the CI workflow manually with "update visual" ticked, download the visual-baselines artifact into tests/visual/__screenshots__/linux and commit it
+- [x] Visual baselines for Linux: refresh them by running the CI workflow manually with "update visual" ticked after visual changes
 - [x] LinkedIn company URL confirmed: https://www.linkedin.com/company/corevex-solution/ (if `NEXT_PUBLIC_LINKEDIN_URL` is set in Vercel, update it there too)
 - [ ] Optional: install the Microsoft Visual C++ runtime on Windows machines that should run Firefox tests locally (CI already runs Firefox and WebKit)
 
