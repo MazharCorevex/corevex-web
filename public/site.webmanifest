@@ -1,6 +1,11 @@
 {
   "name": "Corevex Solutions",
   "short_name": "Corevex",
+  "description": "Custom software, SaaS, mobile apps and AI agents, built by a senior team.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#262B47",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -13,13 +18,10 @@
       "type": "image/png"
     },
     {
-      "src": "/maskable-512.png",
+      "src": "/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#262B47",
-  "background_color": "#0D1022",
-  "display": "standalone"
+  ]
 }

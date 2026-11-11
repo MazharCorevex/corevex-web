@@ -8,7 +8,7 @@ import Analytics from "@/components/layout/Analytics";
 import CookieConsent from "@/components/consent/CookieConsent";
 import { CONSENT_DEFAULTS } from "@/lib/consent";
 import JsonLd from "@/components/seo/JsonLd";
-import { organizationLd } from "@/lib/seo";
+import { OG_IMAGE, organizationLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import "@/styles/tokens.css";
 import "@/styles/site.css";
@@ -27,13 +27,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   manifest: "/site.webmanifest",
-  openGraph: { type: "website", siteName: "Corevex Solutions", images: ["/images/social/og-image-1200x630.png"] },
-  twitter: { card: "summary_large_image", images: ["/images/social/og-image-1200x630.png"] },
+  openGraph: { type: "website", siteName: "Corevex Solutions", url: "/", images: [OG_IMAGE] },
+  twitter: { card: "summary_large_image", images: [OG_IMAGE] },
   formatDetection: { telephone: false },
 };
 
@@ -50,7 +51,7 @@ const NOSCRIPT = [
 ].join("");
 
 export const viewport: Viewport = {
-  themeColor: "#0D1022",
+  themeColor: "#262B47",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",

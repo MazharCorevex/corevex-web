@@ -60,11 +60,18 @@ async function convertNew() {
   return n;
 }
 
+// Website icon set from new-images/icons
+const ICONS = ["favicon.ico", "favicon.svg", "favicon-32.png", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "site.webmanifest", "og-image.png", "og-image.jpg"];
+
 async function rootIcons() {
   const pub = path.join(root, "public");
-  for (const f of ["site.webmanifest", "favicon.ico", "icon.svg", "apple-touch-icon.png", "favicon-16.png", "favicon-32.png", "favicon-48.png", "icon-192.png", "icon-512.png", "maskable-512.png"]) {
-    await fs.copyFile(path.join(root, "reference", f), path.join(pub, f));
+  const src = path.join(newImgs, "icons");
+  try {
+    await fs.access(src);
+  } catch {
+    return;
   }
+  for (const f of ICONS) await fs.copyFile(path.join(src, f), path.join(pub, f));
 }
 
 // Portfolio boards: 1600 and 800 wide WebP

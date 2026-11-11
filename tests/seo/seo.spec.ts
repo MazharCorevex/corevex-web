@@ -94,13 +94,15 @@ test("Open Graph and Twitter tags on every page", () => {
   }
 });
 
-test("Open Graph images resolve", async ({ request }) => {
-  const imgs = [...new Set(heads.map((h) => new URL(h.og["og:image"]).pathname))];
-  for (const p of imgs) {
-    const r = await request.get(p);
-    expect(r.status(), p).toBe(200);
-    expect(r.headers()["content-type"]).toMatch(/image\/png/);
+test("every page shares og-image.jpg with alt text", async ({ request }) => {
+  for (const h of heads) {
+    expect(new URL(h.og["og:image"]).pathname, h.route).toBe("/og-image.jpg");
+    expect(h.og["og:image:alt"], h.route).toBe("Corevex Solutions, Engineered at the Core");
+    expect(h.og["og:site_name"], h.route).toBe("Corevex Solutions");
   }
+  const r = await request.get("/og-image.jpg");
+  expect(r.status()).toBe(200);
+  expect(r.headers()["content-type"]).toMatch(/image\/jpeg/);
 });
 
 test("exactly one h1 on every page", () => {

@@ -8,7 +8,7 @@ vi.mock("@/content/client-logos.json", () => ({ default: data.logos }));
 import * as content from "@/lib/content";
 import Testimonials from "@/components/sections/Testimonials";
 import ClientLogos from "@/components/sections/ClientLogos";
-import { abs, breadcrumbLd, faqLd, organizationLd, pageLd, pageMetadata, seoFor, withSite } from "@/lib/seo";
+import { abs, breadcrumbLd, faqLd, organizationLd, pageLd, OG_IMAGE, pageMetadata, seoFor, withSite } from "@/lib/seo";
 import { DRAWER_ORDER, SERVICES, svc } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
@@ -83,10 +83,12 @@ describe("seo helpers", () => {
     expect(m.alternates?.canonical).toBe("/services/code-rescue/");
     expect(m.openGraph).toMatchObject({ url: "/services/code-rescue/", siteName: "Corevex Solutions" });
     expect(String((m.title as { absolute: string }).absolute)).toMatch(/Code Rescue/i);
-    const a = pageMetadata("/insights/what-is-rag/", { ogFile: true });
+    const a = pageMetadata("/insights/what-is-rag/");
     expect((a.openGraph as { type: string }).type).toBe("article");
-    expect((a.openGraph as { images?: unknown }).images).toBeUndefined();
-    const f = pageMetadata("/unknown/", { title: "T", description: "D", image: "/x.png", type: "website" });
+    expect((a.openGraph as { images: unknown[] }).images).toEqual([OG_IMAGE]);
+    expect((a.twitter as { card: string; images: unknown[] })).toMatchObject({ card: "summary_large_image", images: [OG_IMAGE] });
+    expect(OG_IMAGE).toMatchObject({ url: "/og-image.jpg", width: 1200, height: 630, alt: "Corevex Solutions, Engineered at the Core" });
+    const f = pageMetadata("/unknown/", { title: "T", description: "D", type: "website" });
     expect(f.description).toBe("D");
     expect(pageMetadata("/nothing/").title).toEqual({ absolute: "Corevex Solutions" });
   });

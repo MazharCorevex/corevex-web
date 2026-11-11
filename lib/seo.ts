@@ -6,24 +6,24 @@ import { offer } from "./offers";
 type PageSeo = { title: string; description: string; ogTitle: string; ogType: string; robots: string; ld: object[] };
 const SEO = data as Record<string, PageSeo>;
 
-const OG = "/images/social/og-image-1200x630.png";
+// Link preview image for every page
+export const OG_IMAGE = { url: "/og-image.jpg", width: 1200, height: 630, type: "image/jpeg", alt: "Corevex Solutions, Engineered at the Core" };
 
 export function seoFor(route: string): PageSeo | undefined {
   return SEO[route];
 }
 
-export function pageMetadata(route: string, fallback?: Partial<PageSeo> & { image?: string; type?: "website" | "article"; ogFile?: boolean }): Metadata {
+export function pageMetadata(route: string, fallback?: Partial<PageSeo> & { type?: "website" | "article" }): Metadata {
   const s = { ...fallback, ...SEO[route] } as PageSeo;
   const title = s.title || fallback?.title || "Corevex Solutions";
   const description = s.description || fallback?.description || "";
-  const image = fallback?.image || OG;
   const type = fallback?.type || (route.startsWith("/insights/") && route !== "/insights/" ? "article" : "website");
   return {
     title: { absolute: title },
     description,
     alternates: { canonical: route },
-    openGraph: { type, title: s.ogTitle || title, description, url: route, siteName: "Corevex Solutions", ...(fallback?.ogFile ? {} : { images: [{ url: image, width: 1200, height: 630 }] }) },
-    twitter: { card: "summary_large_image", title: s.ogTitle || title, description, ...(fallback?.ogFile ? {} : { images: [image] }) },
+    openGraph: { type, title, description, url: route, siteName: "Corevex Solutions", images: [OG_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [OG_IMAGE] },
   };
 }
 
