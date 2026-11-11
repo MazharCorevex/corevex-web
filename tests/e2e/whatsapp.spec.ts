@@ -4,7 +4,7 @@ const START = encodeURIComponent("Hi Corevex, can you help me with ");
 
 test("WhatsApp button opens the chat with a start message", async ({ page }, info) => {
   await page.goto("/");
-  const wa = page.getByRole("link", { name: /Chat with us on WhatsApp/ });
+  const wa = page.getByRole("link", { name: /Chat on WhatsApp/ });
   await expect(wa).toBeVisible();
   // Desktop: WhatsApp Web is the link fallback; phones open the app
   const want = info.project.name === "desktop" ? `https://web.whatsapp.com/send?phone=923332031151&text=${START}` : `https://wa.me/923332031151?text=${START}`;

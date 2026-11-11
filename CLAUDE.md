@@ -36,7 +36,8 @@ Header with mega menu and mobile drawer · Hero with 3D mark, orbit of 7 service
 - The call is 30 minutes: use "Book a 30-minute call" everywhere, never 20
 
 - Never use em dashes anywhere in copy
-- No prices, rates, timelines or availability promises on the site
+- Show only these approved starting prices: landing page $199, website up to 3 pages $599, dedicated developer $2,000 to $2,500 per month, SaaS platform from $5,000, AI agent from $1,000. Never invent other prices.
+- No timelines or availability promises, except the reply promise: a senior engineer replies within one business day
 - No "free audit" or free blueprint offers
 - Design-study projects are labelled "Product design study", never presented as client work
 - Hide any block that has no real data yet (testimonials, case study results); never ship [bracket] placeholder text

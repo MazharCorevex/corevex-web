@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import OfferCard from "@/components/offers/OfferCard";
 import Link from "next/link";
 import Img from "@/components/ui/Img";
 import FeatList from "@/components/interactive/FeatList";
@@ -82,6 +83,23 @@ export default function CustomSoftwareDevelopmentBody() {
             <div>Solution architect on every project</div>
             <div>Built around your workflow, not a template</div>
             <div>Full code and documentation handover</div>
+          </div>
+        </div>
+      </section>
+      <section className="band light">
+        <div className="wrap split">
+          <div>
+            <span className="label">Dedicated developers</span>
+            <h2 className="h2" data-reveal="">
+              Hire dedicated developers
+            </h2>
+            <p className="lead" data-reveal="" style={{ margin: "20px 0 0" } as CSSProperties}>
+              Add experienced developers to your team, supported by our project managers and QA engineers, without the
+              cost and time of hiring in-house.
+            </p>
+          </div>
+          <div data-reveal="">
+            <OfferCard slug="dedicated-developer" />
           </div>
         </div>
       </section>

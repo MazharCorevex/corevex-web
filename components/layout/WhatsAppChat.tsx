@@ -41,7 +41,7 @@ export default function WhatsAppChat() {
 
   if (!WHATSAPP_NUMBER) return null;
   return (
-    <a ref={link} className="wa-chat" href={WA_APP} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp (opens in a new tab)" onClick={open}>
+    <a ref={link} className="wa-chat" href={WA_APP} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp (opens in a new tab)" onClick={open}>
       <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
         <path
           fill="currentColor"

@@ -1,5 +1,6 @@
 import "server-only";
 import { rateLimit } from "./rate-limit";
+import { offer as findOffer } from "@/lib/offers";
 import { addToAudience, branded, emailConfigured, esc, p, rows, sendConfirmation, sendNotification } from "./email";
 
 export type FormState = {
@@ -74,6 +75,7 @@ export async function contact(fd: FormData, ip: string): Promise<FormResult> {
     company: line(str(fd, "company", 160)),
     country: line(str(fd, "country", 120)),
     source: line(str(fd, "source", 40)),
+    offer: findOffer(str(fd, "offer", 60))?.label ?? "",
   };
   const errors: Record<string, string> = {};
   if (!v.details) errors.details = "Tell us a little about the project.";
@@ -83,10 +85,11 @@ export async function contact(fd: FormData, ip: string): Promise<FormResult> {
   if (!emailConfigured()) return notConfigured();
   try {
     await sendNotification(
-      `New enquiry: ${v.need || "Project"} from ${v.name}`,
+      `New enquiry: ${v.offer || v.need || "Project"} from ${v.name}`,
       branded(
         "New project enquiry",
         rows({
+          Offer: v.offer,
           Need: v.need,
           Name: v.name,
           Email: v.email,

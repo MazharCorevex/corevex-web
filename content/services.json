@@ -1,654 +1,686 @@
 [
- {
-  "slug": "ai-agents-as-a-service",
-  "name": "AI Agents as a Service",
-  "h1": "AI Agents as a Service (AaaS)",
-  "lead": "Subscribe to managed AI agents that handle support, sales, operations and finance tasks inside your existing tools. We build, host, monitor and improve them for you.",
-  "buttons": [
-   {
-    "label": "Talk to an AI engineer",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "What is AaaS?",
-    "href": "/insights/what-is-agent-as-a-service/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-aaas-ops.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Map",
-     "text": "Choose one workflow and define what the agent may do."
+  {
+    "slug": "ai-agents-as-a-service",
+    "name": "AI Agents as a Service",
+    "h1": "AI Agents as a Service (AaaS)",
+    "lead": "Subscribe to managed AI agents that handle support, sales, operations and finance tasks inside your existing tools. We build, host, monitor and improve them for you.",
+    "buttons": [
+      {
+        "label": "Talk to an AI engineer",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "What is AaaS?",
+        "href": "/insights/what-is-agent-as-a-service/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-aaas-ops.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Connect",
-     "text": "Link the agent to your tools with limited access."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Map",
+          "text": "Choose one workflow and define what the agent may do."
+        },
+        {
+          "title": "Connect",
+          "text": "Link the agent to your tools with limited access."
+        },
+        {
+          "title": "Pilot",
+          "text": "Run alongside your team and measure results."
+        },
+        {
+          "title": "Scale",
+          "text": "Expand to more tasks with weekly reporting."
+        }
+      ]
     },
-    {
-     "title": "Pilot",
-     "text": "Run alongside your team and measure results."
+    "faq": [
+      {
+        "q": "What is Agent as a Service?",
+        "a": "Agent as a Service is a subscription to managed AI agents that complete tasks across your tools, rather than software your team has to operate."
+      },
+      {
+        "q": "How is AaaS different from automation tools?",
+        "a": "Automation tools follow fixed rules you set up. AI agents understand requests, decide the next step and handle variation, while asking a person when unsure."
+      },
+      {
+        "q": "Is our data safe with AI agents?",
+        "a": "Agents run with the least access they need, sensitive actions require approval, and every action is logged for review."
+      },
+      {
+        "q": "How quickly can an agent go live?",
+        "a": "A first agent for one workflow is usually designed, connected and tested in a few weeks, then expanded."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "ai-llm-development",
+      "ai-automation"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     },
-    {
-     "title": "Scale",
-     "text": "Expand to more tasks with weekly reporting."
+    "price": "ai-agent",
+    "offers": {
+      "label": "Starting price",
+      "title": "Put your first agent to work",
+      "slugs": [
+        "ai-agent"
+      ]
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "What is Agent as a Service?",
-    "a": "Agent as a Service is a subscription to managed AI agents that complete tasks across your tools, rather than software your team has to operate."
-   },
-   {
-    "q": "How is AaaS different from automation tools?",
-    "a": "Automation tools follow fixed rules you set up. AI agents understand requests, decide the next step and handle variation, while asking a person when unsure."
-   },
-   {
-    "q": "Is our data safe with AI agents?",
-    "a": "Agents run with the least access they need, sensitive actions require approval, and every action is logged for review."
-   },
-   {
-    "q": "How quickly can an agent go live?",
-    "a": "A first agent for one workflow is usually designed, connected and tested in a few weeks, then expanded."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "ai-llm-development",
-   "ai-automation"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "ai-automation",
-  "name": "AI Automation and Agents",
-  "h1": "AI automation and AI agents development",
-  "lead": "We automate the repetitive work that slows your team down, with AI agents and workflows that run around the clock and hand off to people when it matters.",
-  "buttons": [
-   {
-    "label": "Automate a workflow",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "See it in the AI Lab",
-    "href": "/ai-lab/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-automation-desk.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Map",
-     "text": "Walk through one workflow with your team."
+  {
+    "slug": "ai-automation",
+    "name": "AI Automation and Agents",
+    "h1": "AI automation and AI agents development",
+    "lead": "We automate the repetitive work that slows your team down, with AI agents and workflows that run around the clock and hand off to people when it matters.",
+    "buttons": [
+      {
+        "label": "Automate a workflow",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "See it in the AI Lab",
+        "href": "/ai-lab/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-automation-desk.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Automate",
-     "text": "Build the agent and connect your tools."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Map",
+          "text": "Walk through one workflow with your team."
+        },
+        {
+          "title": "Automate",
+          "text": "Build the agent and connect your tools."
+        },
+        {
+          "title": "Measure",
+          "text": "Track time saved and accuracy."
+        },
+        {
+          "title": "Expand",
+          "text": "Roll out to the next process."
+        }
+      ]
     },
-    {
-     "title": "Measure",
-     "text": "Track time saved and accuracy."
+    "faq": [
+      {
+        "q": "What is an AI agent?",
+        "a": "An AI agent is software that understands a task, takes actions across your tools and asks a person when it is unsure."
+      },
+      {
+        "q": "Which tools can you connect?",
+        "a": "Most modern tools with an API, including CRMs, email, helpdesks, spreadsheets and databases."
+      },
+      {
+        "q": "Will automation replace my team?",
+        "a": "No. It removes repetitive tasks so your team can focus on work that needs people."
+      },
+      {
+        "q": "How do we start?",
+        "a": "We map one workflow with you, automate it, measure the result, then expand."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "custom-software-development",
+      "ai-llm-development"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     },
-    {
-     "title": "Expand",
-     "text": "Roll out to the next process."
+    "offers": {
+      "label": "Starting price",
+      "title": "Start with one agent",
+      "slugs": [
+        "ai-agent"
+      ]
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "What is an AI agent?",
-    "a": "An AI agent is software that understands a task, takes actions across your tools and asks a person when it is unsure."
-   },
-   {
-    "q": "Which tools can you connect?",
-    "a": "Most modern tools with an API, including CRMs, email, helpdesks, spreadsheets and databases."
-   },
-   {
-    "q": "Will automation replace my team?",
-    "a": "No. It removes repetitive tasks so your team can focus on work that needs people."
-   },
-   {
-    "q": "How do we start?",
-    "a": "We map one workflow with you, automate it, measure the result, then expand."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "custom-software-development",
-   "ai-llm-development"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "ai-llm-development",
-  "name": "AI and LLM Development",
-  "h1": "AI and LLM development services",
-  "lead": "We build AI features that do real work: assistants that know your business, search that understands questions, and models that turn your data into decisions.",
-  "buttons": [
-   {
-    "label": "Talk to an AI engineer",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "Try the AI Lab",
-    "href": "/ai-lab/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-ai-support.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Use case",
-     "text": "Pick one task where AI saves real time."
+  {
+    "slug": "ai-llm-development",
+    "name": "AI and LLM Development",
+    "h1": "AI and LLM development services",
+    "lead": "We build AI features that do real work: assistants that know your business, search that understands questions, and models that turn your data into decisions.",
+    "buttons": [
+      {
+        "label": "Talk to an AI engineer",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "Try the AI Lab",
+        "href": "/ai-lab/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-ai-support.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Data",
-     "text": "Connect the documents and systems it needs."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Use case",
+          "text": "Pick one task where AI saves real time."
+        },
+        {
+          "title": "Data",
+          "text": "Connect the documents and systems it needs."
+        },
+        {
+          "title": "Build and evaluate",
+          "text": "Test against real examples before launch."
+        },
+        {
+          "title": "Launch and monitor",
+          "text": "Measure, review and improve."
+        }
+      ]
     },
-    {
-     "title": "Build and evaluate",
-     "text": "Test against real examples before launch."
-    },
-    {
-     "title": "Launch and monitor",
-     "text": "Measure, review and improve."
+    "faq": [
+      {
+        "q": "What is LLM development?",
+        "a": "It is building software features powered by large language models, such as assistants, summarizers and search."
+      },
+      {
+        "q": "What is RAG?",
+        "a": "Retrieval augmented generation lets an AI answer using your own documents, so answers stay accurate and specific to your business."
+      },
+      {
+        "q": "Is our data safe?",
+        "a": "Yes. We design with access controls, and your data is used only for your system."
+      },
+      {
+        "q": "Can AI be added to our existing app?",
+        "a": "Yes. Most AI features are added to existing products through APIs."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "custom-software-development",
+      "ai-automation"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "What is LLM development?",
-    "a": "It is building software features powered by large language models, such as assistants, summarizers and search."
-   },
-   {
-    "q": "What is RAG?",
-    "a": "Retrieval augmented generation lets an AI answer using your own documents, so answers stay accurate and specific to your business."
-   },
-   {
-    "q": "Is our data safe?",
-    "a": "Yes. We design with access controls, and your data is used only for your system."
-   },
-   {
-    "q": "Can AI be added to our existing app?",
-    "a": "Yes. Most AI features are added to existing products through APIs."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "custom-software-development",
-   "ai-automation"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "code-rescue",
-  "name": "Code Rescue and Takeover",
-  "h1": "Code rescue and app takeover for AI-built apps",
-  "lead": "Built it with Lovable, Bolt, Replit or Cursor and hit a wall? We take over your codebase, fix what is broken and harden it for real users, payments and growth.",
-  "buttons": [
-   {
-    "label": "Book a 30-minute call",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "Read: 9 signs it needs a rescue",
-    "href": "/insights/vibe-coded-app-rescue/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-rescue-founder.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Audit",
-     "text": "Review the code, find root causes and agree priorities."
+  {
+    "slug": "code-rescue",
+    "name": "Code Rescue and Takeover",
+    "h1": "Code rescue and app takeover for AI-built apps",
+    "lead": "Built it with Lovable, Bolt, Replit or Cursor and hit a wall? We take over your codebase, fix what is broken and harden it for real users, payments and growth.",
+    "buttons": [
+      {
+        "label": "Book a 30-minute call",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "Read: 9 signs it needs a rescue",
+        "href": "/insights/vibe-coded-app-rescue/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-rescue-founder.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Stabilise",
-     "text": "Fix critical bugs and anything blocking launch."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Audit",
+          "text": "Review the code, find root causes and agree priorities."
+        },
+        {
+          "title": "Stabilise",
+          "text": "Fix critical bugs and anything blocking launch."
+        },
+        {
+          "title": "Harden",
+          "text": "Security, roles, billing and performance done properly."
+        },
+        {
+          "title": "Grow",
+          "text": "Hand it back with docs, or keep building with us."
+        }
+      ]
     },
-    {
-     "title": "Harden",
-     "text": "Security, roles, billing and performance done properly."
-    },
-    {
-     "title": "Grow",
-     "text": "Hand it back with docs, or keep building with us."
+    "faq": [
+      {
+        "q": "Can you work on an app built with Lovable, Bolt or Replit?",
+        "a": "Yes. We take over code generated by AI builders and coding assistants, review it and continue development on a clean foundation."
+      },
+      {
+        "q": "Do we need to rebuild from scratch?",
+        "a": "Usually not. We keep what works, fix the root causes and only rebuild the parts that cannot be made reliable."
+      },
+      {
+        "q": "What do you fix first?",
+        "a": "Anything that blocks launch or puts users at risk: security gaps, broken payments and critical bugs come first."
+      },
+      {
+        "q": "Will I still own the code?",
+        "a": "Yes. The code stays in your repository and accounts, and you keep full ownership."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "full-stack-development",
+      "saas-app-development"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "Can you work on an app built with Lovable, Bolt or Replit?",
-    "a": "Yes. We take over code generated by AI builders and coding assistants, review it and continue development on a clean foundation."
-   },
-   {
-    "q": "Do we need to rebuild from scratch?",
-    "a": "Usually not. We keep what works, fix the root causes and only rebuild the parts that cannot be made reliable."
-   },
-   {
-    "q": "What do you fix first?",
-    "a": "Anything that blocks launch or puts users at risk: security gaps, broken payments and critical bugs come first."
-   },
-   {
-    "q": "Will I still own the code?",
-    "a": "Yes. The code stays in your repository and accounts, and you keep full ownership."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "full-stack-development",
-   "saas-app-development"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "custom-software-development",
-  "name": "Custom Software Development",
-  "h1": "Custom software development services",
-  "lead": "When off-the-shelf tools stop fitting the way you work, we design and build the system that does, and hand you full ownership of the code.",
-  "buttons": [
-   {
-    "label": "Start a project",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "See related work",
-    "href": "/work/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-custom-team.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Discover",
-     "text": "Goals, users and constraints mapped with a solution architect."
+  {
+    "slug": "custom-software-development",
+    "name": "Custom Software Development",
+    "h1": "Custom software development services",
+    "lead": "When off-the-shelf tools stop fitting the way you work, we design and build the system that does, and hand you full ownership of the code.",
+    "buttons": [
+      {
+        "label": "Start a project",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "See related work",
+        "href": "/work/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-custom-team.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Design",
-     "text": "Flows and screens you can click through before code."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Discover",
+          "text": "Goals, users and constraints mapped with a solution architect."
+        },
+        {
+          "title": "Design",
+          "text": "Flows and screens you can click through before code."
+        },
+        {
+          "title": "Build",
+          "text": "Senior engineers deliver in short cycles with demos."
+        },
+        {
+          "title": "Launch",
+          "text": "Tested, deployed and handed over with documentation."
+        }
+      ]
     },
-    {
-     "title": "Build",
-     "text": "Senior engineers deliver in short cycles with demos."
-    },
-    {
-     "title": "Launch",
-     "text": "Tested, deployed and handed over with documentation."
+    "faq": [
+      {
+        "q": "What is custom software development?",
+        "a": "It is software designed and built for one organization's processes, rather than a general product used by many companies."
+      },
+      {
+        "q": "Do we own the code?",
+        "a": "Yes. You receive the full source code, documentation and access when the project is handed over."
+      },
+      {
+        "q": "Can you work with our existing systems?",
+        "a": "Yes. We integrate with your current tools, databases and APIs, or migrate data from them."
+      },
+      {
+        "q": "Which technologies do you use?",
+        "a": "We choose from TypeScript, React, Next.js, Angular, Node.js, .NET and Python based on your needs."
+      },
+      {
+        "q": "How do we start?",
+        "a": "Share your goals through the contact form and a solution architect will review them with you."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "full-stack-development",
+      "ai-automation"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "What is custom software development?",
-    "a": "It is software designed and built for one organization's processes, rather than a general product used by many companies."
-   },
-   {
-    "q": "Do we own the code?",
-    "a": "Yes. You receive the full source code, documentation and access when the project is handed over."
-   },
-   {
-    "q": "Can you work with our existing systems?",
-    "a": "Yes. We integrate with your current tools, databases and APIs, or migrate data from them."
-   },
-   {
-    "q": "Which technologies do you use?",
-    "a": "We choose from TypeScript, React, Next.js, Angular, Node.js, .NET and Python based on your needs."
-   },
-   {
-    "q": "How do we start?",
-    "a": "Share your goals through the contact form and a solution architect will review them with you."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "full-stack-development",
-   "ai-automation"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "full-stack-development",
-  "name": "Full-Stack Development",
-  "h1": "Full stack development services",
-  "lead": "One team from database to interface. We build fast, secure web applications in React, Next.js, Angular, Node.js, .NET and Python.",
-  "buttons": [
-   {
-    "label": "Start a project",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "See our tech stack",
-    "href": "/#stack",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-fullstack-standing.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Discover",
-     "text": "Goals, users and constraints mapped with a solution architect."
+  {
+    "slug": "full-stack-development",
+    "name": "Full-Stack Development",
+    "h1": "Full stack development services",
+    "lead": "One team from database to interface. We build fast, secure web applications in React, Next.js, Angular, Node.js, .NET and Python.",
+    "buttons": [
+      {
+        "label": "Start a project",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "See our tech stack",
+        "href": "/#stack",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-fullstack-standing.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Design",
-     "text": "Flows and screens you can click through before code."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Discover",
+          "text": "Goals, users and constraints mapped with a solution architect."
+        },
+        {
+          "title": "Design",
+          "text": "Flows and screens you can click through before code."
+        },
+        {
+          "title": "Build",
+          "text": "Senior engineers deliver in short cycles with demos."
+        },
+        {
+          "title": "Launch",
+          "text": "Tested, deployed and handed over with documentation."
+        }
+      ]
     },
-    {
-     "title": "Build",
-     "text": "Senior engineers deliver in short cycles with demos."
+    "faq": [
+      {
+        "q": "What does a full stack developer do?",
+        "a": "A full stack developer builds both the parts users see and the server, database and APIs behind them."
+      },
+      {
+        "q": "Which frameworks do you work with?",
+        "a": "React, Next.js, Angular, Node.js, .NET and Python, with TypeScript and JavaScript across the stack."
+      },
+      {
+        "q": "Can you take over an existing web app?",
+        "a": "Yes. We review the code, stabilize it and continue development."
+      },
+      {
+        "q": "Do you provide ongoing support?",
+        "a": "Yes. We offer maintenance and continued development after launch."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "custom-software-development",
+      "mobile-app-development"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     },
-    {
-     "title": "Launch",
-     "text": "Tested, deployed and handed over with documentation."
+    "offers": {
+      "label": "Starting prices",
+      "title": "Launch a website at a clear price",
+      "slugs": [
+        "landing-page",
+        "website"
+      ],
+      "popular": "website"
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "What does a full stack developer do?",
-    "a": "A full stack developer builds both the parts users see and the server, database and APIs behind them."
-   },
-   {
-    "q": "Which frameworks do you work with?",
-    "a": "React, Next.js, Angular, Node.js, .NET and Python, with TypeScript and JavaScript across the stack."
-   },
-   {
-    "q": "Can you take over an existing web app?",
-    "a": "Yes. We review the code, stabilize it and continue development."
-   },
-   {
-    "q": "Do you provide ongoing support?",
-    "a": "Yes. We offer maintenance and continued development after launch."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "custom-software-development",
-   "mobile-app-development"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "mobile-app-development",
-  "name": "Mobile App Development",
-  "h1": "Mobile app development company for iOS and Android",
-  "lead": "We design and build cross-platform apps with React Native and Flutter that feel native, load fast and are ready for the App Store and Google Play.",
-  "buttons": [
-   {
-    "label": "Start a project",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "See app work",
-    "href": "/work/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-mobile-flatlay.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Discovery",
-     "text": "Goals, users and the core journeys."
+  {
+    "slug": "mobile-app-development",
+    "name": "Mobile App Development",
+    "h1": "Mobile app development company for iOS and Android",
+    "lead": "We design and build cross-platform apps with React Native and Flutter that feel native, load fast and are ready for the App Store and Google Play.",
+    "buttons": [
+      {
+        "label": "Start a project",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "See app work",
+        "href": "/work/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-mobile-flatlay.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "UI/UX design",
-     "text": "Screens you can click through on a phone."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Discovery",
+          "text": "Goals, users and the core journeys."
+        },
+        {
+          "title": "UI/UX design",
+          "text": "Screens you can click through on a phone."
+        },
+        {
+          "title": "Build and test",
+          "text": "One codebase, tested on real devices."
+        },
+        {
+          "title": "Store launch",
+          "text": "Listings, submission and updates."
+        }
+      ]
     },
-    {
-     "title": "Build and test",
-     "text": "One codebase, tested on real devices."
-    },
-    {
-     "title": "Store launch",
-     "text": "Listings, submission and updates."
+    "faq": [
+      {
+        "q": "Do you build for both iOS and Android?",
+        "a": "Yes. With React Native or Flutter, one codebase serves both platforms."
+      },
+      {
+        "q": "Will you publish the app to the stores?",
+        "a": "Yes. We prepare the listings, handle submission and support the review process."
+      },
+      {
+        "q": "Can you connect the app to our existing system?",
+        "a": "Yes. We integrate with your APIs, databases and third-party services."
+      },
+      {
+        "q": "Do you maintain apps after launch?",
+        "a": "Yes. We handle updates, OS compatibility and new features."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "full-stack-development",
+      "ai-llm-development"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     }
-   ]
   },
-  "faq": [
-   {
-    "q": "Do you build for both iOS and Android?",
-    "a": "Yes. With React Native or Flutter, one codebase serves both platforms."
-   },
-   {
-    "q": "Will you publish the app to the stores?",
-    "a": "Yes. We prepare the listings, handle submission and support the review process."
-   },
-   {
-    "q": "Can you connect the app to our existing system?",
-    "a": "Yes. We integrate with your APIs, databases and third-party services."
-   },
-   {
-    "q": "Do you maintain apps after launch?",
-    "a": "Yes. We handle updates, OS compatibility and new features."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "full-stack-development",
-   "ai-llm-development"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
-  }
- },
- {
-  "slug": "saas-app-development",
-  "name": "SaaS App Development",
-  "h1": "SaaS app development services",
-  "lead": "We design and build SaaS products that are ready to launch, sell and scale: multi-tenant from day one, with subscriptions, onboarding and admin built in.",
-  "buttons": [
-   {
-    "label": "Start a project",
-    "href": "/contact/",
-    "primary": true
-   },
-   {
-    "label": "Read our SaaS guide",
-    "href": "/insights/how-to-build-a-saas-application/",
-    "primary": false
-   }
-  ],
-  "proof": [
-   "Senior-led team",
-   "Full code handover",
-   "PSEB registered"
-  ],
-  "photo": "/images/photos/svc-saas-team.webp",
-  "photoAlt": "",
-  "chip": {
-   "value": "50+",
-   "label": "engineers and specialists"
-  },
-  "deliver": {
-   "label": "How we deliver",
-   "title": "From first call to launch",
-   "steps": [
-    {
-     "title": "Validate",
-     "text": "Define the core problem, user and pricing model."
+  {
+    "slug": "saas-app-development",
+    "name": "SaaS App Development",
+    "h1": "SaaS app development services",
+    "lead": "We design and build SaaS products that are ready to launch, sell and scale: multi-tenant from day one, with subscriptions, onboarding and admin built in.",
+    "buttons": [
+      {
+        "label": "Start a project",
+        "href": "/contact/",
+        "primary": true
+      },
+      {
+        "label": "Read our SaaS guide",
+        "href": "/insights/how-to-build-a-saas-application/",
+        "primary": false
+      }
+    ],
+    "proof": [
+      "Senior-led team",
+      "Full code handover",
+      "PSEB registered"
+    ],
+    "photo": "/images/photos/svc-saas-team.webp",
+    "photoAlt": "",
+    "chip": {
+      "value": "50+",
+      "label": "engineers and specialists"
     },
-    {
-     "title": "Design",
-     "text": "Onboarding, core workflow and admin screens."
+    "deliver": {
+      "label": "How we deliver",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "Validate",
+          "text": "Define the core problem, user and pricing model."
+        },
+        {
+          "title": "Design",
+          "text": "Onboarding, core workflow and admin screens."
+        },
+        {
+          "title": "Build",
+          "text": "Multi-tenant platform with billing and roles."
+        },
+        {
+          "title": "Launch and grow",
+          "text": "Analytics, monitoring and new features in cycles."
+        }
+      ]
     },
-    {
-     "title": "Build",
-     "text": "Multi-tenant platform with billing and roles."
+    "faq": [
+      {
+        "q": "What is SaaS application development?",
+        "a": "It is building software delivered online on a subscription, where many customer accounts share one platform with their data kept separate."
+      },
+      {
+        "q": "Can you build a SaaS MVP first?",
+        "a": "Yes. We start with sign-up, the core workflow and billing, then grow the product in stages based on user feedback."
+      },
+      {
+        "q": "Do you handle subscriptions and payments?",
+        "a": "Yes. We connect plans, trials, seats and usage billing to a proven payment provider and to the limits inside your app."
+      },
+      {
+        "q": "Who owns the SaaS code?",
+        "a": "You do. Source code, documentation and cloud accounts are handed over in full."
+      }
+    ],
+    "faqTitle": "Questions we often hear",
+    "related": [
+      "full-stack-development",
+      "ai-agents-as-a-service"
+    ],
+    "relatedTitle": "Often built together",
+    "cta": {
+      "title": "Have something to build?",
+      "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
+      "label": "Start a project",
+      "href": "/contact/"
     },
-    {
-     "title": "Launch and grow",
-     "text": "Analytics, monitoring and new features in cycles."
+    "price": "saas-platform",
+    "offers": {
+      "label": "Starting price",
+      "title": "Build your SaaS at a clear starting price",
+      "slugs": [
+        "saas-platform"
+      ]
     }
-   ]
-  },
-  "faq": [
-   {
-    "q": "What is SaaS application development?",
-    "a": "It is building software delivered online on a subscription, where many customer accounts share one platform with their data kept separate."
-   },
-   {
-    "q": "Can you build a SaaS MVP first?",
-    "a": "Yes. We start with sign-up, the core workflow and billing, then grow the product in stages based on user feedback."
-   },
-   {
-    "q": "Do you handle subscriptions and payments?",
-    "a": "Yes. We connect plans, trials, seats and usage billing to a proven payment provider and to the limits inside your app."
-   },
-   {
-    "q": "Who owns the SaaS code?",
-    "a": "You do. Source code, documentation and cloud accounts are handed over in full."
-   }
-  ],
-  "faqTitle": "Questions we often hear",
-  "related": [
-   "full-stack-development",
-   "ai-agents-as-a-service"
-  ],
-  "relatedTitle": "Often built together",
-  "cta": {
-   "title": "Have something to build?",
-   "text": "Tell us what you need. A senior engineer reads every enquiry and replies personally.",
-   "label": "Start a project",
-   "href": "/contact/"
   }
- }
 ]

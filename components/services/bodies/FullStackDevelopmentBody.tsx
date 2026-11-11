@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import OfferCard from "@/components/offers/OfferCard";
 import Link from "next/link";
 import Img from "@/components/ui/Img";
 
@@ -64,17 +65,9 @@ export default function FullStackDevelopmentBody() {
               Add experienced full stack developers to your team, supported by our project managers and QA engineers,
               without the cost and time of hiring in-house.
             </p>
-            <Link href="/contact/" className="btn">
-              {"Talk to us "}
-              <span className="chev">»</span>
-            </Link>
           </div>
-          <div className="split-img" data-reveal="">
-            <Img
-              src="/images/photos/full-stack.webp"
-              alt="Full stack developer working with code and a web application on two monitors"
-              sizes="(max-width: 860px) 100vw, 50vw"
-            />
+          <div data-reveal="">
+            <OfferCard slug="dedicated-developer" />
           </div>
         </div>
       </section>

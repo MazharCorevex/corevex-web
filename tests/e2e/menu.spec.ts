@@ -81,7 +81,7 @@ test.describe("services mega menu, desktop", () => {
     await expect(panel(page).getByRole("heading", { name: "Build" })).toBeVisible();
     await expect(panel(page).getByRole("heading", { name: "Intelligence" })).toBeVisible();
     for (const name of ["Custom Software", "Full-Stack", "Mobile Apps", "SaaS", "Code Rescue", "AI and LLM", "AI Automation", "AI Agents as a Service"]) {
-      await expect(panel(page).locator("a.m b", { hasText: new RegExp(`^${name}$`) })).toBeVisible();
+      await expect(panel(page).locator("a.m b", { hasText: new RegExp(`^${name}(\\s*from \\$[\\d,]+)?$`, "i") })).toBeVisible();
     }
     await expect(panel(page).getByRole("link", { name: /View all services/ })).toHaveAttribute("href", "/services/");
   });

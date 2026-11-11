@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Img from "@/components/ui/Img";
 import GearsVideo from "@/components/home/GearsVideo";
+import { PriceChip } from "@/components/offers/PriceTags";
 
 // ServicesBento
 export default function ServicesBento() {
@@ -49,6 +50,7 @@ export default function ServicesBento() {
             />
             <h3>Full-Stack Development</h3>
             <p>Web products built to scale from day one.</p>
+            <PriceChip slug="landing-page" />
             <div className="reveal">
               <span className="chip">React and Next.js</span>
               <span className="chip">Node.js and .NET</span>
@@ -111,6 +113,7 @@ export default function ServicesBento() {
             <Img src="/images/icons/saas-on-dark.svg" alt="" className="ic" sizes="(max-width: 860px) 100vw, 33vw" />
             <h3>SaaS App Development</h3>
             <p>Subscription products built to launch, sell and scale.</p>
+            <PriceChip slug="saas-platform" />
             <div className="reveal">
               <span className="chip">Multi-tenant</span>
               <span className="chip">Subscriptions and billing</span>
@@ -124,6 +127,7 @@ export default function ServicesBento() {
             <Img src="/images/icons/aaas-on-dark.svg" alt="" className="ic" sizes="(max-width: 860px) 100vw, 33vw" />
             <h3>AI Agents as a Service</h3>
             <p>Managed AI agents that do real work for your team.</p>
+            <PriceChip slug="ai-agent" />
             <div className="reveal">
               <span className="chip">Support agents</span>
               <span className="chip">Sales agents</span>

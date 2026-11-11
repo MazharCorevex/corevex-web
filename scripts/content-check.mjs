@@ -9,8 +9,8 @@ const extra = ["/llms.txt", "/sitemap.xml", "/robots.txt"];
 const RULES = [
   ["em dash", /\u2014/],
   ["bracket placeholder", /\[[A-Za-z][^\]\n]{0,60}\](?!\()/],
-  ["price", /(\$|USD|EUR|GBP|PKR|£|€)\s?\d|\d+\s?(USD|per hour|\/hr|\/month|a month)\b/i],
-  ["rate or timeline promise", /\b(in|within) \d+\s?(days?|weeks?|months?)\b|\bstarting (at|from)\b|\bhourly rate\b/i],
+  ["unapproved price", /\$(?!(?:199|599|1,000|2,000|2,500|5,000)\b)\d|(?:USD|EUR|GBP|PKR|£|€)\s?\d|\d+\s?(?:per hour|\/hr)\b/i],
+  ["rate or timeline promise", /\b(in|within) \d+\s?(days?|weeks?|months?)\b|\bstarting (at|from)\b(?! \$(?:199|599|1,000|2,000|5,000)\b)|\bhourly rate\b/i],
   ["availability promise", /\bbusiness days?\b|\bsame[- ]day\b|\b24\/7\b|\bwithin (a|an|one|two|three|a few|\d+) (hours?|days?|weeks?|months?)\b|\b(reply|replies|respond|response|turnaround) (in|within)\b/i],
   ["free offer", /free (audit|blueprint|consultation|estimate)/i],
   ["20-minute call", /20[- ]minute/i],
@@ -37,8 +37,13 @@ for (const r of [...routes, ...extra]) {
   const body0 = r.endsWith(".txt") || r.endsWith(".xml") ? raw : `${text(raw)} ${meta} ${ld}`;
   const body = scrub(body0);
   // Client quotes describe what happened; promises are checked in Corevex's own copy
-  const ownCopy = scrub(r.endsWith(".txt") || r.endsWith(".xml") ? raw : `${text(raw.replace(/<blockquote[\s\S]*?<\/blockquote>/gi, " "))} ${meta} ${ld}`);
+  const ownCopy = scrub(r.endsWith(".txt") || r.endsWith(".xml") ? raw : `${text(raw.replace(/<blockquote[\s\S]*?<\/blockquote>/gi, " "))} ${meta} ${ld}`)
+    // The one approved promise: a reply within one business day
+    .replace(/\b(?:replies|reply|answers|answer)\s+within one business day\b|\b1 business day reply time\b|\bwithin one business day\b/gi, " ");
+  // Legal pages keep their statutory response times as written
+  const legal = ["/privacy/", "/terms/", "/cookies/"].includes(r);
   for (const [name, re] of RULES) {
+    if (legal && (name === "availability promise" || name === "rate or timeline promise")) continue;
     const m = (name === "availability promise" ? ownCopy : body).match(re);
     if (m) {
       bad++;

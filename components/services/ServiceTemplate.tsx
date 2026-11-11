@@ -7,6 +7,8 @@ import Crumbs from "@/components/sections/Crumbs";
 import CtaBand from "@/components/sections/CtaBand";
 import ClientLogos from "@/components/sections/ClientLogos";
 import { svc } from "@/lib/site";
+import OfferCard from "@/components/offers/OfferCard";
+import { PriceBadge } from "@/components/offers/PriceTags";
 
 export type ServiceData = {
   slug: string;
@@ -24,6 +26,8 @@ export type ServiceData = {
   related: string[];
   relatedTitle: string;
   cta: { title: string; text: string; label: string; href: string };
+  price?: string;
+  offers?: { label: string; title: string; slugs: string[]; popular?: string };
 };
 
 // Service page template
@@ -57,6 +61,11 @@ export default function ServiceTemplate({ data, children }: { data: ServiceData;
                 ),
               )}
             </div>
+            {data.price && (
+              <div data-reveal="load">
+                <PriceBadge slug={data.price} />
+              </div>
+            )}
             <div className="proof-chips" data-reveal="load">
               {data.proof.map((p) => (
                 <span key={p}>{p}</span>
@@ -90,6 +99,21 @@ export default function ServiceTemplate({ data, children }: { data: ServiceData;
           </div>
         </div>
       </section>
+      {data.offers && (
+        <section className="band offers-band" aria-labelledby="offers-title">
+          <div className="wrap">
+            <span className="label">{data.offers.label}</span>
+            <h2 className="h2" id="offers-title" data-reveal="" style={{ marginBottom: 36 }}>
+              {data.offers.title}
+            </h2>
+            <div className="offer-grid">
+              {data.offers.slugs.map((slug) => (
+                <OfferCard key={slug} slug={slug} popular={slug === data.offers?.popular} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       {data.faq.length > 0 && (
         <section className="band light">
           <div className="wrap faq-wrap">

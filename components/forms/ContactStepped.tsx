@@ -4,9 +4,18 @@ import { useActionState, useEffect, useRef, useState } from "react";
 import { submitContact } from "@/app/actions";
 import { track } from "@/lib/analytics";
 import { FieldError, FormError, Trap, initial, invalid, onSubmitWith } from "./shared";
+import { OFFERS, offer } from "@/lib/offers";
 
 const NEEDS = ["Custom software", "Web app", "Mobile app", "AI or LLM", "Automation", "Dedicated team", "Book a 30-minute call"];
 const STEPS = ["need", "details", "contact"];
+// The need that fits each offer
+const OFFER_NEED: Record<string, string> = {
+  "landing-page": "Web app",
+  website: "Web app",
+  "dedicated-developer": "Dedicated team",
+  "saas-platform": "Custom software",
+  "ai-agent": "Automation",
+};
 
 // Contact form in three steps
 export default function ContactStepped() {
@@ -14,6 +23,17 @@ export default function ContactStepped() {
   const [step, setStep] = useState(0);
   const ref = useRef<HTMLFormElement>(null);
   const sent = state.status === "ok";
+
+  // Prefill the offer from ?offer= and tick the matching need
+  useEffect(() => {
+    const o = offer(new URLSearchParams(window.location.search).get("offer"));
+    const form = ref.current;
+    if (!o || !form) return;
+    const sel = form.querySelector<HTMLSelectElement>("#c-offer");
+    if (sel) sel.value = o.slug;
+    const need = form.querySelector<HTMLInputElement>(`input[name="need"][value="${OFFER_NEED[o.slug]}"]`);
+    if (need) need.checked = true;
+  }, []);
 
   useEffect(() => {
     if (sent) track("form_submit", { form: "contact" });
@@ -87,6 +107,17 @@ export default function ContactStepped() {
               <span>{n}</span>
             </label>
           ))}
+        </div>
+        <div className="field offer-field">
+          <label htmlFor="c-offer">Offer</label>
+          <select id="c-offer" name="offer" defaultValue="">
+            <option value="">No specific offer</option>
+            {OFFERS.map((o) => (
+              <option key={o.slug} value={o.slug}>
+                {o.label}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="fnav">
           <button className="btn" type="button" onClick={() => valid(0) && go(1)}>

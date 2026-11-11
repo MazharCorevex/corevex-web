@@ -52,7 +52,9 @@ test("no em dash, bracket placeholder or 20-minute wording in source copy", () =
         if (/—/.test(t)) bad.push(`${p}: em dash`);
         if (/20[- ]minute/i.test(t)) bad.push(`${p}: 20-minute`);
         if (/free (audit|blueprint)/i.test(t)) bad.push(`${p}: free offer`);
-        if (/\b(business days?|same[- ]day)\b/i.test(t) && !p.endsWith("Demo.tsx") && !p.endsWith("testimonials.json")) bad.push(`${p}: availability promise`);
+        // The approved reply promise is "within one business day"
+        const promise = t.replace(/\bone business day\b/gi, "");
+        if (/\b(business days?|same[- ]day)\b/i.test(promise) && !p.endsWith("Demo.tsx") && !p.endsWith("testimonials.json")) bad.push(`${p}: availability promise`);
       }
     }
   };
