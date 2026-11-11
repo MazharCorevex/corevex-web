@@ -8,7 +8,7 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 - [ ] Real client logos: add to `content/client-logos.json` (name, logo path, width, height). The logo strips stay hidden while it is empty
 - [ ] Testimonials: add approved quotes to `content/testimonials.json`. Hidden while it is empty
 - [ ] Case study results: add real numbers to `results` per case study in `content/case-studies.json`. Hidden until then
-- [ ] Leadership headshots: add to `public/images` and set `image` in `content/team.json`. Placeholder SVGs are used until then
+- [ ] Leadership headshots: Mazhar H is done; M Azhar and Zafar H still use placeholder SVGs (add to `public/images/team` and set `image` in `content/team.json`)
 - [ ] Leadership LinkedIn URLs: set `linkedin` in `content/team.json`. The link is hidden until set
 - [ ] Team and office photos
 - [ ] Privacy Policy and Terms of Service: have them reviewed and approved by a legal advisor
