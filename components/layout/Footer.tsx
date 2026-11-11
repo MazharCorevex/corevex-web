@@ -2,6 +2,7 @@ import Link from "next/link";
 import Img from "@/components/ui/Img";
 import Newsletter from "@/components/forms/Newsletter";
 import { CLUTCH_URL, DRAWER_ORDER, FACEBOOK_URL, GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL, PSEB_NUMBER, svc, X_URL } from "@/lib/site";
+import CookieSettingsLink from "@/components/consent/CookieSettingsLink";
 import SocialIcon from "@/components/ui/SocialIcon";
 
 const COLS = [
@@ -32,7 +33,8 @@ const COLS = [
     h: "Legal",
     links: [
       ["/privacy/", "Privacy Policy"],
-      ["/terms/", "Terms of Service"],
+      ["/terms/", "Terms of Use"],
+      ["/cookies/", "Cookie Policy"],
     ],
   },
 ];
@@ -76,6 +78,11 @@ export default function Footer() {
                     <Link href={href}>{label}</Link>
                   </li>
                 ))}
+                {c.h === "Legal" && (
+                  <li>
+                    <CookieSettingsLink />
+                  </li>
+                )}
               </ul>
             </div>
           ))}

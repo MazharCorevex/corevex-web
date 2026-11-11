@@ -28,9 +28,7 @@ import CareersPage from "@/components/generated/CareersPage";
 import ContactPage from "@/components/generated/ContactPage";
 import FaqPage from "@/components/generated/FaqPage";
 import NotFoundPage from "@/components/generated/NotFoundPage";
-import PrivacyPage from "@/components/generated/PrivacyPage";
 import ServicesHub from "@/components/generated/ServicesHub";
-import TermsPage from "@/components/generated/TermsPage";
 import Hero from "@/components/home/sections/Hero";
 import ServicesBento from "@/components/home/sections/ServicesBento";
 import CodeRescue from "@/components/home/sections/CodeRescue";
@@ -46,6 +44,7 @@ import Footer from "@/components/layout/Footer";
 import MegaPanel from "@/components/layout/MegaPanel";
 import Motion from "@/components/layout/Motion";
 import Analytics from "@/components/layout/Analytics";
+import { track } from "@/lib/analytics";
 import ArticleBody from "@/components/insights/ArticleBody";
 import ArticleCard from "@/components/insights/ArticleCard";
 import LeaderSheet from "@/components/about/LeaderSheet";
@@ -115,9 +114,7 @@ describe("pages and sections", () => {
       <ContactPage key="d" />,
       <FaqPage key="e" />,
       <NotFoundPage key="f" />,
-      <PrivacyPage key="g" />,
       <ServicesHub key="h" />,
-      <TermsPage key="i" />,
     ]) {
       const { container, unmount } = render(el);
       expect(container.querySelectorAll("h1").length).toBeLessThanOrEqual(1);
@@ -324,10 +321,15 @@ describe("motion and 3D", () => {
     }
   });
 
-  it("tracks scroll depth and CTA clicks when GA is configured", () => {
+  it("tracks scroll depth and CTA clicks only after analytics consent", () => {
     vi.stubEnv("NEXT_PUBLIC_GA_ID", "G-TEST");
     const g = vi.fn();
-    (window as unknown as { gtag: typeof g }).gtag = g;
+    const w = window as unknown as { gtag?: typeof g; __cvAnalytics?: boolean };
+    w.gtag = g;
+    w.__cvAnalytics = false;
+    track("probe");
+    expect(g).not.toHaveBeenCalled();
+    w.__cvAnalytics = true;
     render(
       <>
         <a className="btn" href="/contact/">
@@ -343,7 +345,8 @@ describe("motion and 3D", () => {
     fireEvent.click(screen.getByText("Start"));
     expect(g).toHaveBeenCalledWith("event", "cta_click", expect.objectContaining({ href: "/contact/" }));
     vi.unstubAllEnvs();
-    delete (window as unknown as { gtag?: unknown }).gtag;
+    delete w.gtag;
+    delete w.__cvAnalytics;
   });
 });
 

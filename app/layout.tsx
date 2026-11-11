@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Montserrat } from "next/font/google";
-import Script from "next/script";
 import Header from "@/components/layout/Header";
 import WhatsAppChat from "@/components/layout/WhatsAppChat";
 import Footer from "@/components/layout/Footer";
 import Motion from "@/components/layout/Motion";
 import Analytics from "@/components/layout/Analytics";
+import CookieConsent from "@/components/consent/CookieConsent";
+import { CONSENT_DEFAULTS } from "@/lib/consent";
 import JsonLd from "@/components/seo/JsonLd";
 import { organizationLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
@@ -63,6 +64,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <style>{NOSCRIPT}</style>
         </noscript>
         <JsonLd data={organizationLd()} />
+        {process.env.NEXT_PUBLIC_GA_ID ? <script id="consent-defaults" dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULTS }} /> : null}
       </head>
       <body>
         <a className="skip" href="#main">
@@ -74,14 +76,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <WhatsAppChat />
         <Motion />
         <Analytics />
-        {process.env.NEXT_PUBLIC_GA_ID ? (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} strategy="lazyOnload" />
-            <Script id="ga" strategy="lazyOnload">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${process.env.NEXT_PUBLIC_GA_ID}',{anonymize_ip:true});`}
-            </Script>
-          </>
-        ) : null}
+        <CookieConsent />
       </body>
     </html>
   );

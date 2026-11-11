@@ -35,7 +35,7 @@ beforeEach(() => {
   Object.values(actions).forEach((a) => a.mockReset());
   upload.mockReset();
   gtag.mockReset();
-  (window as unknown as { gtag: typeof gtag }).gtag = gtag;
+  Object.assign(window, { gtag, __cvAnalytics: true });
   window.requestAnimationFrame = ((cb: FrameRequestCallback) => setTimeout(() => cb(0), 0)) as unknown as typeof requestAnimationFrame;
 });
 

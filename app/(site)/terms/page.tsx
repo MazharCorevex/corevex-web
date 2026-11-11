@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import TermsPage from "@/components/generated/TermsPage";
+import LegalPage from "@/components/legal/LegalPage";
 import JsonLd from "@/components/seo/JsonLd";
+import { legalDoc } from "@/lib/legal";
 import { breadcrumbLd, pageLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata("/terms/");
@@ -8,8 +9,8 @@ export const metadata: Metadata = pageMetadata("/terms/");
 export default function Page() {
   return (
     <>
-      <TermsPage />
-      <JsonLd data={[...pageLd("/terms/"), breadcrumbLd([["Home", "/"], ["Terms of Service", "/terms/"]])]} />
+      <LegalPage doc={legalDoc("terms")} self="/terms/" />
+      <JsonLd data={[...pageLd("/terms/"), breadcrumbLd([["Home", "/"], ["Terms of Use", "/terms/"]])]} />
     </>
   );
 }

@@ -123,8 +123,6 @@ const PAGES = [
   ["CareersPage", "careers/index.html", "careers"],
   ["ContactPage", "contact/index.html", "contact"],
   ["FaqPage", "faq/index.html", "faq"],
-  ["PrivacyPage", "privacy/index.html", "privacy"],
-  ["TermsPage", "terms/index.html", "terms"],
   ["NotFoundPage", "404.html", "404"],
 ];
 

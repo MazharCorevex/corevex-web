@@ -114,9 +114,10 @@ describe("seo helpers", () => {
   it("tracks only when GA is present", () => {
     const g = vi.fn();
     track("x");
-    (window as unknown as { gtag: typeof g }).gtag = g;
+    Object.assign(window, { gtag: g, __cvAnalytics: true });
     track("cta_click", { a: 1 });
     expect(g).toHaveBeenCalledWith("event", "cta_click", { a: 1 });
-    delete (window as unknown as { gtag?: unknown }).gtag;
+    delete (window as unknown as { gtag?: unknown; __cvAnalytics?: unknown }).gtag;
+    delete (window as unknown as { __cvAnalytics?: unknown }).__cvAnalytics;
   });
 });

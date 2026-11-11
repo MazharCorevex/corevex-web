@@ -9,7 +9,7 @@ export default defineConfig({
   fullyParallel: false,
   workers: process.env.CI ? 2 : 4,
   reporter: [["list"], ["json", { outputFile: "test-results/seo.json" }]],
-  use: { baseURL: `http://localhost:${PORT}` },
+  use: { baseURL: `http://localhost:${PORT}`, storageState: "tests/consent-state.json" },
   webServer: {
     command: `npx next start -p ${PORT}`,
     url: `http://localhost:${PORT}`,

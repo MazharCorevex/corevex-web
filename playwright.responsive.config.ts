@@ -10,7 +10,7 @@ export default defineConfig({
   workers: process.env.CI ? 2 : 6,
   retries: process.env.CI ? 1 : 0,
   reporter: [["list"], ["json", { outputFile: "test-results/responsive.json" }]],
-  use: { baseURL: `http://localhost:${PORT}` },
+  use: { baseURL: `http://localhost:${PORT}`, storageState: "tests/consent-state.json" },
   webServer: {
     command: `npx next start -p ${PORT}`,
     url: `http://localhost:${PORT}`,

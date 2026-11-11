@@ -1,0 +1,4 @@
+{
+  "cookies": [{ "name": "cv_consent", "value": "a0.1762819200000", "domain": "localhost", "path": "/", "expires": 4102444800, "httpOnly": false, "secure": false, "sameSite": "Lax" }],
+  "origins": []
+}

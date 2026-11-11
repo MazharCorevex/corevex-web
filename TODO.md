@@ -11,13 +11,13 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 - [x] Leadership headshots: Mazhar H, M Azhar and Zafar H
 - [ ] Leadership LinkedIn URLs: set `linkedin` in `content/team.json`. The link is hidden until set
 - [ ] Team and office photos
-- [ ] Privacy Policy and Terms of Service: have them reviewed and approved by a legal advisor
+- [x] Privacy Policy, Terms of Use and Cookie Policy: final text from LEGAL.md (11 November 2026)
 
 ## Keys and accounts
 
 - [ ] Resend: verify the sending domain, set `CONTACT_FROM_EMAIL` to an address on it, create an audience and set `RESEND_AUDIENCE_ID`
 - [ ] Vercel Blob store for CV uploads over 4.5 MB: `BLOB_READ_WRITE_TOKEN`
-- [ ] GA4 measurement ID: `NEXT_PUBLIC_GA_ID` (no analytics script loads until set)
+- [ ] GA4 measurement ID: `NEXT_PUBLIC_GA_ID` (no analytics script loads until set, and then only after cookie consent)
 - [ ] Final domain: set `NEXT_PUBLIC_SITE_URL`, add the domain in Vercel and in Resend
 
 ## Performance

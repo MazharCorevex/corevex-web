@@ -2,6 +2,7 @@ type Gtag = (cmd: "event", name: string, params?: Record<string, unknown>) => vo
 
 export function track(name: string, params: Record<string, unknown> = {}) {
   if (typeof window === "undefined") return;
-  const g = (window as unknown as { gtag?: Gtag }).gtag;
-  if (g) g("event", name, params);
+  const w = window as unknown as { gtag?: Gtag; __cvAnalytics?: boolean };
+  // Only after the visitor accepts analytics
+  if (w.__cvAnalytics && w.gtag) w.gtag("event", name, params);
 }

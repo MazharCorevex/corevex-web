@@ -1322,7 +1322,7 @@
  },
  "/privacy/": {
   "title": "Privacy Policy, Corevex Solutions",
-  "description": "Privacy Policy for the Corevex Solutions website.",
+  "description": "How Corevex Solutions collects, uses and protects personal information from this website, and the choices and rights you have.",
   "ogTitle": "Privacy Policy, Corevex Solutions",
   "ogType": "website",
   "robots": "",
@@ -2020,9 +2020,9 @@
   ]
  },
  "/terms/": {
-  "title": "Terms of Service, Corevex Solutions",
-  "description": "Terms of Service for the Corevex Solutions website.",
-  "ogTitle": "Terms of Service, Corevex Solutions",
+  "title": "Terms of Use, Corevex Solutions",
+  "description": "Terms of Use for the Corevex Solutions website: using the site, prices and quotes, content, liability and governing law.",
+  "ogTitle": "Terms of Use, Corevex Solutions",
   "ogType": "website",
   "robots": "",
   "ld": []
@@ -2449,5 +2449,13 @@
     ]
    }
   ]
+ },
+ "/cookies/": {
+  "title": "Cookie Policy, Corevex Solutions",
+  "description": "The cookies the Corevex Solutions website uses, why, how long they last and how to change your choice.",
+  "ogTitle": "Cookie Policy, Corevex Solutions",
+  "ogType": "website",
+  "robots": "",
+  "ld": []
  }
 }
