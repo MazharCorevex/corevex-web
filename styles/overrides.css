@@ -472,16 +472,17 @@ a.soc-ic:hover, a.soc-ic:focus-visible { color: var(--teal-glow); background: rg
 
 /* Text-first heroes on phones: headline and lead paint first and lead LCP */
 @keyframes cv-lift { from { transform: translateY(18px); } }
+@keyframes cv-word-top { from { top: 26px; } }
 @media (max-width: 860px) {
-  .words .w { display: inline; animation: none; }
-  .words { animation: cv-lift .7s var(--ease-x) .2s backwards; }
+  /* Per-word rise on phones */
+  .words .w { display: inline; position: relative; top: 0; animation-name: cv-word-top; }
   p[data-reveal="load"] { animation-name: cv-lift; }
   .hero .hero-art { order: 1; margin-top: 28px; }
 }
-@media (prefers-reduced-motion: reduce) { .words { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .words .w { animation: none; top: 0; } }
 /* The headline owns the first screen; the photo starts below it */
 @media (max-width: 860px) {
-  .hero .hero-copy, .c-hero .grid2 > div:first-child, .work-hero .wrap { min-height: calc(100svh - var(--header) - 64px); display: flex; flex-direction: column; justify-content: center; }
+  .hero .hero-copy, .c-hero .grid2 > div:first-child, .text-hero .wrap { min-height: calc(100svh - var(--header) - 64px); display: flex; flex-direction: column; justify-content: center; }
   .hero .hero-copy { min-height: calc(100svh - var(--header)); }
 }
 

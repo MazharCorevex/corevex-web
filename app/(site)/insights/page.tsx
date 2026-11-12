@@ -17,7 +17,7 @@ export default async function InsightsIndex() {
   const rest = articles.filter((a) => a !== feat);
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero text-hero">
         <div className="wrap">
           <Crumbs items={[["Home", "/"], ["Insights"]]} />
           <Words as="h1" className="h1 words">

@@ -37,7 +37,7 @@ In the final confirmation run, `/about/` once measured TBT 183 ms. Two re-runs (
 
 The 404 page answers HTTP 404, which Lighthouse refuses to audit; `tests/perf/vitals.spec.ts` measures it instead.
 
-**Text-first heroes.** In the first round, 8 pages failed mobile LCP at 3.1 to 4.3 s: home, about, careers, insights, work and three service pages. Their LCP element was a hero image competing with the JS for bandwidth. On phones, the headline block now fills the first screen and is the LCP element; the photo or 3D mark starts just below it. The headline paints as one block that rises without fading. Desktop layouts are unchanged.
+**Text-first heroes.** In the first round, 8 pages failed mobile LCP at 3.1 to 4.3 s: home, about, careers, insights, work and three service pages. Their LCP element was a hero image competing with the JS for bandwidth. On phones, the headline block now fills the first screen and is the LCP element; the photo or 3D mark starts just below it. Headline words still rise one by one on phones; they move by position offset instead of transform, so the headline stays one LCP block. The Insights hero follows the same pattern. Desktop layouts are unchanged.
 
 #### Mobile (Moto G Power, Slow 4G, simulated)
 
