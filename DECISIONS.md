@@ -116,3 +116,4 @@ Decisions taken during the build, so the reasoning is on record.
 
 - On phones (860 px and below), the hero headline block fills the first screen and is the LCP element; the hero photo or 3D mark starts just below it. Desktop is unchanged. This took mobile LCP from 3.1 to 4.3 s to about 1.2 s on the 8 image-hero pages.
 - Contact email is business@corevex-solutions.com.
+- First-load JS budget is 155 KB gzip (was 120 KB), checked by `scripts/js-budget.mjs`. Lighthouse's script-size total also counts link prefetches (about 180 KB), so in `lighthouserc.cjs` it is a warning at 155 KB, not a failure.

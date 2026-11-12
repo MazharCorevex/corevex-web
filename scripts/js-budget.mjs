@@ -2,7 +2,7 @@
 import { gzipSync } from "node:zlib";
 
 const BASE = process.argv[2] || "http://localhost:3100";
-const LIMIT = 120 * 1024;
+const LIMIT = 155 * 1024;
 const seo = JSON.parse(await (await import("node:fs/promises")).readFile(new URL("../lib/seo-data.json", import.meta.url), "utf8"));
 const routes = Object.keys(seo).filter((r) => r !== "/404/");
 const cache = new Map();

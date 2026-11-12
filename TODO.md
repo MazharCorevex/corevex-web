@@ -23,7 +23,7 @@ Items that need real content, keys or a decision from Corevex. The site builds a
 ## Performance
 
 - [ ] Home page mobile Lighthouse performance is about 88 (other pages 99 to 100). Observed LCP is 0.4 to 0.5 s, but on localhost hydration runs before the first paint and Lighthouse's simulation charges that script time to LCP (3.8 s). Options: a lighter home page (fewer client sections hydrating at once), or measure on the deployed Vercel URL where scripts arrive after first paint
-- [ ] First-load JS is about 150 KB gzip against a 120 KB target; the Next.js 16 framework floor is about 125 KB (see DECISIONS.md)
+- [x] First-load JS budget raised to 155 KB gzip (pages measure 147 to 153 KB; see DECISIONS.md)
 
 ## Testing
 

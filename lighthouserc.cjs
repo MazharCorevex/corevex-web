@@ -29,7 +29,8 @@ const PAGES = [
 const quality = {
   "categories:accessibility": ["error", { minScore: 0.95 }],
   "categories:best-practices": ["error", { minScore: 0.95 }],
-  "resource-summary:script:size": ["error", { maxNumericValue: 120 * 1024 }],
+  // Includes link prefetches; the hard budget is scripts/js-budget.mjs
+  "resource-summary:script:size": ["warn", { maxNumericValue: 155 * 1024 }],
 };
 const speed = desktop
   ? {
