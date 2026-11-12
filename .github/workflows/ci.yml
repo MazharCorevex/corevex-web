@@ -151,7 +151,7 @@ jobs:
       - run: npm run build
       - run: npx lhci autorun --config=lighthouserc.cjs
         env:
-          LHCI_PRESET: ${{ matrix.preset }}
+          CV_LH_PRESET: ${{ matrix.preset }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

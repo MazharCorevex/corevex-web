@@ -42,7 +42,7 @@ export const DRAWER_ORDER = [
 
 export const svc = (slug: string) => SERVICES.find((s) => s.slug === slug)!;
 
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@corevex.org";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "business@corevex-solutions.com";
 export const CONTACT_PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || "+92 333 2031151";
 // WhatsApp, international format without "+"
 export const WHATSAPP_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923332031151").replace(/\D/g, "");

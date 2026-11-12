@@ -68,7 +68,7 @@ Decisions taken during the build, so the reasoning is on record.
 
 ## Quality and testing pass
 
-- **Suites and where they live.** Unit and component tests use Vitest and Testing Library (`tests/unit`). Playwright suites each have their own config and output folder: `playwright.config.ts` (end-to-end journeys), `.responsive`, `.visual`, `.a11y`, `.seo` (SEO and content rules), `.security` and `.perf` (bundle and image budgets). Lighthouse CI uses `lighthouserc.cjs` with `LHCI_PRESET=desktop` for the desktop run. Load, burst and abuse tests use autocannon and plain fetch (`scripts/load-test.mjs`) and refuse to run against anything but localhost.
+- **Suites and where they live.** Unit and component tests use Vitest and Testing Library (`tests/unit`). Playwright suites each have their own config and output folder: `playwright.config.ts` (end-to-end journeys), `.responsive`, `.visual`, `.a11y`, `.seo` (SEO and content rules), `.security` and `.perf` (bundle and image budgets). Lighthouse CI uses `lighthouserc.cjs` with `CV_LH_PRESET=desktop` for the desktop run. Load, burst and abuse tests use autocannon and plain fetch (`scripts/load-test.mjs`) and refuse to run against anything but localhost.
 - **No real email in tests.** With `TEST_MODE=true` the Resend client is replaced by an in-memory outbox, even when `.env.local` holds a real key. `/api/test/outbox` exists only in test mode and returns 404 otherwise.
 - **Form endpoint with status codes.** The form logic moved to `lib/server/forms.ts`. Server actions stay the primary path for the site, and `/api/forms/<contact|newsletter|careers>` exposes the same logic with real HTTP codes (400 validation, 413 too large, 415 wrong type, 429 rate limited) so the burst test can see the limiter. The endpoint has the same honeypot, timing and rate limit.
 - **Forms work without JavaScript.** Every form has `action={...}` for progressive enhancement and keeps its `onSubmit` handler for the enhanced path. A `<noscript>` style shows all contact steps, all tech stack panels, the orbit chips and every reveal in its final state.
@@ -100,7 +100,7 @@ Decisions taken during the build, so the reasoning is on record.
 - **Boards are never cropped.** They carry their own titles and feature chips, so cards, the home rail and service features use 4:3, and the Work grid reads row by row. Where a project had two boards, the second shows under "More screens".
 - **Source images** live in `new-images/portfolio/` (gitignored); `npm run images` writes 1600 and 800 wide WebP to `public/images/portfolio/` and no longer copies the old reference boards.
 - **Logo strip under the hero.** Until real client logos are published in `content/client-logos.json`, the home marquee shows the portfolio projects as initials-and-name marks, headed "Selected work from our portfolio" (not "Trusted by", since they are design studies). Marks rest in a neutral grey for contrast and take each brand colour on hover; each links to its case study.
-- **Contact details.** Email hello@corevex.org, phone +92 333 2031151 and the office address (Sikander Plaza, Canal Bridge, Vehari Rd, Model Town, Hasilpur) are defaults in `lib/site.ts`, shown on the Contact page and in the Organization structured data. No PSEB number, Clutch or GitHub link is shown, at the client's request; the settings still exist but stay empty.
+- **Contact details.** Email business@corevex-solutions.com, phone +92 333 2031151 and the office address (Sikander Plaza, Canal Bridge, Vehari Rd, Model Town, Hasilpur) are defaults in `lib/site.ts`, shown on the Contact page and in the Organization structured data. No PSEB number, Clutch or GitHub link is shown, at the client's request; the settings still exist but stay empty.
 
 ## Pricing
 
@@ -111,3 +111,8 @@ Decisions taken during the build, so the reasoning is on record.
 - **Legal text is content.** Privacy Policy, Terms of Use and Cookie Policy render from `content/legal/*.md` exactly as supplied (headings, lists, bold and emails only), at 720px with the effective date under the title. The content check skips its timeline rules on these three pages, because "We will reply within 30 days" is a statutory response time.
 - **Cookie consent, no library.** `cv_consent` (first-party, 6 months, `a1` or `a0` plus a timestamp) stores the choice. Google Consent Mode v2 defaults every type to denied; gtag.js is injected only after Analytics is accepted, and events are sent only then. Turning Analytics off updates consent, disables GA and deletes `_ga` and `_ga_*`. The banner is non-blocking (a card on desktop, full width with 44px buttons on phones); the settings panel is a modal dialog, reopened from "Cookie settings" in the footer. Calendly loads only inside the booking window.
 - **Tests start with a stored choice.** Playwright configs use `tests/consent-state.json` (analytics rejected) so the banner does not cover pages; `tests/e2e/consent.spec.ts` runs as a fresh visitor.
+
+## Text-first heroes on phones (12 November 2026)
+
+- On phones (860 px and below), the hero headline block fills the first screen and is the LCP element; the hero photo or 3D mark starts just below it. Desktop is unchanged. This took mobile LCP from 3.1 to 4.3 s to about 1.2 s on the 8 image-hero pages.
+- Contact email is business@corevex-solutions.com.

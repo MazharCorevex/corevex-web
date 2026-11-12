@@ -21,7 +21,7 @@
     "test:a11y": "playwright test -c playwright.a11y.config.ts",
     "start:test": "cross-env TEST_MODE=true next start -p 3100",
     "test:visual": "playwright test -c playwright.visual.config.ts",
-    "test:perf": "playwright test -c playwright.perf.config.ts && node scripts/with-server.mjs node scripts/js-budget.mjs && lhci autorun --config=lighthouserc.cjs && cross-env LHCI_PRESET=desktop lhci autorun --config=lighthouserc.cjs",
+    "test:perf": "playwright test -c playwright.perf.config.ts && node scripts/with-server.mjs node scripts/js-budget.mjs && lhci autorun --config=lighthouserc.cjs && cross-env CV_LH_PRESET=desktop lhci autorun --config=lighthouserc.cjs",
     "test:load": "node scripts/with-server.mjs k6 run tests/load/k6.js",
     "test:seo": "playwright test -c playwright.seo.config.ts && node scripts/with-server.mjs node scripts/content-check.mjs && node scripts/with-server.mjs linkinator http://localhost:3100/ --config linkinator.config.json",
     "test:security": "playwright test -c playwright.security.config.ts && node scripts/secrets-scan.mjs && npm audit --audit-level=high",

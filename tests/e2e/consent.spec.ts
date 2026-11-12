@@ -59,7 +59,8 @@ test("settings panel: necessary is locked on, analytics off by default, Save cho
   await ana.check();
   await panel.getByRole("button", { name: "Save choices" }).click();
   await expect(panel).toBeHidden();
-  expect((await choice(page))!.value).toMatch(/^a1\./);
+  // The browser's cookie store catches up with document.cookie a moment later
+  await expect.poll(async () => (await choice(page))?.value).toMatch(/^a1\./);
 });
 
 test("footer Cookie settings reopens the panel, turning analytics off deletes _ga cookies", async ({ page, context }) => {

@@ -6,7 +6,7 @@ This policy explains what personal information Corevex Solutions collects throug
 
 ## Who we are
 
-This website is operated by Corevex Solutions ("Corevex", "we", "us"), a software company with its registered office at Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur, Pakistan. For any privacy question or request, email hello@corevex.org.
+This website is operated by Corevex Solutions ("Corevex", "we", "us"), a software company with its registered office at Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur, Pakistan. For any privacy question or request, email business@corevex-solutions.com.
 
 ## What we collect
 
@@ -60,7 +60,7 @@ Our team is based in Pakistan, and some of our providers store data in the Unite
 
 ## Your rights
 
-Depending on where you live, you can ask us to access, correct or delete your personal information, to restrict or object to how we use it, or to receive a copy in a portable format. You can unsubscribe from the newsletter using the link in any email. To make a request, email hello@corevex.org. We will reply within 30 days.
+Depending on where you live, you can ask us to access, correct or delete your personal information, to restrict or object to how we use it, or to receive a copy in a portable format. You can unsubscribe from the newsletter using the link in any email. To make a request, email business@corevex-solutions.com. We will reply within 30 days.
 
 If you are in the UK or EU, you can also complain to your local data protection authority. If you are in California, you have the right to know what we collect and to ask us to delete it, and we will not treat you differently for using these rights.
 
@@ -82,6 +82,6 @@ We may update this policy as the website or the law changes. The effective date 
 
 ## Contact
 
-Corevex Solutions, Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur, Pakistan. Email: hello@corevex.org
+Corevex Solutions, Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur, Pakistan. Email: business@corevex-solutions.com
 
 

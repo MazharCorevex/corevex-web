@@ -151,7 +151,7 @@ test("legal pages show the company, address, email, court city and date", async 
     await page.goto(route);
     const t = await page.locator("main").innerText();
     expect(t, route).toContain("11 November 2026");
-    expect(t, route).toContain("hello@corevex.org");
+    expect(t, route).toContain("business@corevex-solutions.com");
     if (route !== "/cookies/") {
       expect(t, route).toContain("Corevex Solutions");
       expect(t, route).toMatch(/Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur/);

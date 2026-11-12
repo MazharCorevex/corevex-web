@@ -54,4 +54,4 @@ We may update these terms from time to time. The effective date at the top shows
 
 ## Contact
 
-Corevex Solutions, Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur, Pakistan. Email: hello@corevex.org
+Corevex Solutions, Sikander Plaza, Canal Bridge, Vehari Road, Model Town, Hasilpur, Pakistan. Email: business@corevex-solutions.com

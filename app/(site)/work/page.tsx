@@ -25,7 +25,7 @@ export default async function WorkIndex() {
   const cases = await getCaseStudies();
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero work-hero">
         <div className="wrap">
           <Crumbs items={[["Home", "/"], ["Work"]]} />
           <Words as="h1" className="h1 words">

@@ -14,4 +14,4 @@ We ask for your choice again after 6 months.
 
 ## Contact
 
-Questions about cookies can be sent to hello@corevex.org. How we handle personal information is explained in our Privacy Policy.
+Questions about cookies can be sent to business@corevex-solutions.com. How we handle personal information is explained in our Privacy Policy.

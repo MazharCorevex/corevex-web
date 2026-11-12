@@ -1,5 +1,5 @@
-// Lighthouse CI, mobile by default (Moto G Power, Slow 4G); LHCI_PRESET=desktop for desktop
-const desktop = process.env.LHCI_PRESET === "desktop";
+// Lighthouse CI, mobile by default (Moto G Power, Slow 4G); CV_LH_PRESET=desktop for desktop
+const desktop = process.env.CV_LH_PRESET === "desktop";
 const PORT = 3300;
 const PAGES = [
   "/",
@@ -51,20 +51,20 @@ module.exports = {
     collect: {
       startServerCommand: `npx next start -p ${PORT}`,
       startServerReadyPattern: "Ready",
-      url: (process.env.LHCI_PAGES ? process.env.LHCI_PAGES.split(",") : PAGES).map((p) => `http://localhost:${PORT}${p}`),
-      numberOfRuns: Number(process.env.LHCI_RUNS || 3),
+      url: (process.env.CV_LH_PAGES ? process.env.CV_LH_PAGES.split(",") : PAGES).map((p) => `http://localhost:${PORT}${p}`),
+      numberOfRuns: Number(process.env.CV_LH_RUNS || 3),
       settings: {
         preset: desktop ? "desktop" : undefined,
         onlyCategories: ["performance", "accessibility", "best-practices", "seo"],
         chromeFlags: "--headless=new --no-sandbox",
-        // Report-only comparison: LHCI_THROTTLING=devtools applies real throttling instead of simulating it
-        ...(process.env.LHCI_THROTTLING === "devtools" ? { throttlingMethod: "devtools" } : {}),
+        // Report-only comparison: CV_LH_THROTTLING=devtools applies real throttling instead of simulating it
+        ...(process.env.CV_LH_THROTTLING === "devtools" ? { throttlingMethod: "devtools" } : {}),
       },
     },
     assert: {
       aggregationMethod: "median-run",
       assertions: { ...speed, ...quality, "categories:seo": ["error", { minScore: 0.95 }] },
     },
-    upload: { target: "filesystem", outputDir: `.lighthouseci/${desktop ? "desktop" : "mobile"}${process.env.LHCI_THROTTLING === "devtools" ? "-devtools" : ""}` },
+    upload: { target: "filesystem", outputDir: `.lighthouseci/${desktop ? "desktop" : "mobile"}${process.env.CV_LH_THROTTLING === "devtools" ? "-devtools" : ""}` },
   },
 };
