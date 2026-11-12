@@ -53,10 +53,10 @@ export default async function WorkIndex() {
               Projects
             </h2>
             <div className="masonry">
-              {cases.map((c) => (
+              {cases.map((c, i) => (
                 <Link key={c.slug} className="m-card" data-cat={c.categories.join(" ")} href={`/work/${c.slug}/`}>
                   <div className="img">
-                    <Img src={c.image} alt={c.imageAlt || ""} sizes="(max-width: 860px) 100vw, 50vw" />
+                    <Img src={c.image} alt={c.imageAlt || ""} sizes="(max-width: 860px) 100vw, 50vw" eager={i < 2} />
                   </div>
                   <div className="meta">
                     <span className="chip">{c.industry}</span>{" "}

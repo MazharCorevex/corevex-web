@@ -15,6 +15,7 @@ export default function Tabs({ className, children }: { className?: string; chil
       t.id = t.id || `stx-tab-${i}`;
       panels[i]?.setAttribute("aria-labelledby", t.id);
     });
+    let picked = false;
     const show = (i: number, focus = false) => {
       tabs.forEach((t, j) => {
         t.setAttribute("aria-selected", String(j === i));
@@ -32,13 +33,15 @@ export default function Tabs({ className, children }: { className?: string; chil
       });
     };
     const handlers = tabs.map((t, i) => {
-      const click = () => show(i);
+      const click = () => ((picked = true), show(i));
       const key = (e: KeyboardEvent) => {
         if (e.key === "ArrowRight" || e.key === "ArrowDown") {
           e.preventDefault();
+          picked = true;
           show((i + 1) % tabs.length, true);
         } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
           e.preventDefault();
+          picked = true;
           show((i - 1 + tabs.length) % tabs.length, true);
         }
       };
@@ -54,7 +57,8 @@ export default function Tabs({ className, children }: { className?: string; chil
     const io = new IntersectionObserver(
       (es) => {
         if (es[0].isIntersecting) {
-          show(0);
+          // Entrance animation, unless the visitor already chose a tab
+          if (!picked) show(0);
           io.disconnect();
         }
       },

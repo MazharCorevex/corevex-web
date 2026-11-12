@@ -17,7 +17,11 @@ async function ready(page: Page) {
     if (document.querySelector(".hc")) for (let i = 0; i < 60 && document.querySelectorAll(".hc-row.fixed").length < 6; i++) await new Promise((r) => setTimeout(r, 100));
     scrollTo({ top: 0, behavior: "instant" });
   });
+  // Steady state: pause the quote slider like a reader would, then let finite animations end
+  const slider = page.locator(".quotes, .quote-slider").first();
+  if (await slider.count()) await slider.hover().catch(() => null);
   await page.waitForTimeout(800);
+  await page.evaluate(() => Promise.all(document.getAnimations().filter((x) => x.effect?.getComputedTiming().iterations !== Infinity).map((x) => x.finished.catch(() => null))));
 }
 
 for (const route of [...ROUTES, "/this-page-does-not-exist/"]) {

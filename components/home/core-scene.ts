@@ -39,7 +39,7 @@ export function initCore(canvas: HTMLCanvasElement, section: HTMLElement, offset
 
   const group = new THREE.Group();
   const parts = data.paths.map((p, i) => {
-    const geo = new THREE.ExtrudeGeometry(SVGLoader.createShapes(p), {
+    const geo = new THREE.ExtrudeGeometry(p.toShapes(), {
       depth: 34,
       bevelEnabled: true,
       bevelThickness: 5,

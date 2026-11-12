@@ -445,3 +445,27 @@ a.soc-ic:hover, a.soc-ic:focus-visible { color: var(--teal-glow); background: rg
 .footer ul .cookie-link:hover { color: var(--teal-glow); text-decoration: none; }
 @media (min-width: 1101px) { .footer ul .cookie-link { white-space: nowrap; } }
 @media (pointer: coarse), (max-width: 1100px) { .footer ul .cookie-link { display: inline-block; min-height: 44px; padding-block: 10px; } }
+
+/* First paint: hero headline and photos visible from the first frame */
+@keyframes cv-word-rise { from { transform: translateY(26px); } }
+.words .w { animation-name: cv-word-rise; }
+.svc-photo[data-reveal="load"], .c-hero .frame[data-reveal="load"], .frame[data-reveal="load"] { animation: none; opacity: 1; transform: none; }
+
+/* Skip link stays on screen wherever the page is scrolled */
+.skip { position: fixed; }
+/* Hidden header comes back when keyboard focus enters it */
+.header.is-hidden:focus-within { transform: none; }
+
+/* Small text stays readable on phones */
+@media (max-width: 767px) {
+  .note, .legal-date { font-size: 14px; }
+  .mq-projects .marquee-title { font-size: 14px; letter-spacing: .06em; }
+}
+
+/* Narrow two-column hero: copy column gives the mark room */
+@media (min-width: 861px) and (max-width: 1100px) { .hero .lead, .hero .seo-h1 { max-width: min(620px, 44vw); } }
+.orbit.row { position: relative; left: auto; top: auto; width: auto; height: auto; animation: none; display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 10px; margin-top: 10px; scrollbar-width: none; }
+.orbit.row::-webkit-scrollbar { display: none; }
+.orbit.row .orb-chip { position: static; transform: none; opacity: 1; flex: none; }
+.orbit.row .orb-in { animation: none; box-shadow: none; }
+.hero-art.is-row .orb-card { display: none; }

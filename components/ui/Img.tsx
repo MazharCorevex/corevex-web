@@ -9,6 +9,7 @@ type Props = {
   alt: string;
   sizes?: string;
   priority?: boolean;
+  eager?: boolean;
   fill?: boolean;
   className?: string;
   style?: CSSProperties;
@@ -17,7 +18,7 @@ type Props = {
   "aria-hidden"?: "true" | boolean;
 };
 
-export default function Img({ src, alt, sizes, priority, fill, className, style, width, height, ...rest }: Props) {
+export default function Img({ src, alt, sizes, priority, eager, fill, className, style, width, height, ...rest }: Props) {
   const d: [number, number] = dims[src] ?? [width ?? 1600, height ?? 1000];
   if (src.endsWith(".svg")) {
     const h = height ?? d[1];
@@ -47,7 +48,7 @@ export default function Img({ src, alt, sizes, priority, fill, className, style,
         sizes={sizes ?? "100vw"}
         preload={priority}
         fetchPriority={priority ? "high" : undefined}
-        loading={priority ? "eager" : undefined}
+        loading={priority || eager ? "eager" : undefined}
         className={className}
         style={{ objectFit: "cover", ...style }}
         aria-hidden={rest["aria-hidden"]}
@@ -63,7 +64,7 @@ export default function Img({ src, alt, sizes, priority, fill, className, style,
       sizes={sizes ?? "(max-width: 860px) 100vw, 50vw"}
       preload={priority}
       fetchPriority={priority ? "high" : undefined}
-      loading={priority ? "eager" : undefined}
+      loading={priority || eager ? "eager" : undefined}
       className={className}
       style={style}
       aria-hidden={rest["aria-hidden"]}

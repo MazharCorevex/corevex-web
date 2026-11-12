@@ -29,7 +29,7 @@ export async function settle(page: Page) {
   await page.waitForTimeout(1200);
 }
 
-export type Opts = { touch: boolean; desktop: boolean; home: boolean };
+export type Opts = { touch: boolean; desktop: boolean; home: boolean; mobile?: boolean };
 
 // Layout audit, runs in the page
 export async function audit(page: Page, opts: Opts) {
@@ -178,6 +178,20 @@ export async function audit(page: Page, opts: Opts) {
       }
     }
 
+    // Body text size on phones
+    if (o.mobile) {
+      let n = 0;
+      for (const el of document.querySelectorAll<HTMLElement>("main p, main li, main dd, main td, main blockquote, footer p")) {
+        if (n > 5) break;
+        if (hidden(el) || !(el.textContent || "").trim()) continue;
+        const fs = parseFloat(cs(el).fontSize);
+        if (fs < 13.95) {
+          issues.push(`body text ${fs}px: ${label(el)}`);
+          n++;
+        }
+      }
+    }
+
     // Images
     for (const img of document.images) {
       if (img.closest("noscript")) continue;
@@ -245,7 +259,9 @@ export async function layout(page: Page, route: string, w: number, h: number) {
         const orbit = s(".orbit");
         if (orbit) {
           const row = orbit.display === "flex" && orbit.overflowX === "auto";
-          const rowWanted = narrow || h <= 520;
+          // A circle needs a mark at least 340px wide, or the chips collide
+          const art = document.querySelector<HTMLElement>(".hero-art")?.offsetWidth ?? 0;
+          const rowWanted = narrow || h <= 520 || art < 340;
           if (row !== rowWanted) issues.push(`orbit ${rowWanted ? "should be a swipe row" : "should orbit"} at ${w}`);
         }
         const nav = s(".stx-nav");

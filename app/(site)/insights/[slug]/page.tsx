@@ -67,8 +67,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               {a.title}
             </h1>
             <div className="author">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={authorImg} alt={a.author} width={48} height={48} />
+              <Img src={authorImg} alt={a.author} width={48} height={48} sizes="48px" />
               <div>
                 <b>{a.author}</b>
                 <br />

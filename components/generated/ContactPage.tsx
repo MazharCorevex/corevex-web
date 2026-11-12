@@ -24,9 +24,9 @@ export default function ContactPage() {
           </p>
           <div className="team-avs">
             <div>
-              <Img src="/images/team/mazhar-h-v2.webp" alt="Mazhar H" />
-              <Img src="/images/team/m-azhar.webp" alt="M Azhar" />
-              <Img src="/images/team/zafar-h.webp" alt="Zafar H" />
+              <Img src="/images/team/mazhar-h-v2.webp" alt="Mazhar H" sizes="48px" />
+              <Img src="/images/team/m-azhar.webp" alt="M Azhar" sizes="48px" />
+              <Img src="/images/team/zafar-h.webp" alt="Zafar H" sizes="48px" />
             </div>
             <span>You will speak with our team</span>
           </div>
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <li>A senior engineer replies personally</li>
             <li>NDA on request</li>
             <li>You own the code</li>
-            <li>{'Prefer to talk? Choose "Book a call" below and we will send a time'}</li>
+            <li>{'Prefer to talk? Choose "Book a 30-minute call" below and we will send a time'}</li>
           </ul>
           <ContactDetails />
         </div>

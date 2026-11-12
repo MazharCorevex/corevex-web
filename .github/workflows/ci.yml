@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
         with: { node-version: 24, cache: npm }
       - run: npm ci
@@ -102,9 +103,13 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run build
-      - run: npx playwright test -c playwright.seo.config.ts
+      - run: npm run test:seo
       - run: npx playwright test -c playwright.security.config.ts
       - run: npx playwright test -c playwright.perf.config.ts
+      - run: node scripts/with-server.mjs node scripts/js-budget.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: perf-results, path: test-results/perf, retention-days: 14 }
 
   visual:
     name: Visual regression
@@ -153,3 +158,28 @@ jobs:
           name: lighthouse-${{ matrix.preset }}
           path: .lighthouseci
           retention-days: 14
+
+  load:
+    name: Load (k6, local build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - uses: grafana/setup-k6-action@v1
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:load
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: load-results, path: test-results/load, retention-days: 14 }
+
+  test-all:
+    name: test:all
+    if: always()
+    needs: [checks, e2e, responsive, a11y, seo-security, visual, lighthouse, load]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Every suite passed
+        run: |
+          echo '${{ toJSON(needs) }}' | grep -qE '"result": "(failure|cancelled|skipped)"' && exit 1 || echo "all suites passed"

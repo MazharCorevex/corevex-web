@@ -10,7 +10,7 @@ export default defineConfig({
   workers: process.env.CI ? 2 : 4,
   retries: process.env.CI ? 1 : 0,
   reporter: [["list"], ["json", { outputFile: "test-results/e2e.json" }], ["html", { open: "never", outputFolder: "playwright-report" }]],
-  use: { baseURL: `http://localhost:${PORT}`, trace: "retain-on-failure" },
+  use: { baseURL: `http://localhost:${PORT}`, storageState: "tests/consent-state.json", trace: "retain-on-failure" },
   webServer: {
     command: `npx next start -p ${PORT}`,
     url: `http://localhost:${PORT}`,

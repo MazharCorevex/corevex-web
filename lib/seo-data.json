@@ -504,9 +504,9 @@
   ]
  },
  "/insights/hire-a-dedicated-development-team/": {
-  "title": "Hiring a Dedicated Development Team: What to Expect | Corevex",
+  "title": "Hire a Dedicated Development Team: What to Expect | Corevex",
   "description": "How a dedicated development team works day to day, who is on it, what you stay in control of, and how to get the best results from the engagement.",
-  "ogTitle": "Hiring a Dedicated Development Team: What to Expect | Corevex",
+  "ogTitle": "Hire a Dedicated Development Team: What to Expect | Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -1242,9 +1242,9 @@
   ]
  },
  "/insights/what-is-rag/": {
-  "title": "What is RAG? Retrieval Augmented Generation Explained | Corevex",
+  "title": "What Is RAG? Retrieval Augmented Generation | Corevex",
   "description": "Retrieval augmented generation explained in plain language: how RAG grounds AI answers in your own documents, where it works best and how to build it well.",
-  "ogTitle": "What is RAG? Retrieval Augmented Generation Explained | Corevex",
+  "ogTitle": "What Is RAG? Retrieval Augmented Generation | Corevex",
   "ogType": "website",
   "robots": "",
   "ld": [
@@ -1330,7 +1330,7 @@
  },
  "/services/ai-agents-as-a-service/": {
   "title": "AI Agents as a Service (AaaS), Corevex",
-  "description": "Agent as a Service from Corevex: managed AI agents for support, sales, operations and finance that work inside your tools, with monitoring and human approval built in.",
+  "description": "Managed AI agents from Corevex for support, sales, operations and finance, working inside your tools with monitoring and human approval built in.",
   "ogTitle": "AI Agents as a Service (AaaS), Corevex",
   "ogType": "website",
   "robots": "",
@@ -1344,7 +1344,7 @@
      "name": "Corevex Solutions"
     },
     "areaServed": "Worldwide",
-    "description": "Agent as a Service from Corevex: managed AI agents for support, sales, operations and finance that work inside your tools, with monitoring and human approval built in."
+    "description": "Managed AI agents from Corevex for support, sales, operations and finance, working inside your tools with monitoring and human approval built in."
    },
    {
     "@context": "https://schema.org",
@@ -2055,9 +2055,9 @@
   ]
  },
  "/work/australian-direct-tutoring/": {
-  "title": "Australian Direct Tutoring: Custom Software Case Study, Corevex",
+  "title": "Australian Direct Tutoring: Custom Software Case Study",
   "description": "How a tutoring business runs leads, lessons and reports on one platform. A Corevex Solutions concept case study.",
-  "ogTitle": "Australian Direct Tutoring: Custom Software Case Study, Corevex",
+  "ogTitle": "Australian Direct Tutoring: Custom Software Case Study",
   "ogType": "website",
   "robots": "",
   "ld": [

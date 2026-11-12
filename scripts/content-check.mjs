@@ -14,6 +14,8 @@ const RULES = [
   ["availability promise", /\bbusiness days?\b|\bsame[- ]day\b|\b24\/7\b|\bwithin (a|an|one|two|three|a few|\d+) (hours?|days?|weeks?|months?)\b|\b(reply|replies|respond|response|turnaround) (in|within)\b/i],
   ["free offer", /free (audit|blueprint|consultation|estimate)/i],
   ["20-minute call", /20[- ]minute/i],
+  ["template placeholder", /\{\{|\}\}|\blorem\b|\bipsum\b|\bTBD\b|\bTODO\b|coming soon/i],
+  ["banned word", /\b(seamless(ly)?|cutting[- ]edge|leverag(e|es|ed|ing)|robust|innovative|world[- ]class|empower(s|ed|ing)?|unlock(s|ed|ing)?|revolutioni[sz](e|es|ed|ing)|synerg(y|ies)|next[- ]level)\b/i],
 ];
 
 function text(html) {
@@ -27,11 +29,14 @@ function text(html) {
     .replace(/\s+/g, " ");
 }
 
+// Structured data is checked by its text values, not its JSON syntax
+const strings = (v) => (typeof v === "string" ? v : Array.isArray(v) ? v.map(strings).join(" ") : v && typeof v === "object" ? Object.values(v).map(strings).join(" ") : "");
+
 let bad = 0;
 for (const r of [...routes, ...extra]) {
   const raw = await (await fetch(BASE + r)).text();
   const meta = [...raw.matchAll(/<(?:title|meta[^>]+content=)"?([^"<]*)/g)].map((m) => m[1]).join(" ");
-  const ld = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]).join(" ");
+  const ld = [...raw.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => strings(JSON.parse(m[1]))).join(" ");
   // AI Lab extraction demo shows a sample supplier invoice, not Corevex pricing
   const scrub = (t) => (r === "/ai-lab/" ? t.replace(/\$[\d,]+\.\d{2}/g, "") : t);
   const body0 = r.endsWith(".txt") || r.endsWith(".xml") ? raw : `${text(raw)} ${meta} ${ld}`;

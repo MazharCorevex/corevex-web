@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { TeamMember } from "@/lib/types";
+import Img from "@/components/ui/Img";
 
 // Leadership cards and bio sheet
 export default function LeaderSheet({ team }: { team: TeamMember[] }) {
@@ -36,8 +37,7 @@ export default function LeaderSheet({ team }: { team: TeamMember[] }) {
             }}
           >
             <div className="ph">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={m.image} alt={`${m.name}, ${m.role} of Corevex Solutions`} width={400} height={500} loading="lazy" decoding="async" />
+              <Img src={m.image} alt={`${m.name}, ${m.role} of Corevex Solutions`} sizes="(max-width: 760px) 340px, 280px" />
               <span className="more" aria-hidden="true">
                 View profile <span className="chev">»</span>
               </span>
@@ -65,8 +65,7 @@ export default function LeaderSheet({ team }: { team: TeamMember[] }) {
           <div className="content">
             {open && (
               <>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={open.image} alt={open.name} width={140} height={175} />
+                <Img src={open.image} alt={open.name} sizes="140px" />
                 <h3>{open.name}</h3>
                 <p className="role">{open.role}</p>
                 {open.bio.map((p) => (

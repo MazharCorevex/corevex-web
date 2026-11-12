@@ -105,11 +105,9 @@ export default function CareersForm({ roles, blob }: { roles: string[]; blob: bo
           aria-describedby={cvErr ? "cv-err" : undefined}
           onChange={(e) => setFileErr(check(e.currentTarget.files?.[0]))}
         />
-        {cvErr && (
-          <span className={s.err} id="cv-err">
-            {cvErr}
-          </span>
-        )}
+        <span className={cvErr ? s.err : undefined} id="cv-err" aria-live="polite">
+          {cvErr}
+        </span>
       </div>
       <div className="field hide-on-sent">
         <label htmlFor="a-msg">Message</label>

@@ -1,8 +1,16 @@
 import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 import { ROUTES } from "../routes";
+
+// Text of every section in main, painted yet or not, without scripts or screen-reader-only copy
+const mainText = (page: Page) =>
+  page.locator("main").evaluate((m) => {
+    const c = m.cloneNode(true) as HTMLElement;
+    c.querySelectorAll("script,style,template,.sr").forEach((x) => x.remove());
+    return c.textContent || "";
+  });
 
 test("rendered pages follow every copy rule", () => {
   const out = execFileSync("node", ["scripts/content-check.mjs", "http://localhost:3100"], { encoding: "utf8" });
@@ -27,7 +35,7 @@ test("every booking button says Book a 30-minute call", async ({ page }) => {
 test("design studies are labelled and never shown as client work", async ({ page }) => {
   for (const r of ["/", "/work/", ...ROUTES.filter((x) => x.startsWith("/work/") && x !== "/work/")]) {
     await page.goto(r, { waitUntil: "domcontentloaded" });
-    const text = (await page.locator("main").innerText()).replace(/\s+/g, " ");
+    const text = (await mainText(page)).replace(/\s+/g, " ");
     expect(text, r).toContain("Product design study");
     expect(text, r).not.toMatch(/\b(Design study|Concept)\b(?! study)/);
     expect(text, r).not.toMatch(/\b(our client|client said|case study results)\b/i);
@@ -36,7 +44,7 @@ test("design studies are labelled and never shown as client work", async ({ page
 
 test("company facts match CLAUDE.md", async ({ page }) => {
   await page.goto("/about/", { waitUntil: "domcontentloaded" });
-  const text = (await page.locator("main").innerText()).replace(/\s+/g, " ");
+  const text = (await mainText(page)).replace(/\s+/g, " ");
   for (const fact of ["PSEB", "50+", "Mazhar H", "M Azhar", "Zafar H", "CEO and Founder", "Solution Architect", "Chief Operating Officer"]) expect(text).toContain(fact);
   expect(await page.locator("[data-count]").evaluateAll((els) => els.map((e) => e.getAttribute("data-count")))).toContain("2022");
 });

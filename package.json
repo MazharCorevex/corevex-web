@@ -21,11 +21,13 @@
     "test:a11y": "playwright test -c playwright.a11y.config.ts",
     "start:test": "cross-env TEST_MODE=true next start -p 3100",
     "test:visual": "playwright test -c playwright.visual.config.ts",
-    "test:perf": "playwright test -c playwright.perf.config.ts && lhci autorun --config=lighthouserc.cjs && cross-env LHCI_PRESET=desktop lhci autorun --config=lighthouserc.cjs",
-    "test:load": "node scripts/with-server.mjs node scripts/load-test.mjs all",
-    "test:seo": "playwright test -c playwright.seo.config.ts && node scripts/with-server.mjs linkinator http://localhost:3100/ --config linkinator.config.json",
+    "test:perf": "playwright test -c playwright.perf.config.ts && node scripts/with-server.mjs node scripts/js-budget.mjs && lhci autorun --config=lighthouserc.cjs && cross-env LHCI_PRESET=desktop lhci autorun --config=lighthouserc.cjs",
+    "test:load": "node scripts/with-server.mjs k6 run tests/load/k6.js",
+    "test:seo": "playwright test -c playwright.seo.config.ts && node scripts/with-server.mjs node scripts/content-check.mjs && node scripts/with-server.mjs linkinator http://localhost:3100/ --config linkinator.config.json",
     "test:security": "playwright test -c playwright.security.config.ts && node scripts/secrets-scan.mjs && npm audit --audit-level=high",
-    "test:all": "npm run lint && npm run typecheck && npm run test:unit && npm run build && npm run test:e2e && npm run test:responsive && npm run test:visual && npm run test:a11y && npm run test:seo && npm run test:security && npm run test:perf && npm run test:load"
+    "test:all": "npm run lint && npm run typecheck && npm run test:unit && npm run build && npm run test:e2e && npm run test:responsive && npm run test:visual && npm run test:a11y && npm run test:seo && npm run test:security && npm run test:perf && npm run test:load",
+    "test:screens": "playwright test -c playwright.screens.config.ts && node scripts/contact-sheet.mjs",
+    "test:load:autocannon": "node scripts/with-server.mjs node scripts/load-test.mjs all"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",
@@ -63,7 +65,8 @@
     "svgo": "^4.1.0",
     "typescript": "^6.0.3",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.0",
+    "web-vitals": "^6.2.3"
   },
   "overrides": {
     "zod": "^4.6.7",

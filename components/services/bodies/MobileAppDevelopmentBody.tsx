@@ -20,7 +20,7 @@ export default function MobileAppDevelopmentBody() {
                 src="/images/portfolio/orbit-money-finance-app-1600.webp"
                 alt="Orbit Money personal finance app screens"
                 style={{ objectPosition: "85% 50%" } as CSSProperties}
-                sizes="(max-width: 1280px) 100vw, 1200px"
+                sizes="(max-width: 860px) 85vw, 400px"
               />
             </div>
             <figcaption>
@@ -34,7 +34,7 @@ export default function MobileAppDevelopmentBody() {
                 src="/images/portfolio/lumen-learning-app-2-1600.webp"
                 alt="Lumen teacher class dashboard and student progress screens"
                 style={{ objectPosition: "85% 50%" } as CSSProperties}
-                sizes="(max-width: 1280px) 100vw, 1200px"
+                sizes="(max-width: 860px) 85vw, 400px"
               />
             </div>
             <figcaption>
@@ -48,7 +48,7 @@ export default function MobileAppDevelopmentBody() {
                 src="/images/portfolio/aura-home-smart-home-app-1600.webp"
                 alt="Aura Home app controlling connected devices"
                 style={{ objectPosition: "85% 50%" } as CSSProperties}
-                sizes="(max-width: 1280px) 100vw, 1200px"
+                sizes="(max-width: 860px) 85vw, 400px"
               />
             </div>
             <figcaption>
@@ -61,7 +61,7 @@ export default function MobileAppDevelopmentBody() {
               <Img
                 src="/images/photos/mobile-in-hand.webp"
                 alt="Hand holding a smartphone showing a fitness mobile app"
-                sizes="(max-width: 1280px) 100vw, 1200px"
+                sizes="(max-width: 860px) 85vw, 400px"
               />
             </div>
             <figcaption>
@@ -131,7 +131,7 @@ export default function MobileAppDevelopmentBody() {
             <Img
               src="/images/portfolio/voltway-ev-charging-app-1600.webp"
               alt="Voltway onboarding, charger map, charger details, wallet and live charging session screens"
-              sizes="(max-width: 1280px) 100vw, 1200px"
+              sizes="(max-width: 860px) 85vw, 400px"
             />
           </div>
           <div>

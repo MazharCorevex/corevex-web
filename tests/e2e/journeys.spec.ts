@@ -203,7 +203,7 @@ test.describe("booking", () => {
     await expect(btn).toBeFocused();
     expect(await page.evaluate(() => document.documentElement.classList.contains("booking-open"))).toBe(false);
     // every booking button uses the same wording
-    const texts = await page.locator("a[href^='https://calendly.com']").allInnerTexts();
+    const texts = await page.locator("a[href^='https://calendly.com']").allTextContents();
     for (const t of texts) expect(t.trim()).toMatch(/^Book a 30-minute call/);
   });
 });

@@ -67,9 +67,9 @@ test("every page has a unique title and description", () => {
   expect(dupe("title")).toEqual([]);
   expect(dupe("description")).toEqual([]);
   for (const h of heads) {
-    expect(h.title.length, `${h.route} title length`).toBeLessThanOrEqual(70);
+    expect(h.title.length, `${h.route} title length`).toBeLessThanOrEqual(60);
     expect(h.description.length, `${h.route} description length`).toBeGreaterThanOrEqual(40);
-    expect(h.description.length, `${h.route} description length`).toBeLessThanOrEqual(170);
+    expect(h.description.length, `${h.route} description length`).toBeLessThanOrEqual(160);
   }
 });
 

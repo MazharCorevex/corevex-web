@@ -77,15 +77,17 @@ export default function HeroArt({ mark }: { mark: ReactNode }) {
   };
   const cur = active !== null ? CHIPS[active] : null;
   const rVar = r ? ({ "--orb-r": `${r}px` } as CSSProperties) : undefined;
+  // Too small for the circle: chips become a swipe row
+  const row = r !== null && r < 170;
 
   return (
-    <div className="hero-art" ref={ref}>
+    <div className={`hero-art${row ? " is-row" : ""}`} ref={ref}>
       <span className="hero-disc" aria-hidden="true" />
       <span className="hero-ring r1" aria-hidden="true" />
       <span className="hero-ring r2" aria-hidden="true" />
       <span className="hero-glow" aria-hidden="true" />
       {mark}
-      <nav className={`orbit${inView ? " in" : ""}`} aria-label="Our services" style={rVar}>
+      <nav className={`orbit${inView ? " in" : ""}${row ? " row" : ""}`} aria-label="Our services" style={rVar}>
         {CHIPS.map((c, i) => (
           <Link
             key={c.slug}
