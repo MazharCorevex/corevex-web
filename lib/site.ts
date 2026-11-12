@@ -1,4 +1,7 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.corevexsolutions.com").replace(/\/$/, "");
+// Primary host is www; the bare domain redirects, which breaks link previews
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.corevex-solutions.com")
+  .replace(/\/$/, "")
+  .replace(/^https?:\/\/corevex-solutions\.com$/, "https://www.corevex-solutions.com");
 export const SITE_NAME = "Corevex Solutions";
 export const PSEB_NUMBER = process.env.NEXT_PUBLIC_PSEB_NUMBER || "";
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/company/corevex-solution/";

@@ -68,6 +68,9 @@ function suite(list: VP[], engineOnly: boolean) {
           await expect(drawer).toBeVisible();
           await drawer.locator("summary").first().click();
           await expect(drawer.locator("details[open] a[href^='/services/']").first()).toBeVisible();
+          // Each service link sits on its own line
+          const tops = await drawer.locator("details[open] a").evaluateAll((as) => as.map((a) => Math.round(a.getBoundingClientRect().top)));
+          expect(new Set(tops).size, "drawer links share a line").toBe(tops.length);
           const last = drawer.getByRole("link", { name: "Contact", exact: true });
           await last.scrollIntoViewIfNeeded();
           await expect(last).toBeInViewport();

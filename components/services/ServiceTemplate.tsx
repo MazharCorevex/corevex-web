@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Img from "@/components/ui/Img";
 import Words from "@/components/ui/Words";
 import BookCall from "@/components/booking/BookCall";
@@ -101,12 +101,14 @@ export default function ServiceTemplate({ data, children }: { data: ServiceData;
       </section>
       {data.offers && (
         <section className="band offers-band" aria-labelledby="offers-title">
-          <div className="wrap">
-            <span className="label">{data.offers.label}</span>
-            <h2 className="h2" id="offers-title" data-reveal="" style={{ marginBottom: 36 }}>
-              {data.offers.title}
-            </h2>
-            <div className="offer-grid">
+          <div className={`wrap offers-wrap${data.offers.slugs.length === 1 ? " is-single" : ""}`}>
+            <div className="offers-head">
+              <span className="label">{data.offers.label}</span>
+              <h2 className="h2" id="offers-title" data-reveal="">
+                {data.offers.title}
+              </h2>
+            </div>
+            <div className="offer-grid" style={{ "--n": data.offers.slugs.length } as CSSProperties}>
               {data.offers.slugs.map((slug) => (
                 <OfferCard key={slug} slug={slug} popular={slug === data.offers?.popular} />
               ))}

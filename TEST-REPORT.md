@@ -222,3 +222,26 @@ Visual regression baselines were updated for Windows. The Linux baselines need t
 | Low | 9 moderate npm advisories in dev tooling | Wait for upstream fixes; `npm audit fix --force` would make breaking upgrades |
 
 Raw outputs are in `test-results/` (gitignored): `perf/lighthouse.md`, `perf/*.json`, `load/k6-summary.json`, `js-budget.txt` and the per-suite run logs.
+
+## Phone review round (12 November 2026)
+
+Issues found on a real Android phone (364 px wide, Chrome) and fixed. Every item has a test so it cannot come back.
+
+| Issue | Fix | Guarded by |
+|---|---|---|
+| Pinned columns (process heading, About pull quote, FAQ topics, article contents) slid over the text when scrolling on phones | Pinned only in two-column layouts; static when stacked | New `tests/responsive/scroll.spec.ts`: scrolls every page at 360, 390, 768 and 1440 and fails if a pinned element without a solid background covers text |
+| Header showed page text through it; the glass blur never worked in Chrome | The CSS build dropped `backdrop-filter` (it kept only the `-webkit-` form); both are now shipped, and the header is solid on phones | Scroll spec: solid header on phones, blur present on desktop |
+| Service tiles split words ("Developm / ent"); "PSEB" split in the numbers band; article cards in two cramped columns | One column of tiles on phones; numbers sized to fit; related articles one column below 861 px | Scroll spec: no heading or big number may break inside a word |
+| Mobile menu put "All services" and the first service on one line | Every link on its own line, services indented under "All services" | Responsive spec: drawer links never share a line |
+| Pricing sections left a wide empty strip on desktop; single cards stretched to 920 px | Cards fill the row; a single card sits beside its heading | Visual baselines |
+| Home page long on phones (24.5 screens) | Tighter section rhythm, compact cards and steps: 22.1 screens on phones, 15.3 on desktop | |
+| Orbit static on phones | Compact icon orbit rotates around the mark (respects Reduce Motion) | Responsive spec layout check |
+| Mobile app swipe cards showed one and a half tall cards | One 4:3 card per screen with snap | |
+| Health check tags "At risk" and "Fixed" could overlap mid-swap | Visibility steps so only one is ever shown | Responsive overlap check |
+| Confirmation email logo was an empty box | The PNG it pointed to was never shipped; added `corevex-logo-email.png` | New unit test: every image an email references exists |
+| WhatsApp link previews missing | `og:url` and `og:image` used the bare domain, which redirects; site URL now resolves to `https://www.corevex-solutions.com` | New unit test for the site URL |
+| Text-only zoom 200% widened the home page | Big numbers and hero copy may wrap when text is that large | Conditions spec |
+
+Mobile Lighthouse after the round: Performance 100 and LCP 1.21 to 1.22 s on the slowest five pages; all 21 pages pass mobile and desktop assertions.
+
+**Needs your action on Vercel:** set `NEXT_PUBLIC_SITE_URL=https://www.corevex-solutions.com`. The code already maps the bare domain to www, but the variable should say what the site uses.

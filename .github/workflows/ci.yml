@@ -16,7 +16,7 @@ concurrency:
 
 env:
   NEXT_TELEMETRY_DISABLED: "1"
-  NEXT_PUBLIC_SITE_URL: https://www.corevexsolutions.com
+  NEXT_PUBLIC_SITE_URL: https://www.corevex-solutions.com
   NEXT_PUBLIC_CALENDLY_URL: https://calendly.com/corevex-ci/30min
   TEST_MODE: "true"
 

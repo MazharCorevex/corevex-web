@@ -53,7 +53,7 @@ export default function QuickContact({ source = "home" }: { source?: string }) {
         {pending ? "Sending" : "Send my project details"} <span className="chev">»</span>
       </button>
       <p className="form-ok" role="status">
-        {sent ? "Thank you. Your details are with our team and a senior engineer will be in touch." : ""}
+        {sent ? "Thank you. Your details are with our team and a business manager will be in touch." : ""}
       </p>
     </form>
   );

@@ -27,6 +27,7 @@ a.btn[href^="https://calendly.com"] { cursor: pointer; }
 /* Tap targets */
 @media (pointer: coarse), (max-width: 1100px) {
   .footer ul a, .crumbs a, .legal .soc a, .legal a, .drawer details a { display: inline-block; min-height: 44px; min-width: 44px; padding-block: 10px; }
+  .drawer details a { display: block; }
   .toc a { display: flex; align-items: center; min-height: 44px; }
   .footer ul { gap: 0; }
 }
@@ -171,7 +172,7 @@ body.menu-open .wa-chat { visibility: hidden; }
 /* Booking window */
 html.booking-open { overflow: hidden; padding-right: var(--sbw, 0px); }
 .booking { padding: 0; border: 0; margin: auto; width: min(1040px, calc(100vw - 48px)); height: min(720px, calc(100dvh - 48px)); max-width: none; max-height: none; border-radius: 24px; overflow: hidden; background: #fff; color: var(--fg); box-shadow: 0 40px 120px rgba(13, 16, 34, .35); }
-.booking::backdrop { background: rgba(13, 16, 34, .55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.booking::backdrop { background: rgba(13, 16, 34, .55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .booking[open] { animation: booking-in .35s var(--ease-x); }
 .booking[open]::backdrop { animation: booking-fade .35s var(--ease-x); }
 @keyframes booking-in { from { opacity: 0; transform: translateY(18px) scale(.98); } }
@@ -350,7 +351,8 @@ a.soc-ic:hover, a.soc-ic:focus-visible { color: var(--teal-glow); background: rg
 .offer-card:hover, .offer-card:focus-within { border-color: rgba(72, 172, 159, .6); box-shadow: 0 0 0 4px rgba(72, 172, 159, .12), 0 22px 44px rgba(23, 30, 60, .10); transform: translateY(-3px); }
 .offer-card.is-popular { border-color: rgba(72, 172, 159, .55); }
 .offer-ribbon { position: absolute; top: 18px; right: 18px; padding: 5px 12px; border-radius: 999px; background: var(--teal-text); color: #fff; font: 600 12px var(--f-body); letter-spacing: .04em; text-transform: uppercase; }
-.offer-card h3 { font: 600 19px var(--f-head); color: var(--navy); padding-right: 90px; }
+.offer-card h3 { font: 600 19px var(--f-head); color: var(--navy); }
+.offer-card.is-popular h3 { padding-right: 110px; }
 .offer-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 16px 0 10px; color: var(--navy); }
 .offer-from { width: 100%; font: 600 13px var(--f-body); color: var(--fg-muted); text-transform: uppercase; letter-spacing: .06em; }
 .offer-amount { font: 700 clamp(34px, 3.4vw, 44px)/1.05 var(--f-head); letter-spacing: -.02em; color: var(--navy); }
@@ -367,7 +369,7 @@ a.soc-ic:hover, a.soc-ic:focus-visible { color: var(--teal-glow); background: rg
 .price-chip { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; background: rgba(72, 172, 159, .14); color: var(--teal-text); font: 600 12px var(--f-body); white-space: nowrap; vertical-align: middle; }
 .tile .price-chip { background: rgba(140, 217, 211, .18); color: var(--teal-glow); margin-top: 10px; align-self: flex-start; }
 .mega .price-chip { margin-left: 8px; font-size: 11px; padding: 2px 8px; }
-.offers-band .offer-grid { max-width: 920px; }
+
 .mega-foot { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--line); margin-top: 10px; padding-top: 6px; }
 .mega-foot .all { margin-top: 0; padding-top: 8px; }
 .mega-team { display: inline-flex; align-items: center; padding: 8px 0 4px; font-weight: 600; font-size: 15px; color: var(--navy); }
@@ -412,7 +414,14 @@ a.soc-ic:hover, a.soc-ic:focus-visible { color: var(--teal-glow); background: rg
   .cookie-bar { left: 0; right: 0; bottom: 0; width: 100%; border-radius: 18px 18px 0 0; border-width: 1px 0 0; padding: 16px 16px max(16px, env(safe-area-inset-bottom)); }
   .cookie-btn { min-height: 44px; font-size: 13.5px; padding: 8px 6px; }
 }
-@media (max-width: 380px) { .cookie-actions { grid-template-columns: 1fr; } }
+@media (max-width: 340px) { .cookie-actions { grid-template-columns: 1fr; } }
+/* Compact banner on phones */
+@media (max-width: 860px) {
+  .cookie-bar { padding: 12px 16px max(12px, env(safe-area-inset-bottom)); }
+  .cookie-bar p { font-size: 14px; line-height: 1.45; }
+  .cookie-actions { margin-top: 10px; gap: 6px; }
+  .cookie-btn { font-size: 13px; line-height: 1.15; padding: 4px 6px; }
+}
 @media (prefers-reduced-motion: reduce) { .cookie-bar { animation: none; } }
 @media (max-width: 860px) { .wa-chat { bottom: calc(max(14px, env(safe-area-inset-bottom)) + var(--cookie-h, 0px)); } }
 
@@ -482,9 +491,116 @@ a.soc-ic:hover, a.soc-ic:focus-visible { color: var(--teal-glow); background: rg
 @media (prefers-reduced-motion: reduce) { .words .w { animation: none; top: 0; } }
 /* The headline owns the first screen; the photo starts below it */
 @media (max-width: 860px) {
-  .hero .hero-copy, .c-hero .grid2 > div:first-child, .text-hero .wrap { min-height: calc(100svh - var(--header) - 64px); display: flex; flex-direction: column; justify-content: center; }
+  .hero .hero-copy, .c-hero .grid2 > div:first-child { min-height: calc(100svh - var(--header) - 64px); display: flex; flex-direction: column; justify-content: center; }
   .hero .hero-copy { min-height: calc(100svh - var(--header)); }
 }
 
 /* Health check tags hand over in turn, never on top of each other */
-.hc-row.fixed .hc-tag .good { transition-delay: .35s; }
+.hc-tag .good { visibility: hidden; transition: opacity .35s .35s, visibility 0s .35s; }
+.hc-row.fixed .hc-tag .good { visibility: visible; }
+.hc-row.fixed .hc-tag .bad { visibility: hidden; transition: opacity .35s, visibility 0s .35s; }
+
+/* Phones: one column of service tiles */
+@media (max-width: 600px) {
+  .bento { grid-template-columns: 1fr; }
+  .bento > * { grid-column: 1 / -1; }
+}
+
+/* Stacked layouts: pinned columns scroll with the page */
+@media (max-width: 860px) {
+  .steps-wrap .sticky, .story .pull, .faq-cats, .toc, .feat-media { position: static; }
+}
+
+/* Solid header where glass blur is missing or on touch screens */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .header { background: #fff; } }
+@media (max-width: 860px) { .header { background: rgba(255, 255, 255, .98); } }
+
+/* Offer sections: cards fill the row; a single card sits beside the heading */
+.offers-head .h2 { margin-bottom: 36px; }
+.offers-wrap .offer-grid { grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); }
+.offers-wrap.is-single { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+.offers-wrap.is-single .offers-head .h2 { margin-bottom: 0; }
+@media (max-width: 1100px) { .offers-wrap .offer-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); } }
+@media (max-width: 860px) {
+  .offers-wrap.is-single { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* Compact rhythm */
+:root { --section: clamp(44px, 6vw, 84px); }
+.section-head { margin-bottom: clamp(28px, 4vw, 52px); }
+.t-wide, .t-ai { min-height: 380px; }
+.tile { min-height: 190px; }
+.step { padding-bottom: 52px; }
+.numbers b, .dark-numbers b { overflow-wrap: anywhere; }
+@media (max-width: 860px) {
+  .tile { padding: 22px; min-height: 0; }
+  .t-wide, .t-ai, .t-strip { min-height: 260px; }
+  .bento { gap: 12px; }
+  .stuck { gap: 10px; margin-top: 32px; }
+  .stuck div { padding: 14px 14px 16px; }
+  .stuck b { font-size: 15.5px; }
+  .step { padding-bottom: 32px; }
+  .trust:not(.rc-grid) { gap: 10px; }
+  .trust:not(.rc-grid) > div { display: grid; grid-template-columns: 48px 1fr; column-gap: 14px; align-items: start; padding: 18px; }
+  .trust:not(.rc-grid) > div > .ib { grid-row: span 2; margin: 0; }
+  .trust:not(.rc-grid) > div > :not(.ib) { grid-column: 2; margin-top: 0; }
+  .numbers b { font-size: clamp(36px, 10.5vw, 52px); }
+  .numbers > div { padding-inline: 16px; }
+  .numbers > div:nth-child(odd) { padding-left: 0; }
+}
+@media (min-width: 360px) and (max-width: 860px) { .stuck { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 860px) { .hero .hero-art { width: 58%; max-width: 280px; } }
+
+/* Core section on phones: image flush to the top, blended into the band */
+@media (max-width: 860px) {
+  .core-sticky { padding: 0 0 var(--section); }
+  .core-sticky .core-fallback { height: 220px !important; object-position: 74% 50%; -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 70%, transparent 100%); }
+  .core-steps { gap: 26px; }
+}
+
+/* Drawer: All services leads, services sit under it */
+.drawer details > a:first-of-type { font-weight: 600; color: var(--navy); }
+.drawer details > a:not(:first-of-type) { padding-left: 28px; }
+
+/* Phones: photos fade in without scale or parallax */
+@media (max-width: 860px) {
+  .split-img img, .svc-photo img, .art-img img, .case-band .shot img, .ed-photo img,
+  .split-img.is-in img, .svc-photo.is-in img, .art-img.is-in img, .case-band .shot.is-in img, .ed-photo.is-in img { transform: none; will-change: auto; max-width: 100%; }
+}
+
+/* Phones: one swipe card per screen, compact */
+@media (max-width: 860px) {
+  .swipe { gap: 14px; padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .swipe figure { flex: 0 0 calc(100vw - 2 * var(--gutter)); scroll-snap-align: center; scroll-snap-stop: always; }
+  .swipe .shot { aspect-ratio: 4 / 3; border-radius: 20px; }
+  .swipe figcaption { padding-top: 12px; }
+  .swipe figcaption b { font-size: 18px; }
+}
+
+/* Phones: space between the Core image and its steps */
+@media (max-width: 860px) { .core-sticky .wrap { margin-top: 24px; } }
+
+/* Phones: compact icon orbit around the mark */
+@media (max-width: 860px) {
+  .hero-art .orbit, .hero-art .orbit.row { position: absolute; left: 50%; top: 50%; width: 0; height: 0; display: block; overflow: visible; padding: 0; margin: 0; animation: orbitSpin 64s linear infinite; }
+  .hero-art .orb-chip, .hero-art .orbit.in .orb-chip, .hero-art .orbit.row .orb-chip { position: absolute; left: 0; top: 0; opacity: 1; transform: translate(-50%, -50%) rotate(var(--a)) translateX(var(--orb-r, 140px)) rotate(calc(-1 * var(--a))); }
+  .hero-art .orb-in, .hero-art .orbit.row .orb-in { width: 44px; height: 44px; min-height: 44px; padding: 0; justify-content: center; gap: 0; font-size: 0; line-height: 0; border-radius: 50%; box-shadow: 0 8px 20px rgba(23, 30, 60, .12); animation: orbitSpin 64s linear infinite reverse; }
+  .hero-art .orb-in img { width: 20px; height: 20px; }
+  .hero .hero-art { margin-top: 44px; margin-bottom: 28px; }
+}
+
+/* Phones: Work and Insights cards lead with their title, photos stay compact */
+@media (max-width: 860px) {
+  .m-card { display: flex; flex-direction: column; }
+  .m-card .meta { order: -1; }
+  .m-card .img, .m-card:nth-child(n) .img { aspect-ratio: 16 / 10; }
+  .mag-feat .t { order: -1; }
+  .mag-feat .img { min-height: 0; aspect-ratio: 16 / 10; }
+}
+
+/* Large text: cards and hero copy wrap instead of pushing past the screen */
+.stuck > * { min-width: 0; overflow-wrap: break-word; }
+@media (min-width: 861px) {
+  .hero .wrap { grid-template-columns: minmax(0, max-content) minmax(0, 1fr); }
+  .hero .display { white-space: normal; }
+}

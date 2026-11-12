@@ -261,7 +261,8 @@ export async function layout(page: Page, route: string, w: number, h: number) {
           const row = orbit.display === "flex" && orbit.overflowX === "auto";
           // A circle needs a mark at least 340px wide, or the chips collide
           const art = document.querySelector<HTMLElement>(".hero-art")?.offsetWidth ?? 0;
-          const rowWanted = narrow || h <= 520 || art < 340;
+          // Phones use a compact icon orbit; desktop falls back to a row when short or narrow
+          const rowWanted = !narrow && (h <= 520 || art < 340);
           if (row !== rowWanted) issues.push(`orbit ${rowWanted ? "should be a swipe row" : "should orbit"} at ${w}`);
         }
         const nav = s(".stx-nav");

@@ -54,7 +54,7 @@ export function branded(title: string, body: string) {
   return `<!doctype html><html><body style="margin:0;background:#F6F7F9;font-family:Inter,Segoe UI,Arial,sans-serif;color:#1C2133">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F6F7F9;padding:32px 12px"><tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:18px;overflow:hidden;border:1px solid #E3E6EC">
-<tr><td style="background:#262B47;padding:28px 32px"><img src="${SITE_URL}/images/logo/corevex-logo-email.png" alt="Corevex Solutions" width="180" style="display:block;height:auto;border:0"></td></tr>
+<tr><td style="background:#262B47;padding:28px 32px"><img src="${SITE_URL}/images/logo/corevex-logo-email.png" alt="Corevex Solutions" width="180" height="41" style="display:block;width:180px;height:auto;border:0"></td></tr>
 <tr><td style="height:4px;background:#48AC9F;line-height:4px;font-size:0">&nbsp;</td></tr>
 <tr><td style="padding:32px">
 <h1 style="font-family:Montserrat,Segoe UI,Arial,sans-serif;font-weight:600;font-size:24px;line-height:1.25;color:#262B47;margin:0 0 16px">${title}</h1>
