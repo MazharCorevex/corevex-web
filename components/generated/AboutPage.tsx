@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import Img from "@/components/ui/Img";
 import Words from "@/components/ui/Words";
+import LayerStack from "@/components/about/LayerStack";
 
 import LeaderSheet from "@/components/about/LeaderSheet";
 import type { TeamMember } from "@/lib/types";
@@ -13,19 +14,24 @@ export default function AboutPage({ team }: { team: TeamMember[] }) {
     <>
       <section className="ed-hero">
         <div className="wrap">
-          <nav className="crumbs" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span>About</span>
-          </nav>
-          <span className="label">About Corevex</span>
-          <Words as="h1" className="h1 words">
-            {"A software development company built by engineers"}
-          </Words>
-          <p className="lead" data-reveal="load">
-            Corevex Solutions is a PSEB registered software company founded in 2022. Our team of 50+ engineers and
-            specialists builds custom software, web and mobile apps, AI and automation for businesses across diverse
-            industries.
-          </p>
+          <div className="ed-head">
+            <div>
+              <nav className="crumbs" aria-label="Breadcrumb">
+                <Link href="/">Home</Link>
+                <span>About</span>
+              </nav>
+              <span className="label">About Corevex</span>
+              <Words as="h1" className="h1 words">
+                {"A software development company built by engineers"}
+              </Words>
+              <p className="lead" data-reveal="load">
+                Corevex Solutions is a PSEB registered software company founded in 2022. Our team of 50+ engineers and
+                specialists builds custom software, web and mobile apps, AI and automation for businesses across diverse
+                industries.
+              </p>
+            </div>
+            <LayerStack />
+          </div>
           <div className="ed-photo">
             <Img
               src="/images/photos/team-night.webp"
@@ -60,7 +66,8 @@ export default function AboutPage({ team }: { team: TeamMember[] }) {
               <strong>PSEB</strong>
               <p>
                 Corevex Solutions is registered with the Pakistan Software Export Board (PSEB), the government body that
-                certifies and supports IT and software export companies.{PSEB_NUMBER ? ` Registration no. ${PSEB_NUMBER}.` : ""}
+                certifies and supports IT and software export companies.
+                {PSEB_NUMBER ? ` Registration no. ${PSEB_NUMBER}.` : ""}
               </p>
             </div>
           </div>
@@ -92,7 +99,7 @@ export default function AboutPage({ team }: { team: TeamMember[] }) {
           </div>
         </div>
       </section>
-      <section className="band">
+      <section className="band values-band">
         <div className="wrap">
           <span className="label">What we believe</span>
           <h2 className="h2" data-reveal="" style={{ marginBottom: "24px" } as CSSProperties}>
@@ -100,18 +107,34 @@ export default function AboutPage({ team }: { team: TeamMember[] }) {
           </h2>
           <div className="values" data-reveal-group="">
             <div>
+              <span className="ib" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/icons/full-stack.svg" alt="" width={24} height={24} />
+              </span>
               <h3>Engineering first</h3>
               <p>Every decision is grounded in what will work in production.</p>
             </div>
             <div>
+              <span className="ib" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/icons/automation.svg" alt="" width={24} height={24} />
+              </span>
               <h3>Clear communication</h3>
               <p>You always know what is done, what is next and why.</p>
             </div>
             <div>
+              <span className="ib" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/icons/custom-software.svg" alt="" width={24} height={24} />
+              </span>
               <h3>Ownership for clients</h3>
               <p>Code, documentation and access are yours.</p>
             </div>
             <div>
+              <span className="ib" aria-hidden="true">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/icons/rescue.svg" alt="" width={24} height={24} />
+              </span>
               <h3>Built to last</h3>
               <p>Clean architecture that your next team can understand.</p>
             </div>

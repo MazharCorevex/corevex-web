@@ -60,6 +60,33 @@ async function scan(page: Page) {
       }
     }
 
+    // Breadcrumb items sit on one line
+    const crumbs = [...document.querySelectorAll(".crumbs > a, .crumbs > span")].filter(shown).map((e) => { const r = e.getBoundingClientRect(); return { top: r.top + scrollY, mid: r.top + r.height / 2 }; });
+    const firstRow = crumbs.filter((c) => Math.abs(c.top - (crumbs[0]?.top ?? 0)) < 30);
+    if (firstRow.length > 1 && Math.max(...firstRow.map((c) => c.mid)) - Math.min(...firstRow.map((c) => c.mid)) > 2) issues.add("breadcrumb items are not aligned");
+
+    // Buttons are never cut off by a clipping container
+    for (const b of document.querySelectorAll<HTMLElement>("main button, main .btn")) {
+      if (!shown(b) || b.closest(".rail, .swipe, .filters, .marquee, .orbit, .stx-nav, .mq-projects, .table-scroll")) continue;
+      const r = b.getBoundingClientRect();
+      if (r.width < 1) continue;
+      for (let n = b.parentElement; n && n !== document.body; n = n.parentElement) {
+        if (getComputedStyle(n).overflowX === "visible") continue;
+        const c = n.getBoundingClientRect();
+        if (r.right > c.right + 1 || r.left < c.left - 1) issues.add(`button cut off: ${label(b)} in ${label(n)}`);
+        break;
+      }
+    }
+
+    // Absolutely placed images stay within their own frame
+    for (const img of document.querySelectorAll("main img")) {
+      if (getComputedStyle(img).position !== "absolute" || !shown(img)) continue;
+      const box = img.parentElement!.getBoundingClientRect();
+      const r = img.getBoundingClientRect();
+      if (box.width < 1 || box.height < 1) continue;
+      if (r.width > box.width * 1.15 + 2 || r.height > box.height * 1.15 + 2) issues.add(`image larger than its frame: ${label(img.parentElement!)} ${Math.round(r.width)}x${Math.round(r.height)} in ${Math.round(box.width)}x${Math.round(box.height)}`);
+    }
+
     // Pinned elements may cover text only with a solid background
     const pinned = [...document.querySelectorAll<HTMLElement>("body *")].filter((el) => {
       const p = getComputedStyle(el).position;

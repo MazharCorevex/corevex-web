@@ -10,9 +10,10 @@ export default function AiAutomationBody() {
       <section className="band light">
         <div className="wrap">
           <span className="label">Before and after</span>
-          <h2 className="h2" data-reveal="" style={{ marginBottom: "40px" } as CSSProperties}>
-            Drag to see the difference
+          <h2 className="h2" data-reveal="">
+            From manual work to work that runs itself
           </h2>
+          <p className="ba-hint">Drag the handle to compare</p>
           <BeforeAfter className="ba">
             <div className="side before">
               <div>

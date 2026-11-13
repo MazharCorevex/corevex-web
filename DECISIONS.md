@@ -117,3 +117,11 @@ Decisions taken during the build, so the reasoning is on record.
 - On phones (860 px and below), the hero headline block fills the first screen and is the LCP element; the hero photo or 3D mark starts just below it. Desktop is unchanged. This took mobile LCP from 3.1 to 4.3 s to about 1.2 s on the 8 image-hero pages.
 - Contact email is business@corevex-solutions.com.
 - First-load JS budget is 155 KB gzip (was 120 KB), checked by `scripts/js-budget.mjs`. Lighthouse's script-size total also counts link prefetches (about 180 KB), so in `lighthouserc.cjs` it is a warning at 155 KB, not a failure.
+
+## Images and 3D scenes (13 November 2026)
+
+Several stock photos were replaced with CSS 3D scenes, reviewed by the client, and most were restored:
+- Kept as photos: Home service tiles, Home "A senior team that stays with you", the side image on the Custom Software, Full-Stack, SaaS, AI Agents, AI and LLM and AI Automation pages, the AI and LLM "LLM integration" tile and the Mobile App "MVP apps" card.
+- Kept as 3D scenes: Code Rescue health check (issues turning green, score ring) and refactor (before and after code), from `components/ui/Scene.tsx`; About hero layer stack (Interface, API, Data, Cloud) in the space beside the headline.
+- The scenes are CSS only, decorative (aria-hidden) and still under reduced motion.
+- AI Automation before and after heading now reads "From manual work to work that runs itself" with a "Drag the handle to compare" hint.

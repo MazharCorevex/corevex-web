@@ -39,34 +39,66 @@ export default function CodeRescue() {
         </div>
         <div className="stuck" data-reveal-group="">
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Bugs and broken flows</b>
             <p>Features that worked in the demo fail with real users.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>UI/UX that does not convert</b>
             <p>Confusing screens, layout bugs and drop-offs.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Billing and subscriptions</b>
             <p>Stripe plans, trials and failed payments done properly.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Security gaps</b>
             <p>Exposed keys, missing database rules and open endpoints.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Roles and permissions</b>
             <p>RBAC so each user sees only what they should.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Performance and scaling</b>
             <p>Slow queries and pages fixed before traffic grows.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Deployment and hosting</b>
             <p>Reliable releases, environments and monitoring.</p>
           </div>
           <div>
+            <span className="stuck-tag" aria-hidden="true">
+              <i className="r">At risk</i>
+              <i className="f">Fixed</i>
+            </span>
             <b>Code nobody can maintain</b>
             <p>Structure, tests and docs your next hire can follow.</p>
           </div>

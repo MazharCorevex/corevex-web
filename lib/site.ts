@@ -1,7 +1,18 @@
-// Primary host is www; the bare domain redirects, which breaks link previews
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.corevex-solutions.com")
-  .replace(/\/$/, "")
-  .replace(/^https?:\/\/corevex-solutions\.com$/, "https://www.corevex-solutions.com");
+// Site URL on the primary www host
+function siteUrl(raw?: string) {
+  const fallback = "https://www.corevex-solutions.com";
+  const v = (raw || "").trim();
+  if (!v) return fallback;
+  try {
+    const u = new URL(/^https?:\/\//i.test(v) ? v : `https://${v}`);
+    if (u.hostname === "corevex-solutions.com") u.hostname = "www.corevex-solutions.com";
+    if (u.hostname.endsWith("corevex-solutions.com")) u.protocol = "https:";
+    return u.origin;
+  } catch {
+    return fallback;
+  }
+}
+export const SITE_URL = siteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 export const SITE_NAME = "Corevex Solutions";
 export const PSEB_NUMBER = process.env.NEXT_PUBLIC_PSEB_NUMBER || "";
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/company/corevex-solution/";

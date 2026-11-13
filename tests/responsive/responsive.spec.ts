@@ -71,6 +71,9 @@ function suite(list: VP[], engineOnly: boolean) {
           // Each service link sits on its own line
           const tops = await drawer.locator("details[open] a").evaluateAll((as) => as.map((a) => Math.round(a.getBoundingClientRect().top)));
           expect(new Set(tops).size, "drawer links share a line").toBe(tops.length);
+          // Start a project is a centred button
+          const cta = await drawer.locator("a.btn").evaluate((a) => { const r = a.getBoundingClientRect(); const t = document.createRange(); t.selectNodeContents(a); const tr = t.getBoundingClientRect(); return { left: tr.left - r.left, right: r.right - tr.right, display: getComputedStyle(a).display }; });
+          expect(Math.abs(cta.left - cta.right), "drawer button text centred").toBeLessThan(4);
           const last = drawer.getByRole("link", { name: "Contact", exact: true });
           await last.scrollIntoViewIfNeeded();
           await expect(last).toBeInViewport();

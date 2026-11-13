@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
-import Img from "@/components/ui/Img";
 import RescueCards from "@/components/services/RescueCards";
+import Scene from "@/components/ui/Scene";
 
 // code-rescue
 export default function CodeRescueBody() {
@@ -18,8 +18,8 @@ export default function CodeRescueBody() {
               traffic, hidden problems surface. We step in, find the root causes and make your app ready for launch.
             </p>
           </div>
-          <div className="split-img" data-reveal="">
-            <Img src="/images/photos/rescue-health-check.webp" alt="" sizes="(max-width: 860px) 100vw, 50vw" />
+          <div className="split-img has-scene" data-reveal="">
+            <Scene kind="rescue" />
           </div>
         </div>
       </section>
@@ -34,12 +34,8 @@ export default function CodeRescueBody() {
       </section>
       <section className="band mist">
         <div className="wrap split">
-          <div className="split-img" data-reveal="">
-            <Img
-              src="/images/photos/rescue-refactor.webp"
-              alt="Engineer refactoring messy code into clean, tested code on two monitors"
-              sizes="(max-width: 860px) 100vw, 50vw"
-            />
+          <div className="split-img has-scene" data-reveal="">
+            <Scene kind="refactor" />
           </div>
           <div>
             <span className="label">Tools we take over from</span>
